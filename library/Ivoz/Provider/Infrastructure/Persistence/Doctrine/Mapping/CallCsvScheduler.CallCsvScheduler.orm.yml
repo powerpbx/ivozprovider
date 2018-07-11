@@ -1,0 +1,13 @@
+Ivoz\Provider\Domain\Model\CallCsvScheduler\CallCsvScheduler:
+  repositoryClass: Ivoz\Provider\Infrastructure\Persistence\Doctrine\CallCsvSchedulerDoctrineRepository
+  type: entity
+  table: CallCsvSchedulers
+  id:
+    id:
+      type: integer
+      nullable: false
+      options:
+        unsigned: true
+      id: true
+      generator:
+        strategy: IDENTITY
