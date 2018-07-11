@@ -81,6 +81,18 @@ production:
       source:
         class: IvozProvider_Klear_Ghost_TrunksCdr
         method: getDuration
+    destination:
+      title: _('Destination')
+      type: ghost
+      source:
+        class: IvozProvider_Klear_Ghost_BillableCalls
+        method: getDestination
+    ratingPlan:
+      title: _('Rating Plan')
+      type: ghost
+      source:
+        class: IvozProvider_Klear_Ghost_BillableCalls
+        method: getRatingPlan
 staging:
   _extends: production
 testing:

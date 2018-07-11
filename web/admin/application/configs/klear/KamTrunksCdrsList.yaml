@@ -75,6 +75,8 @@ production:
           fields:
             price: 6
             peeringContract: 6
+            destination: 6
+            ratingPlan: 6
             direction: 6
             invoice: 6
 
