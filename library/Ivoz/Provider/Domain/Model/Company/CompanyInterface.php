@@ -571,6 +571,22 @@ interface CompanyInterface extends LoggableEntityInterface
     public function getInvoiceNotificationTemplate();
 
     /**
+     * Set callRegistryNotificationTemplate
+     *
+     * @param \Ivoz\Provider\Domain\Model\NotificationTemplate\NotificationTemplateInterface $callRegistryNotificationTemplate
+     *
+     * @return self
+     */
+    public function setCallRegistryNotificationTemplate(\Ivoz\Provider\Domain\Model\NotificationTemplate\NotificationTemplateInterface $callRegistryNotificationTemplate = null);
+
+    /**
+     * Get callRegistryNotificationTemplate
+     *
+     * @return \Ivoz\Provider\Domain\Model\NotificationTemplate\NotificationTemplateInterface
+     */
+    public function getCallRegistryNotificationTemplate();
+
+    /**
      * Add extension
      *
      * @param \Ivoz\Provider\Domain\Model\Extension\ExtensionInterface $extension

@@ -178,6 +178,11 @@ abstract class CompanyDtoAbstract implements DataTransferObjectInterface
     private $invoiceNotificationTemplate;
 
     /**
+     * @var \Ivoz\Provider\Domain\Model\NotificationTemplate\NotificationTemplateDto | null
+     */
+    private $callRegistryNotificationTemplate;
+
+    /**
      * @var \Ivoz\Provider\Domain\Model\Extension\ExtensionDto[] | null
      */
     private $extensions = null;
@@ -282,7 +287,8 @@ abstract class CompanyDtoAbstract implements DataTransferObjectInterface
             'outgoingDdiRuleId' => 'outgoingDdiRule',
             'voicemailNotificationTemplateId' => 'voicemailNotificationTemplate',
             'faxNotificationTemplateId' => 'faxNotificationTemplate',
-            'invoiceNotificationTemplateId' => 'invoiceNotificationTemplate'
+            'invoiceNotificationTemplateId' => 'invoiceNotificationTemplate',
+            'callRegistryNotificationTemplateId' => 'callRegistryNotificationTemplate'
         ];
     }
 
@@ -325,6 +331,7 @@ abstract class CompanyDtoAbstract implements DataTransferObjectInterface
             'voicemailNotificationTemplate' => $this->getVoicemailNotificationTemplate(),
             'faxNotificationTemplate' => $this->getFaxNotificationTemplate(),
             'invoiceNotificationTemplate' => $this->getInvoiceNotificationTemplate(),
+            'callRegistryNotificationTemplate' => $this->getCallRegistryNotificationTemplate(),
             'extensions' => $this->getExtensions(),
             'ddis' => $this->getDdis(),
             'friends' => $this->getFriends(),
@@ -357,6 +364,7 @@ abstract class CompanyDtoAbstract implements DataTransferObjectInterface
         $this->voicemailNotificationTemplate = $transformer->transform('Ivoz\\Provider\\Domain\\Model\\NotificationTemplate\\NotificationTemplate', $this->getVoicemailNotificationTemplateId());
         $this->faxNotificationTemplate = $transformer->transform('Ivoz\\Provider\\Domain\\Model\\NotificationTemplate\\NotificationTemplate', $this->getFaxNotificationTemplateId());
         $this->invoiceNotificationTemplate = $transformer->transform('Ivoz\\Provider\\Domain\\Model\\NotificationTemplate\\NotificationTemplate', $this->getInvoiceNotificationTemplateId());
+        $this->callRegistryNotificationTemplate = $transformer->transform('Ivoz\\Provider\\Domain\\Model\\NotificationTemplate\\NotificationTemplate', $this->getCallRegistryNotificationTemplateId());
         if (!is_null($this->extensions)) {
             $items = $this->getExtensions();
             $this->extensions = [];
@@ -1523,6 +1531,52 @@ abstract class CompanyDtoAbstract implements DataTransferObjectInterface
     public function getInvoiceNotificationTemplateId()
     {
         if ($dto = $this->getInvoiceNotificationTemplate()) {
+            return $dto->getId();
+        }
+
+        return null;
+    }
+
+    /**
+     * @param \Ivoz\Provider\Domain\Model\NotificationTemplate\NotificationTemplateDto $callRegistryNotificationTemplate
+     *
+     * @return static
+     */
+    public function setCallRegistryNotificationTemplate(\Ivoz\Provider\Domain\Model\NotificationTemplate\NotificationTemplateDto $callRegistryNotificationTemplate = null)
+    {
+        $this->callRegistryNotificationTemplate = $callRegistryNotificationTemplate;
+
+        return $this;
+    }
+
+    /**
+     * @return \Ivoz\Provider\Domain\Model\NotificationTemplate\NotificationTemplateDto
+     */
+    public function getCallRegistryNotificationTemplate()
+    {
+        return $this->callRegistryNotificationTemplate;
+    }
+
+    /**
+     * @param integer $id | null
+     *
+     * @return static
+     */
+    public function setCallRegistryNotificationTemplateId($id)
+    {
+        $value = !is_null($id)
+            ? new \Ivoz\Provider\Domain\Model\NotificationTemplate\NotificationTemplateDto($id)
+            : null;
+
+        return $this->setCallRegistryNotificationTemplate($value);
+    }
+
+    /**
+     * @return integer | null
+     */
+    public function getCallRegistryNotificationTemplateId()
+    {
+        if ($dto = $this->getCallRegistryNotificationTemplate()) {
             return $dto->getId();
         }
 

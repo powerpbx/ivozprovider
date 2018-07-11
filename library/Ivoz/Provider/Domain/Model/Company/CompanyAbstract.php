@@ -178,6 +178,11 @@ abstract class CompanyAbstract
      */
     protected $invoiceNotificationTemplate;
 
+    /**
+     * @var \Ivoz\Provider\Domain\Model\NotificationTemplate\NotificationTemplateInterface
+     */
+    protected $callRegistryNotificationTemplate;
+
 
     use ChangelogTrait;
 
@@ -308,6 +313,7 @@ abstract class CompanyAbstract
             ->setVoicemailNotificationTemplate($dto->getVoicemailNotificationTemplate())
             ->setFaxNotificationTemplate($dto->getFaxNotificationTemplate())
             ->setInvoiceNotificationTemplate($dto->getInvoiceNotificationTemplate())
+            ->setCallRegistryNotificationTemplate($dto->getCallRegistryNotificationTemplate())
         ;
 
         $self->sanitizeValues();
@@ -359,7 +365,8 @@ abstract class CompanyAbstract
             ->setOutgoingDdiRule($dto->getOutgoingDdiRule())
             ->setVoicemailNotificationTemplate($dto->getVoicemailNotificationTemplate())
             ->setFaxNotificationTemplate($dto->getFaxNotificationTemplate())
-            ->setInvoiceNotificationTemplate($dto->getInvoiceNotificationTemplate());
+            ->setInvoiceNotificationTemplate($dto->getInvoiceNotificationTemplate())
+            ->setCallRegistryNotificationTemplate($dto->getCallRegistryNotificationTemplate());
 
 
 
@@ -405,7 +412,8 @@ abstract class CompanyAbstract
             ->setOutgoingDdiRule(\Ivoz\Provider\Domain\Model\OutgoingDdiRule\OutgoingDdiRule::entityToDto(self::getOutgoingDdiRule(), $depth))
             ->setVoicemailNotificationTemplate(\Ivoz\Provider\Domain\Model\NotificationTemplate\NotificationTemplate::entityToDto(self::getVoicemailNotificationTemplate(), $depth))
             ->setFaxNotificationTemplate(\Ivoz\Provider\Domain\Model\NotificationTemplate\NotificationTemplate::entityToDto(self::getFaxNotificationTemplate(), $depth))
-            ->setInvoiceNotificationTemplate(\Ivoz\Provider\Domain\Model\NotificationTemplate\NotificationTemplate::entityToDto(self::getInvoiceNotificationTemplate(), $depth));
+            ->setInvoiceNotificationTemplate(\Ivoz\Provider\Domain\Model\NotificationTemplate\NotificationTemplate::entityToDto(self::getInvoiceNotificationTemplate(), $depth))
+            ->setCallRegistryNotificationTemplate(\Ivoz\Provider\Domain\Model\NotificationTemplate\NotificationTemplate::entityToDto(self::getCallRegistryNotificationTemplate(), $depth));
     }
 
     /**
@@ -445,7 +453,8 @@ abstract class CompanyAbstract
             'outgoingDdiRuleId' => self::getOutgoingDdiRule() ? self::getOutgoingDdiRule()->getId() : null,
             'voicemailNotificationTemplateId' => self::getVoicemailNotificationTemplate() ? self::getVoicemailNotificationTemplate()->getId() : null,
             'faxNotificationTemplateId' => self::getFaxNotificationTemplate() ? self::getFaxNotificationTemplate()->getId() : null,
-            'invoiceNotificationTemplateId' => self::getInvoiceNotificationTemplate() ? self::getInvoiceNotificationTemplate()->getId() : null
+            'invoiceNotificationTemplateId' => self::getInvoiceNotificationTemplate() ? self::getInvoiceNotificationTemplate()->getId() : null,
+            'callRegistryNotificationTemplateId' => self::getCallRegistryNotificationTemplate() ? self::getCallRegistryNotificationTemplate()->getId() : null
         ];
     }
 
@@ -1306,6 +1315,30 @@ abstract class CompanyAbstract
     public function getInvoiceNotificationTemplate()
     {
         return $this->invoiceNotificationTemplate;
+    }
+
+    /**
+     * Set callRegistryNotificationTemplate
+     *
+     * @param \Ivoz\Provider\Domain\Model\NotificationTemplate\NotificationTemplateInterface $callRegistryNotificationTemplate
+     *
+     * @return self
+     */
+    public function setCallRegistryNotificationTemplate(\Ivoz\Provider\Domain\Model\NotificationTemplate\NotificationTemplateInterface $callRegistryNotificationTemplate = null)
+    {
+        $this->callRegistryNotificationTemplate = $callRegistryNotificationTemplate;
+
+        return $this;
+    }
+
+    /**
+     * Get callRegistryNotificationTemplate
+     *
+     * @return \Ivoz\Provider\Domain\Model\NotificationTemplate\NotificationTemplateInterface
+     */
+    public function getCallRegistryNotificationTemplate()
+    {
+        return $this->callRegistryNotificationTemplate;
     }
 
 
