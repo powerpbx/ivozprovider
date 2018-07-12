@@ -366,7 +366,16 @@ production:
           class: ui-silk-application-view-list
           description: _("List of %s", ngettext('Call registry', 'Call registries', 1))
           showOnlyIf: ${auth.companyWholesale}
-
+        CallCsvSchedulersList:
+          title: ngettext('Call CSV scheduler', 'Call CSV schedulers', 1)
+          class: ui-silk-application-side-expand
+          description: _("List of %s", ngettext('Call CSV scheduler', 'Call CSV schedulers', 1))
+          showOnlyIf: ${auth.companyResidential}
+        CallCsvSchedulersWholesaleList:
+          title: ngettext('Call CSV scheduler', 'Call CSV schedulers', 1)
+          class: ui-silk-application-side-expand
+          description: _("List of %s", ngettext('Call CSV scheduler', 'Call CSV schedulers', 1))
+          showOnlyIf: ${auth.companyWholesale}
   footerMenu:
     footer:
       title: ''

@@ -1,0 +1,75 @@
+production:
+  entity: Ivoz\Provider\Domain\Model\CallCsvScheduler\CallCsvScheduler
+  fields:
+    Iden:
+      title: _('Iden')
+      type: text
+      trim: both
+      required: true
+      maxLength: 40
+      default: true
+    frequency:
+      title: _('Frequency')
+      type: number
+      required: true
+      defaultValue: 1
+      source:
+        control: Spinner
+        min: 1
+    unit:
+      title: _('Unit')
+      type: select
+      required: true
+      source:
+        data: inline
+        values:
+        values:
+          'week': _('Week')
+          'month': _('Month')
+          'year': _('Year')
+    email:
+      title: ngettext('Email', 'Emails', 1)
+      type: text
+      trim: both
+      defaultValue: ''
+      maxLength: 140
+    lastExecution:
+      title: _('Last execution')
+      type: picker
+      required: true
+      source:
+        control: datetime
+        settings:
+          disabled: 'false'
+      readonly: true
+    nextExecution:
+      title: _('Next execution')
+      type: picker
+      required: true
+      source:
+        control: datetime
+        settings:
+          disabled: 'false'
+    company:
+      title: ngettext('Company', 'Companies', 1)
+      type: select
+      required: true
+      source:
+        data: mapper
+        config:
+          entity: \Ivoz\Provider\Domain\Model\Company\Company
+          filterClass: IvozProvider_Klear_Filter_InvoiceSchedulerCompany
+          fieldName:
+            fields:
+              - name
+            template: '%name%'
+          order:
+            Company.name: asc
+staging:
+  _extends: production
+testing:
+  _extends: production
+development:
+  _extends: production
+localdev:
+  _extends: production
