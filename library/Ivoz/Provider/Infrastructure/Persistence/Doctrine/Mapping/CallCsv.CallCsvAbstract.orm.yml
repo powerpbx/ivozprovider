@@ -1,0 +1,41 @@
+Ivoz\Provider\Domain\Model\CallCsv\CallCsvAbstract:
+  type: mappedSuperclass
+  embedded:
+    csv:
+      class: Csv
+      columnPrefix: false
+  fields:
+    createdAt:
+      type: datetime
+      nullable: true
+      column: createdAt
+    email:
+      type: string
+      nullable: false
+      length: 140
+      options:
+        fixed: false
+  manyToOne:
+    company:
+      targetEntity: \Ivoz\Provider\Domain\Model\Company\CompanyInterface
+      cascade: {  }
+      fetch: LAZY
+      mappedBy: null
+      inversedBy: null
+      joinColumns:
+        companyId:
+          referencedColumnName: id
+          nullable: false
+          onDelete: cascade
+      orphanRemoval: false
+    scheduler:
+      targetEntity: \Ivoz\Provider\Domain\Model\CallCsvScheduler\CallCsvSchedulerInterface
+      cascade: {  }
+      fetch: LAZY
+      mappedBy: null
+      inversedBy: null
+      joinColumns:
+        callCsvSchedulerId:
+          referencedColumnName: id
+          onDelete: set null
+      orphanRemoval: false

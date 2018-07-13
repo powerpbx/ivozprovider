@@ -1,0 +1,13 @@
+Ivoz\Provider\Domain\Model\CallCsv\CallCsv:
+  repositoryClass: Ivoz\Provider\Infrastructure\Persistence\Doctrine\CallCsvDoctrineRepository
+  type: entity
+  table: CallCsvs
+  id:
+    id:
+      type: integer
+      nullable: false
+      options:
+        unsigned: true
+      id: true
+      generator:
+        strategy: IDENTITY
