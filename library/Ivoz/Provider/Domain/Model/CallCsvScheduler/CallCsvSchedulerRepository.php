@@ -7,7 +7,10 @@ use Doctrine\Common\Collections\Selectable;
 
 interface CallCsvSchedulerRepository extends  ObjectRepository, Selectable
 {
-
+    /**
+     * @return CallCsvInterface[]
+     */
+    public function getPendingSchedulers();
 }
 
 

@@ -27,5 +27,23 @@ class CallCsvScheduler extends CallCsvSchedulerAbstract implements CallCsvSchedu
     {
         return $this->id;
     }
+
+    /**
+     * @return \DateInterval
+     */
+    public function getInterval()
+    {
+        $frecuency = $this->getFrequency();
+
+        switch ($this->getUnit()) {
+            /** @see http://php.net/manual/es/dateinterval.createfromdatestring.php */
+            case 'year':
+                return new \DateInterval("P${frecuency}Y");
+            case 'month':
+                return new \DateInterval("P${frecuency}M");
+            case 'week':
+                return new \DateInterval("P${frecuency}W");
+        }
+    }
 }
 

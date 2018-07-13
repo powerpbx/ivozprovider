@@ -34,6 +34,21 @@ services:
       $basePath: 'ivozprovider_model_brandurls.logo'
 
   ##########################################
+  ## CallCsv
+  ##########################################
+  Service\StoragePathResolverCollection::CallCsv:
+     class: Ivoz\Core\Application\Service\StoragePathResolverCollection
+     calls:
+      - [addPathResolver, ['Csv', '@Service\CommonStoragePathResolver::CallCsvCsv']]
+     public: true
+
+  Service\CommonStoragePathResolver::CallCsvCsv:
+    class: Ivoz\Core\Application\Service\CommonStoragePathResolver
+    arguments:
+      $localStoragePath: '%local_storage_path%'
+      $basePath: 'ivozprovider_model_callcsv.csv'
+
+  ##########################################
   ## Locution
   ##########################################
   Service\StoragePathResolverCollection::Locution:
