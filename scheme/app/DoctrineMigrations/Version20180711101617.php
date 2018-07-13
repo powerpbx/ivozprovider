@@ -21,7 +21,7 @@ class Version20180711101617 extends AbstractMigration
         $this->addSql(
         'CREATE TABLE CallCsvSchedulers (
               id INT UNSIGNED AUTO_INCREMENT NOT NULL,
-              iden VARCHAR(40) NOT NULL,
+              name VARCHAR(40) NOT NULL,
               unit VARCHAR(30) DEFAULT \'month\' NOT NULL COMMENT \'[enum:week|month|year]\',
               frequency SMALLINT UNSIGNED NOT NULL,
               email VARCHAR(140) NOT NULL,

@@ -1,12 +1,12 @@
 Ivoz\Provider\Domain\Model\CallCsvScheduler\CallCsvSchedulerAbstract:
   type: mappedSuperclass
   uniqueConstraints:
-    invoiceScheduler_iden_company:
+    invoiceScheduler_name_company:
       columns:
-        - iden
+        - name
         - companyId
   fields:
-    iden:
+    name:
       type: string
       nullable: false
       length: 40
