@@ -13,20 +13,25 @@ interface CallCsvSchedulerInterface extends LoggableEntityInterface
     public function getChangeSet();
 
     /**
-     * Set iden
+     * @return \DateInterval
+     */
+    public function getInterval();
+
+    /**
+     * Set name
      *
-     * @param string $iden
+     * @param string $name
      *
      * @return self
      */
-    public function setIden($iden);
+    public function setName($name);
 
     /**
-     * Get iden
+     * Get name
      *
      * @return string
      */
-    public function getIden();
+    public function getName();
 
     /**
      * Set unit

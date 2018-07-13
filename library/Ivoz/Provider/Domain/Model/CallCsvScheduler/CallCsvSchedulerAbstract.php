@@ -16,7 +16,7 @@ abstract class CallCsvSchedulerAbstract
     /**
      * @var string
      */
-    protected $iden;
+    protected $name;
 
     /**
      * comment: enum:week|month|year
@@ -55,9 +55,9 @@ abstract class CallCsvSchedulerAbstract
     /**
      * Constructor
      */
-    protected function __construct($iden, $unit, $frequency, $email)
+    protected function __construct($name, $unit, $frequency, $email)
     {
-        $this->setIden($iden);
+        $this->setName($name);
         $this->setUnit($unit);
         $this->setFrequency($frequency);
         $this->setEmail($email);
@@ -127,7 +127,7 @@ abstract class CallCsvSchedulerAbstract
         Assertion::isInstanceOf($dto, CallCsvSchedulerDto::class);
 
         $self = new static(
-            $dto->getIden(),
+            $dto->getName(),
             $dto->getUnit(),
             $dto->getFrequency(),
             $dto->getEmail());
@@ -156,7 +156,7 @@ abstract class CallCsvSchedulerAbstract
         Assertion::isInstanceOf($dto, CallCsvSchedulerDto::class);
 
         $this
-            ->setIden($dto->getIden())
+            ->setName($dto->getName())
             ->setUnit($dto->getUnit())
             ->setFrequency($dto->getFrequency())
             ->setEmail($dto->getEmail())
@@ -177,7 +177,7 @@ abstract class CallCsvSchedulerAbstract
     public function toDto($depth = 0)
     {
         return self::createDto()
-            ->setIden(self::getIden())
+            ->setName(self::getName())
             ->setUnit(self::getUnit())
             ->setFrequency(self::getFrequency())
             ->setEmail(self::getEmail())
@@ -192,7 +192,7 @@ abstract class CallCsvSchedulerAbstract
     protected function __toArray()
     {
         return [
-            'iden' => self::getIden(),
+            'name' => self::getName(),
             'unit' => self::getUnit(),
             'frequency' => self::getFrequency(),
             'email' => self::getEmail(),
@@ -206,30 +206,30 @@ abstract class CallCsvSchedulerAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * Set iden
+     * Set name
      *
-     * @param string $iden
+     * @param string $name
      *
      * @return self
      */
-    public function setIden($iden)
+    public function setName($name)
     {
-        Assertion::notNull($iden, 'iden value "%s" is null, but non null value was expected.');
-        Assertion::maxLength($iden, 40, 'iden value "%s" is too long, it should have no more than %d characters, but has %d characters.');
+        Assertion::notNull($name, 'name value "%s" is null, but non null value was expected.');
+        Assertion::maxLength($name, 40, 'name value "%s" is too long, it should have no more than %d characters, but has %d characters.');
 
-        $this->iden = $iden;
+        $this->name = $name;
 
         return $this;
     }
 
     /**
-     * Get iden
+     * Get name
      *
      * @return string
      */
-    public function getIden()
+    public function getName()
     {
-        return $this->iden;
+        return $this->name;
     }
 
     /**
