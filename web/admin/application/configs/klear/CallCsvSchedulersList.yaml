@@ -12,7 +12,7 @@ production:
         items: 25
       <<: *CallCsvSchedulers
       class: ui-silk-report-key
-      title: _("List of %s %2s", ngettext('Invoice scheduler', 'Invoice schedulers', 0), "[format| (%parent%)]")
+      title: _("List of %s %2s", ngettext('Call CSV scheduler', 'Call CSV schedulers', 0), "[format| (%parent%)]")
       forcedValues:
         <<: *forcedCompany
       fields: &callCsvSchedulers_fieldsLink
