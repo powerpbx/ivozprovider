@@ -66,6 +66,7 @@ production:
           type: true
           voicemailNotificationTemplate: true
           faxNotificationTemplate: true
+          callRegistryNotificationTemplate: true
           billingMethod: true
           balance: true
         order:
@@ -261,6 +262,7 @@ production:
           fields:
             voicemailNotificationTemplate: 1
             faxNotificationTemplate: 1
+            callRegistryNotificationTemplate: true
       class: ui-silk-pencil
       label: false
       title: _("Edit %s %2s", ngettext('Residential Client', 'Residential Clients', 1), "[format| (%item%)]")

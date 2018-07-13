@@ -159,6 +159,19 @@ production:
             fields:
               - iden
             template: '%iden%'
+    callRegistryNotificationTemplate:
+      title: ngettext('Call Registry Notification', 'Call Registry Notifications', 1)
+      type: select
+      source:
+        data: mapper
+        config:
+          entity: \Ivoz\Provider\Domain\Model\NotificationTemplate\NotificationTemplate
+          filterClass: IvozProvider_Klear_Filter_NotificationTemplateInvoice
+          fieldName:
+            fields:
+              - name
+            template: '%name%'
+        'null': _("Use generic template")
     relRoutingTags:
       title: ngettext('Routing Tag', 'Routing Tags', 0)
       type: multiselect

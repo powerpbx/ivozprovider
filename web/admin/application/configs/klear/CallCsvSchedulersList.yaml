@@ -6,6 +6,7 @@ production:
     module: klearMatrix
     defaultScreen: callCsvSchedulersList_screen
   screens: &callCsvSchedulers_screensLink
+
     callCsvSchedulersList_screen: &callCsvSchedulersList_screenLink
       controller: list
       pagination:
@@ -20,27 +21,24 @@ production:
           title: _("Options")
           screens:
             callCsvSchedulersEdit_screen: true
-            fixedCostsRelCallCsvSchedulersList_screen: true
           dialogs:
             callCsvSchedulersDel_dialog: true
           default: callCsvSchedulersEdit_screen
         order:
-          iden: true
+          name: true
           company: true
           frecuency: true
           unit: true
         blacklist:
           email: true
-          numberSequence: true
           lastExecution: true
-          taxRate: true
-          invoiceTemplate: true
       options:
         title: _("Options")
         screens:
           callCsvSchedulersNew_screen: true
         dialogs:
           callCsvSchedulersDel_dialog: true
+
     callCsvSchedulersNew_screen: &callCsvSchedulersNew_screenLink
       <<: *CallCsvSchedulers
       controller: new
@@ -60,7 +58,7 @@ production:
         group0:
           colsPerRow: 2
           fields:
-            Iden: 1
+            name: 1
             company: true
             email: 1
             nextExecution: 1
@@ -70,9 +68,6 @@ production:
           fields:
             frequency: 1
             unit: 1
-            numberSequence: 1
-            invoiceTemplate: 1
-            taxRate: 1
 
     callCsvSchedulersEdit_screen: &callCsvSchedulersEdit_screenLink
       <<: *CallCsvSchedulers

@@ -1,8 +1,8 @@
 production:
   entity: Ivoz\Provider\Domain\Model\CallCsvScheduler\CallCsvScheduler
   fields:
-    Iden:
-      title: _('Iden')
+    name:
+      title: _('Name')
       type: text
       trim: both
       required: true

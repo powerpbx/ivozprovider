@@ -48,6 +48,7 @@ production:
           mediaRelaySets: true
           language: true
           relCodecs: true
+          callRegistryNotificationTemplate: true
         order:
           name: true
           nif: true
@@ -226,6 +227,7 @@ production:
           fields:
             voicemailNotificationTemplate: 1
             faxNotificationTemplate: 1
+            callRegistryNotificationTemplate: 1
       class: ui-silk-pencil
       label: false
       title: _("Edit %s %2s", ngettext('Wholesale Client', 'Wholesale Clients', 1), "[format| (%item%)]")
