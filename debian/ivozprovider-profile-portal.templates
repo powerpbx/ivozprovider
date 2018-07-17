@@ -22,6 +22,6 @@ Description-es.UTF-8:
 Template: ivozprovider/language
 Type: select
 Default: en
-Choices: en, es
-Choices-en.UTF8: English, Spanish
-Choices-es.UTF8: Inglés, Español
+Choices: en, es, it
+Choices-en.UTF8: English, Spanish, Italian
+Choices-es.UTF8: Inglés, Español, Italiano
