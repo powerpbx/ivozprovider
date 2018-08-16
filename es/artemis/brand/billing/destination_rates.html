@@ -1,0 +1,357 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Precios destino &mdash; documentación de IvozProvider - Artemis</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/banner.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Índice"
+              href="../../genindex.html"/>
+        <link rel="search" title="Búsqueda" href="../../search.html"/>
+    <link rel="top" title="documentación de IvozProvider - Artemis" href="../../index.html"/>
+        <link rel="up" title="Tarificación" href="index.html"/>
+        <link rel="next" title="Tarificación de llamadas" href="bill_a_call.html"/>
+        <link rel="prev" title="Llamadas facturables" href="billable_calls.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> IvozProvider
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.6
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Basic Concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../basics/intro/index.html">Introducción a Ivozprovider</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../basics/architecture/index.html">Arquitectura general de la plataforma</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../basics/installation/index.html">Instalación inicial</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../basics/operation_roles/index.html">Roles de la plataforma</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/internal_calls/index.html">Realizar llamadas internas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/external_incoming_calls/index.html">Recibir llamadas externas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/external_outgoing_calls/index.html">Realizar llamadas externas</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Administation portal</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../platform/index.html">Configuración de Plataforma</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Configuración de Marca</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../virtual_pbx.html">PBX Virtual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../retail.html">Retail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wholesale.html">Wholesale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../residential.html">Residencial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../balances.html">Saldos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../portal_urls.html">URL Portales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notifications.html">Plantillas de Notificaciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../peering/index.html">Peering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transformations/index.html">Transformaciones numéricas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../music_on_hold.html">Músicas en espera genéricas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../services.html">Servicios de marca</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../match_lists.html">Listas coincidencia genéricas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../routing/index.html">Enrutado saliente</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Tarificación</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="billable_calls.html">Llamadas facturables</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Precios destino</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#importing-a-csv-file">Importación vía CSV</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rating_plans.html">Planes de precio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bill_a_call.html">Tarificación de llamadas</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../invoices/index.html">Facturación</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../company/index.html">Configuración de Compañía</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../residential/index.html">Residential Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../retail/index.html">Configuración Retail</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User portal</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../userportal/index.html">Portal de usuario</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Security and Maintenance</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../security/index.html">Elementos de seguridad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maintenance/index.html">Mantenimiento de la solución</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">IvozProvider</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Configuración de Marca</a> &raquo;</li>
+      
+          <li><a href="index.html">Tarificación</a> &raquo;</li>
+      
+    <li>Precios destino</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/brand/billing/destination_rates.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="destination-rates">
+<span id="destination-rate"></span><h1>Precios destino<a class="headerlink" href="#destination-rates" title="Enlazar permanentemente con este título">¶</a></h1>
+<ul>
+<li><p class="first">Los <strong>precio destino</strong> agrupan los prefijos y sus costes:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p class="first">Precio por minuto</p>
+</li>
+<li><p class="first">Establecimiento de llamada</p>
+</li>
+<li><p class="first">Facturación por segundos / minutos /etc.</p>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>En ese momento, es posible que el futuro administrador de marca se haya dado cuenta de la titánica tarea que implicaría crear miles de patrones de precio (254 países por las distintas redes móviles, fijos, numeraciones especiales, etc.) para luego poder agruparlos en un plan de precios.</p>
+<p>Esto es debido a que la creación de los precios destinos se realiza generalmente a través de un fichero <a class="reference external" href="https://es.wikipedia.org/wiki/CSV">CSV</a>. Si quiere crear los datos de manera manual, vea la sección <a class="reference internal" href="../../getting_started/external_outgoing_calls/destination_rate.html#creating-a-destination-rate"><span class="std std-ref">Crear un precio destino</span></a></p>
+<div class="section" id="importing-a-csv-file">
+<h2>Importación vía CSV<a class="headerlink" href="#importing-a-csv-file" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El primer paso es crear un plan de precios vacío sobre el que importar nuestros precios (sección <strong>Configuración de marca</strong> &gt; <strong>Planes de precio</strong>):</p>
+<p>El botón clave para este proceso de importación masiva es el siguiente:</p>
+<img alt="../../_images/destination_rates_import.png" src="../../_images/destination_rates_import.png" />
+<p>En esta ventana podríamos seleccionar qué contiene cada columna, en caso de no haber creado el <a class="reference external" href="https://es.wikipedia.org/wiki/CSV">CSV</a> en el formato recomendado. Del mismo modo, se nos ofrece la posibilidad de ignorar la primera línea, en caso de que incluya los nombres de las columnas en lugar de datos.</p>
+<div class="admonition hint">
+<p class="first admonition-title">Consejo</p>
+<p class="last">El proceso de importación se realiza en segundo plano, permitiendo al administrador de marca seguir configurando otros aspectos de la plataforma mientras se completa.</p>
+</div>
+<div class="section" id="csv-format">
+<h3>Formato CSV<a class="headerlink" href="#csv-format" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>A pesar de que la ventana anterior nos permite importar archivos CSV en distintos formatos, lo mejor es  importar un archivo en el formato adecuado para simplicar este proceso.</p>
+<p>Puedes encontrar un CSV de ejemplo para la importación <a class="reference external" href="https://raw.githubusercontent.com/irontec/ivozprovider/artemis/web/admin/samples/pricesSample.csv">aqui</a>.</p>
+<p>El orden de las columnas debería de ser:</p>
+<ul class="simple">
+<li><p class="first">Nombre del destino</p>
+</li>
+<li><p class="first">Prefijo destino (E.164 con signo +)</p>
+</li>
+<li><p class="first">Precio por minuto</p>
+</li>
+<li><p class="first">Precio de establecimiento</p>
+</li>
+<li><p class="first">Período de facturación en segundos</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Se recomienda entrecomillar con comillas dobles las entradas alfanuméricas, aunque no es necesario para entradas con una única palabra (o entradas sin símbolos raros). <strong>Si contienen coma, es OBLIGATORIO entrecomillarlos</strong>.</p>
+</div>
+<div class="admonition error">
+<p class="first admonition-title">Error</p>
+<p class="last">Los <strong>números decimales</strong> tienen que usar el <strong>punto como separador decimal</strong>.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Las entradas numéricas se pueden entrecomillar con comillas dobles, pero no es obligatorio.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Advertencia</p>
+<p>El precio de la llamada sera incrementado cada periodo de facturacion.</p>
+<ul class="last simple">
+<li><p class="first">Si se pone a 1, implica una tarificación por segundos y cada segundo implicará un coste que será el <em>precio por minuto</em> dividido entre 60.</p>
+</li>
+<li><p class="first">Si se pone a 60, implica una tarificación por minutos y cada minuto implicará un coste que será el <em>precio por minuto</em>.</p>
+</li>
+</ul>
+</div>
+<p>Puedes descargar el fichero importad del precio destino. Ten en cuenta que cuando importe ficheros sobre datos existentes, los valores que coincidan serán sobreescritos y los no coincidentes serán mantenidos. Esto permite descargar el fichero importado, cambiar algunos valores y volverlo a importar.</p>
+<p>Una vez completada la importación, solo faltaría asociar el nuevo plan de precios a las empresas que queramos, siguiendo el procedimiento explicado en <a class="reference internal" href="rating_plans.html#rating-plans"><span class="std std-ref">Planes de precio</span></a>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bill_a_call.html" class="btn btn-neutral float-right" title="Tarificación de llamadas" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="billable_calls.html" class="btn btn-neutral" title="Llamadas facturables" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2017, Irontec.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        <span class="fa fa-book"> Other Versions</span>
+        v: artemis
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        <dl>
+            <dt>Branches</dt>
+            <dd><a href="destination_rates.html">artemis</a></dd>
+            <dd><a href="../../../bleeding/brand/billing/destination_rates.html">bleeding</a></dd>
+            <dd><a href="../../../oasis/index.html">oasis</a></dd>
+        </dl>
+    </div>
+</div>
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'Artemis',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

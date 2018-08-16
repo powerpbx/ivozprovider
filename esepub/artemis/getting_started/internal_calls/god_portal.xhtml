@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Configuración Global</title>
+    
+    <link rel="stylesheet" href="../../_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/banner.css" type="text/css" /> 
+  </head>
+  <body role="document">
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.xhtml" title="Índice General"
+             accesskey="I">índice</a></li>
+        <li class="right" >
+          <a href="brand_portal.xhtml" title="Configuración DemoBrand"
+             accesskey="N">siguiente</a> |</li>
+        <li class="right" >
+          <a href="index.xhtml" title="Realizar llamadas internas"
+             accesskey="P">anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.xhtml">documentación de IvozProvider - Artemis</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.xhtml" accesskey="U">Realizar llamadas internas</a> &#187;</li> 
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="global-configuration">
+<h1>Configuración Global</h1>
+<div class="admonition important">
+<p class="first admonition-title">Importante</p>
+<p class="last">Cualquiera de las 2 IPs públicas configuradas en la instalación servirá para acceder al panel web. Las credenciales por defecto son <strong>admin / changeme</strong>.</p>
+</div>
+<p>En esta sección haremos referencia a todo lo relativo al rol operador global, configurable en el bloque <strong>Gestión general</strong> del panel web (solo visible para God):</p>
+<div class="section" id="emulate-the-demo-brand">
+<h2>Emular la marca Demo</h2>
+<p>Como mencionamos anteriormente, tras la instalación inicial, la plataforma incluye una marca pre-creada llamada DemoBrand, que es la que utilizaremos para el fin que nos ocupa: tener 2 teléfonos registrados y que se puedan llamar entre sí.</p>
+<p>Antes de pasar a la siguiente sección, es importante entender el concepto de <strong>Emular una marca</strong>:</p>
+<ul class="simple">
+<li><p class="first">Como operador global, tienes acceso al bloque <strong>Gestión general</strong>, que solo ve <em>God</em>.</p>
+</li>
+<li><p class="first">Aparte de ese bloque, también ves los bloques <strong>Configuración de marca</strong> y <strong>Configuración de empresa</strong> que tienen este aspecto:</p>
+</li>
+</ul>
+<img alt="../../_images/emular_marca_prev1.png" class="align-center" src="../../_images/emular_marca_prev1.png" />
+<ul class="simple">
+<li><p class="first">Atención especial al siguiente botón:</p>
+</li>
+</ul>
+<img alt="../../_images/emular_marca1.png" class="align-center" src="../../_images/emular_marca1.png" />
+<ul class="simple">
+<li><p class="first">Una vez pulsado, muestra una ventana flotante tal que:</p>
+</li>
+</ul>
+<img alt="../../_images/emular_marca21.png" class="align-center" src="../../_images/emular_marca21.png" />
+<ul class="simple">
+<li><p class="first">Al seleccionar la marca DemoBrand, el icono cambia y muestra la marca que se está emulando:</p>
+</li>
+</ul>
+<img alt="../../_images/emular_marca31.png" class="align-center" src="../../_images/emular_marca31.png" />
+<ul class="simple">
+<li><p class="first">La parte superior derecha de la página también muestra la marca que se está emulando:</p>
+</li>
+</ul>
+<img alt="../../_images/emular_marca41.png" class="align-center" src="../../_images/emular_marca41.png" />
+</div>
+<div class="section" id="what-emulation-means">
+<h2>¿Qué implica esta emulación?</h2>
+<p>Que <strong>todo lo que se ve en el bloque &#8216;Configuración de marca&#8217; es relativo a esa marca</strong> y es <em>exactamente</em> lo mismo que lo que ve el operador de marca cuando entra con sus credenciales de acceso.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Truco</p>
+<p class="last">Decir exactamente es mucho decir, ya que el operador global ve campos en ciertas secciones del bloque <strong>Configuración de marca</strong> que el operador de marca no ve. por ej. Al editar una empresa <em>God</em> ve &#8216;Servidores de media&#8217; y&#8217;AS&#8217;, que el operador de marca no ve.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016-2017, Irontec.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9.
+    </div>
+  </body>
+</html>

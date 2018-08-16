@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>No pricing plan, no call</title>
+    
+    <link rel="stylesheet" href="../../_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/banner.css" type="text/css" /> 
+  </head>
+  <body role="document">
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.xhtml" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="destination_rate.xhtml" title="Creating a destination rate"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="outgoing_ddi.xhtml" title="Outgoing DDI configuration"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.xhtml">IvozProvider Artemis documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.xhtml" accesskey="U">Making external calls</a> &#187;</li> 
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <p>At this point, we are looking forward to make our first outgoing call with our
+new IvozProvider, we may have even tried to call with current configuration but...</p>
+<div class="section" id="no-pricing-plan-no-call">
+<span id="noplan-nocall"></span><h1>No pricing plan, no call</h1>
+<p>Just the way we warned <a class="reference internal" href="../../basics/operation_roles/index.xhtml#brand-responsibilities"><span class="std std-ref">when we described the duties of the brand operator</span></a>, the brand operator is <strong>responsible for making all the
+needed setup so that IvozProvider is able to bill all external calls</strong>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><strong>Billing a call</strong> is the action of <strong>assigning price</strong> to a call that implies
+cost.</p>
+</div>
+<p><strong>IvozProvider checks live that a call can be billed when it is established</strong> to avoid
+placing calls that imply cost but won&#8217;t be billed because Brand Operator, due to
+a mistake, hasn&#8217;t assigned a price.</p>
+<div class="admonition error">
+<p class="first admonition-title">Error</p>
+<p class="last">If a call can&#8217;t be billed, IvozProvider won&#8217;t allow its establishment.</p>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016-2017, Irontec.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Rating plans</title>
+    
+    <link rel="stylesheet" href="../../_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/banner.css" type="text/css" /> 
+  </head>
+  <body role="document">
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.xhtml" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../getting_started/external_outgoing_calls/finish.xhtml" title="Outgoing configuration complete!"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../../getting_started/external_outgoing_calls/destination_rate.xhtml" title="Creating a destination rate"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.xhtml">IvozProvider Artemis documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../getting_started/external_outgoing_calls/index.xhtml" accesskey="U">Making external calls</a> &#187;</li> 
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="rating-plans">
+<h1>Rating plans</h1>
+<div class="section" id="creating-a-rating-plan">
+<h2>Creating a rating plan</h2>
+<p>Destination rates are grouped using Rating plans. This offers the possibility to have base pricing data and customize
+some destination with different prices.</p>
+<p>Create a <strong>rating plan</strong>:</p>
+<img alt="../../_images/rating_plan_new.png" src="../../_images/rating_plan_new.png" />
+<p>And then we can add our destination rate:</p>
+<img alt="../../_images/rating_plan_add.png" src="../../_images/rating_plan_add.png" />
+<p>The <strong>metric</strong> of the link lets you assign more than one <em>destination rate</em> for a
+plan, even though some destinations are included in more than one of those
+destination rates.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p class="last">If a given call can be billed with more than one destination rate,
+it will be billed using the one with lowest metric.</p>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">This allows having a general <em>Destination rate</em> and concrete the price of
+a specific destination in another <em>destination rate</em> with lower metric (free cell
+phone calls, for example).</p>
+</div>
+<p class="rubric">Checking Rating plans</p>
+<p>To check the configuration so far we can <strong>Simulate a call</strong> from the rating plans list.</p>
+<p>We introduce the destination number in <a class="reference internal" href="../transformations/index.xhtml#e164"><span class="std std-ref">E.164 format</span></a>, and we can check that it matches
+the <strong>rating plan</strong> we have just created:</p>
+<img alt="../../_images/rating_plan_simulate.png" src="../../_images/rating_plan_simulate.png" />
+</div>
+<div class="section" id="assigning-a-rating-plan-to-a-company">
+<h2>Assigning a rating plan to a company</h2>
+<p>A specific <strong>rating plan</strong> can be linked to multiple companies.</p>
+<p>In the section <strong>Brand configuration</strong> &gt; <strong>Virtual PBXs</strong> we select the <em>demo</em>
+company:</p>
+<img alt="../../_images/rating_plan_company.png" src="../../_images/rating_plan_company.png" />
+<p>The <strong>Rating plan</strong> have an activation time, and only one can be active for each
+company.</p>
+<img alt="../../_images/rating_plan_company2.png" src="../../_images/rating_plan_company2.png" />
+<p class="rubric">Simulating a call of a specific company</p>
+<p>In this list we can also simulate a call for a given company like we did previously
+in the rating plan list and check the price it will imply. This way, we can be sure
+that the configuration is ok.</p>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016-2017, Irontec.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9.
+    </div>
+  </body>
+</html>

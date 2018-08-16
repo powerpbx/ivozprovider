@@ -1,0 +1,3426 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.1.31)  16 AUG 2018 16:54
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**IvozProvider.tex
+(./IvozProvider.tex
+LaTeX2e <2017/01/01> patch level 3
+Babel <3.9r> and hyphenation patterns for 3 language(s) loaded.
+(./sphinxmanual.cls
+Document Class: sphinxmanual 2009/06/02 Document class (Sphinx manual)
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)) (./iftex.sty
+Package: iftex 2013/04/04 v0.2 Provides if(tex) conditional for PDFTeX, XeTeX, 
+and LuaTeX
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00AD (decimal 173)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0100 (decimal 256)
+   defining Unicode char U+0101 (decimal 257)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+0108 (decimal 264)
+   defining Unicode char U+0109 (decimal 265)
+   defining Unicode char U+010A (decimal 266)
+   defining Unicode char U+010B (decimal 267)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0112 (decimal 274)
+   defining Unicode char U+0113 (decimal 275)
+   defining Unicode char U+0114 (decimal 276)
+   defining Unicode char U+0115 (decimal 277)
+   defining Unicode char U+0116 (decimal 278)
+   defining Unicode char U+0117 (decimal 279)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011C (decimal 284)
+   defining Unicode char U+011D (decimal 285)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0120 (decimal 288)
+   defining Unicode char U+0121 (decimal 289)
+   defining Unicode char U+0122 (decimal 290)
+   defining Unicode char U+0123 (decimal 291)
+   defining Unicode char U+0124 (decimal 292)
+   defining Unicode char U+0125 (decimal 293)
+   defining Unicode char U+0128 (decimal 296)
+   defining Unicode char U+0129 (decimal 297)
+   defining Unicode char U+012A (decimal 298)
+   defining Unicode char U+012B (decimal 299)
+   defining Unicode char U+012C (decimal 300)
+   defining Unicode char U+012D (decimal 301)
+   defining Unicode char U+012E (decimal 302)
+   defining Unicode char U+012F (decimal 303)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0134 (decimal 308)
+   defining Unicode char U+0135 (decimal 309)
+   defining Unicode char U+0136 (decimal 310)
+   defining Unicode char U+0137 (decimal 311)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013B (decimal 315)
+   defining Unicode char U+013C (decimal 316)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0145 (decimal 325)
+   defining Unicode char U+0146 (decimal 326)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+014C (decimal 332)
+   defining Unicode char U+014D (decimal 333)
+   defining Unicode char U+014E (decimal 334)
+   defining Unicode char U+014F (decimal 335)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0156 (decimal 342)
+   defining Unicode char U+0157 (decimal 343)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015C (decimal 348)
+   defining Unicode char U+015D (decimal 349)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+0168 (decimal 360)
+   defining Unicode char U+0169 (decimal 361)
+   defining Unicode char U+016A (decimal 362)
+   defining Unicode char U+016B (decimal 363)
+   defining Unicode char U+016C (decimal 364)
+   defining Unicode char U+016D (decimal 365)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0172 (decimal 370)
+   defining Unicode char U+0173 (decimal 371)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+01CD (decimal 461)
+   defining Unicode char U+01CE (decimal 462)
+   defining Unicode char U+01CF (decimal 463)
+   defining Unicode char U+01D0 (decimal 464)
+   defining Unicode char U+01D1 (decimal 465)
+   defining Unicode char U+01D2 (decimal 466)
+   defining Unicode char U+01D3 (decimal 467)
+   defining Unicode char U+01D4 (decimal 468)
+   defining Unicode char U+01E2 (decimal 482)
+   defining Unicode char U+01E3 (decimal 483)
+   defining Unicode char U+01E6 (decimal 486)
+   defining Unicode char U+01E7 (decimal 487)
+   defining Unicode char U+01E8 (decimal 488)
+   defining Unicode char U+01E9 (decimal 489)
+   defining Unicode char U+01EA (decimal 490)
+   defining Unicode char U+01EB (decimal 491)
+   defining Unicode char U+01F0 (decimal 496)
+   defining Unicode char U+01F4 (decimal 500)
+   defining Unicode char U+01F5 (decimal 501)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+0232 (decimal 562)
+   defining Unicode char U+0233 (decimal 563)
+   defining Unicode char U+1E02 (decimal 7682)
+   defining Unicode char U+1E03 (decimal 7683)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2010 (decimal 8208)
+   defining Unicode char U+2011 (decimal 8209)
+   defining Unicode char U+2012 (decimal 8210)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2015 (decimal 8213)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+   defining Unicode char U+1E20 (decimal 7712)
+   defining Unicode char U+1E21 (decimal 7713)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AD (decimal 173)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+   defining Unicode char U+00A0 (decimal 160)
+
+(/usr/share/texlive/texmf-dist/tex/latex/cmap/cmap.sty
+Package: cmap 2008/03/06 v1.0h CMap support: searchable PDF
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2017/02/22 v2.0g Standard LaTeX package
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2017/02/22 v2.0g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+)<<t1.cmap>>)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/11/05 v2.16a AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen103
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen104
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count88
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count89
+\leftroot@=\count90
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count91
+\DOTSCASE@=\count92
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count93
+\c@MaxMatrixCols=\count94
+\dotsspace@=\muskip10
+\c@parentequation=\count95
+\dspbrk@lvl=\count96
+\tag@help=\toks17
+\row@=\count97
+\column@=\count98
+\maxfields@=\count99
+\andhelp@=\toks18
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks19
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2016/04/23 3.9r The Babel package
+
+
+! Package babel Error: You haven't specified a language option.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.343 ...ry to proceed from here, type x to quit.}
+                                                  
+You need to specify a language, either as a global option
+or as an optional argument to the \usepackage command;
+You shouldn't try to proceed from here, type x to quit.
+
+) (/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fncychap/fncychap.sty
+Package: fncychap 2007/07/30 v1.34 LaTeX package (Revised chapters)
+\RW=\skip46
+\mylen=\skip47
+\myhi=\skip48
+\px=\skip49
+\py=\skip50
+\pyy=\skip51
+\pxx=\skip52
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip53
+\LTright=\skip54
+\LTpre=\skip55
+\LTpost=\skip56
+\LTchunksize=\count100
+\LTcapwidth=\dimen112
+\LT@head=\box28
+\LT@firsthead=\box29
+\LT@foot=\box30
+\LT@lastfoot=\box31
+\LT@cols=\count101
+\LT@rows=\count102
+\c@LT@tables=\count103
+\c@LT@chunks=\count104
+\LT@p@ftn=\toks21
+) (./sphinx.sty
+Package: sphinx 2010/01/15 LaTeX package (Sphinx markup)
+
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2016/09/06 3.8 Extensive control of page headers and footers
+\fancy@headwidth=\skip57
+\f@ncyO@elh=\skip58
+\f@ncyO@erh=\skip59
+\f@ncyO@olh=\skip60
+\f@ncyO@orh=\skip61
+\f@ncyO@elf=\skip62
+\f@ncyO@erf=\skip63
+\f@ncyO@olf=\skip64
+\f@ncyO@orf=\skip65
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2017/02/22 v2.0g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.dfu
+File: ts1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AC (decimal 172)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B1 (decimal 177)
+   defining Unicode char U+00B2 (decimal 178)
+   defining Unicode char U+00B3 (decimal 179)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+02C7 (decimal 711)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+02DD (decimal 733)
+   defining Unicode char U+0E3F (decimal 3647)
+   defining Unicode char U+2016 (decimal 8214)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+203B (decimal 8251)
+   defining Unicode char U+203D (decimal 8253)
+   defining Unicode char U+2044 (decimal 8260)
+   defining Unicode char U+204E (decimal 8270)
+   defining Unicode char U+2052 (decimal 8274)
+   defining Unicode char U+20A1 (decimal 8353)
+   defining Unicode char U+20A4 (decimal 8356)
+   defining Unicode char U+20A6 (decimal 8358)
+   defining Unicode char U+20A9 (decimal 8361)
+   defining Unicode char U+20AB (decimal 8363)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+20B1 (decimal 8369)
+   defining Unicode char U+2103 (decimal 8451)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2117 (decimal 8471)
+   defining Unicode char U+211E (decimal 8478)
+   defining Unicode char U+2120 (decimal 8480)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+2127 (decimal 8487)
+   defining Unicode char U+212E (decimal 8494)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2193 (decimal 8595)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2422 (decimal 9250)
+   defining Unicode char U+25E6 (decimal 9702)
+   defining Unicode char U+25EF (decimal 9711)
+   defining Unicode char U+266A (decimal 9834)
+))
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancybox/fancybox.sty
+Package: fancybox 2010/05/15 1.4
+
+Style option: `fancybox' v1.4 <2010/05/15> (tvz)
+\@fancybox=\box32
+\shadowsize=\dimen113
+\@Sbox=\box33
+\do@VerbBox=\toks22
+\the@fancyput=\toks23
+\this@fancyput=\toks24
+\EndVerbatimTokens=\toks25
+\Verbatim@Outfile=\write3
+\Verbatim@Infile=\read1
+) (/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
+\ttl@box=\box34
+\beforetitleunit=\skip66
+\aftertitleunit=\skip67
+\ttl@plus=\dimen114
+\ttl@minus=\dimen115
+\ttl@toksa=\toks26
+\titlewidth=\dimen116
+\titlewidthlast=\dimen117
+\titlewidthfirst=\dimen118
+)
+(./tabulary.sty
+Package: tabulary 2008/12/01 v0.9 tabulary package (DPC)
+ (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
+\col@sep=\dimen119
+\extrarowheight=\dimen120
+\NC@list=\toks27
+\extratabsurround=\skip68
+\backup@length=\skip69
+)
+\TY@count=\count105
+\TY@linewidth=\dimen121
+\tymin=\dimen122
+\tymax=\dimen123
+\TY@tablewidth=\dimen124
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty
+Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
+)
+(/usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip70
+\fb@frw=\dimen125
+\fb@frh=\dimen126
+\FrameRule=\dimen127
+\FrameSep=\dimen128
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count106
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2008/02/07
+
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz) (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks28
+)
+\FV@CodeLineNo=\count107
+\FV@InFile=\read2
+\FV@TabBox=\box35
+\c@FancyVerbLine=\count108
+\FV@StepNumber=\count109
+\FV@OutFile=\write4
+) (/usr/share/texlive/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box36
+)
+(/usr/share/texlive/texmf-dist/tex/latex/mdwtools/footnote.sty
+Package: footnote 1997/01/28 1.13 Save footnotes around boxes
+\fn@notes=\box37
+\fn@width=\dimen129
+)
+(/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen130
+\WF@size=\dimen131
+\c@WF@wrappedlines=\count110
+\WF@box=\box38
+\WF@everypar=\toks29
+Package: wrapfig 2003/01/31  v 3.6
+)
+(/usr/share/texlive/texmf-dist/tex/latex/parskip/parskip.sty
+Package: parskip 2001/04/09 non-zero parskip adjustments
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/alltt.sty
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
+(/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count111
+\float@exts=\toks30
+\float@box=\box39
+\@float@everytoks=\toks31
+\@floatcapt=\box40
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/10/09 v1.0u Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+)
+\Gin@req@height=\dimen132
+\Gin@req@width=\dimen133
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftex/pdfcolor.tex)
+\sphinxcontinuationbox=\box41
+\sphinxvisiblespacebox=\box42
+\sphinxshadowsep=\skip71
+\sphinxshadowsize=\skip72
+\sphinxshadowrule=\skip73
+\py@argswidth=\skip74
+\lineblockindentation=\skip75
+\spx@image@box=\box43
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2016/06/24 v6.83q Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen134
+\Hy@linkcounter=\count112
+\Hy@pagecounter=\count113
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2016/06/24 v6.83q Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count114
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Option `unicode' set `true' on input line 4362.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2016/06/24 v6.83q Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 4362.
+Package hyperref Info: Option `breaklinks' set `true' on input line 4362.
+Package hyperref Info: Hyper figures OFF on input line 4486.
+Package hyperref Info: Link nesting OFF on input line 4491.
+Package hyperref Info: Hyper index ON on input line 4494.
+Package hyperref Info: Plain pages OFF on input line 4501.
+Package hyperref Info: Backreferencing OFF on input line 4506.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4735.
+\c@Hy@tempcnt=\count115
+
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5088.
+\XeTeXLinkMargin=\dimen135
+\Fld@menulength=\count116
+\Field@Width=\dimen136
+\Fld@charsize=\dimen137
+Package hyperref Info: Hyper figures OFF on input line 6342.
+Package hyperref Info: Link nesting OFF on input line 6347.
+Package hyperref Info: Hyper index ON on input line 6350.
+Package hyperref Info: backreferencing OFF on input line 6357.
+Package hyperref Info: Link coloring ON on input line 6360.
+Package hyperref Info: Link coloring with OCG OFF on input line 6367.
+Package hyperref Info: PDF/A mode OFF on input line 6372.
+LaTeX Info: Redefining \ref on input line 6412.
+LaTeX Info: Redefining \pageref on input line 6416.
+\Hy@abspage=\count117
+\c@Item=\count118
+\c@Hfootnote=\count119
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2016/06/24 v6.83q Hyperref driver for pdfTeX
+\Fld@listcount=\count120
+\c@bookmark@seq@number=\count121
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip76
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/hypcap.sty
+Package: hypcap 2016/05/16 v1.12 Adjusting the anchors of captions (HO)
+)
+\DUlineblockindent=\skip77
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/newfloat.sty
+Package: newfloat 2015/09/17 v1.1-109 Defining new floating environments (AR)
+)
+Package newfloat Info: New float `literal-block' with options `' on input line 
+874.
+\c@literal-block=\count122
+Package newfloat Info: float type `literal-block'=4 on input line 874.
+
+(/usr/share/texlive/texmf-dist/tex/latex/capt-of/capt-of.sty
+Package: capt-of 2009/12/29 v0.2 standard captions outside of floats
+)
+(/usr/share/texlive/texmf-dist/tex/latex/needspace/needspace.sty
+Package: needspace 2010/09/12 v1.3d reserve vertical space
+)
+** (sphinx) defining (legacy) text style macros without \sphinx prefix
+** if clashes with packages, set latex_keep_old_macro_names=False in conf.py
+) (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
+\multirow@colwidth=\skip78
+\multirow@cntb=\count123
+\multirow@dima=\skip79
+\bigstrutjot=\dimen138
+)
+(/usr/share/texlive/texmf-dist/tex/latex/eqparbox/eqparbox.sty
+Package: eqparbox 2013/03/15 v4.0 Create equal-widthed boxes
+\eqp@tempdima=\skip80
+\eqp@tempdimb=\skip81
+\eqp@tabular@box=\box44
+\eqp@list@box=\box45
+\eqp@list@indent=\skip82
+
+(/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+)))
+! Undefined control sequence.
+l.24 \addto
+           \captionsspanish{\renewcommand{\contentsname}{Basic Concepts}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.24 \addto\captionsspanish
+                           {\renewcommand{\contentsname}{Basic Concepts}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.26 \addto
+           \captionsspanish{\renewcommand{\figurename}{Figura }}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.26 \addto\captionsspanish
+                           {\renewcommand{\figurename}{Figura }}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.27 \addto
+           \captionsspanish{\renewcommand{\tablename}{Tabla }}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.27 \addto\captionsspanish
+                           {\renewcommand{\tablename}{Tabla }}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.30 \addto
+           \extrasspanish{\def\pageautorefname{página}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\@indexfile=\write5
+\openout5 = `IvozProvider.idx'.
+
+Writing index file IvozProvider.idx
+No file IvozProvider.aux.
+\openout1 = `IvozProvider.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 145.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 145.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 145.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+)
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count124
+\scratchdimen=\dimen139
+\scratchbox=\box46
+\nofMPsegments=\count125
+\nofMParguments=\count126
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count127
+\MPscratchDim=\dimen140
+\MPnumerator=\count128
+\makeMPintoPDFobject=\count129
+\everyMPtoPDFconversion=\toks33
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\AtBeginShipoutBox=\box47
+Package hyperref Info: Link coloring ON on input line 145.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count130
+)
+LaTeX Info: Redefining \ref on input line 145.
+LaTeX Info: Redefining \pageref on input line 145.
+LaTeX Info: Redefining \nameref on input line 145.
+\@outlinefile=\write6
+\openout6 = `IvozProvider.out'.
+
+
+! Undefined control sequence.
+l.146 \shorthandoff
+                   {"}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Try loading font information for T1+phv on input line 148.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 148.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 148.
+LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <10> not available
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 148.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 148.
+LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <17.28> not available
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 148.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <17.28> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 148.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 148.
+<<ot1.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
+LaTeX Font Info:    Try loading font information for U+msa on input line 148.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 148.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 148.
+pdfTeX warning (ext4): destination with the same identifier (name{page.a}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.148 \tableofcontents
+                       [1] [2
+
+]
+\tf@toc=\write7
+\openout7 = `IvozProvider.toc'.
+
+ [1
+
+] [2
+
+]
+Chapter 1.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 153.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 153.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 153.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 164.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+
+LaTeX Warning: Hyper reference `index:concepts' on page 1 undefined on input li
+ne 165.
+
+
+LaTeX Warning: Hyper reference `index:installation' on page 1 undefined on inpu
+t line 168.
+
+
+LaTeX Warning: Hyper reference `index:advanced' on page 1 undefined on input li
+ne 171.
+
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 171.
+
+LaTeX Warning: Hyper reference `index:security' on page 1 undefined on input li
+ne 174.
+
+
+LaTeX Warning: Hyper reference `basics/intro/what_is_ivozprovider:voip' on page
+ 1 undefined on input line 202.
+
+
+LaTeX Warning: Hyper reference `basics/intro/what_is_ivozprovider:multilevel' o
+n page 1 undefined on input line 202.
+
+
+LaTeX Warning: Hyper reference `basics/intro/what_is_ivozprovider:operator-orie
+nted' on page 1 undefined on input line 202.
+
+
+LaTeX Warning: Hyper reference `basics/intro/what_is_ivozprovider:exposed' on p
+age 1 undefined on input line 202.
+
+[1
+
+] <operator_levels1.png, id=54, 660.4675pt x 430.60875pt>
+File: operator_levels1.png Graphic file (type png)
+
+<use operator_levels1.png>
+Package pdftex.def Info: operator_levels1.png used on input line 265.
+(pdftex.def)             Requested size: 660.46588pt x 430.60768pt.
+File: operator_levels1.png Graphic file (type png)
+ <use operator_levels1.png>
+Package pdftex.def Info: operator_levels1.png used on input line 265.
+(pdftex.def)             Requested size: 469.755pt x 306.2797pt.
+ [2]
+
+LaTeX Warning: Hyper reference `basics/operation_roles/index:operation-roles' o
+n page 3 undefined on input line 267.
+
+[3 <./operator_levels1.png>] [4]
+<ivozprovider_logos.png, id=76, 490.83376pt x 591.71063pt>
+File: ivozprovider_logos.png Graphic file (type png)
+
+<use ivozprovider_logos.png>
+Package pdftex.def Info: ivozprovider_logos.png used on input line 404.
+(pdftex.def)             Requested size: 490.83255pt x 591.70918pt.
+File: ivozprovider_logos.png Graphic file (type png)
+ <use ivozprovider_logos.png>
+Package pdftex.def Info: ivozprovider_logos.png used on input line 404.
+(pdftex.def)             Requested size: 469.755pt x 566.32028pt.
+ [5 <./ivozprovider_logos.png>]
+
+LaTeX Warning: Hyper reference `basics/architecture/index:architecture' on page
+ 6 undefined on input line 410.
+
+[6]
+Chapter 2.
+<flows1.png, id=88, 2626.81375pt x 2154.0475pt>
+File: flows1.png Graphic file (type png)
+ <use flows1.png>
+Package pdftex.def Info: flows1.png used on input line 446.
+(pdftex.def)             Requested size: 2626.80737pt x 2154.04227pt.
+File: flows1.png Graphic file (type png)
+
+<use flows1.png>
+Package pdftex.def Info: flows1.png used on input line 446.
+(pdftex.def)             Requested size: 469.755pt x 385.18098pt.
+ <conceptual1.png, id=89, 2618.78375pt x 1728.4575pt>
+File: conceptual1.png Graphic file (type png)
+
+<use conceptual1.png>
+Package pdftex.def Info: conceptual1.png used on input line 450.
+(pdftex.def)             Requested size: 2618.77739pt x 1728.4533pt.
+File: conceptual1.png Graphic file (type png)
+ <use conceptual1.png>
+Package pdftex.def Info: conceptual1.png used on input line 450.
+(pdftex.def)             Requested size: 469.755pt x 310.02759pt.
+ [7
+
+ <./flows1.png>] [8 <./conceptual1.png>]
+
+LaTeX Warning: Hyper reference `basics/operation_roles/index:operation-roles' o
+n page 9 undefined on input line 515.
+
+[9] [10]
+Chapter 3.
+
+LaTeX Warning: Hyper reference `basics/installation/debian_install:installing-p
+rofile-package' on page 11 undefined on input line 577.
+
+
+LaTeX Warning: Hyper reference `basics/installation/cd_install:automatic-iso-cd
+-image' on page 11 undefined on input line 586.
+
+[11
+
+]
+
+LaTeX Warning: Hyper reference `basics/installation/cd_install:automatic-iso-cd
+-image' on page 12 undefined on input line 620.
+
+
+LaTeX Warning: Hyper reference `basics/installation/install_types:standalone-in
+stall' on page 12 undefined on input line 637.
+
+
+LaTeX Warning: Hyper reference `basics/installation/install_types:distributed-i
+nstall' on page 12 undefined on input line 637.
+
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 644.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+
+LaTeX Warning: Hyper reference `basics/installation/install_types:standalone-in
+stall' on page 12 undefined on input line 662.
+
+LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 662.
+[12]
+
+LaTeX Warning: Hyper reference `basics/installation/install_types:distributed-i
+nstall' on page 13 undefined on input line 671.
+
+<installcd-intro.png, id=152, 483.30562pt x 360.59718pt>
+File: installcd-intro.png Graphic file (type png)
+
+<use installcd-intro.png>
+Package pdftex.def Info: installcd-intro.png used on input line 742.
+(pdftex.def)             Requested size: 483.30444pt x 360.5963pt.
+File: installcd-intro.png Graphic file (type png)
+ <use installcd-intro.png>
+Package pdftex.def Info: installcd-intro.png used on input line 742.
+(pdftex.def)             Requested size: 469.755pt x 350.49963pt.
+ [13]
+<installcd-language.png, id=159, 603.75563pt x 451.6875pt>
+File: installcd-language.png Graphic file (type png)
+
+<use installcd-language.png>
+Package pdftex.def Info: installcd-language.png used on input line 749.
+(pdftex.def)             Requested size: 603.75415pt x 451.68639pt.
+File: installcd-language.png Graphic file (type png)
+ <use installcd-language.png>
+Package pdftex.def Info: installcd-language.png used on input line 749.
+(pdftex.def)             Requested size: 469.755pt x 351.43951pt.
+ [14 <./installcd-intro.png (PNG copy)>] <installcd-location.png, id=165, 603.7
+5563pt x 450.18187pt>
+File: installcd-location.png Graphic file (type png)
+
+<use installcd-location.png>
+Package pdftex.def Info: installcd-location.png used on input line 756.
+(pdftex.def)             Requested size: 603.75415pt x 450.18077pt.
+File: installcd-location.png Graphic file (type png)
+ <use installcd-location.png>
+Package pdftex.def Info: installcd-location.png used on input line 756.
+(pdftex.def)             Requested size: 469.755pt x 350.26805pt.
+ [15 <./installcd-language.png (PNG copy)>] <installcd-clock.png, id=170, 603.7
+5563pt x 452.4403pt>
+File: installcd-clock.png Graphic file (type png)
+
+<use installcd-clock.png>
+Package pdftex.def Info: installcd-clock.png used on input line 763.
+(pdftex.def)             Requested size: 603.75415pt x 452.43921pt.
+File: installcd-clock.png Graphic file (type png)
+ <use installcd-clock.png>
+Package pdftex.def Info: installcd-clock.png used on input line 763.
+(pdftex.def)             Requested size: 469.755pt x 352.02525pt.
+ [16 <./installcd-location.png (PNG copy)>] <installcd-ivozmenu.png, id=175, 60
+3.75563pt x 449.42906pt>
+File: installcd-ivozmenu.png Graphic file (type png)
+
+<use installcd-ivozmenu.png>
+Package pdftex.def Info: installcd-ivozmenu.png used on input line 774.
+(pdftex.def)             Requested size: 603.75415pt x 449.42795pt.
+File: installcd-ivozmenu.png Graphic file (type png)
+ <use installcd-ivozmenu.png>
+Package pdftex.def Info: installcd-ivozmenu.png used on input line 774.
+(pdftex.def)             Requested size: 469.755pt x 349.68231pt.
+ [17 <./installcd-clock.png (PNG copy)>]
+
+LaTeX Warning: Hyper reference `basics/installation/requirements:minimum-requir
+ements' on page 18 undefined on input line 776.
+
+<installcd-proxyaddr.png, id=180, 603.75563pt x 448.67625pt>
+File: installcd-proxyaddr.png Graphic file (type png)
+
+<use installcd-proxyaddr.png>
+Package pdftex.def Info: installcd-proxyaddr.png used on input line 780.
+(pdftex.def)             Requested size: 603.75415pt x 448.67516pt.
+File: installcd-proxyaddr.png Graphic file (type png)
+ <use installcd-proxyaddr.png>
+Package pdftex.def Info: installcd-proxyaddr.png used on input line 780.
+(pdftex.def)             Requested size: 469.755pt x 349.09659pt.
+ [18 <./installcd-ivozmenu.png (PNG copy)>]
+<installcd-mysql.png, id=185, 603.75563pt x 453.94594pt>
+File: installcd-mysql.png Graphic file (type png)
+
+<use installcd-mysql.png>
+Package pdftex.def Info: installcd-mysql.png used on input line 788.
+(pdftex.def)             Requested size: 603.75415pt x 453.94482pt.
+File: installcd-mysql.png Graphic file (type png)
+ <use installcd-mysql.png>
+Package pdftex.def Info: installcd-mysql.png used on input line 788.
+(pdftex.def)             Requested size: 469.755pt x 353.19672pt.
+ [19 <./installcd-proxyaddr.png (PNG copy)>] <installcd-portallang.png, id=190,
+ 603.75563pt x 447.17062pt>
+File: installcd-portallang.png Graphic file (type png)
+
+<use installcd-portallang.png>
+Package pdftex.def Info: installcd-portallang.png used on input line 792.
+(pdftex.def)             Requested size: 603.75415pt x 447.16953pt.
+File: installcd-portallang.png Graphic file (type png)
+ <use installcd-portallang.png>
+Package pdftex.def Info: installcd-portallang.png used on input line 792.
+(pdftex.def)             Requested size: 469.755pt x 347.92513pt.
+ [20 <./installcd-mysql.png (PNG copy)>]
+<installcd-warning.png, id=196, 603.75563pt x 453.19313pt>
+File: installcd-warning.png Graphic file (type png)
+
+<use installcd-warning.png>
+Package pdftex.def Info: installcd-warning.png used on input line 798.
+(pdftex.def)             Requested size: 603.75415pt x 453.19202pt.
+File: installcd-warning.png Graphic file (type png)
+ <use installcd-warning.png>
+Package pdftex.def Info: installcd-warning.png used on input line 798.
+(pdftex.def)             Requested size: 469.755pt x 352.611pt.
+ [21 <./installcd-portallang.png (PNG copy)>] <installcd-grub.png, id=201, 603.
+75563pt x 452.4403pt>
+File: installcd-grub.png Graphic file (type png)
+
+<use installcd-grub.png>
+Package pdftex.def Info: installcd-grub.png used on input line 802.
+(pdftex.def)             Requested size: 603.75415pt x 452.43921pt.
+File: installcd-grub.png Graphic file (type png)
+ <use installcd-grub.png>
+Package pdftex.def Info: installcd-grub.png used on input line 802.
+(pdftex.def)             Requested size: 469.755pt x 352.02525pt.
+ [22 <./installcd-warning.png (PNG copy)>] [23 <./installcd-grub.png (PNG copy)
+>]
+LaTeX Font Info:    Try loading font information for TS1+pcr on input line 830.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1pcr.fd
+File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
+) [24]
+Chapter 4.
+<operator_levels3.png, id=217, 660.4675pt x 430.60875pt>
+File: operator_levels3.png Graphic file (type png)
+
+<use operator_levels3.png>
+Package pdftex.def Info: operator_levels3.png used on input line 840.
+(pdftex.def)             Requested size: 660.46588pt x 430.60768pt.
+File: operator_levels3.png Graphic file (type png)
+ <use operator_levels3.png>
+Package pdftex.def Info: operator_levels3.png used on input line 840.
+(pdftex.def)             Requested size: 469.755pt x 306.2797pt.
+ [25
+
+ <./operator_levels3.png>] [26] [27] [28
+
+]
+Chapter 5.
+
+LaTeX Warning: Hyper reference `basics/operation_roles/index:operation-roles' o
+n page 29 undefined on input line 1016.
+
+<emular_marca_prev1.png, id=242, 311.1625pt x 103.38625pt>
+File: emular_marca_prev1.png Graphic file (type png)
+
+<use emular_marca_prev1.png>
+Package pdftex.def Info: emular_marca_prev1.png used on input line 1042.
+(pdftex.def)             Requested size: 311.16174pt x 103.38599pt.
+
+<emular_marca1.png, id=243, 474.77374pt x 174.6525pt>
+File: emular_marca1.png Graphic file (type png)
+ <use emular_marca1.png>
+Package pdftex.def Info: emular_marca1.png used on input line 1049.
+(pdftex.def)             Requested size: 474.77258pt x 174.65207pt.
+File: emular_marca1.png Graphic file (type png)
+
+<use emular_marca1.png>
+Package pdftex.def Info: emular_marca1.png used on input line 1049.
+(pdftex.def)             Requested size: 469.755pt x 172.81323pt.
+ [29 <./emular_marca_prev1.png>]
+<emular_marca21.png, id=251, 717.68124pt x 237.88875pt>
+File: emular_marca21.png Graphic file (type png)
+
+<use emular_marca21.png>
+Package pdftex.def Info: emular_marca21.png used on input line 1056.
+(pdftex.def)             Requested size: 717.67949pt x 237.88815pt.
+File: emular_marca21.png Graphic file (type png)
+ <use emular_marca21.png>
+Package pdftex.def Info: emular_marca21.png used on input line 1056.
+(pdftex.def)             Requested size: 469.755pt x 155.71118pt.
+
+<emular_marca31.png, id=252, 513.92pt x 171.64125pt>
+File: emular_marca31.png Graphic file (type png)
+ <use emular_marca31.png>
+Package pdftex.def Info: emular_marca31.png used on input line 1063.
+(pdftex.def)             Requested size: 513.91873pt x 171.64081pt.
+File: emular_marca31.png Graphic file (type png)
+
+<use emular_marca31.png>
+Package pdftex.def Info: emular_marca31.png used on input line 1063.
+(pdftex.def)             Requested size: 469.755pt x 156.89304pt.
+ <emular_marca41.png, id=253, 266.9975pt x 110.4125pt>
+File: emular_marca41.png Graphic file (type png)
+
+<use emular_marca41.png>
+Package pdftex.def Info: emular_marca41.png used on input line 1070.
+(pdftex.def)             Requested size: 266.99683pt x 110.41222pt.
+ [30 <./emular_marca1.png> <./emular_marca21.png> <./emular_marca31.png>] <comp
+any_list1.png, id=261, 1072.005pt x 193.72375pt>
+File: company_list1.png Graphic file (type png)
+
+<use company_list1.png>
+Package pdftex.def Info: company_list1.png used on input line 1088.
+(pdftex.def)             Requested size: 1072.0024pt x 193.72327pt.
+File: company_list1.png Graphic file (type png)
+ <use company_list1.png>
+Package pdftex.def Info: company_list1.png used on input line 1088.
+(pdftex.def)             Requested size: 469.755pt x 84.8899pt.
+
+
+LaTeX Warning: Hyper reference `platform/proxy_users:proxyusers' on page 31 und
+efined on input line 1095.
+
+<set_domain1.png, id=262, 708.6475pt x 354.32375pt>
+File: set_domain1.png Graphic file (type png)
+ <use set_domain1.png>
+Package pdftex.def Info: set_domain1.png used on input line 1103.
+(pdftex.def)             Requested size: 708.64578pt x 354.32288pt.
+File: set_domain1.png Graphic file (type png)
+
+<use set_domain1.png>
+Package pdftex.def Info: set_domain1.png used on input line 1103.
+(pdftex.def)             Requested size: 469.755pt x 234.88164pt.
+ [31 <./emular_marca41.png> <./company_list1.png>]
+
+LaTeX Warning: Hyper reference `platform/domains:god-sipdomains' on page 32 und
+efined on input line 1105.
+
+<domain_list1.png, id=270, 1045.9075pt x 129.48375pt>
+File: domain_list1.png Graphic file (type png)
+ <use domain_list1.png>
+Package pdftex.def Info: domain_list1.png used on input line 1107.
+(pdftex.def)             Requested size: 1045.90495pt x 129.48341pt.
+File: domain_list1.png Graphic file (type png)
+
+<use domain_list1.png>
+Package pdftex.def Info: domain_list1.png used on input line 1107.
+(pdftex.def)             Requested size: 469.755pt x 58.1565pt.
+
+
+LaTeX Warning: Hyper reference `getting_started/internal_calls/brand_portal:dns
+hack' on page 32 undefined on input line 1110.
+
+
+LaTeX Warning: Hyper reference `platform/proxy_users:proxyusers' on page 32 und
+efined on input line 1113.
+
+<dominio_bien_configurado1.png, id=271, 633.36626pt x 162.6075pt>
+File: dominio_bien_configurado1.png Graphic file (type png)
+
+<use dominio_bien_configurado1.png>
+Package pdftex.def Info: dominio_bien_configurado1.png used on input line 1115.
+
+(pdftex.def)             Requested size: 633.36472pt x 162.6071pt.
+File: dominio_bien_configurado1.png Graphic file (type png)
+ <use dominio_bien_configurado1.png>
+Package pdftex.def Info: dominio_bien_configurado1.png used on input line 1115.
+
+(pdftex.def)             Requested size: 469.755pt x 120.60555pt.
+
+[32 <./set_domain1.png> <./domain_list1.png> <./dominio_bien_configurado1.png>]
+<fake_domain1.png, id=279, 760.8425pt x 353.32pt>
+File: fake_domain1.png Graphic file (type png)
+ <use fake_domain1.png>
+Package pdftex.def Info: fake_domain1.png used on input line 1128.
+(pdftex.def)             Requested size: 760.84064pt x 353.31914pt.
+File: fake_domain1.png Graphic file (type png)
+
+<use fake_domain1.png>
+Package pdftex.def Info: fake_domain1.png used on input line 1128.
+(pdftex.def)             Requested size: 469.755pt x 218.1504pt.
+ <fake_domain21.png, id=280, 710.655pt x 73.27374pt>
+File: fake_domain21.png Graphic file (type png)
+
+<use fake_domain21.png>
+Package pdftex.def Info: fake_domain21.png used on input line 1132.
+(pdftex.def)             Requested size: 710.65326pt x 73.27354pt.
+File: fake_domain21.png Graphic file (type png)
+ <use fake_domain21.png>
+Package pdftex.def Info: fake_domain21.png used on input line 1132.
+(pdftex.def)             Requested size: 469.755pt x 48.43683pt.
+
+<emulate_company1.png, id=281, 444.66125pt x 554.07pt>
+File: emulate_company1.png Graphic file (type png)
+
+<use emulate_company1.png>
+Package pdftex.def Info: emulate_company1.png used on input line 1143.
+(pdftex.def)             Requested size: 444.66016pt x 554.06865pt.
+ [33 <./fake_domain1.png> <./fake_domain21.png>]
+<emulate_company21.png, id=288, 691.58376pt x 198.7425pt>
+File: emulate_company21.png Graphic file (type png)
+
+<use emulate_company21.png>
+Package pdftex.def Info: emulate_company21.png used on input line 1145.
+(pdftex.def)             Requested size: 691.58206pt x 198.742pt.
+File: emulate_company21.png Graphic file (type png)
+ <use emulate_company21.png>
+Package pdftex.def Info: emulate_company21.png used on input line 1145.
+(pdftex.def)             Requested size: 469.755pt x 134.99754pt.
+ [34 <./emulate_company1.png>] <terminals1.png, id=294, 972.63374pt x 113.42375
+pt>
+File: terminals1.png Graphic file (type png)
+
+<use terminals1.png>
+Package pdftex.def Info: terminals1.png used on input line 1170.
+(pdftex.def)             Requested size: 972.63136pt x 113.42346pt.
+File: terminals1.png Graphic file (type png)
+ <use terminals1.png>
+Package pdftex.def Info: terminals1.png used on input line 1170.
+(pdftex.def)             Requested size: 469.755pt x 54.78026pt.
+
+<extensions1.png, id=295, 974.64125pt x 112.42pt>
+File: extensions1.png Graphic file (type png)
+ <use extensions1.png>
+Package pdftex.def Info: extensions1.png used on input line 1177.
+(pdftex.def)             Requested size: 974.63887pt x 112.41972pt.
+File: extensions1.png Graphic file (type png)
+
+<use extensions1.png>
+Package pdftex.def Info: extensions1.png used on input line 1177.
+(pdftex.def)             Requested size: 469.755pt x 54.18398pt.
+ <users1.png, id=296, 1185.42876pt x 116.435pt>
+File: users1.png Graphic file (type png)
+
+<use users1.png>
+Package pdftex.def Info: users1.png used on input line 1186.
+(pdftex.def)             Requested size: 1185.42586pt x 116.43471pt.
+File: users1.png Graphic file (type png)
+ <use users1.png>
+Package pdftex.def Info: users1.png used on input line 1186.
+(pdftex.def)             Requested size: 469.755pt x 46.13966pt.
+ [35 <./emulate_company21.png> <./terminals1.png> <./extensions1.png>]
+
+LaTeX Warning: Hyper reference `getting_started/internal_calls/brand_portal:dns
+hack' on page 36 undefined on input line 1204.
+
+
+LaTeX Warning: Hyper reference `getting_started/internal_calls/brand_portal:dns
+hack' on page 36 undefined on input line 1217.
+
+
+LaTeX Warning: Hyper reference `getting_started/internal_calls/brand_portal:dns
+hack' on page 36 undefined on input line 1222.
+
+[36 <./users1.png>]
+Chapter 6.
+<transformations_section1.png, id=317, 310.15875pt x 265.99374pt>
+File: transformations_section1.png Graphic file (type png)
+
+<use transformations_section1.png>
+Package pdftex.def Info: transformations_section1.png used on input line 1243.
+(pdftex.def)             Requested size: 310.15799pt x 265.99309pt.
+
+
+LaTeX Warning: Hyper reference `brand/transformations/index:numeric-transformat
+ions' on page 37 undefined on input line 1245.
+
+[37
+
+ <./transformations_section1.png>]
+<peeringcontract_section1.png, id=325, 309.155pt x 230.8625pt>
+File: peeringcontract_section1.png Graphic file (type png)
+
+<use peeringcontract_section1.png>
+Package pdftex.def Info: peeringcontract_section1.png used on input line 1254.
+(pdftex.def)             Requested size: 309.15424pt x 230.86192pt.
+ [38 <./peeringcontract_section1.png>]
+<ddis_add1.png, id=341, 809.0225pt x 648.4225pt>
+File: ddis_add1.png Graphic file (type png)
+ <use ddis_add1.png>
+Package pdftex.def Info: ddis_add1.png used on input line 1314.
+(pdftex.def)             Requested size: 809.02054pt x 648.42091pt.
+File: ddis_add1.png Graphic file (type png)
+
+<use ddis_add1.png>
+Package pdftex.def Info: ddis_add1.png used on input line 1314.
+(pdftex.def)             Requested size: 469.755pt x 376.51076pt.
+
+
+LaTeX Warning: Hyper reference `company/ddis:ddis' on page 39 undefined on inpu
+t line 1316.
+
+
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 1314--1317
+| []|  [][]
+ []
+
+[39] [40 <./ddis_add1.png>]
+Chapter 7.
+<routing_patterns_default1.png, id=358, 704.98677pt x 250.81941pt>
+File: routing_patterns_default1.png Graphic file (type png)
+
+<use routing_patterns_default1.png>
+Package pdftex.def Info: routing_patterns_default1.png used on input line 1348.
+
+(pdftex.def)             Requested size: 704.98505pt x 250.81879pt.
+File: routing_patterns_default1.png Graphic file (type png)
+ <use routing_patterns_default1.png>
+Package pdftex.def Info: routing_patterns_default1.png used on input line 1348.
+
+(pdftex.def)             Requested size: 469.755pt x 167.1296pt.
+
+[41
+
+ <./routing_patterns_default1.png (PNG copy)>]
+
+LaTeX Warning: Hyper reference `brand/routing/outgoing_routing:outgoing-routing
+' on page 42 undefined on input line 1357.
+
+<routing_patterngroups_default1.png, id=367, 1009.7725pt x 405.515pt>
+File: routing_patterngroups_default1.png Graphic file (type png)
+
+<use routing_patterngroups_default1.png>
+Package pdftex.def Info: routing_patterngroups_default1.png used on input line 
+1363.
+(pdftex.def)             Requested size: 1009.77003pt x 405.51399pt.
+File: routing_patterngroups_default1.png Graphic file (type png)
+
+<use routing_patterngroups_default1.png>
+Package pdftex.def Info: routing_patterngroups_default1.png used on input line 
+1363.
+(pdftex.def)             Requested size: 469.755pt x 188.64914pt.
+
+<outgoing_routes_by_pattern1.png, id=368, 817.0525pt x 521.95pt>
+File: outgoing_routes_by_pattern1.png Graphic file (type png)
+
+<use outgoing_routes_by_pattern1.png>
+Package pdftex.def Info: outgoing_routes_by_pattern1.png used on input line 138
+3.
+(pdftex.def)             Requested size: 817.05052pt x 521.94872pt.
+File: outgoing_routes_by_pattern1.png Graphic file (type png)
+ <use outgoing_routes_by_pattern1.png>
+Package pdftex.def Info: outgoing_routes_by_pattern1.png used on input line 138
+3.
+(pdftex.def)             Requested size: 469.755pt x 300.09502pt.
+
+[42 <./routing_patterngroups_default1.png>]
+<outgoing_routes_by_patterngroup1.png, id=376, 810.02625pt x 518.93875pt>
+File: outgoing_routes_by_patterngroup1.png Graphic file (type png)
+
+<use outgoing_routes_by_patterngroup1.png>
+Package pdftex.def Info: outgoing_routes_by_patterngroup1.png used on input lin
+e 1387.
+(pdftex.def)             Requested size: 810.02426pt x 518.93748pt.
+File: outgoing_routes_by_patterngroup1.png Graphic file (type png)
+
+<use outgoing_routes_by_patterngroup1.png>
+Package pdftex.def Info: outgoing_routes_by_patterngroup1.png used on input lin
+e 1387.
+(pdftex.def)             Requested size: 469.755pt x 300.953pt.
+
+
+LaTeX Warning: Hyper reference `brand/routing/index:outgoing-call-routing' on p
+age 43 undefined on input line 1389.
+
+[43 <./outgoing_routes_by_pattern1.png> <./outgoing_routes_by_patterngroup1.png
+>] <ddi_out1.png, id=383, 807.015pt x 653.44125pt>
+File: ddi_out1.png Graphic file (type png)
+ <use ddi_out1.png>
+Package pdftex.def Info: ddi_out1.png used on input line 1398.
+(pdftex.def)             Requested size: 807.01303pt x 653.43965pt.
+File: ddi_out1.png Graphic file (type png)
+
+<use ddi_out1.png>
+Package pdftex.def Info: ddi_out1.png used on input line 1398.
+(pdftex.def)             Requested size: 469.755pt x 380.36217pt.
+
+
+LaTeX Warning: Hyper reference `getting_started/internal_calls/brand_portal:emu
+late-company' on page 44 undefined on input line 1400.
+
+
+LaTeX Warning: Hyper reference `basics/operation_roles/index:brand-responsibili
+ties' on page 44 undefined on input line 1411.
+
+[44 <./ddi_out1.png>]
+
+LaTeX Warning: Hyper reference `brand/billing/destination_rates:destination-rat
+es' on page 45 undefined on input line 1429.
+
+<destination_rate_new1.png, id=391, 580.99411pt x 201.22235pt>
+File: destination_rate_new1.png Graphic file (type png)
+
+<use destination_rate_new1.png>
+Package pdftex.def Info: destination_rate_new1.png used on input line 1433.
+(pdftex.def)             Requested size: 580.99269pt x 201.22185pt.
+File: destination_rate_new1.png Graphic file (type png)
+ <use destination_rate_new1.png>
+Package pdftex.def Info: destination_rate_new1.png used on input line 1433.
+(pdftex.def)             Requested size: 469.755pt x 162.70058pt.
+
+<destination_rate_add1.png, id=392, 571.0747pt x 264.28146pt>
+File: destination_rate_add1.png Graphic file (type png)
+
+<use destination_rate_add1.png>
+Package pdftex.def Info: destination_rate_add1.png used on input line 1437.
+(pdftex.def)             Requested size: 571.0733pt x 264.28082pt.
+File: destination_rate_add1.png Graphic file (type png)
+ <use destination_rate_add1.png>
+Package pdftex.def Info: destination_rate_add1.png used on input line 1437.
+(pdftex.def)             Requested size: 469.755pt x 217.3937pt.
+ [45 <./destination_rate_new1.png (PNG copy)>]
+<rating_plan_new1.png, id=399, 576.03441pt x 292.62265pt>
+File: rating_plan_new1.png Graphic file (type png)
+
+<use rating_plan_new1.png>
+Package pdftex.def Info: rating_plan_new1.png used on input line 1454.
+(pdftex.def)             Requested size: 576.03299pt x 292.62193pt.
+File: rating_plan_new1.png Graphic file (type png)
+ <use rating_plan_new1.png>
+Package pdftex.def Info: rating_plan_new1.png used on input line 1454.
+(pdftex.def)             Requested size: 469.755pt x 238.63046pt.
+
+<rating_plan_add1.png, id=400, 574.61736pt x 137.45471pt>
+File: rating_plan_add1.png Graphic file (type png)
+
+<use rating_plan_add1.png>
+Package pdftex.def Info: rating_plan_add1.png used on input line 1458.
+(pdftex.def)             Requested size: 574.61595pt x 137.45436pt.
+File: rating_plan_add1.png Graphic file (type png)
+ <use rating_plan_add1.png>
+Package pdftex.def Info: rating_plan_add1.png used on input line 1458.
+(pdftex.def)             Requested size: 469.755pt x 112.3738pt.
+ [46 <./destination_rate_add1.png (PNG copy)> <./rating_plan_new1.png (PNG copy
+)>]
+
+LaTeX Warning: Hyper reference `brand/transformations/index:e164' on page 47 un
+defined on input line 1473.
+
+<rating_plan_simulate1.png, id=407, 675.22853pt x 98.4856pt>
+File: rating_plan_simulate1.png Graphic file (type png)
+
+<use rating_plan_simulate1.png>
+Package pdftex.def Info: rating_plan_simulate1.png used on input line 1476.
+(pdftex.def)             Requested size: 675.22688pt x 98.48535pt.
+File: rating_plan_simulate1.png Graphic file (type png)
+ <use rating_plan_simulate1.png>
+Package pdftex.def Info: rating_plan_simulate1.png used on input line 1476.
+(pdftex.def)             Requested size: 469.755pt x 68.51566pt.
+
+<rating_plan_company1.png, id=408, 1133.23375pt x 230.8625pt>
+File: rating_plan_company1.png Graphic file (type png)
+
+<use rating_plan_company1.png>
+Package pdftex.def Info: rating_plan_company1.png used on input line 1485.
+(pdftex.def)             Requested size: 1133.23099pt x 230.86192pt.
+File: rating_plan_company1.png Graphic file (type png)
+ <use rating_plan_company1.png>
+Package pdftex.def Info: rating_plan_company1.png used on input line 1485.
+(pdftex.def)             Requested size: 469.755pt x 95.69695pt.
+
+<rating_plan_company21.png, id=409, 539.89941pt x 153.04236pt>
+File: rating_plan_company21.png Graphic file (type png)
+
+<use rating_plan_company21.png>
+Package pdftex.def Info: rating_plan_company21.png used on input line 1489.
+(pdftex.def)             Requested size: 539.89809pt x 153.04198pt.
+File: rating_plan_company21.png Graphic file (type png)
+ <use rating_plan_company21.png>
+Package pdftex.def Info: rating_plan_company21.png used on input line 1489.
+(pdftex.def)             Requested size: 469.755pt x 133.16444pt.
+ [47 <./rating_plan_add1.png (PNG copy)> <./rating_plan_simulate1.png (PNG copy
+)> <./rating_plan_company1.png>] [48 <./rating_plan_company21.png (PNG copy)>]
+Chapter 8.
+[49
+
+] <domain_list_local1.png, id=438, 944.52875pt x 75.28125pt>
+File: domain_list_local1.png Graphic file (type png)
+
+<use domain_list_local1.png>
+Package pdftex.def Info: domain_list_local1.png used on input line 1567.
+(pdftex.def)             Requested size: 944.52644pt x 75.28105pt.
+File: domain_list_local1.png Graphic file (type png)
+ <use domain_list_local1.png>
+Package pdftex.def Info: domain_list_local1.png used on input line 1567.
+(pdftex.def)             Requested size: 469.755pt x 37.44064pt.
+
+
+LaTeX Warning: Hyper reference `getting_started/internal_calls/brand_portal:dom
+ain-per-company' on page 50 undefined on input line 1572.
+
+<proxyusers1.png, id=439, 694.595pt x 184.69pt>
+File: proxyusers1.png Graphic file (type png)
+ <use proxyusers1.png>
+Package pdftex.def Info: proxyusers1.png used on input line 1582.
+(pdftex.def)             Requested size: 694.5933pt x 184.68953pt.
+File: proxyusers1.png Graphic file (type png)
+
+<use proxyusers1.png>
+Package pdftex.def Info: proxyusers1.png used on input line 1582.
+(pdftex.def)             Requested size: 469.755pt x 124.91116pt.
+ <proxytrunks1.png, id=440, 686.565pt x 180.675pt>
+File: proxytrunks1.png Graphic file (type png)
+
+<use proxytrunks1.png>
+Package pdftex.def Info: proxytrunks1.png used on input line 1591.
+(pdftex.def)             Requested size: 686.56332pt x 180.67455pt.
+File: proxytrunks1.png Graphic file (type png)
+ <use proxytrunks1.png>
+Package pdftex.def Info: proxytrunks1.png used on input line 1591.
+(pdftex.def)             Requested size: 469.755pt x 123.61826pt.
+ [50 <./domain_list_local1.png> <./proxyusers1.png>] <media_relay_groups1.png, 
+id=449, 808.01875pt x 174.6525pt>
+File: media_relay_groups1.png Graphic file (type png)
+
+<use media_relay_groups1.png>
+Package pdftex.def Info: media_relay_groups1.png used on input line 1614.
+(pdftex.def)             Requested size: 808.01678pt x 174.65207pt.
+File: media_relay_groups1.png Graphic file (type png)
+ <use media_relay_groups1.png>
+Package pdftex.def Info: media_relay_groups1.png used on input line 1614.
+(pdftex.def)             Requested size: 469.755pt x 101.53836pt.
+
+<media_relays1.png, id=450, 813.0375pt x 211.79124pt>
+File: media_relays1.png Graphic file (type png)
+ <use media_relays1.png>
+Package pdftex.def Info: media_relays1.png used on input line 1618.
+(pdftex.def)             Requested size: 813.03552pt x 211.79073pt.
+File: media_relays1.png Graphic file (type png)
+
+<use media_relays1.png>
+Package pdftex.def Info: media_relays1.png used on input line 1618.
+(pdftex.def)             Requested size: 469.755pt x 122.36717pt.
+ [51 <./proxytrunks1.png> <./media_relay_groups1.png>]
+<app_servers1.png, id=457, 688.5725pt x 178.6675pt>
+File: app_servers1.png Graphic file (type png)
+ <use app_servers1.png>
+Package pdftex.def Info: app_servers1.png used on input line 1631.
+(pdftex.def)             Requested size: 688.5708pt x 178.66705pt.
+File: app_servers1.png Graphic file (type png)
+
+<use app_servers1.png>
+Package pdftex.def Info: app_servers1.png used on input line 1631.
+(pdftex.def)             Requested size: 469.755pt x 121.8903pt.
+ [52 <./media_relays1.png> <./app_servers1.png>]
+<trusted_ips.png, id=464, 912.40875pt x 91.34125pt>
+File: trusted_ips.png Graphic file (type png)
+ <use trusted_ips.png>
+Package pdftex.def Info: trusted_ips.png used on input line 1662.
+(pdftex.def)             Requested size: 912.40652pt x 91.34102pt.
+File: trusted_ips.png Graphic file (type png)
+
+<use trusted_ips.png>
+Package pdftex.def Info: trusted_ips.png used on input line 1662.
+(pdftex.def)             Requested size: 469.755pt x 47.02663pt.
+ [53 <./trusted_ips.png>] [54] [55]
+<services_god1.png, id=493, 618.94604pt x 143.10892pt>
+File: services_god1.png Graphic file (type png)
+ <use services_god1.png>
+Package pdftex.def Info: services_god1.png used on input line 1870.
+(pdftex.def)             Requested size: 618.94453pt x 143.10855pt.
+File: services_god1.png Graphic file (type png)
+
+<use services_god1.png>
+Package pdftex.def Info: services_god1.png used on input line 1870.
+(pdftex.def)             Requested size: 469.755pt x 108.61322pt.
+
+
+LaTeX Warning: Hyper reference `company/route_locks:route-locks' on page 56 und
+efined on input line 1885.
+
+
+LaTeX Warning: Hyper reference `company/route_locks:route-locks' on page 56 und
+efined on input line 1888.
+
+
+LaTeX Warning: Hyper reference `company/route_locks:route-locks' on page 56 und
+efined on input line 1891.
+
+[56 <./services_god1.png (PNG copy)>]
+Chapter 9.
+
+LaTeX Warning: Hyper reference `getting_started/internal_calls/brand_portal:com
+pany-sip-domain' on page 57 undefined on input line 1922.
+
+
+LaTeX Warning: Hyper reference `brand/billing/index:billing' on page 57 undefin
+ed on input line 1928.
+
+
+LaTeX Warning: Hyper reference `brand/peering/carriers:carriers' on page 57 und
+efined on input line 1940.
+
+
+LaTeX Warning: Hyper reference `brand/notifications:notification-templates' on 
+page 57 undefined on input line 1943.
+
+[57
+
+]
+
+LaTeX Warning: Hyper reference `brand/billing/index:billing' on page 58 undefin
+ed on input line 1998.
+
+
+LaTeX Warning: Hyper reference `brand/peering/carriers:carriers' on page 58 und
+efined on input line 2010.
+
+
+LaTeX Warning: Hyper reference `brand/notifications:notification-templates' on 
+page 58 undefined on input line 2013.
+
+[58]
+
+LaTeX Warning: Hyper reference `brand/billing/index:billing' on page 59 undefin
+ed on input line 2066.
+
+
+LaTeX Warning: Hyper reference `brand/routing/tags:routing-tags' on page 59 und
+efined on input line 2075.
+
+
+LaTeX Warning: Hyper reference `brand/notifications:notification-templates' on 
+page 59 undefined on input line 2081.
+
+[59]
+
+LaTeX Warning: Hyper reference `brand/billing/bill_a_call:prepaid-billing' on p
+age 60 undefined on input line 2099.
+
+
+LaTeX Warning: Hyper reference `brand/billing/bill_a_call:pseudo-prepaid-billin
+g' on page 60 undefined on input line 2099.
+
+
+LaTeX Warning: Hyper reference `brand/billing/billable_calls:billable-calls' on
+ page 60 undefined on input line 2111.
+
+
+LaTeX Warning: Hyper reference `brand/notifications:notification-templates' on 
+page 60 undefined on input line 2116.
+
+[60] [61]
+
+LaTeX Warning: Hyper reference `brand/transformations/index:numeric-transformat
+ions' on page 62 undefined on input line 2245.
+
+
+LaTeX Warning: Hyper reference `basics/intro/getting_help:getting-help' on page
+ 62 undefined on input line 2248.
+
+
+LaTeX Warning: Hyper reference `brand/routing/outgoing_routing:outgoing-routing
+' on page 62 undefined on input line 2255.
+
+
+LaTeX Warning: Hyper reference `brand/transformations/index:numeric-transformat
+ions' on page 62 undefined on input line 2282.
+
+[62] [63] <transformations_auto1.png, id=622, 804.00375pt x 396.48125pt>
+File: transformations_auto1.png Graphic file (type png)
+
+<use transformations_auto1.png>
+Package pdftex.def Info: transformations_auto1.png used on input line 2383.
+(pdftex.def)             Requested size: 804.0018pt x 396.48027pt.
+File: transformations_auto1.png Graphic file (type png)
+ <use transformations_auto1.png>
+Package pdftex.def Info: transformations_auto1.png used on input line 2383.
+(pdftex.def)             Requested size: 469.755pt x 231.64717pt.
+ [64 <./transformations_auto1.png>] <transformations1.png, id=629, 732.48656pt 
+x 78.2925pt>
+File: transformations1.png Graphic file (type png)
+
+<use transformations1.png>
+Package pdftex.def Info: transformations1.png used on input line 2399.
+(pdftex.def)             Requested size: 732.48476pt x 78.2923pt.
+File: transformations1.png Graphic file (type png)
+ <use transformations1.png>
+Package pdftex.def Info: transformations1.png used on input line 2399.
+(pdftex.def)             Requested size: 469.755pt x 50.21095pt.
+
+
+LaTeX Warning: Hyper reference `company/music_on_hold:music-on-hold' on page 65
+ undefined on input line 2454.
+
+[65 <./transformations1.png>]
+
+LaTeX Warning: Hyper reference `company/match_lists:match-lists' on page 66 und
+efined on input line 2488.
+
+
+LaTeX Warning: Hyper reference `company/call_permissions:call-acl-matchlits' on
+ page 66 undefined on input line 2490.
+
+
+LaTeX Warning: Hyper reference `brand/peering/carriers:carriers' on page 66 und
+efined on input line 2498.
+
+
+LaTeX Warning: Hyper reference `brand/routing/outgoing_routing:outgoing-routing
+' on page 66 undefined on input line 2498.
+
+<routing_tag1.png, id=638, 672.39441pt x 83.60648pt>
+File: routing_tag1.png Graphic file (type png)
+ <use routing_tag1.png>
+Package pdftex.def Info: routing_tag1.png used on input line 2502.
+(pdftex.def)             Requested size: 672.39276pt x 83.60626pt.
+File: routing_tag1.png Graphic file (type png)
+
+<use routing_tag1.png>
+Package pdftex.def Info: routing_tag1.png used on input line 2502.
+(pdftex.def)             Requested size: 469.755pt x 58.41058pt.
+ [66 <./routing_tag1.png (PNG copy)>]
+<routing_tag_client1.png, id=647, 506.59853pt x 76.52118pt>
+File: routing_tag_client1.png Graphic file (type png)
+
+<use routing_tag_client1.png>
+Package pdftex.def Info: routing_tag_client1.png used on input line 2506.
+(pdftex.def)             Requested size: 506.59729pt x 76.52098pt.
+File: routing_tag_client1.png Graphic file (type png)
+ <use routing_tag_client1.png>
+Package pdftex.def Info: routing_tag_client1.png used on input line 2506.
+(pdftex.def)             Requested size: 469.755pt x 70.95612pt.
+
+
+LaTeX Warning: Hyper reference `brand/routing/outgoing_routing:outgoing-routing
+' on page 67 undefined on input line 2512.
+
+<routing_tag_outgoing_routing1.png, id=648, 670.97736pt x 84.315pt>
+File: routing_tag_outgoing_routing1.png Graphic file (type png)
+
+<use routing_tag_outgoing_routing1.png>
+Package pdftex.def Info: routing_tag_outgoing_routing1.png used on input line 2
+514.
+(pdftex.def)             Requested size: 670.97571pt x 84.31477pt.
+File: routing_tag_outgoing_routing1.png Graphic file (type png)
+
+<use routing_tag_outgoing_routing1.png>
+Package pdftex.def Info: routing_tag_outgoing_routing1.png used on input line 2
+514.
+(pdftex.def)             Requested size: 469.755pt x 59.02908pt.
+ [67 <./routing_tag_client1.png (PNG copy)> <./routing_tag_outgoing_routing1.pn
+g (PNG copy)>]
+
+LaTeX Warning: Hyper reference `company/call_registry:call-registry' on page 68
+ undefined on input line 2599.
+
+[68]
+
+LaTeX Warning: Hyper reference `brand/peering/ddi_providers:ddi-provider' on pa
+ge 69 undefined on input line 2633.
+
+
+LaTeX Warning: Hyper reference `brand/invoices/invoices:invoices' on page 69 un
+defined on input line 2636.
+
+
+LaTeX Warning: Hyper reference `getting_started/external_outgoing_calls/destina
+tion_rate:creating-a-destination-rate' on page 69 undefined on input line 2665.
+
+
+<destination_rates_import.png, id=673, 559.02971pt x 104.15382pt>
+File: destination_rates_import.png Graphic file (type png)
+
+<use destination_rates_import.png>
+Package pdftex.def Info: destination_rates_import.png used on input line 2674.
+(pdftex.def)             Requested size: 559.02834pt x 104.15356pt.
+File: destination_rates_import.png Graphic file (type png)
+ <use destination_rates_import.png>
+Package pdftex.def Info: destination_rates_import.png used on input line 2674.
+(pdftex.def)             Requested size: 469.755pt x 87.52516pt.
+ [69 <./destination_rates_import.png (PNG copy)>]
+
+LaTeX Warning: Hyper reference `brand/billing/rating_plans:rating-plans' on pag
+e 70 undefined on input line 2734.
+
+[70]
+
+LaTeX Warning: Hyper reference `brand/billing/billable_calls:billable-calls' on
+ page 71 undefined on input line 2755.
+
+[71] <invoices_templates.png, id=707, 1048.91875pt x 163.61125pt>
+File: invoices_templates.png Graphic file (type png)
+
+<use invoices_templates.png>
+Package pdftex.def Info: invoices_templates.png used on input line 2827.
+(pdftex.def)             Requested size: 1048.91618pt x 163.61084pt.
+File: invoices_templates.png Graphic file (type png)
+ <use invoices_templates.png>
+Package pdftex.def Info: invoices_templates.png used on input line 2827.
+(pdftex.def)             Requested size: 469.755pt x 73.27237pt.
+
+<fixed_costs.png, id=708, 1052.93375pt x 138.5175pt>
+File: fixed_costs.png Graphic file (type png)
+ <use fixed_costs.png>
+Package pdftex.def Info: fixed_costs.png used on input line 2836.
+(pdftex.def)             Requested size: 1052.93118pt x 138.51715pt.
+File: fixed_costs.png Graphic file (type png)
+
+<use fixed_costs.png>
+Package pdftex.def Info: fixed_costs.png used on input line 2836.
+(pdftex.def)             Requested size: 469.755pt x 61.79755pt.
+ <invoice_add.png, id=709, 810.02625pt x 481.8pt>
+File: invoice_add.png Graphic file (type png)
+
+<use invoice_add.png>
+Package pdftex.def Info: invoice_add.png used on input line 2847.
+(pdftex.def)             Requested size: 810.02426pt x 481.79881pt.
+File: invoice_add.png Graphic file (type png)
+ <use invoice_add.png>
+Package pdftex.def Info: invoice_add.png used on input line 2847.
+(pdftex.def)             Requested size: 469.755pt x 279.41478pt.
+ [72 <./invoices_templates.png> <./fixed_costs.png>] <invoice_add2.png, id=716,
+ 1076.02pt x 75.28125pt>
+File: invoice_add2.png Graphic file (type png)
+
+<use invoice_add2.png>
+Package pdftex.def Info: invoice_add2.png used on input line 2868.
+(pdftex.def)             Requested size: 1076.0174pt x 75.28105pt.
+File: invoice_add2.png Graphic file (type png)
+ <use invoice_add2.png>
+Package pdftex.def Info: invoice_add2.png used on input line 2868.
+(pdftex.def)             Requested size: 469.755pt x 32.86539pt.
+
+<invoice_add3.png, id=717, 670.505pt x 136.51pt>
+File: invoice_add3.png Graphic file (type png)
+ <use invoice_add3.png>
+Package pdftex.def Info: invoice_add3.png used on input line 2872.
+(pdftex.def)             Requested size: 670.50337pt x 136.50966pt.
+File: invoice_add3.png Graphic file (type png)
+
+<use invoice_add3.png>
+Package pdftex.def Info: invoice_add3.png used on input line 2872.
+(pdftex.def)             Requested size: 469.755pt x 95.63757pt.
+ <invoice_add4.png, id=718, 212.795pt x 69.25874pt>
+File: invoice_add4.png Graphic file (type png)
+
+<use invoice_add4.png>
+Package pdftex.def Info: invoice_add4.png used on input line 2876.
+(pdftex.def)             Requested size: 212.79446pt x 69.25856pt.
+ [73 <./invoice_add.png> <./invoice_add2.png> <./invoice_add3.png> <./invoice_a
+dd4.png>]
+<invoice_add5.png, id=730, 252.945pt x 90.3375pt>
+File: invoice_add5.png Graphic file (type png)
+ <use invoice_add5.png>
+Package pdftex.def Info: invoice_add5.png used on input line 2880.
+(pdftex.def)             Requested size: 252.94438pt x 90.33727pt.
+
+<invoice_add6.png, id=731, 155.58125pt x 50.1875pt>
+File: invoice_add6.png Graphic file (type png)
+ <use invoice_add6.png>
+Package pdftex.def Info: invoice_add6.png used on input line 2884.
+(pdftex.def)             Requested size: 155.58086pt x 50.18736pt.
+
+[74 <./invoice_add5.png> <./invoice_add6.png>]
+Chapter 10.
+<users_edit_personal_data.png, id=741, 766.865pt x 294.09875pt>
+File: users_edit_personal_data.png Graphic file (type png)
+
+<use users_edit_personal_data.png>
+Package pdftex.def Info: users_edit_personal_data.png used on input line 2912.
+(pdftex.def)             Requested size: 766.86314pt x 294.09802pt.
+File: users_edit_personal_data.png Graphic file (type png)
+ <use users_edit_personal_data.png>
+Package pdftex.def Info: users_edit_personal_data.png used on input line 2912.
+(pdftex.def)             Requested size: 469.755pt x 180.15837pt.
+
+<users_edit_login.png, id=742, 766.865pt x 125.46875pt>
+File: users_edit_login.png Graphic file (type png)
+
+<use users_edit_login.png>
+Package pdftex.def Info: users_edit_login.png used on input line 2937.
+(pdftex.def)             Requested size: 766.86314pt x 125.46843pt.
+File: users_edit_login.png Graphic file (type png)
+ <use users_edit_login.png>
+Package pdftex.def Info: users_edit_login.png used on input line 2937.
+(pdftex.def)             Requested size: 469.755pt x 76.85936pt.
+ [75
+
+ <./users_edit_personal_data.png>]
+
+LaTeX Warning: Hyper reference `userportal/index:userportal' on page 76 undefin
+ed on input line 2940.
+
+
+LaTeX Warning: Hyper reference `userportal/index:userportal' on page 76 undefin
+ed on input line 2943.
+
+<users_edit_basic_config.png, id=756, 763.85374pt x 354.32375pt>
+File: users_edit_basic_config.png Graphic file (type png)
+
+<use users_edit_basic_config.png>
+Package pdftex.def Info: users_edit_basic_config.png used on input line 2953.
+(pdftex.def)             Requested size: 763.85187pt x 354.32288pt.
+File: users_edit_basic_config.png Graphic file (type png)
+ <use users_edit_basic_config.png>
+Package pdftex.def Info: users_edit_basic_config.png used on input line 2953.
+(pdftex.def)             Requested size: 469.755pt x 217.89969pt.
+
+
+LaTeX Warning: Hyper reference `company/terminals:terminals' on page 76 undefin
+ed on input line 2956.
+
+
+LaTeX Warning: Hyper reference `company/extensions:extensions' on page 76 undef
+ined on input line 2959.
+
+
+LaTeX Warning: Hyper reference `getting_started/external_outgoing_calls/outgoin
+g_ddi:external-ddi' on page 76 undefined on input line 2962.
+
+
+LaTeX Warning: Hyper reference `company/outgoingddi_rules:outgoingddi-rules' on
+ page 76 undefined on input line 2965.
+
+
+LaTeX Warning: Hyper reference `company/call_permissions:call-permissions' on p
+age 76 undefined on input line 2968.
+
+
+LaTeX Warning: Hyper reference `security/index:roadwarrior-users' on page 76 un
+defined on input line 2977.
+
+<users_voicemail.png, id=757, 761.84625pt x 195.73125pt>
+File: users_voicemail.png Graphic file (type png)
+
+<use users_voicemail.png>
+Package pdftex.def Info: users_voicemail.png used on input line 2984.
+(pdftex.def)             Requested size: 761.84439pt x 195.73076pt.
+File: users_voicemail.png Graphic file (type png)
+ <use users_voicemail.png>
+Package pdftex.def Info: users_voicemail.png used on input line 2984.
+(pdftex.def)             Requested size: 469.755pt x 120.6861pt.
+ [76 <./users_edit_login.png> <./users_edit_basic_config.png>]
+
+LaTeX Warning: Hyper reference `company/users:fwd-to-vm' on page 77 undefined o
+n input line 2987.
+
+
+LaTeX Warning: Hyper reference `company/users:fwd-to-vm' on page 77 undefined o
+n input line 2990.
+
+<users_edit_boss1.png, id=775, 547.69324pt x 137.45471pt>
+File: users_edit_boss1.png Graphic file (type png)
+
+<use users_edit_boss1.png>
+Package pdftex.def Info: users_edit_boss1.png used on input line 3007.
+(pdftex.def)             Requested size: 547.6919pt x 137.45436pt.
+File: users_edit_boss1.png Graphic file (type png)
+ <use users_edit_boss1.png>
+Package pdftex.def Info: users_edit_boss1.png used on input line 3007.
+(pdftex.def)             Requested size: 469.755pt x 117.89412pt.
+
+
+LaTeX Warning: Hyper reference `company/match_lists:match-lists' on page 77 und
+efined on input line 3028.
+
+<users_edit_groups.png, id=776, 765.86125pt x 379.4175pt>
+File: users_edit_groups.png Graphic file (type png)
+
+<use users_edit_groups.png>
+Package pdftex.def Info: users_edit_groups.png used on input line 3039.
+(pdftex.def)             Requested size: 765.85938pt x 379.41656pt.
+File: users_edit_groups.png Graphic file (type png)
+ <use users_edit_groups.png>
+Package pdftex.def Info: users_edit_groups.png used on input line 3039.
+(pdftex.def)             Requested size: 469.755pt x 232.7238pt.
+ [77 <./users_voicemail.png> <./users_edit_boss1.png (PNG copy)>]
+
+LaTeX Warning: Hyper reference `company/huntgroups:huntgroups' on page 78 undef
+ined on input line 3041.
+
+
+LaTeX Warning: Hyper reference `company/call_captures:capture-groups' on page 7
+8 undefined on input line 3041.
+
+
+LaTeX Warning: Hyper reference `company/huntgroups:huntgroups' on page 78 undef
+ined on input line 3043.
+
+
+LaTeX Warning: Hyper reference `company/call_captures:capture-groups' on page 7
+8 undefined on input line 3043.
+
+<users_huntgroups.png, id=790, 732.7375pt x 220.825pt>
+File: users_huntgroups.png Graphic file (type png)
+
+<use users_huntgroups.png>
+Package pdftex.def Info: users_huntgroups.png used on input line 3047.
+(pdftex.def)             Requested size: 732.73572pt x 220.82445pt.
+File: users_huntgroups.png Graphic file (type png)
+ <use users_huntgroups.png>
+Package pdftex.def Info: users_huntgroups.png used on input line 3047.
+(pdftex.def)             Requested size: 469.755pt x 141.57011pt.
+
+<users_call_fwd.png, id=791, 734.745pt x 226.8475pt>
+File: users_call_fwd.png Graphic file (type png)
+ <use users_call_fwd.png>
+Package pdftex.def Info: users_call_fwd.png used on input line 3054.
+(pdftex.def)             Requested size: 734.7432pt x 226.84694pt.
+File: users_call_fwd.png Graphic file (type png)
+
+<use users_call_fwd.png>
+Package pdftex.def Info: users_call_fwd.png used on input line 3054.
+(pdftex.def)             Requested size: 469.755pt x 145.03651pt.
+
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 3054--3057
+| []|  [][]
+ []
+
+[78 <./users_edit_groups.png> <./users_huntgroups.png>]
+<users_call_fwd2.png, id=799, 797.98125pt x 301.125pt>
+File: users_call_fwd2.png Graphic file (type png)
+
+<use users_call_fwd2.png>
+Package pdftex.def Info: users_call_fwd2.png used on input line 3058.
+(pdftex.def)             Requested size: 797.9793pt x 301.12425pt.
+File: users_call_fwd2.png Graphic file (type png)
+ <use users_call_fwd2.png>
+Package pdftex.def Info: users_call_fwd2.png used on input line 3058.
+(pdftex.def)             Requested size: 469.755pt x 177.26704pt.
+ [79 <./users_call_fwd.png> <./users_call_fwd2.png>]
+<terminals_add1.png, id=809, 586.03099pt x 350.61684pt>
+File: terminals_add1.png Graphic file (type png)
+
+<use terminals_add1.png>
+Package pdftex.def Info: terminals_add1.png used on input line 3111.
+(pdftex.def)             Requested size: 586.02956pt x 350.61597pt.
+File: terminals_add1.png Graphic file (type png)
+ <use terminals_add1.png>
+Package pdftex.def Info: terminals_add1.png used on input line 3111.
+(pdftex.def)             Requested size: 469.755pt x 281.06093pt.
+
+
+LaTeX Warning: Hyper reference `platform/terminal_provisioning:provisioning' on
+ page 80 undefined on input line 3126.
+
+
+LaTeX Warning: Hyper reference `platform/terminal_provisioning:provisioning' on
+ page 80 undefined on input line 3129.
+
+
+LaTeX Warning: Hyper reference `getting_started/internal_calls/brand_portal:dom
+ain-per-company' on page 80 undefined on input line 3138.
+
+[80 <./terminals_add1.png (PNG copy)>]
+
+LaTeX Warning: Hyper reference `company/users:users-configuration' on page 81 u
+ndefined on input line 3176.
+
+
+LaTeX Warning: Hyper reference `company/terminals:terminals' on page 81 undefin
+ed on input line 3192.
+
+LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <12> not available
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 3197.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 3197.
+[81]
+
+LaTeX Warning: Hyper reference `company/extensions:extensions' on page 82 undef
+ined on input line 3202.
+
+
+LaTeX Warning: Hyper reference `company/users:users' on page 82 undefined on in
+put line 3205.
+
+
+LaTeX Warning: Hyper reference `company/friends:friends' on page 82 undefined o
+n input line 3205.
+
+
+LaTeX Warning: Hyper reference `platform/proxy_users:proxyusers' on page 82 und
+efined on input line 3224.
+
+
+LaTeX Warning: Hyper reference `company/users:users' on page 82 undefined on in
+put line 3245.
+
+[82]
+
+LaTeX Warning: Hyper reference `brand/peering/ddi_providers:ddi-provider' on pa
+ge 83 undefined on input line 3336.
+
+
+LaTeX Warning: Hyper reference `brand/transformations/index:numeric-transformat
+ions' on page 83 undefined on input line 3336.
+
+[83]
+
+LaTeX Warning: Hyper reference `company/external_filters:external-filters' on p
+age 84 undefined on input line 3339.
+
+
+LaTeX Warning: Hyper reference `company/ddis:routing-logics' on page 84 undefin
+ed on input line 3342.
+
+
+LaTeX Warning: Hyper reference `company/call_recording:call-recordings' on page
+ 84 undefined on input line 3345.
+
+
+LaTeX Warning: Hyper reference `basics/intro/getting_help:getting-help' on page
+ 84 undefined on input line 3348.
+
+
+LaTeX Warning: Hyper reference `company/external_filters:external-filters' on p
+age 84 undefined on input line 3355.
+
+<ddi_edit.png, id=864, 764.8575pt x 110.4125pt>
+File: ddi_edit.png Graphic file (type png)
+ <use ddi_edit.png>
+Package pdftex.def Info: ddi_edit.png used on input line 3357.
+(pdftex.def)             Requested size: 764.85562pt x 110.41222pt.
+File: ddi_edit.png Graphic file (type png)
+
+<use ddi_edit.png>
+Package pdftex.def Info: ddi_edit.png used on input line 3357.
+(pdftex.def)             Requested size: 469.755pt x 67.81314pt.
+
+
+LaTeX Warning: Hyper reference `company/users:users' on page 84 undefined on in
+put line 3365.
+
+
+LaTeX Warning: Hyper reference `company/huntgroups:huntgroups' on page 84 undef
+ined on input line 3368.
+
+
+LaTeX Warning: Hyper reference `company/ivrs:ivrs' on page 84 undefined on inpu
+t line 3371.
+
+
+LaTeX Warning: Hyper reference `company/conference_rooms:conference-rooms' on p
+age 84 undefined on input line 3374.
+
+
+LaTeX Warning: Hyper reference `company/conditional_routes:conditional-routes' 
+on page 84 undefined on input line 3377.
+
+
+LaTeX Warning: Hyper reference `company/queues:queues' on page 84 undefined on 
+input line 3380.
+
+
+LaTeX Warning: Hyper reference `company/friends:friends' on page 84 undefined o
+n input line 3383.
+
+
+LaTeX Warning: Hyper reference `company/faxing:faxing-system' on page 84 undefi
+ned on input line 3388.
+
+
+LaTeX Warning: Hyper reference `company/match_lists:match-lists' on page 84 und
+efined on input line 3398.
+
+[84 <./ddi_edit.png>]
+<outgoingddi_rules_edit1.png, id=878, 538.48235pt x 222.47824pt>
+File: outgoingddi_rules_edit1.png Graphic file (type png)
+
+<use outgoingddi_rules_edit1.png>
+Package pdftex.def Info: outgoingddi_rules_edit1.png used on input line 3405.
+(pdftex.def)             Requested size: 538.48102pt x 222.47768pt.
+File: outgoingddi_rules_edit1.png Graphic file (type png)
+ <use outgoingddi_rules_edit1.png>
+Package pdftex.def Info: outgoingddi_rules_edit1.png used on input line 3405.
+(pdftex.def)             Requested size: 469.755pt x 194.08406pt.
+
+<outgoingddi_rulepatterns_edit1.png, id=879, 542.025pt x 216.81pt>
+File: outgoingddi_rulepatterns_edit1.png Graphic file (type png)
+
+<use outgoingddi_rulepatterns_edit1.png>
+Package pdftex.def Info: outgoingddi_rulepatterns_edit1.png used on input line 
+3410.
+(pdftex.def)             Requested size: 542.02367pt x 216.80946pt.
+File: outgoingddi_rulepatterns_edit1.png Graphic file (type png)
+
+<use outgoingddi_rulepatterns_edit1.png>
+Package pdftex.def Info: outgoingddi_rulepatterns_edit1.png used on input line 
+3410.
+(pdftex.def)             Requested size: 469.755pt x 187.90858pt.
+
+<user_outgoingddirule1.png, id=880, 507.30705pt x 55.97382pt>
+File: user_outgoingddirule1.png Graphic file (type png)
+
+<use user_outgoingddirule1.png>
+Package pdftex.def Info: user_outgoingddirule1.png used on input line 3415.
+(pdftex.def)             Requested size: 507.3058pt x 55.97366pt.
+File: user_outgoingddirule1.png Graphic file (type png)
+ <use user_outgoingddirule1.png>
+Package pdftex.def Info: user_outgoingddirule1.png used on input line 3415.
+(pdftex.def)             Requested size: 469.755pt x 51.83217pt.
+ [85 <./outgoingddi_rules_edit1.png (PNG copy)> <./outgoingddi_rulepatterns_edi
+t1.png (PNG copy)>]
+
+LaTeX Warning: Hyper reference `company/ddis:ddis' on page 86 undefined on inpu
+t line 3426.
+
+
+LaTeX Warning: Hyper reference `company/schedules:schedules' on page 86 undefin
+ed on input line 3428.
+
+
+LaTeX Warning: Hyper reference `company/calendars:calendars' on page 86 undefin
+ed on input line 3428.
+
+<external_call_filter.png, id=888, 799.98875pt x 697.60625pt>
+File: external_call_filter.png Graphic file (type png)
+
+<use external_call_filter.png>
+Package pdftex.def Info: external_call_filter.png used on input line 3432.
+(pdftex.def)             Requested size: 799.9868pt x 697.60454pt.
+File: external_call_filter.png Graphic file (type png)
+ <use external_call_filter.png>
+Package pdftex.def Info: external_call_filter.png used on input line 3432.
+(pdftex.def)             Requested size: 469.755pt x 409.63615pt.
+ [86 <./user_outgoingddirule1.png (PNG copy)>]
+
+LaTeX Warning: Hyper reference `company/match_lists:match-lists' on page 87 und
+efined on input line 3441.
+
+
+LaTeX Warning: Hyper reference `company/match_lists:match-lists' on page 87 und
+efined on input line 3444.
+
+[87 <./external_call_filter.png>]
+
+LaTeX Warning: Hyper reference `company/ddis:ddis' on page 88 undefined on inpu
+t line 3470.
+
+<conditional_route_edit.png, id=906, 768.8725pt x 326.21875pt>
+File: conditional_route_edit.png Graphic file (type png)
+
+<use conditional_route_edit.png>
+Package pdftex.def Info: conditional_route_edit.png used on input line 3510.
+(pdftex.def)             Requested size: 768.87062pt x 326.21794pt.
+File: conditional_route_edit.png Graphic file (type png)
+ <use conditional_route_edit.png>
+Package pdftex.def Info: conditional_route_edit.png used on input line 3510.
+(pdftex.def)             Requested size: 469.755pt x 199.3117pt.
+ [88]
+<conditional_route_rule1.png, id=916, 767.86874pt x 405.515pt>
+File: conditional_route_rule1.png Graphic file (type png)
+
+<use conditional_route_rule1.png>
+Package pdftex.def Info: conditional_route_rule1.png used on input line 3520.
+(pdftex.def)             Requested size: 767.86687pt x 405.51399pt.
+File: conditional_route_rule1.png Graphic file (type png)
+ <use conditional_route_rule1.png>
+Package pdftex.def Info: conditional_route_rule1.png used on input line 3520.
+(pdftex.def)             Requested size: 469.755pt x 248.08154pt.
+
+<conditional_route_rule2.png, id=917, 765.86125pt x 404.51125pt>
+File: conditional_route_rule2.png Graphic file (type png)
+
+<use conditional_route_rule2.png>
+Package pdftex.def Info: conditional_route_rule2.png used on input line 3523.
+(pdftex.def)             Requested size: 765.85938pt x 404.51025pt.
+File: conditional_route_rule2.png Graphic file (type png)
+ <use conditional_route_rule2.png>
+Package pdftex.def Info: conditional_route_rule2.png used on input line 3523.
+(pdftex.def)             Requested size: 469.755pt x 248.11559pt.
+ [89 <./conditional_route_edit.png> <./conditional_route_rule1.png>]
+<conditional_route_rule3.png, id=925, 765.86125pt x 406.51875pt>
+File: conditional_route_rule3.png Graphic file (type png)
+
+<use conditional_route_rule3.png>
+Package pdftex.def Info: conditional_route_rule3.png used on input line 3526.
+(pdftex.def)             Requested size: 765.85938pt x 406.51775pt.
+File: conditional_route_rule3.png Graphic file (type png)
+ <use conditional_route_rule3.png>
+Package pdftex.def Info: conditional_route_rule3.png used on input line 3526.
+(pdftex.def)             Requested size: 469.755pt x 249.34692pt.
+
+<conditional_route_rules.png, id=926, 934.49126pt x 139.52126pt>
+File: conditional_route_rules.png Graphic file (type png)
+
+<use conditional_route_rules.png>
+Package pdftex.def Info: conditional_route_rules.png used on input line 3530.
+(pdftex.def)             Requested size: 934.48898pt x 139.5209pt.
+File: conditional_route_rules.png Graphic file (type png)
+ <use conditional_route_rules.png>
+Package pdftex.def Info: conditional_route_rules.png used on input line 3530.
+(pdftex.def)             Requested size: 469.755pt x 70.13513pt.
+ [90 <./conditional_route_rule2.png> <./conditional_route_rule3.png>]
+
+LaTeX Warning: Hyper reference `company/match_lists:match-lists' on page 91 und
+efined on input line 3541.
+
+
+LaTeX Warning: Hyper reference `company/schedules:schedules' on page 91 undefin
+ed on input line 3544.
+
+
+LaTeX Warning: Hyper reference `company/calendars:calendars' on page 91 undefin
+ed on input line 3547.
+
+<conditional_route_ddi.png, id=932, 767.86874pt x 437.635pt>
+File: conditional_route_ddi.png Graphic file (type png)
+
+<use conditional_route_ddi.png>
+Package pdftex.def Info: conditional_route_ddi.png used on input line 3563.
+(pdftex.def)             Requested size: 767.86687pt x 437.63393pt.
+File: conditional_route_ddi.png Graphic file (type png)
+ <use conditional_route_ddi.png>
+Package pdftex.def Info: conditional_route_ddi.png used on input line 3563.
+(pdftex.def)             Requested size: 469.755pt x 267.73158pt.
+ [91 <./conditional_route_rules.png> <./conditional_route_ddi.png>]
+
+LaTeX Warning: Hyper reference `company/external_filters:external-filters' on p
+age 92 undefined on input line 3596.
+
+<matchlist_add1.png, id=938, 476.13176pt x 77.93823pt>
+File: matchlist_add1.png Graphic file (type png)
+
+<use matchlist_add1.png>
+Package pdftex.def Info: matchlist_add1.png used on input line 3610.
+(pdftex.def)             Requested size: 476.13058pt x 77.93803pt.
+File: matchlist_add1.png Graphic file (type png)
+ <use matchlist_add1.png>
+Package pdftex.def Info: matchlist_add1.png used on input line 3610.
+(pdftex.def)             Requested size: 469.755pt x 76.89507pt.
+
+<matchlist_patterns_add1.png, id=939, 474.7147pt x 97.06853pt>
+File: matchlist_patterns_add1.png Graphic file (type png)
+
+<use matchlist_patterns_add1.png>
+Package pdftex.def Info: matchlist_patterns_add1.png used on input line 3614.
+(pdftex.def)             Requested size: 474.71353pt x 97.06828pt.
+File: matchlist_patterns_add1.png Graphic file (type png)
+ <use matchlist_patterns_add1.png>
+Package pdftex.def Info: matchlist_patterns_add1.png used on input line 3614.
+(pdftex.def)             Requested size: 469.755pt x 96.05962pt.
+ [92 <./matchlist_add1.png (PNG copy)> <./matchlist_patterns_add1.png (PNG copy
+)>]
+<calendars_list.png, id=947, 771.88374pt x 141.52875pt>
+File: calendars_list.png Graphic file (type png)
+
+<use calendars_list.png>
+Package pdftex.def Info: calendars_list.png used on input line 3625.
+(pdftex.def)             Requested size: 771.88185pt x 141.5284pt.
+File: calendars_list.png Graphic file (type png)
+ <use calendars_list.png>
+Package pdftex.def Info: calendars_list.png used on input line 3625.
+(pdftex.def)             Requested size: 469.755pt x 86.13156pt.
+
+<calendars_add_day.png, id=948, 741.77126pt x 343.2825pt>
+File: calendars_add_day.png Graphic file (type png)
+
+<use calendars_add_day.png>
+Package pdftex.def Info: calendars_add_day.png used on input line 3629.
+(pdftex.def)             Requested size: 741.76945pt x 343.28165pt.
+File: calendars_add_day.png Graphic file (type png)
+ <use calendars_add_day.png>
+Package pdftex.def Info: calendars_add_day.png used on input line 3629.
+(pdftex.def)             Requested size: 469.755pt x 217.40053pt.
+
+
+LaTeX Warning: Hyper reference `company/ddis:ddis' on page 93 undefined on inpu
+t line 3645.
+
+[93 <./calendars_list.png> <./calendars_add_day.png>]
+<timetables_add.png, id=956, 800.9925pt x 445.665pt>
+File: timetables_add.png Graphic file (type png)
+ <use timetables_add.png>
+Package pdftex.def Info: timetables_add.png used on input line 3649.
+(pdftex.def)             Requested size: 800.99054pt x 445.66391pt.
+File: timetables_add.png Graphic file (type png)
+
+<use timetables_add.png>
+Package pdftex.def Info: timetables_add.png used on input line 3649.
+(pdftex.def)             Requested size: 469.755pt x 261.3692pt.
+ <timetables_add2.png, id=957, 794.97pt x 442.65375pt>
+File: timetables_add2.png Graphic file (type png)
+
+<use timetables_add2.png>
+Package pdftex.def Info: timetables_add2.png used on input line 3655.
+(pdftex.def)             Requested size: 794.96806pt x 442.65265pt.
+File: timetables_add2.png Graphic file (type png)
+ <use timetables_add2.png>
+Package pdftex.def Info: timetables_add2.png used on input line 3655.
+(pdftex.def)             Requested size: 469.755pt x 261.57545pt.
+ [94 <./timetables_add.png>] <timetables_add3.png, id=964, 794.97pt x 448.67625
+pt>
+File: timetables_add3.png Graphic file (type png)
+
+<use timetables_add3.png>
+Package pdftex.def Info: timetables_add3.png used on input line 3659.
+(pdftex.def)             Requested size: 794.96806pt x 448.67516pt.
+File: timetables_add3.png Graphic file (type png)
+ <use timetables_add3.png>
+Package pdftex.def Info: timetables_add3.png used on input line 3659.
+(pdftex.def)             Requested size: 469.755pt x 265.13431pt.
+
+<timetables_add4.png, id=965, 771.88374pt x 135.50626pt>
+File: timetables_add4.png Graphic file (type png)
+
+<use timetables_add4.png>
+Package pdftex.def Info: timetables_add4.png used on input line 3663.
+(pdftex.def)             Requested size: 771.88185pt x 135.5059pt.
+File: timetables_add4.png Graphic file (type png)
+ <use timetables_add4.png>
+Package pdftex.def Info: timetables_add4.png used on input line 3663.
+(pdftex.def)             Requested size: 469.755pt x 82.46638pt.
+ [95 <./timetables_add2.png> <./timetables_add3.png>]
+
+LaTeX Warning: Hyper reference `company/conditional_routes:conditional-routes' 
+on page 96 undefined on input line 3682.
+
+
+LaTeX Warning: Hyper reference `platform/services:services' on page 96 undefine
+d on input line 3729.
+
+[96 <./timetables_add4.png>]
+
+LaTeX Warning: Hyper reference `company/match_lists:match-lists' on page 97 und
+efined on input line 3768.
+
+<permissions_patterns_list1.png, id=980, 616.4206pt x 75.10411pt>
+File: permissions_patterns_list1.png Graphic file (type png)
+
+<use permissions_patterns_list1.png>
+Package pdftex.def Info: permissions_patterns_list1.png used on input line 3781
+.
+(pdftex.def)             Requested size: 616.41908pt x 75.10391pt.
+File: permissions_patterns_list1.png Graphic file (type png)
+ <use permissions_patterns_list1.png>
+Package pdftex.def Info: permissions_patterns_list1.png used on input line 3781
+.
+(pdftex.def)             Requested size: 469.755pt x 57.23555pt.
+
+<permissions_add1.png, id=981, 800.9925pt x 215.80624pt>
+File: permissions_add1.png Graphic file (type png)
+
+<use permissions_add1.png>
+Package pdftex.def Info: permissions_add1.png used on input line 3785.
+(pdftex.def)             Requested size: 800.99054pt x 215.80571pt.
+File: permissions_add1.png Graphic file (type png)
+ <use permissions_add1.png>
+Package pdftex.def Info: permissions_add1.png used on input line 3785.
+(pdftex.def)             Requested size: 469.755pt x 126.5639pt.
+ [97 <./permissions_patterns_list1.png (PNG copy)>]
+<permissions_add21.png, id=989, 529.27147pt x 347.17941pt>
+File: permissions_add21.png Graphic file (type png)
+
+<use permissions_add21.png>
+Package pdftex.def Info: permissions_add21.png used on input line 3793.
+(pdftex.def)             Requested size: 529.27017pt x 347.17856pt.
+File: permissions_add21.png Graphic file (type png)
+ <use permissions_add21.png>
+Package pdftex.def Info: permissions_add21.png used on input line 3793.
+(pdftex.def)             Requested size: 469.755pt x 308.1464pt.
+
+<permissions_add31.png, id=990, 530.68852pt x 212.55882pt>
+File: permissions_add31.png Graphic file (type png)
+
+<use permissions_add31.png>
+Package pdftex.def Info: permissions_add31.png used on input line 3797.
+(pdftex.def)             Requested size: 530.68723pt x 212.5583pt.
+File: permissions_add31.png Graphic file (type png)
+ <use permissions_add31.png>
+Package pdftex.def Info: permissions_add31.png used on input line 3797.
+(pdftex.def)             Requested size: 469.755pt x 188.16158pt.
+ [98 <./permissions_add1.png> <./permissions_add21.png (PNG copy)>]
+<permissions_add41.png, id=997, 528.56294pt x 351.43059pt>
+File: permissions_add41.png Graphic file (type png)
+
+<use permissions_add41.png>
+Package pdftex.def Info: permissions_add41.png used on input line 3801.
+(pdftex.def)             Requested size: 528.56166pt x 351.42972pt.
+File: permissions_add41.png Graphic file (type png)
+ <use permissions_add41.png>
+Package pdftex.def Info: permissions_add41.png used on input line 3801.
+(pdftex.def)             Requested size: 469.755pt x 312.34323pt.
+
+<permissions_add51.png, id=998, 535.64824pt x 374.10353pt>
+File: permissions_add51.png Graphic file (type png)
+
+<use permissions_add51.png>
+Package pdftex.def Info: permissions_add51.png used on input line 3805.
+(pdftex.def)             Requested size: 535.64693pt x 374.1026pt.
+File: permissions_add51.png Graphic file (type png)
+ <use permissions_add51.png>
+Package pdftex.def Info: permissions_add51.png used on input line 3805.
+(pdftex.def)             Requested size: 469.755pt x 328.09328pt.
+ [99 <./permissions_add31.png (PNG copy)> <./permissions_add41.png (PNG copy)>]
+
+<huntgroup_add.png, id=1003, 749.80125pt x 260.975pt>
+File: huntgroup_add.png Graphic file (type png)
+ <use huntgroup_add.png>
+Package pdftex.def Info: huntgroup_add.png used on input line 3833.
+(pdftex.def)             Requested size: 749.79942pt x 260.97437pt.
+File: huntgroup_add.png Graphic file (type png)
+
+<use huntgroup_add.png>
+Package pdftex.def Info: huntgroup_add.png used on input line 3833.
+(pdftex.def)             Requested size: 469.755pt x 163.5032pt.
+ [100 <./permissions_add51.png (PNG copy)>]
+<huntgroup_add2.png, id=1014, 813.0375pt x 88.33pt>
+File: huntgroup_add2.png Graphic file (type png)
+ <use huntgroup_add2.png>
+Package pdftex.def Info: huntgroup_add2.png used on input line 3837.
+(pdftex.def)             Requested size: 813.03552pt x 88.32977pt.
+File: huntgroup_add2.png Graphic file (type png)
+
+<use huntgroup_add2.png>
+Package pdftex.def Info: huntgroup_add2.png used on input line 3837.
+(pdftex.def)             Requested size: 469.755pt x 51.03464pt.
+ <huntgroup_add3.png, id=1015, 738.76pt x 256.96pt>
+File: huntgroup_add3.png Graphic file (type png)
+
+<use huntgroup_add3.png>
+Package pdftex.def Info: huntgroup_add3.png used on input line 3842.
+(pdftex.def)             Requested size: 738.75818pt x 256.95937pt.
+File: huntgroup_add3.png Graphic file (type png)
+ <use huntgroup_add3.png>
+Package pdftex.def Info: huntgroup_add3.png used on input line 3842.
+(pdftex.def)             Requested size: 469.755pt x 163.39127pt.
+
+<huntgroup_add4.png, id=1016, 813.0375pt x 114.4275pt>
+File: huntgroup_add4.png Graphic file (type png)
+
+<use huntgroup_add4.png>
+Package pdftex.def Info: huntgroup_add4.png used on input line 3846.
+(pdftex.def)             Requested size: 813.03552pt x 114.42722pt.
+File: huntgroup_add4.png Graphic file (type png)
+ <use huntgroup_add4.png>
+Package pdftex.def Info: huntgroup_add4.png used on input line 3846.
+(pdftex.def)             Requested size: 469.755pt x 66.11307pt.
+ [101 <./huntgroup_add.png> <./huntgroup_add2.png> <./huntgroup_add3.png> <./hu
+ntgroup_add4.png>]
+<huntgroup_extension.png, id=1022, 747.79375pt x 296.10625pt>
+File: huntgroup_extension.png Graphic file (type png)
+
+<use huntgroup_extension.png>
+Package pdftex.def Info: huntgroup_extension.png used on input line 3854.
+(pdftex.def)             Requested size: 747.79192pt x 296.10551pt.
+File: huntgroup_extension.png Graphic file (type png)
+ <use huntgroup_extension.png>
+Package pdftex.def Info: huntgroup_extension.png used on input line 3854.
+(pdftex.def)             Requested size: 469.755pt x 186.01024pt.
+
+<capture_groups.png, id=1023, 797.98125pt x 209.78375pt>
+File: capture_groups.png Graphic file (type png)
+
+<use capture_groups.png>
+Package pdftex.def Info: capture_groups.png used on input line 3878.
+(pdftex.def)             Requested size: 797.9793pt x 209.78322pt.
+File: capture_groups.png Graphic file (type png)
+ <use capture_groups.png>
+Package pdftex.def Info: capture_groups.png used on input line 3878.
+(pdftex.def)             Requested size: 469.755pt x 123.49603pt.
+
+
+LaTeX Warning: Hyper reference `company/users:users' on page 102 undefined on i
+nput line 3880.
+
+[102 <./huntgroup_extension.png> <./capture_groups.png>]
+
+LaTeX Warning: Hyper reference `platform/services:services' on page 103 undefin
+ed on input line 3901.
+
+[103] <ivr_custom2.png, id=1048, 1079.03125pt x 159.59625pt>
+File: ivr_custom2.png Graphic file (type png)
+
+<use ivr_custom2.png>
+Package pdftex.def Info: ivr_custom2.png used on input line 3953.
+(pdftex.def)             Requested size: 1079.02863pt x 159.59584pt.
+File: ivr_custom2.png Graphic file (type png)
+ <use ivr_custom2.png>
+Package pdftex.def Info: ivr_custom2.png used on input line 3953.
+(pdftex.def)             Requested size: 469.755pt x 69.4798pt.
+
+<ivr_custom3.png, id=1049, 1049.9225pt x 139.52126pt>
+File: ivr_custom3.png Graphic file (type png)
+ <use ivr_custom3.png>
+Package pdftex.def Info: ivr_custom3.png used on input line 3957.
+(pdftex.def)             Requested size: 1049.91994pt x 139.5209pt.
+File: ivr_custom3.png Graphic file (type png)
+
+<use ivr_custom3.png>
+Package pdftex.def Info: ivr_custom3.png used on input line 3957.
+(pdftex.def)             Requested size: 469.755pt x 62.42418pt.
+
+
+LaTeX Warning: Hyper reference `company/huntgroups:huntgroups' on page 104 unde
+fined on input line 3960.
+
+
+LaTeX Warning: Hyper reference `brand/virtual_pbx:virtual-pbx' on page 104 unde
+fined on input line 3986.
+
+
+LaTeX Warning: Hyper reference `brand/index:brand-configuration' on page 104 un
+defined on input line 3989.
+
+
+LaTeX Warning: Hyper reference `company/index:company-configuration' on page 10
+4 undefined on input line 3989.
+
+[104 <./ivr_custom2.png> <./ivr_custom3.png>] [105]
+
+LaTeX Warning: Hyper reference `brand/virtual_pbx:virtual-pbx' on page 106 unde
+fined on input line 4059.
+
+
+LaTeX Warning: Hyper reference `brand/index:brand-configuration' on page 106 un
+defined on input line 4062.
+
+
+LaTeX Warning: Hyper reference `company/index:company-configuration' on page 10
+6 undefined on input line 4062.
+
+<conference_room.png, id=1080, 801.99625pt x 316.18124pt>
+File: conference_room.png Graphic file (type png)
+
+<use conference_room.png>
+Package pdftex.def Info: conference_room.png used on input line 4068.
+(pdftex.def)             Requested size: 801.99428pt x 316.18047pt.
+File: conference_room.png Graphic file (type png)
+ <use conference_room.png>
+Package pdftex.def Info: conference_room.png used on input line 4068.
+(pdftex.def)             Requested size: 469.755pt x 185.19926pt.
+
+<conference_room_ext.png, id=1081, 803.0pt x 298.11375pt>
+File: conference_room_ext.png Graphic file (type png)
+
+<use conference_room_ext.png>
+Package pdftex.def Info: conference_room_ext.png used on input line 4088.
+(pdftex.def)             Requested size: 802.99805pt x 298.11302pt.
+File: conference_room_ext.png Graphic file (type png)
+ <use conference_room_ext.png>
+Package pdftex.def Info: conference_room_ext.png used on input line 4088.
+(pdftex.def)             Requested size: 469.755pt x 174.40266pt.
+ [106 <./conference_room.png>]
+
+LaTeX Warning: Hyper reference `company/ddis:ddis' on page 107 undefined on inp
+ut line 4090.
+
+
+LaTeX Warning: Hyper reference `company/music_on_hold:musiconhold' on page 107 
+undefined on input line 4099.
+
+<sounds.png, id=1092, 798.985pt x 237.88875pt>
+File: sounds.png Graphic file (type png)
+ <use sounds.png>
+Package pdftex.def Info: sounds.png used on input line 4103.
+(pdftex.def)             Requested size: 798.98305pt x 237.88815pt.
+File: sounds.png Graphic file (type png)
+
+<use sounds.png>
+Package pdftex.def Info: sounds.png used on input line 4103.
+(pdftex.def)             Requested size: 469.755pt x 139.86673pt.
+ [107 <./conference_room_ext.png> <./sounds.png>]
+<moh_add.png, id=1099, 798.985pt x 394.47375pt>
+File: moh_add.png Graphic file (type png)
+ <use moh_add.png>
+Package pdftex.def Info: moh_add.png used on input line 4125.
+(pdftex.def)             Requested size: 798.98305pt x 394.47278pt.
+File: moh_add.png Graphic file (type png)
+
+<use moh_add.png>
+Package pdftex.def Info: moh_add.png used on input line 4125.
+(pdftex.def)             Requested size: 469.755pt x 231.93092pt.
+ <moh_add2.png, id=1100, 773.89125pt x 88.33pt>
+File: moh_add2.png Graphic file (type png)
+
+<use moh_add2.png>
+Package pdftex.def Info: moh_add2.png used on input line 4129.
+(pdftex.def)             Requested size: 773.88936pt x 88.32977pt.
+File: moh_add2.png Graphic file (type png)
+ <use moh_add2.png>
+Package pdftex.def Info: moh_add2.png used on input line 4129.
+(pdftex.def)             Requested size: 469.755pt x 53.61703pt.
+
+<moh_add3.png, id=1101, 794.97pt x 532.99126pt>
+File: moh_add3.png Graphic file (type png)
+ <use moh_add3.png>
+Package pdftex.def Info: moh_add3.png used on input line 4137.
+(pdftex.def)             Requested size: 794.96806pt x 532.98996pt.
+File: moh_add3.png Graphic file (type png)
+
+<use moh_add3.png>
+Package pdftex.def Info: moh_add3.png used on input line 4137.
+(pdftex.def)             Requested size: 469.755pt x 314.95822pt.
+ [108 <./moh_add.png> <./moh_add2.png>]
+
+LaTeX Warning: Hyper reference `company/ddis:ddis' on page 109 undefined on inp
+ut line 4149.
+
+
+LaTeX Warning: Hyper reference `company/ddis:ddis' on page 109 undefined on inp
+ut line 4167.
+
+[109 <./moh_add3.png>] <recordings_ddi.png, id=1115, 421.575pt x 279.0425pt>
+File: recordings_ddi.png Graphic file (type png)
+
+<use recordings_ddi.png>
+Package pdftex.def Info: recordings_ddi.png used on input line 4178.
+(pdftex.def)             Requested size: 421.57396pt x 279.04181pt.
+
+<recordings_ondemand.png, id=1116, 762.85pt x 124.465pt>
+File: recordings_ondemand.png Graphic file (type png)
+
+<use recordings_ondemand.png>
+Package pdftex.def Info: recordings_ondemand.png used on input line 4201.
+(pdftex.def)             Requested size: 762.84814pt x 124.46469pt.
+File: recordings_ondemand.png Graphic file (type png)
+ <use recordings_ondemand.png>
+Package pdftex.def Info: recordings_ondemand.png used on input line 4201.
+(pdftex.def)             Requested size: 469.755pt x 76.64333pt.
+ [110 <./recordings_ddi.png> <./recordings_ondemand.png>]
+
+LaTeX Warning: Hyper reference `platform/services:services' on page 111 undefin
+ed on input line 4204.
+
+
+LaTeX Warning: Hyper reference `basics/architecture/index:architecture' on page
+ 111 undefined on input line 4257.
+
+
+LaTeX Warning: Hyper reference `basics/architecture/index:audioflow' on page 11
+1 undefined on input line 4257.
+
+[111] <recordings_list.png, id=1136, 1049.9225pt x 136.51pt>
+File: recordings_list.png Graphic file (type png)
+
+<use recordings_list.png>
+Package pdftex.def Info: recordings_list.png used on input line 4264.
+(pdftex.def)             Requested size: 1049.91994pt x 136.50966pt.
+File: recordings_list.png Graphic file (type png)
+ <use recordings_list.png>
+Package pdftex.def Info: recordings_list.png used on input line 4264.
+(pdftex.def)             Requested size: 469.755pt x 61.0769pt.
+
+<recordings_list2.png, id=1137, 741.77126pt x 436.63126pt>
+File: recordings_list2.png Graphic file (type png)
+
+<use recordings_list2.png>
+Package pdftex.def Info: recordings_list2.png used on input line 4268.
+(pdftex.def)             Requested size: 741.76945pt x 436.63019pt.
+File: recordings_list2.png Graphic file (type png)
+ <use recordings_list2.png>
+Package pdftex.def Info: recordings_list2.png used on input line 4268.
+(pdftex.def)             Requested size: 469.755pt x 276.51823pt.
+
+<recordings_list3.png, id=1138, 740.7675pt x 437.635pt>
+File: recordings_list3.png Graphic file (type png)
+
+<use recordings_list3.png>
+Package pdftex.def Info: recordings_list3.png used on input line 4272.
+(pdftex.def)             Requested size: 740.76569pt x 437.63393pt.
+File: recordings_list3.png Graphic file (type png)
+ <use recordings_list3.png>
+Package pdftex.def Info: recordings_list3.png used on input line 4272.
+(pdftex.def)             Requested size: 469.755pt x 277.52785pt.
+ [112 <./recordings_list.png> <./recordings_list2.png>]
+<services_company_edit1.png, id=1145, 764.8575pt x 176.66pt>
+File: services_company_edit1.png Graphic file (type png)
+
+<use services_company_edit1.png>
+Package pdftex.def Info: services_company_edit1.png used on input line 4284.
+(pdftex.def)             Requested size: 764.85562pt x 176.65956pt.
+File: services_company_edit1.png Graphic file (type png)
+ <use services_company_edit1.png>
+Package pdftex.def Info: services_company_edit1.png used on input line 4284.
+(pdftex.def)             Requested size: 469.755pt x 108.50102pt.
+ [113 <./recordings_list3.png> <./services_company_edit1.png>]
+<fax_add.png, id=1153, 797.98125pt x 315.1775pt>
+File: fax_add.png Graphic file (type png)
+ <use fax_add.png>
+Package pdftex.def Info: fax_add.png used on input line 4312.
+(pdftex.def)             Requested size: 797.9793pt x 315.17673pt.
+File: fax_add.png Graphic file (type png)
+
+<use fax_add.png>
+Package pdftex.def Info: fax_add.png used on input line 4312.
+(pdftex.def)             Requested size: 469.755pt x 185.53952pt.
+ <fax_ddi.png, id=1154, 794.97pt x 526.96875pt>
+File: fax_ddi.png Graphic file (type png)
+
+<use fax_ddi.png>
+Package pdftex.def Info: fax_ddi.png used on input line 4329.
+(pdftex.def)             Requested size: 794.96806pt x 526.96745pt.
+File: fax_ddi.png Graphic file (type png)
+ <use fax_ddi.png>
+Package pdftex.def Info: fax_ddi.png used on input line 4329.
+(pdftex.def)             Requested size: 469.755pt x 311.39935pt.
+ [114 <./fax_add.png>]
+<fax_routes.png, id=1165, 807.015pt x 520.94624pt>
+File: fax_routes.png Graphic file (type png)
+ <use fax_routes.png>
+Package pdftex.def Info: fax_routes.png used on input line 4333.
+(pdftex.def)             Requested size: 807.01303pt x 520.94498pt.
+File: fax_routes.png Graphic file (type png)
+
+<use fax_routes.png>
+Package pdftex.def Info: fax_routes.png used on input line 4333.
+(pdftex.def)             Requested size: 469.755pt x 303.23804pt.
+ [115 <./fax_ddi.png> <./fax_routes.png>]
+
+LaTeX Warning: Hyper reference `brand/routing/outgoing_routing:routes-metrics' 
+on page 116 undefined on input line 4338.
+
+<fax_send.png, id=1170, 789.95125pt x 335.2525pt>
+File: fax_send.png Graphic file (type png)
+ <use fax_send.png>
+Package pdftex.def Info: fax_send.png used on input line 4350.
+(pdftex.def)             Requested size: 789.94931pt x 335.25168pt.
+File: fax_send.png Graphic file (type png)
+
+<use fax_send.png>
+Package pdftex.def Info: fax_send.png used on input line 4350.
+(pdftex.def)             Requested size: 469.755pt x 199.36261pt.
+ <fax_send2.png, id=1171, 841.1425pt x 91.34125pt>
+File: fax_send2.png Graphic file (type png)
+
+<use fax_send2.png>
+Package pdftex.def Info: fax_send2.png used on input line 4354.
+(pdftex.def)             Requested size: 841.14046pt x 91.34102pt.
+File: fax_send2.png Graphic file (type png)
+ <use fax_send2.png>
+Package pdftex.def Info: fax_send2.png used on input line 4354.
+(pdftex.def)             Requested size: 469.755pt x 51.01137pt.
+
+<fax_list.png, id=1172, 873.2625pt x 131.49126pt>
+File: fax_list.png Graphic file (type png)
+ <use fax_list.png>
+Package pdftex.def Info: fax_list.png used on input line 4361.
+(pdftex.def)             Requested size: 873.26036pt x 131.49092pt.
+File: fax_list.png Graphic file (type png)
+
+<use fax_list.png>
+Package pdftex.def Info: fax_list.png used on input line 4361.
+(pdftex.def)             Requested size: 469.755pt x 70.73334pt.
+ [116 <./fax_send.png> <./fax_send2.png> <./fax_list.png>]
+<call_registry_company.png, id=1183, 1045.9075pt x 262.9825pt>
+File: call_registry_company.png Graphic file (type png)
+
+<use call_registry_company.png>
+Package pdftex.def Info: call_registry_company.png used on input line 4368.
+(pdftex.def)             Requested size: 1045.90495pt x 262.98184pt.
+File: call_registry_company.png Graphic file (type png)
+ <use call_registry_company.png>
+Package pdftex.def Info: call_registry_company.png used on input line 4368.
+(pdftex.def)             Requested size: 469.755pt x 118.1163pt.
+ [117 <./call_registry_company.png>] [118
+
+]
+Chapter 11.
+
+LaTeX Warning: Hyper reference `company/friends:friends' on page 119 undefined 
+on input line 4397.
+
+
+LaTeX Warning: Hyper reference `company/terminals:terminals' on page 119 undefi
+ned on input line 4419.
+
+[119]
+
+LaTeX Warning: Hyper reference `residential/filters:residential-filters' on pag
+e 120 undefined on input line 4507.
+
+[120]
+
+LaTeX Warning: Hyper reference `residential/devices:residential-devices' on pag
+e 121 undefined on input line 4513.
+
+
+LaTeX Warning: Hyper reference `company/faxing:faxing-system' on page 121 undef
+ined on input line 4514.
+
+[121] [122
+
+]
+Chapter 12.
+
+LaTeX Warning: Hyper reference `company/friends:friends' on page 123 undefined 
+on input line 4545.
+
+
+LaTeX Warning: Hyper reference `company/terminals:terminals' on page 123 undefi
+ned on input line 4560.
+
+[123] [124]
+
+LaTeX Warning: Hyper reference `retail/accounts:retail-accounts' on page 125 un
+defined on input line 4655.
+
+[125] [126
+
+]
+Chapter 13.
+[127] [128]
+Chapter 14.
+[129
+
+] <authorized_ips2.png, id=1288, 291.0875pt x 80.3pt>
+File: authorized_ips2.png Graphic file (type png)
+
+<use authorized_ips2.png>
+Package pdftex.def Info: authorized_ips2.png used on input line 4824.
+(pdftex.def)             Requested size: 291.08678pt x 80.29979pt.
+
+<authorized_ips.png, id=1289, 939.51pt x 145.54375pt>
+File: authorized_ips.png Graphic file (type png)
+ <use authorized_ips.png>
+Package pdftex.def Info: authorized_ips.png used on input line 4832.
+(pdftex.def)             Requested size: 939.5077pt x 145.54338pt.
+File: authorized_ips.png Graphic file (type png)
+
+<use authorized_ips.png>
+Package pdftex.def Info: authorized_ips.png used on input line 4832.
+(pdftex.def)             Requested size: 469.755pt x 72.77168pt.
+
+<authorized_ips3.png, id=1290, 911.405pt x 113.42375pt>
+File: authorized_ips3.png Graphic file (type png)
+
+<use authorized_ips3.png>
+Package pdftex.def Info: authorized_ips3.png used on input line 4836.
+(pdftex.def)             Requested size: 911.40277pt x 113.42346pt.
+File: authorized_ips3.png Graphic file (type png)
+ <use authorized_ips3.png>
+Package pdftex.def Info: authorized_ips3.png used on input line 4836.
+(pdftex.def)             Requested size: 469.755pt x 58.46147pt.
+ [130 <./authorized_ips2.png> <./authorized_ips.png> <./authorized_ips3.png>]
+
+LaTeX Warning: Hyper reference `platform/antiflood:antiflood-trusted-ips' on pa
+ge 131 undefined on input line 4878.
+
+<call_limit.png, id=1298, 190.7125pt x 52.195pt>
+File: call_limit.png Graphic file (type png)
+ <use call_limit.png>
+Package pdftex.def Info: call_limit.png used on input line 4892.
+(pdftex.def)             Requested size: 190.71202pt x 52.19487pt.
+ [131 <./call_limit.png>] [132
+
+]
+Chapter 15.
+<sngrep_sample.png, id=1313, 799.98875pt x 564.1075pt>
+File: sngrep_sample.png Graphic file (type png)
+ <use sngrep_sample.png>
+Package pdftex.def Info: sngrep_sample.png used on input line 4910.
+(pdftex.def)             Requested size: 799.9868pt x 564.10611pt.
+File: sngrep_sample.png Graphic file (type png)
+
+<use sngrep_sample.png>
+Package pdftex.def Info: sngrep_sample.png used on input line 4910.
+(pdftex.def)             Requested size: 469.755pt x 331.24535pt.
+ [133] [134 <./sngrep_sample.png>]
+<asterisk_cli.png, id=1334, 1424.32124pt x 272.01625pt>
+File: asterisk_cli.png Graphic file (type png)
+ <use asterisk_cli.png>
+Package pdftex.def Info: asterisk_cli.png used on input line 4950.
+(pdftex.def)             Requested size: 1424.31778pt x 272.01558pt.
+File: asterisk_cli.png Graphic file (type png)
+
+<use asterisk_cli.png>
+Package pdftex.def Info: asterisk_cli.png used on input line 4950.
+(pdftex.def)             Requested size: 469.755pt x 89.71167pt.
+ <kamtail.png, id=1335, 1360.08125pt x 456.70625pt>
+File: kamtail.png Graphic file (type png)
+
+<use kamtail.png>
+Package pdftex.def Info: kamtail.png used on input line 4959.
+(pdftex.def)             Requested size: 1360.07794pt x 456.70512pt.
+File: kamtail.png Graphic file (type png)
+ <use kamtail.png>
+Package pdftex.def Info: kamtail.png used on input line 4959.
+(pdftex.def)             Requested size: 469.755pt x 157.73804pt.
+
+No file IvozProvider.ind.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 4965.
+[135 <./asterisk_cli.png> <./kamtail.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 4965.
+ (./IvozProvider.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 4965.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 4965.
+
+
+
+Package rerunfilecheck Warning: File `IvozProvider.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `IvozProvider.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  C2ADB43B15EA4B9B7187F3B82BA05138;17660.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 4965.
+ ) 
+Here is how much of TeX's memory you used:
+ 15071 strings out of 494945
+ 226705 string characters out of 6181032
+ 268927 words of memory out of 5000000
+ 17309 multiletter control sequences out of 15000+600000
+ 62658 words of font info for 75 fonts, out of 8000000 for 9000
+ 15 hyphenation exceptions out of 8191
+ 35i,12n,49p,576b,660s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/he
+lvetic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on IvozProvider.pdf (140 pages, 5010399 bytes).
+PDF statistics:
+ 1505 PDF objects out of 1728 (max. 8388607)
+ 1163 compressed objects within 12 object streams
+ 622 named destinations out of 1000 (max. 500000)
+ 706 words of extra memory for PDF output out of 10000 (max. 10000000)
+

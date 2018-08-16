@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Tarificación de llamadas</title>
+    
+    <link rel="stylesheet" href="../../_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/banner.css" type="text/css" /> 
+  </head>
+  <body role="document">
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.xhtml" title="Índice General"
+             accesskey="I">índice</a></li>
+        <li class="right" >
+          <a href="../invoices/index.xhtml" title="Facturación"
+             accesskey="N">siguiente</a> |</li>
+        <li class="right" >
+          <a href="destination_rates.xhtml" title="Precios destino"
+             accesskey="P">anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.xhtml">documentación de IvozProvider - Artemis</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.xhtml" >Configuración de Marca</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.xhtml" accesskey="U">Tarificación</a> &#187;</li> 
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="call-billing">
+<h1>Tarificación de llamadas</h1>
+<p>Tarificar una llamada es la <strong>acción de poner precio</strong> a una llamada que implica coste.</p>
+<div class="section" id="automatic-billing">
+<h2>Tarificación automática</h2>
+<p>Tal y como se ha explicado con anterioridad, el proceso de tarificación es automático:</p>
+<ul>
+<li><p class="first">En el momento en el que una llamada se va a establecer, se verifica que se vaya a poder tarificar.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p class="first">Si no se va a poder tarificar atendiendo a los planes de precios activos para la empresa, la llamada no se cursará.</p>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">En el momento en el que una llamada que implique coste se cuelga, aparece en el listado de <a class="reference internal" href="billable_calls.xhtml#billable-calls"><span class="std std-ref">Llamadas facturables</span></a>.</p>
+</li>
+</ul>
+<div class="section" id="postpaid-billing">
+<h3>Tarificación postpago</h3>
+<blockquote>
+<div><ul class="simple">
+<li><p class="first">La tarificación de llamadas se realiza tras el colgado</p>
+</li>
+<li><p class="first">No existe saldo ni límite de gasto configurable</p>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="prepaid-billing">
+<h3>Tarificación prepago</h3>
+<blockquote>
+<div><ul class="simple">
+<li><p class="first">La tarificación de la llamada se hace durante la llamada</p>
+</li>
+<li><p class="first">Los clientes con prepago tienen un saldo preconfigurado que ira decrementando durante la llamada</p>
+</li>
+<li><p class="first">Cuando el saldo llega a cero, todas las llamadas establecidas del cliente serán colgadas</p>
+</li>
+<li><p class="first">Los clientes no pueden realizar nuevas llamadas con saldo cero o inferior.</p>
+</li>
+<li><p class="first">Es posible configurar notifaciones de correo para saldos bajos</p>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="pseudo-prepaid-billing">
+<h3>Tarificación pseudo-prepago</h3>
+<blockquote>
+<div><ul class="simple">
+<li><p class="first">La tarificación de la llamada se hace durante la llamada</p>
+</li>
+<li><p class="first">Los clientes con pseudo-prepago tienen un saldo preconfigurado que ira decrementando cuando las llamada finalice</p>
+</li>
+<li><p class="first">Los clientes no pueden realizar nuevas llamadas con saldo cero o inferior.</p>
+</li>
+<li><p class="first">Es posible configurar notifaciones de correo para saldos bajos</p>
+</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016-2017, Irontec.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9.
+    </div>
+  </body>
+</html>

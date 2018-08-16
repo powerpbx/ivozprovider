@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Configuring an external DDI</title>
+    
+    <link rel="stylesheet" href="../../_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/banner.css" type="text/css" /> 
+  </head>
+  <body role="document">
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.xhtml" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../external_outgoing_calls/index.xhtml" title="Making external calls"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../../brand/peering/ddi_provider_registrations.xhtml" title="DDI Provider Registrations"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.xhtml">IvozProvider Artemis documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.xhtml" accesskey="U">Receive external calls</a> &#187;</li> 
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <p>Once we have an agreement with a VoIP provider and we have configured it in
+the <em>peering</em> section, only two task are pending:</p>
+<div class="section" id="configuring-an-external-ddi">
+<span id="settingup-ddi"></span><h1>Configuring an external DDI</h1>
+<p>The brand operator, responsible of this <em>peering</em> agreements with VoIP providers
+, has the task to create the DDIs for each provider.</p>
+<p>Notice that in order to access this section, the brand operator (or <em>god</em>)
+must have emulated the proper company and access the menu section <strong>Company
+Configuration</strong>.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p class="last">Section <strong>Company configuration &gt; DDIs</strong> is different when the
+company administrator access than the displayed data when a global or brand
+administrator does. Company administrator are unable to create or delete
+DDIs, just edit the one created by the brand or god administrator.</p>
+</div>
+<p>The section <strong>Brand configuration &gt; DDIs</strong> is a <em>read-only</em> display of all the
+DDIs of the brand, associated with the different companies.</p>
+<p>Taking into account this concepts, we create a new DDI and fill the required
+fields:</p>
+<img alt="../../_images/ddis_add.png" class="align-center" src="../../_images/ddis_add.png" />
+<p id="bill-inbound">For detailed information about configuration fields, check <a class="reference internal" href="../../company/ddis.xhtml#ddis"><span class="std std-ref">DDIs</span></a> section.</p>
+</div>
+<div class="section" id="configure-incoming-routes">
+<h1>Configure incoming routes</h1>
+<p>In the previous section, we have created the DDI and configure it, but <strong>the
+most common procedure</strong> is that the brand operator just create it while the
+<strong>company administator</strong>, using the same saction <strong>will configure</strong> it choosing
+the correct route (user, huntgroup, etc.), its filters with calendars and so on.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">At this point, calling the number of the configured DDI will make the
+<em>Alice</em> phone ring.</p>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016-2017, Irontec.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>DDI Provider Registrations</title>
+    
+    <link rel="stylesheet" href="../../_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/banner.css" type="text/css" /> 
+  </head>
+  <body role="document">
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.xhtml" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../getting_started/external_incoming_calls/configure_ddi.xhtml" title="Configuring an external DDI"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ddi_providers.xhtml" title="DDI Providers"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.xhtml">IvozProvider Artemis documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../getting_started/external_incoming_calls/index.xhtml" >Receive external calls</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../getting_started/external_incoming_calls/peering.xhtml" accesskey="U">Peering configuartion</a> &#187;</li> 
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="ddi-provider-registrations">
+<h1>DDI Provider Registrations</h1>
+<p>Some providers require a <a class="reference external" href="https://tools.ietf.org/html/rfc3261#section-10">SIP Register</a><span class="link-target"> [https://tools.ietf.org/html/rfc3261#section-10]</span> active in order to receive
+incoming calls to our DDIs. Some of them, even require this register in order
+to process our outgoing calls through their services.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">IvozProvider supports any kind of <em>peering</em>, but we highly recomend
+<em>peer to peer peerings</em>: without authentication, without registry and
+validated by IP. This will avoid unnecessary traffic (authentication in each
+session and preriodic registers) and simplifies its configuration, just by
+leaving most of the fields by default.</p>
+</div>
+<dl class="glossary docutils">
+<dt id="term-username">Username</dt>
+<dd>Account number or similar provider by the provider that requires SIP
+register.</dd>
+<dt id="term-domain">Domain</dt>
+<dd>Domain or IP of the registar server. Usually the same as the SIP proxy
+of the Peer server.</dd>
+<dt id="term-ddi">DDI</dt>
+<dd>This will be sent in the SIP Contact header and must be unique in all
+the platform. For DDI Providers with an associated DDI, it is
+recommended to enter that DDI. In case of multiples DDI for the same
+DDI Provider, use any of them. If no DDI is associated with this
+DDI Provider just enter an unique numeric value.</dd>
+<dt id="term-user">User</dt>
+<dd>Authentication user. Most of the time it&#8217;s the same as username, so
+it&#8217;s recommended to leave empty.</dd>
+<dt id="term-register-server-uri">Register server URI</dt>
+<dd>Usually this can be left empty, as it can be obtained from the
+Domain. If it is not the case, enter the IP address with the &#8216;sip:&#8217;
+prefix.</dd>
+<dt id="term-realm">Realm</dt>
+<dd>Leave empty to accept the authentication realm proposed by the provider.
+Define only if you are familiar to the authentication mechanism used
+in SIP.</dd>
+<dt id="term-expire">Expire</dt>
+<dd>Default suggested register expire time.</dd>
+</dl>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">Similar to the Peer Servers, there are lots of fields in the screen.
+You must have into account that most of the provider doesn&#8217;t require register
+, and those who does, will only use user, domain and password.</p>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016-2017, Irontec.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9.
+    </div>
+  </body>
+</html>

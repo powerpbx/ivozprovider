@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Calendars</title>
+    
+    <link rel="stylesheet" href="../_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/banner.css" type="text/css" /> 
+  </head>
+  <body role="document">
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.xhtml" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="schedules.xhtml" title="Schedules"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="match_lists.xhtml" title="Match Lists"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.xhtml">IvozProvider Artemis documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.xhtml" accesskey="U">Company Configuration</a> &#187;</li> 
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="calendars">
+<h1>Calendars</h1>
+<p>Calenders are used to define what days are considered as holiday. Like
+schedules, multiples calendars can be combined.</p>
+<p>Let&#8217;s imagine three calendars with the following configuration:</p>
+<img alt="../_images/calendars_list.png" src="../_images/calendars_list.png" />
+<p>Calendar creation process only requires a name. Once created, we can add what
+days will be holidays using the buttons in its row:</p>
+<img alt="../_images/calendars_add_day.png" src="../_images/calendars_add_day.png" />
+<p>From this moment on, the calendar has the 1st of January of 2016 as holiday
+date with the locution &#8220;Happy New Year&#8221;.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Calendars logic is opposite to Schedulers: If a day is not defined
+as holiday in any of the calendars, it will considered a normal day and no
+filtering will be applied.</p>
+</div>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last">Holidays without special locutions will apply the external call filter
+holiday generic locution (see below).</p>
+</div>
+<p class="rubric">Create a new External call filter</p>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016-2017, Irontec.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9.
+    </div>
+  </body>
+</html>

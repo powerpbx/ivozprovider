@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>DDIs</title>
+    
+    <link rel="stylesheet" href="../_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/banner.css" type="text/css" /> 
+  </head>
+  <body role="document">
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.xhtml" title="Índice General"
+             accesskey="I">índice</a></li>
+        <li class="right" >
+          <a href="outgoingddi_rules.xhtml" title="Reglas DDI de salida"
+             accesskey="N">siguiente</a> |</li>
+        <li class="right" >
+          <a href="friends.xhtml" title="Friends"
+             accesskey="P">anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.xhtml">documentación de IvozProvider - Artemis</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.xhtml" accesskey="U">Configuración de Compañía</a> &#187;</li> 
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="ddis">
+<h1>DDIs</h1>
+<dl class="glossary docutils">
+<dt id="term-country">País</dt>
+<dd><p class="first last">El país de la númeración pública que estamos dando de alta.</p>
+</dd>
+<dt id="term-ddi">DDI</dt>
+<dd><p class="first last">El número en cuestión, sin códigos de país.</p>
+</dd>
+<dt id="term-ddi-provider">Proveedor DDI</dt>
+<dd><p class="first last">El <a class="reference internal" href="../brand/peering/ddi_providers.xhtml#ddi-provider"><span class="std std-ref">proveedor DDI</span></a> por el que entra la numeración. Esta relación permite aplicar las <a class="reference internal" href="../brand/transformations/index.xhtml#numeric-transformations"><span class="std std-ref">Transformaciones numéricas</span></a> adecuadas.</p>
+</dd>
+<dt id="term-external-call-filter">Filtro de entrada</dt>
+<dd><p class="first last">Permite aplicar lógicas de filtrado en base a horario y calendario, se verán en <a class="reference internal" href="external_filters.xhtml#external-filters"><span class="std std-ref">Filtros de entrada externo</span></a>. Dejar sin seleccionar para no aplicar filtro alguno.</p>
+</dd>
+<dt id="term-route">Enrutar</dt>
+<dd><p class="first last">Un DDI puede tener distintos <a class="reference internal" href="#routing-logics"><span class="std std-ref">tratamientos</span></a>. Para nuestro objetivo, enrutar al usuario <em>Alice</em>.</p>
+</dd>
+<dt id="term-record-calls">Grabar llamadas</dt>
+<dd><p class="first last">Dejar desactivado de momento, se explicará en <a class="reference internal" href="call_recording.xhtml#call-recordings"><span class="std std-ref">Grabación de llamadas</span></a>.</p>
+</dd>
+<dt id="term-tarificate-incoming-calls">Tarificar llamadas entrantes</dt>
+<dd><p class="first last">Requiere del módulo de tarificación externa y permite tarificar llamadas entrantes a numeraciones especiales. Consultar a los <a class="reference internal" href="../basics/intro/getting_help.xhtml#getting-help"><span class="std std-ref">desarrolladores de la solución</span></a> en caso de estar interesados.</p>
+</dd>
+</dl>
+<div class="section" id="ddi-external-filters">
+<h2>Filtro de entrada</h2>
+<p>Podemos seleccionar el <strong>Filtro de entrada externo</strong> configurado en <a class="reference internal" href="external_filters.xhtml#external-filters"><span class="std std-ref">la sección anterior</span></a>.</p>
+<img alt="../_images/ddi_edit.png" src="../_images/ddi_edit.png" />
+</div>
+<div class="section" id="ddi-routes">
+<span id="routing-logics"></span><h2>Tratamientos</h2>
+<p>Vemos que tenemos más opciones aparte de enviar la llamada, una vez superado los filtros de horario y calendario (y previa locución de bienvenida), directamente a un usuario:</p>
+<ul class="simple">
+<li><a class="reference internal" href="users.xhtml#users"><span class="std std-ref">Usuarios</span></a></li>
+<li><a class="reference internal" href="huntgroups.xhtml#huntgroups"><span class="std std-ref">Grupos de salto</span></a></li>
+<li><a class="reference internal" href="ivrs.xhtml#ivrs"><span class="std std-ref">IVRs</span></a></li>
+<li><a class="reference internal" href="conference_rooms.xhtml#conference-rooms"><span class="std std-ref">Salas de audioconferencias</span></a></li>
+<li><a class="reference internal" href="conditional_routes.xhtml#conditional-routes"><span class="std std-ref">Rutas condicionales</span></a></li>
+<li><p class="first"><a class="reference internal" href="queues.xhtml#queues"><span class="std std-ref">Colas</span></a></p>
+</li>
+<li><a class="reference internal" href="friends.xhtml#friends"><span class="std std-ref">Friends</span></a></li>
+</ul>
+<div class="admonition hint">
+<p class="first admonition-title">Consejo</p>
+<p class="last">También podemos apuntar el DDI a un <a class="reference internal" href="faxing.xhtml#faxing-system"><span class="std std-ref">fax virtual</span></a>, pero esto se verá en el siguiente bloque.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016-2017, Irontec.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9.
+    </div>
+  </body>
+</html>

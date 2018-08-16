@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Configuración DemoBrand</title>
+    
+    <link rel="stylesheet" href="../../_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/banner.css" type="text/css" /> 
+  </head>
+  <body role="document">
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.xhtml" title="Índice General"
+             accesskey="I">índice</a></li>
+        <li class="right" >
+          <a href="company_portal.xhtml" title="Configuración DemoCompany"
+             accesskey="N">siguiente</a> |</li>
+        <li class="right" >
+          <a href="god_portal.xhtml" title="Configuración Global"
+             accesskey="P">anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.xhtml">documentación de IvozProvider - Artemis</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.xhtml" accesskey="U">Realizar llamadas internas</a> &#187;</li> 
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="demobrand-configuration">
+<h1>Configuración DemoBrand</h1>
+<p>Para conseguir que esta DemoBrand tenga un cliente con 2 usuarios que se puedan llamar entre sí, vamos a tener que hacer muy poco en este bloque.</p>
+<p>De hecho, al acceder a la sección <strong>PBXs virtuales</strong>, vemos que ya existe una compañía <em>DemoCompany</em> que podremos utilizar para cumplir nuestro ansiado objetivo :)</p>
+<img alt="../../_images/company_list1.png" src="../../_images/company_list1.png" />
+<p>Solo le falta una cosa a esta empresa, marcado con <strong>EDIT</strong> en la captura anterior.</p>
+<div class="section" id="company-sip-domain">
+<span id="domain-per-company"></span><h2>Dominio SIP de la compañía</h2>
+<p>Tal y como se introdujo en la sección anterior, es <strong>imprescindible</strong> que cada empresa tenga un dominio público que resuelva a la IP configurada para el <a class="reference internal" href="../../platform/proxy_users.xhtml#proxyusers"><span class="std std-ref">Proxy de Usuarios</span></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">El registro DNS puede ser de tipo A (soportado por todos los hardphones/softphones) o del tipo NAPTR+SRV.</p>
+</div>
+<p>Una vez configurado el dominio (por medio de procedimientos que escapan al objetivo de este documento), bastará con escribir el parámetro en el campo adecuado de nuestra empresa:</p>
+<img alt="../../_images/set_domain1.png" src="../../_images/set_domain1.png" />
+<p>Una vez guardada la empresa, este dominio aparecerá en la sección descrita <a class="reference internal" href="../../platform/domains.xhtml#god-sipdomains"><span class="std std-ref">en la sección anterior</span></a>:</p>
+<img alt="../../_images/domain_list1.png" src="../../_images/domain_list1.png" />
+<div class="admonition attention">
+<p class="first admonition-title">Atención</p>
+<p class="last">Es fundamental entender este bloque. <a class="reference internal" href="#dnshack"><span class="std std-ref">Salvo que tengamos una única compañía registrada</span></a>, sin un registro DNS correctamente configurado apuntando a la IP del Proxy de Usuarios, ¡fracasaremos en nuestro objetivo!</p>
+</div>
+<p>Esta es una buena señal para el dominio que acabamos de configurar, siempre y cuando en lugar de 10.10.3.10 aparezca la IP pública configurada en <a class="reference internal" href="../../platform/proxy_users.xhtml#proxyusers"><span class="std std-ref">Proxy de Usuarios</span></a>.</p>
+<img alt="../../_images/dominio_bien_configurado1.png" src="../../_images/dominio_bien_configurado1.png" />
+<div class="admonition danger">
+<p class="first admonition-title">Peligro</p>
+<p class="last">¿Se ha insistido suficiente en que sin un registro DNS correctamente configurado apuntando a la IP del Proxy de Usuarios no funcionará nada?</p>
+</div>
+<div class="section" id="i-have-no-time-for-a-dns-registry">
+<span id="dnshack"></span><h3>No tengo tiempo para crear registros DNS</h3>
+<p>Todo lo contado hasta este punto es verídico: a medida que vayamos creando marcas y éstas vayan creando empresas, cada una de ellas necesitará un registro DNS.</p>
+<p>Pero la primera empresa de la plataforma es especial y puede apoderarse de laIP del Proxy de Usuarios y usarla como si de un DNS se tratara:</p>
+<img alt="../../_images/fake_domain1.png" src="../../_images/fake_domain1.png" />
+<p>A pesar de no ser un dominio, al estar usándose como tal, aparecerá en la sección de <strong>Dominios</strong>:</p>
+<img alt="../../_images/fake_domain21.png" src="../../_images/fake_domain21.png" />
+<div class="admonition tip">
+<p class="first admonition-title">Truco</p>
+<p class="last">Es importante entender que este truco solo es válido para la primera   empresa de la plataforma ;)</p>
+</div>
+</div>
+</div>
+<div class="section" id="emulate-demo-company">
+<span id="emulate-company"></span><h2>Emular la empresa Demo</h2>
+<p>El proceso de emulación de empresa es idéntico al de emulación de marca, conla diferencia de que filtra el bloque &#8216;Configuración de Empresa&#8217; en lugar delbloque &#8216;Configuración de Marca&#8217;.</p>
+<img alt="../../_images/emulate_company1.png" class="align-center" src="../../_images/emulate_company1.png" />
+<img alt="../../_images/emulate_company21.png" class="align-center" src="../../_images/emulate_company21.png" />
+<p>Una vez emulada la empresa, la parte superior derecha de la pantalla mostraráque vamos por el buen camino :)</p>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016-2017, Irontec.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9.
+    </div>
+  </body>
+</html>

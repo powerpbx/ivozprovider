@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Plantillas de Notificaciones</title>
+    
+    <link rel="stylesheet" href="../_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/banner.css" type="text/css" /> 
+  </head>
+  <body role="document">
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.xhtml" title="Índice General"
+             accesskey="I">índice</a></li>
+        <li class="right" >
+          <a href="peering/index.xhtml" title="Peering"
+             accesskey="N">siguiente</a> |</li>
+        <li class="right" >
+          <a href="portal_urls.xhtml" title="URL Portales"
+             accesskey="P">anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.xhtml">documentación de IvozProvider - Artemis</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.xhtml" accesskey="U">Configuración de Marca</a> &#187;</li> 
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="notification-templates">
+<span id="id1"></span><h1>Plantillas de Notificaciones</h1>
+<p>Los administradores de marca pueden configurar las notificaciones enviadas por IvozProvider:</p>
+<ul class="simple">
+<li><p class="first">Correos electrónicos enviados cuando se recibe un buzón de voz nuevo.</p>
+</li>
+<li><p class="first">Correos electrónicos enviados cuando se recibe un fax nuevo.</p>
+</li>
+<li>Email sent when a balance is below configured threshold</li>
+<li><p class="first">Correos electrónicos enviados cuando se generan facturas automáticas</p>
+</li>
+<li><p class="first">Correos electrónicos enviados cuando se generan CSVs de CDR planificados</p>
+</li>
+</ul>
+<div class="admonition hint">
+<p class="first admonition-title">Consejo</p>
+<p class="last">Si no se configuran notificaciones, se emplearán notificaciones genéricas</p>
+</div>
+<p>Las plantillas de notificaciones son creadas en dos pasos: Crear una tipo de notificación y añadir contenido a la notificación para cada lenguaje necesario.</p>
+<div class="section" id="creating-a-new-notification">
+<h2>Crear una nueva notificación</h2>
+<p>Los administradores de marca puede crear nuevas plantillas de notificacion en <strong>Configuración de marca</strong> &gt; <strong>Plantillas de notificación</strong></p>
+<p>Los campos son auto-explicativos</p>
+<dl class="glossary docutils">
+<dt id="term-name">Nombre</dt>
+<dd><p class="first last">Empleado para identificar esta plantilla de notificación</p>
+</dd>
+<dt id="term-type">Tipo</dt>
+<dd><p class="first last">Determina el tipo de notificación. Cada tipo de notificación tiene sus propias variables de sustitución disponibles para poder replazar en los contenidos del asunto y cuerpo.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="adding-notification-contents">
+<h2>Añadiendo contenidos a la notificación</h2>
+<p>Una vez la notificación ha sido creada, se pueden añadir contenidos para los diferentes languages. IvozProvider eligirá automáticamente el lenguaje en función del destino:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p class="first">Para buzones de voz, el lenguaje del usuario del buzón será empleado</p>
+</li>
+<li><p class="first">Para faxes, el lenguaje de la compañía será empleado.</p>
+</li>
+</ul>
+</div></blockquote>
+<p>Campos configurables para cada contenido:</p>
+<dl class="glossary docutils">
+<dt id="term-language">Lenguaje</dt>
+<dd><p class="first last">Lenguaje de los contenidos</p>
+</dd>
+<dt id="term-from-name">Nombre origen</dt>
+<dd><p class="first last">Nombre mostar al enviar correos electrónicos (p.e. Notificaciones Buzón de voz IvozProvider)</p>
+</dd>
+<dt id="term-from-address">Dirección origen</dt>
+<dd><p class="first last">Dirección origen mostrado al enviar corros electrónicos (p.e. <a class="reference external" href="mailto:no-reply&#37;&#52;&#48;ivozprovider&#46;com">no-reply<span>&#64;</span>ivozprovider<span>&#46;</span>com</a>)</p>
+</dd>
+<dt id="term-substitution-variables">Sustitución de variables</dt>
+<dd><p class="first last">Variables disponibles que pueden emplearse en el asunto y cuero y serán remplazadas antes de enviar el correo electrónico. Cada notificacion cuenta con sus propias variables de sustitución.</p>
+</dd>
+<dt id="term-subject">Asunto</dt>
+<dd><p class="first last">Asunto del email que se enviará. Puede emplear variables de sustitución aquí.</p>
+</dd>
+<dt id="term-body">Cuerpo</dt>
+<dd><p class="first last">Cuerpo HTML del email que se enviará. Puede emplear variables de sustitución aquí.</p>
+</dd>
+</dl>
+<div class="admonition hint">
+<p class="first admonition-title">Consejo</p>
+<p class="last">No es neceario crear contenidos para todos los lenguajes. Si una notificación no tiene un lenguaje definido, se emplearán los contenidos por defecto para ese lenguaje y tipo de notificación.</p>
+</div>
+</div>
+<div class="section" id="assigning-templates-to-companies">
+<h2>Asignar plantillas a compañías.</h2>
+<p>Una vez configurada la notificación para los idiomas deseados, los administradores de Marca deben asignarlas a las Compañias o Clientes Retail que las emplearán. Esta asignación se realiza en la sección Configuración de Notificaciones de las pantallas de edición de Compañía y Cliente Retail.</p>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016-2017, Irontec.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9.
+    </div>
+  </body>
+</html>

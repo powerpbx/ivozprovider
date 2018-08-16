@@ -1,0 +1,301 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Calendarios &mdash; documentación de IvozProvider - Artemis</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/banner.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Índice"
+              href="../genindex.html"/>
+        <link rel="search" title="Búsqueda" href="../search.html"/>
+    <link rel="top" title="documentación de IvozProvider - Artemis" href="../index.html"/>
+        <link rel="up" title="Configuración de Compañía" href="index.html"/>
+        <link rel="next" title="Horarios" href="schedules.html"/>
+        <link rel="prev" title="Listas de coincidencia" href="match_lists.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> IvozProvider
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Basic Concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basics/intro/index.html">Introducción a Ivozprovider</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basics/architecture/index.html">Arquitectura general de la plataforma</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basics/installation/index.html">Instalación inicial</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basics/operation_roles/index.html">Roles de la plataforma</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/internal_calls/index.html">Realizar llamadas internas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/external_incoming_calls/index.html">Recibir llamadas externas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/external_outgoing_calls/index.html">Realizar llamadas externas</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Administation portal</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../platform/index.html">Configuración de Plataforma</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../brand/index.html">Configuración de Marca</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Configuración de Compañía</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="users.html">Usuarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="terminals.html">Terminales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extensions.html">Extensiones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="friends.html">Friends</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ddis.html">DDIs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outgoingddi_rules.html">Reglas DDI de salida</a></li>
+<li class="toctree-l2"><a class="reference internal" href="external_filters.html">Filtros de entrada externo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conditional_routes.html">Rutas condicionales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="match_lists.html">Listas de coincidencia</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Calendarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schedules.html">Horarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="route_locks.html">Candados</a></li>
+<li class="toctree-l2"><a class="reference internal" href="call_permissions.html">Control ACL para llamadas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="huntgroups.html">Grupos de salto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="call_captures.html">Capturas de llamada</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ivrs.html">Interactive Voice Response (IVR)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="queues.html">Colas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conference_rooms.html">Salas de audioconferencias</a></li>
+<li class="toctree-l2"><a class="reference internal" href="locutions.html">Locuciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="music_on_hold.html">Música en espera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="call_recording.html">Grabación de llamadas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services.html">Servicios de Compañía</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faxing.html">Sistema de Fax Virtual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="call_registry.html">Registro de llamadas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../residential/index.html">Residential Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../retail/index.html">Configuración Retail</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User portal</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../userportal/index.html">Portal de usuario</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Security and Maintenance</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../security/index.html">Elementos de seguridad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maintenance/index.html">Mantenimiento de la solución</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">IvozProvider</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Configuración de Compañía</a> &raquo;</li>
+      
+    <li>Calendarios</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/company/calendars.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="calendars">
+<h1>Calendarios<a class="headerlink" href="#calendars" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Los calendarios definen, una vez sumados, los días que se tienen que considerar festivos.</p>
+<p>Imaginemos que creamos 3 calendarios tal que:</p>
+<img alt="../_images/calendars_list.png" src="../_images/calendars_list.png" />
+<p>La creación de calendarios solo requiere dar un nombre al mismo, una vez creado hay que añadir días festivos a dicho calendario pulsando el botón de la derecha del lápiz:</p>
+<img alt="../_images/calendars_add_day.png" src="../_images/calendars_add_day.png" />
+<p>Desde este momento, ese calendario tiene marcado el día 1 de Enero de 2016 como día festivo con locución de festivo especial llamada &#8220;Feliz año&#8221;.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Advertencia</p>
+<p class="last">Los calendarios tienen una lógica contraria a los horarios: si un día concreto no está definido como festivo en uno de los calendarios, será considerado como día laborable.</p>
+</div>
+<div class="admonition hint">
+<p class="first admonition-title">Consejo</p>
+<p class="last">Si un día es festivo en un calendario y no hay locución de festivo especial, se reproducirá la locución de festivo del filtro de entrada externo (ver más abajo).</p>
+</div>
+<p class="rubric">Crear un filtro de entrada externo</p>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="schedules.html" class="btn btn-neutral float-right" title="Horarios" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="match_lists.html" class="btn btn-neutral" title="Listas de coincidencia" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2017, Irontec.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        <span class="fa fa-book"> Other Versions</span>
+        v: bleeding
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        <dl>
+            <dt>Branches</dt>
+            <dd><a href="../artemis/company/calendars.html">artemis</a></dd>
+            <dd><a href="../bleeding/company/calendars.html">bleeding</a></dd>
+            <dd><a href="../oasis/index.html">oasis</a></dd>
+        </dl>
+    </div>
+</div>
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'Artemis',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Servidores de Carrier</title>
+    
+    <link rel="stylesheet" href="../../_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/banner.css" type="text/css" /> 
+  </head>
+  <body role="document">
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.xhtml" title="Índice General"
+             accesskey="I">índice</a></li>
+        <li class="right" >
+          <a href="ddi_provider_addresses.xhtml" title="Direcciones IP de proveedores DDI"
+             accesskey="N">siguiente</a> |</li>
+        <li class="right" >
+          <a href="carriers.xhtml" title="Carriers"
+             accesskey="P">anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.xhtml">documentación de IvozProvider - Artemis</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.xhtml" >Configuración de Marca</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.xhtml" accesskey="U">Peering</a> &#187;</li> 
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="carrier-servers">
+<h1>Servidores de Carrier</h1>
+<p>El concepto de <strong>Servidor de Carrier</strong> se refiere a los distintos servidores SIP que puede tener un Operador IP para servir su dominio SIP.Estos servidores se emplean para realizar llamadas salientes a empleando <a class="reference internal" href="../routing/outgoing_routing.xhtml#outgoing-routing"><span class="std std-ref">Rutas salientes</span></a>.</p>
+<dl class="glossary docutils">
+<dt id="term-name">Nombre</dt>
+<dd><p class="first last">Se utilizará para referencia a este servidor.</p>
+</dd>
+<dt id="term-description">Descripción</dt>
+<dd><p class="first last">Un campo adicional para escribir algún detalle.</p>
+</dd>
+<dt id="term-sip-proxy">SIP Proxy</dt>
+<dd><p class="first last">Dirección IP (o registro DNS) del Servidor. Si utiliza un puerto distinto a 5060, se puede indicar con &#8216;:&#8217;.</p>
+</dd>
+<dt id="term-uri-scheme">Esquema URI</dt>
+<dd><p class="first last">Los esquemas soportados son sip y sips. Dejar en &#8216;sip&#8217; en caso de duda.</p>
+</dd>
+<dt id="term-transport">Transporte</dt>
+<dd><p class="first last">Los protocolos de transporte SIP soportados. En caso de duda, dejar &#8216;udp&#8217;.</p>
+</dd>
+<dt id="term-outbound-proxy">Proxy saliente</dt>
+<dd><p class="first last">Normalmente se deja vacío o se pone la IP del dominio indicado en <strong>SIP Proxy</strong> (para evitar resolución de dominios y hacer que el mensaje SIP contenga el dominio en lugar de una IP). Funciona como un proxy web:en lugar de enviar los mensajes SIP al destino de <strong>SIP Proxy</strong>, los envía a la IP:PUERTO de este campo.</p>
+</dd>
+<dt id="term-requires-authentication">Requiere autenticación</dt>
+<dd><p class="first last">Existen Carriers que nos validarán por IP, otros necesitarán que nos autentiquemos en cada sesión que queramos establecer. En caso de ser del último grupo, este selector nos permite introducir un usuario y una contraseña para responder a esa autenticación.</p>
+</dd>
+<dt id="term-call-origin-header">Cabecera de origen de llamada</dt>
+<dd><p class="first last">Algunos operadores recogen el origen del From. Otros utilizan el From para validar la cuenta de cliente y necesitan cabeceras adicionales para recoger el origen. En caso de duda, marcar <strong>PAI</strong>.</p>
+</dd>
+<dt id="term-r-uri-transformations-before-numeric-transformations">Transformaciones R-URI previas a las transformaciones numéricas</dt>
+<dd><p class="first last">Permiten realizar cambios estáticos al destino de la llamada antes de aplicar las reglas de transformación numéricas mencionadas en <a class="reference internal" href="../transformations/index.xhtml#numeric-transformations"><span class="std std-ref">Transformaciones numéricas</span></a>. Se pueden quitar unos dígitos del comienzo, añadir un prefijo después e, incluso, añadir parámetros a la URI siguiendo el formato indicado. En caso de duda, dejar todo el bloque en blanco.</p>
+</dd>
+<dt id="term-from-header-customization">Personalización de la cabecera From</dt>
+<dd><p class="first last">Los operadores que muestren el origen en otras cabeceras (PAI/RPID), es posible que nos soliciten que el From User sea el número de cuenta de cliente y el From Domain (por ejemplo), su dominio SIP. En caso de duda, dejar en blanco.</p>
+</dd>
+</dl>
+<div class="admonition tip">
+<p class="first admonition-title">Truco</p>
+<p class="last">Existen muchos campos para poder establecer <em>peering</em> con operadores de todo tipo, pero lo habitual será poner solo nombre y SIP Proxy (para los operadores que nos validen por IP) o nombre, SIP Proxy y Autenticación.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Advertencia</p>
+<p class="last">En caso de definir múltiples servidores para un Carrier, IvozProvider hará balanceo y failover utilizando todos. Es decir, a veces hablará a uno y otras veces a otro. En caso de que uno no le conteste, lo intentará con el resto hasta dar con uno que conteste.</p>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016-2017, Irontec.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9.
+    </div>
+  </body>
+</html>

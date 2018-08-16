@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Registros SIP de proveedores DDI</title>
+    
+    <link rel="stylesheet" href="../../_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/banner.css" type="text/css" /> 
+  </head>
+  <body role="document">
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.xhtml" title="Índice General"
+             accesskey="I">índice</a></li>
+        <li class="right" >
+          <a href="../../getting_started/external_incoming_calls/configure_ddi.xhtml" title="Dar de alta un DDI externo"
+             accesskey="N">siguiente</a> |</li>
+        <li class="right" >
+          <a href="ddi_providers.xhtml" title="Proveedores DDI"
+             accesskey="P">anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.xhtml">documentación de IvozProvider - Artemis</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../getting_started/external_incoming_calls/index.xhtml" >Recibir llamadas externas</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../getting_started/external_incoming_calls/peering.xhtml" accesskey="U">Configuración de peering</a> &#187;</li> 
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="ddi-provider-registrations">
+<h1>Registros SIP de proveedores DDI</h1>
+<p>Hay operadores que exigen que tengamos un <a class="reference external" href="https://tools.ietf.org/html/rfc3261#section-10">Registro SIP</a><span class="link-target"> [https://tools.ietf.org/html/rfc3261#section-10]</span> activo para que nos metan las llamadas de nuestras numeraciones. Es más, existen operadores que exigen un registro activo para poder sacar llamadas a través de ellos.</p>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">IvozProvider soporta <em>peerings</em> de todo tipo, pero recomendamos acordar <em>peerings de tú a tú</em>: sin autenticación, sin registro y validados por IP. Esto evita tráfico innecesario (autenticación en cada sesión y registros periódicos) y simplifica la configuración, quedándose casi todo con los valores por defecto.</p>
+</div>
+<dl class="glossary docutils">
+<dt id="term-username">Nombre de usuario</dt>
+<dd><p class="first last">Número de cuenta de cliente o similar proporcionada por el operador que exige registro SIP.</p>
+</dd>
+<dt id="term-domain">Dominio</dt>
+<dd><p class="first last">Dominio o IP del servidor de registros. Habitualmente el mismo que sirve de Proxy SIP en el PeerServer.</p>
+</dd>
+<dt id="term-ddi">DDI</dt>
+<dd><p class="first last">Se envía en la cabecera Contact y tiene que ser único a nivel de toda laplataforma. En proveedores con un DDI asociado, se recomienda meter ese DDI. En caso de múltiples DDIs asociados, se recomienda meter uno de ellos. En caso de ningún DDI asociado, se recomienda meter un valor único (cualquier valor que te deje guardar).</p>
+</dd>
+<dt id="term-user">Usuario</dt>
+<dd><p class="first last">Usuario de autenticación, prácticamente siempre es igual al &#8220;Nombre de usuario&#8221; por lo que se recomienda dejar en blanco.</p>
+</dd>
+<dt id="term-register-server-uri">URI Servidor de registro</dt>
+<dd><p class="first last">Normalmente se puede dejar en blanco ya que se deduce del Dominio introducido. Si no fuera así, poner una dirección IP con &#8216;sip:&#8217; por delante.</p>
+</dd>
+<dt id="term-realm">Realm</dt>
+<dd><p class="first last">Dejar en blanco para aceptar el propuesto por el extremo contrario.Definir solo si de estar familiarizado el mecanismo de autorización de SIP y saber lo que este campo implica.</p>
+</dd>
+<dt id="term-expire">Expire</dt>
+<dd><p class="first last">Tiempo que IvozProvider sugerirá como tiempo de expiración del registro.</p>
+</dd>
+</dl>
+<div class="admonition tip">
+<p class="first admonition-title">Truco</p>
+<p class="last">Al igual que ocurre con los PeerServers, existen múltiples campos. Hay que tener en cuenta, no obstante, que la mayoría de operadores no deberían de exigir registro y, los que lo hagan, habitualmente solo requerirán de usuario, dominio y contraseña.</p>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016-2017, Irontec.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9.
+    </div>
+  </body>
+</html>

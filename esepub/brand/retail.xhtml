@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Retail</title>
+    
+    <link rel="stylesheet" href="../_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/banner.css" type="text/css" /> 
+  </head>
+  <body role="document">
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.xhtml" title="Índice General"
+             accesskey="I">índice</a></li>
+        <li class="right" >
+          <a href="wholesale.xhtml" title="Wholesale"
+             accesskey="N">siguiente</a> |</li>
+        <li class="right" >
+          <a href="virtual_pbx.xhtml" title="PBX Virtual"
+             accesskey="P">anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.xhtml">documentación de IvozProvider - Artemis</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.xhtml" accesskey="U">Configuración de Marca</a> &#187;</li> 
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="retail">
+<span id="retail-clients"></span><h1>Retail</h1>
+<p>Los clientes retail están diseñados para ofrecer servicio de enrutado de DDIs a clientes con PBXs propias.</p>
+<div class="admonition hint">
+<p class="first admonition-title">Consejo</p>
+<p class="last">Algunos de los campos descritos a continuación podrían ser invisibles en función de las funcionalidades habilitadas en el cliente.</p>
+</div>
+<dl class="glossary docutils">
+<dt id="term-name">Nombre</dt>
+<dd><p class="first last">Configura el nombre del cliente.</p>
+</dd>
+<dt id="term-features">Features</dt>
+<dd><p class="first last">Permite elegir las features del cliente. Esto habilitará o deshabilitará las diferentes secciones del menú del cliente.</p>
+</dd>
+<dt id="term-billing-method">Método de tarificación</dt>
+<dd><p class="first last">Cuando la tarificación esté habilitada, determina como serán tarificadas las llamadas. Ver sección <a class="reference internal" href="billing/index.xhtml#billing"><span class="std std-ref">Tarificación</span></a>.</p>
+</dd>
+<dt id="term-geographic-configuration">Configuración geográfica</dt>
+<dd><p class="first last">Configuración geral del lenguaje y zona horaria. La mayoría de las opciones en esta sección se pueden configurar por usuario si es necesario.</p>
+</dd>
+<dt id="term-security">Seguridad</dt>
+<dd><p class="first last">Limita el número de llamadas externas concurrentes y origenes de llamadas de este cliente.</p>
+</dd>
+<dt id="term-invoice-data">Datos de facturación</dt>
+<dd><p class="first last">Información incluida en las facturas creadas por esta marca.</p>
+</dd>
+<dt id="term-externally-rated-options">Opciones adicionales tarificación externa</dt>
+<dd><p class="first last">Para <a class="reference internal" href="peering/carriers.xhtml#carriers"><span class="std std-ref">Carriers</span></a> con tarificación externa habilitada, este campo puede emplearse para información específica de este cliente.</p>
+</dd>
+<dt id="term-notifications">Notificationes</dt>
+<dd><p class="first last">Configurar las <a class="reference internal" href="notifications.xhtml#notification-templates"><span class="std std-ref">Plantillas de Notificaciones</span></a> a emplear en esta compañía.</p>
+</dd>
+<dt id="term-outgoing-ddi">DDI saliente</dt>
+<dd><p class="first last">Introducido en 1.3, esta opción permite elegir el DDI saliente para las llamadas de este cliente, si no son especificadas en un nivel inferior.</p>
+</dd>
+<dt id="term-media-relay-set">Servidores de Media</dt>
+<dd><p class="first last">Como se ha mencionado, los servidores de media pueden ser agrupados para reservar capacidades o para una distribución geográfica. Esta sección le permite asignarlos a las compañías.</p>
+</dd>
+<dt id="term-distribute-method">Método de distribución</dt>
+<dd><p class="first last">&#8216;Basado en hash&#8217; distribuye las llamadas en base a un parámetro único por cliente, &#8216;Round robin&#8217; distribuye las llamadas uniformemente entre todos los AS-es y &#8216;estático&#8217; se utiliza solo para <em>testing</em>.</p>
+</dd>
+<dt id="term-application-server">Servidores de aplicación</dt>
+<dd><p class="first last">Si se utiliza &#8216;estático&#8217;, selecciona un AS aquí.</p>
+</dd>
+<dt id="term-recordings">Grabaciones</dt>
+<dd><p class="first last">Configure el límite de tamaño de las grabaciones de este cliente. Se enviará una notificación a la dirección configurada cuando se alcance el 80% y se rotarán las grabaciones más antiguas cuando se alcance el límite.</p>
+</dd>
+</dl>
+<div class="admonition hint">
+<p class="first admonition-title">Consejo</p>
+<p class="last">Retail clients and their accounts use Brand&#8217;s domain for authentication.</p>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016-2017, Irontec.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9.
+    </div>
+  </body>
+</html>

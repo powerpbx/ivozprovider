@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Call billing</title>
+    
+    <link rel="stylesheet" href="../../_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/banner.css" type="text/css" /> 
+  </head>
+  <body role="document">
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.xhtml" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../invoices/index.xhtml" title="Invoicing"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="destination_rates.xhtml" title="Destination Rates"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.xhtml">IvozProvider Artemis documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.xhtml" >Brand Configuration</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.xhtml" accesskey="U">Billing</a> &#187;</li> 
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="call-billing">
+<h1>Call billing</h1>
+<p>Billing a call is the <strong>action of setting a price</strong> to a call that implies cost.</p>
+<div class="section" id="automatic-billing">
+<h2>Automatic billing</h2>
+<p>As exposed previously, billing calls depends upon an automatic process:</p>
+<ul>
+<li><p class="first">When a call is about to be established, IvozProvider verifies that it will be
+able to bill it.</p>
+<blockquote>
+<div><ul class="simple">
+<li>If with the current configuration (active and applicable rating plans for
+a given company and for the specific destination) it won&#8217;t be possible to
+bill the call, IvozProvider will prevent its establishment.</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Once a call that implies cost is hung up, it is listed in <a class="reference internal" href="billable_calls.xhtml#billable-calls"><span class="std std-ref">Billable calls</span></a>.</p>
+</li>
+</ul>
+<div class="section" id="postpaid-billing">
+<h3>Postpaid billing</h3>
+<blockquote>
+<div><ul class="simple">
+<li>Call tarification is done after the call ends</li>
+<li>No configurable limit or balances involved</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="prepaid-billing">
+<h3>Prepaid billing</h3>
+<blockquote>
+<div><ul class="simple">
+<li>Call trarification is done during the call</li>
+<li>Clients with prepaid have a preconfigured balance that will be decrement during the call</li>
+<li>When the balance reaches zero, all established calls for the client will hang up</li>
+<li>Clients can not place new calls with zero or below balance</li>
+<li>Low balance email notifications can be configured</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="pseudo-prepaid-billing">
+<h3>Pseudo-prepaid billing</h3>
+<blockquote>
+<div><ul class="simple">
+<li>Call trarification is done during the call</li>
+<li>Clients with pseudo-prepaid have a preconfigured balance that will be decrement after the call ends</li>
+<li>Clients can not place new calls with zero or below balance</li>
+<li>Low balance email notifications can be configured</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016-2017, Irontec.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,338 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>DemoBrand Configuration &mdash; IvozProvider Artemis documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/banner.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="IvozProvider Artemis documentation" href="../../index.html"/>
+        <link rel="up" title="Making internal calls" href="index.html"/>
+        <link rel="next" title="DemoCompany Configuration" href="company_portal.html"/>
+        <link rel="prev" title="Global Configuration" href="god_portal.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> IvozProvider
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Basic Concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../basics/intro/index.html">Introduction to IvozProvider</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../basics/architecture/index.html">Platform general architecture</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../basics/installation/index.html">Initial Installation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../basics/operation_roles/index.html">Platform roles</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Making internal calls</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="god_portal.html">Global Configuration</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">DemoBrand Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#company-sip-domain">Company SIP Domain</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#i-have-no-time-for-a-dns-registry">I have no time for a DNS registry</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#emulate-demo-company">Emulate Demo company</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="company_portal.html">DemoCompany Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configure_sipuacs.html">SIP Terminal configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../external_incoming_calls/index.html">Receive external calls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../external_outgoing_calls/index.html">Making external calls</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Administation portal</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../platform/index.html">Platform Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../brand/index.html">Brand Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../company/index.html">Company Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../residential/index.html">Residential Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../retail/index.html">Retail Configuration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User portal</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../userportal/index.html">User Portal</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Security and Maintenance</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../security/index.html">Security elements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maintenance/index.html">Maintenance and troubleshooting</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">IvozProvider</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Making internal calls</a> &raquo;</li>
+      
+    <li>DemoBrand Configuration</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/getting_started/internal_calls/brand_portal.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="demobrand-configuration">
+<h1>DemoBrand Configuration<a class="headerlink" href="#demobrand-configuration" title="Permalink to this headline">¶</a></h1>
+<p>We need that the default DemoBrand have a client with at least 2 users. In
+order to archive this we will require little configuration in this section.</p>
+<p>In fact, if we check <strong>Virtual PBXs</strong> in the brand menu, we&#8217;ll discover that there
+is already an existing <em>DemoCompany</em> that we can use to fulfill our desired
+goal :)</p>
+<img alt="../../_images/company_list.png" src="../../_images/company_list.png" />
+<p>Only a thing is required to configure for this company, marked as edit in the
+previous image.</p>
+<div class="section" id="company-sip-domain">
+<span id="domain-per-company"></span><h2>Company SIP Domain<a class="headerlink" href="#company-sip-domain" title="Permalink to this headline">¶</a></h2>
+<p>As mentioned in the previous section, is <strong>required</strong> that each of the companies
+have a public domain that resolves to the configured IP address for
+<a class="reference internal" href="../../platform/proxy_users.html#proxyusers"><span class="std std-ref">Users SIP Proxy</span></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">DNS register can be type A (supported by all the hardphones/softphones
+) or even NAPTR+SRV.</p>
+</div>
+<p>Once the domain has been configured (by means that are out of scope of this
+document), it will be enought to write it in our company configuration:</p>
+<img alt="../../_images/set_domain.png" src="../../_images/set_domain.png" />
+<p>Once the company has been saved, the domain will be also displayed in the list
+<a class="reference internal" href="../../platform/domains.html#god-sipdomains"><span class="std std-ref">previously mentioned</span></a>:</p>
+<img alt="../../_images/domain_list.png" src="../../_images/domain_list.png" />
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p class="last">It&#8217;s important to understand this block. <a class="reference internal" href="#dnshack"><span class="std std-ref">Unless we&#8217;ve a
+single company registered</span></a>, wihout a DNS domain pointing to our
+users proxy IP address, everything will fail.</p>
+</div>
+<p>This is a good sign for the domain we have configured right now, replacing the
+10.10.3.10 with the public address we have used to configure <a class="reference internal" href="../../platform/proxy_users.html#proxyusers"><span class="std std-ref">Users SIP Proxy</span></a>.</p>
+<img alt="../../_images/dominio_bien_configurado.png" src="../../_images/dominio_bien_configurado.png" />
+<div class="admonition danger">
+<p class="first admonition-title">Danger</p>
+<p class="last">Have we stressed enough that without a properly configured DNS
+pointing to the Users proxy IP address nothing will work?</p>
+</div>
+<div class="section" id="i-have-no-time-for-a-dns-registry">
+<span id="dnshack"></span><h3>I have no time for a DNS registry<a class="headerlink" href="#i-have-no-time-for-a-dns-registry" title="Permalink to this headline">¶</a></h3>
+<p>Everything we have said is true: as we create new brands and brands create new
+companies, each of them will need a DNS registry.</p>
+<p>But the first company of the platform is quite special and can take over the IP
+address of the proxy to use it as a domain:</p>
+<img alt="../../_images/fake_domain.png" src="../../_images/fake_domain.png" />
+<p>Although it is not a domain, but being used like it was, it will be displayed
+in Domain section:</p>
+<img alt="../../_images/fake_domain2.png" src="../../_images/fake_domain2.png" />
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">It’s important to understand the this trick is only valid for the first
+company of the platform ;)</p>
+</div>
+</div>
+</div>
+<div class="section" id="emulate-demo-company">
+<span id="emulate-company"></span><h2>Emulate Demo company<a class="headerlink" href="#emulate-demo-company" title="Permalink to this headline">¶</a></h2>
+<p>The company emulation process is the same as the brand emulation, with the
+difference that it filters the block ‘Company Configuration’ instead of
+‘Brand Configuration’.</p>
+<img alt="../../_images/emulate_company.png" class="align-center" src="../../_images/emulate_company.png" />
+<img alt="../../_images/emulate_company2.png" class="align-center" src="../../_images/emulate_company2.png" />
+<p>Once the company has been emulated, the top right corner of the portal will
+show that we are in the right path :)</p>
+<img alt="../../_images/emular_empresa.png" class="align-center" src="../../_images/emular_empresa.png" />
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="company_portal.html" class="btn btn-neutral float-right" title="DemoCompany Configuration" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="god_portal.html" class="btn btn-neutral" title="Global Configuration" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2017, Irontec.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        <span class="fa fa-book"> Other Versions</span>
+        v: bleeding
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        <dl>
+            <dt>Branches</dt>
+            <dd><a href="../../artemis/getting_started/internal_calls/brand_portal.html">artemis</a></dd>
+            <dd><a href="../../bleeding/getting_started/internal_calls/brand_portal.html">bleeding</a></dd>
+            <dd><a href="../../oasis/index.html">oasis</a></dd>
+        </dl>
+    </div>
+</div>
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'Artemis',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

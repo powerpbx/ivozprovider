@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Servidores de aplicación</title>
+    
+    <link rel="stylesheet" href="../_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/banner.css" type="text/css" /> 
+  </head>
+  <body role="document">
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.xhtml" title="Índice General"
+             accesskey="I">índice</a></li>
+        <li class="right" >
+          <a href="antiflood.xhtml" title="Ips de confianza"
+             accesskey="N">siguiente</a> |</li>
+        <li class="right" >
+          <a href="media_relays.xhtml" title="Servidores de Media"
+             accesskey="P">anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.xhtml">documentación de IvozProvider - Artemis</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.xhtml" accesskey="U">Configuración de Plataforma</a> &#187;</li> 
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="application-servers">
+<h1>Servidores de aplicación</h1>
+<p>En la sección <strong>Servidores de Aplicación</strong> se listan las direcciones IP donde escuchan los distintos Asterisk que componen la solución que, tal y como se ha mencionado, escalan horizontalmente para adaptarse a la carga de la plataforma.</p>
+<p>A diferencia de los Proxies, estos Asterisk no están expuestos al exterior, porlo que en una instalación standalone solo habrá uno y escuchará en 127.0.0.1.</p>
+<img alt="../_images/app_servers1.png" src="../_images/app_servers1.png" />
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">El puerto en el que escuchan no se recoge en el campo, ya que siempre será 6060 (UDP).</p>
+</div>
+<div class="admonition important">
+<p class="first admonition-title">Importante</p>
+<p class="last">Desde el momento en el que se añade otro Servidor de Aplicación, se intentará contar con él a la hora de repartir la carga. Si éste no responde, se desactivará automáticamente.</p>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016-2017, Irontec.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9.
+    </div>
+  </body>
+</html>

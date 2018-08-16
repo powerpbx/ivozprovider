@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Interactive Voice Response (IVR)</title>
+    
+    <link rel="stylesheet" href="../_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/banner.css" type="text/css" /> 
+  </head>
+  <body role="document">
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.xhtml" title="Índice General"
+             accesskey="I">índice</a></li>
+        <li class="right" >
+          <a href="queues.xhtml" title="Colas"
+             accesskey="N">siguiente</a> |</li>
+        <li class="right" >
+          <a href="call_captures.xhtml" title="Capturas de llamada"
+             accesskey="P">anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.xhtml">documentación de IvozProvider - Artemis</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.xhtml" accesskey="U">Configuración de Compañía</a> &#187;</li> 
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="interactive-voice-response-ivr">
+<h1>Interactive Voice Response (IVR)</h1>
+<p>Un IVR es la forma habitual de realizar <strong>menús telefónicos</strong> en los que <strong>el llamante puede decidir el destino de su llamada sin más que pulsar dígitos</strong> en base a las locuciones que se le van reproduciendo.</p>
+<div class="section" id="ivrs">
+<h2>IVRs</h2>
+<p>Los IVRs soportan tanto espicificar acciones para digitos marcados, como enrutar cualquier extensión de la compañía.</p>
+<p>Describamos cada uno de los parámetros de un IVR:</p>
+<dl class="glossary docutils">
+<dt id="term-name">Nombre</dt>
+<dd><p class="first last">Forma de referenciar el IVR</p>
+</dd>
+<dt id="term-timeout">Timeout</dt>
+<dd><p class="first last">Tiempo adicional al de la locución de bienvenida que el sistema espera a que el interlocutor marque los dígitos.</p>
+</dd>
+<dt id="term-max-digits">Longitud Máxima</dt>
+<dd><p class="first last">Número máximo de dígitos que el llamante puede introducir.</p>
+</dd>
+<dt id="term-welcome-locution">Locución de bienvenida</dt>
+<dd><p class="first last">Locución que se le presenta al llamante invitándole a marcar la extensión con la que quiera hablar.</p>
+</dd>
+<dt id="term-success-locution">Locución de éxito</dt>
+<dd><p class="first last">En caso de que la extensión marcada coincida con alguna entrada o la extension exista enla compañía (y permitir extensiones este habilitado), se reproducirá esta locución (típicamente dirá algo así como &#8220;Contactando...&#8221;).</p>
+</dd>
+<dt id="term-allow-dialing-extensions">Permitir marcar extensiones</dt>
+<dd><p class="first last">Cuando este activada, permite al llamante introducir el número de extensión que previamente conozca (o que la locucion de bienvenida le sugiera) y el  sistema le conectará automáticamente con la extensión.</p>
+</dd>
+<dt id="term-excluded-extensions">Extensiones excluidas</dt>
+<dd><p class="first last">Cuando Permitir extensiones esta habilitado, es posible excluir algunas extensiones que no podrán ser llamadas directamente añadiendolas a la lista de exclusión.</p>
+</dd>
+<dt id="term-no-input-process">Configuración sin entrada</dt>
+<dd><p class="first last">Si el llamante no introduce ningún digito, se reproduce la locución indicada y se desvía la llamada al número externo, extensión interna o buzón seleccionado.</p>
+</dd>
+<dt id="term-error-process">Configuración Error</dt>
+<dd><p class="first last">Si la extensión marcada no coincide con ninguna entrada del IVR, ninguna extensión de la compañía (si esta habilitado permitir extensiones), o coincide con alguna de las extensiones de la lista de exclusión, se activará el tratamiento de error, reproduciendo la locución configurada y enrutando la llamada a otro número, extensión o buzón de voz</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="ivr-entries">
+<h2>Opciones IVR</h2>
+<div class="admonition hint">
+<p class="first admonition-title">Consejo</p>
+<p class="last">El caso más típico es el IVR que dice algo así como &#8220;Marque 1 si quiere hablar con administración, marque 2 si quiere hablar con informática...&#8221;</p>
+</div>
+<p>Pulsando el botón de la siguiente imagen se pueden definir las equivalencias deseadas:</p>
+<img alt="../_images/ivr_custom2.png" src="../_images/ivr_custom2.png" />
+<p>En este caso se puede marcar 1, 2 y 3 (todo lo demás será considerado inválido y activará la <strong>Configuración de Error</strong>):</p>
+<img alt="../_images/ivr_custom3.png" src="../_images/ivr_custom3.png" />
+<ul class="simple">
+<li><p class="first">1: Llamada a la extensión interna 200, creada <a class="reference internal" href="huntgroups.xhtml#huntgroups"><span class="std std-ref">en la sección anterior</span></a> y que apunta al grupo de salto <em>Recepción</em>.</p>
+</li>
+<li><p class="first">2: Llama a la extensión interna 101.</p>
+</li>
+<li><p class="first">3: Desvía la llamada al número externo 676 676 676.</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Cada una de las opciones de IVR admite una locución que, si se especifica, será reproducida en lugar de la <strong>locución de éxito</strong>. De esta manera, puede configurar locuciones genéricas (como &#8216;Conectando...&#8217;) o una a medida para algunas entradas (como &#8216;Conectando con recepción, por favor espere...&#8217;).</p>
+</div>
+<p class="rubric">Las opciones son expresiones regulares</p>
+<p>Puede especificar opciones de IVR como Expresiones regulares. Si la opcion es un valor númerico, será tratada como una secuencia de dígitos, si no será tratada como una expresión regular. Esto puede resultar útil si tiene el mismo comportamiento para un grupo de números marcados.</p>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016-2017, Irontec.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9.
+    </div>
+  </body>
+</html>

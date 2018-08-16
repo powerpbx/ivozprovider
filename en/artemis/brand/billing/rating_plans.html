@@ -1,0 +1,328 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Rating plans &mdash; IvozProvider Artemis documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/banner.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="IvozProvider Artemis documentation" href="../../index.html"/>
+        <link rel="up" title="Making external calls" href="../../getting_started/external_outgoing_calls/index.html"/>
+        <link rel="next" title="Outgoing configuration complete!" href="../../getting_started/external_outgoing_calls/finish.html"/>
+        <link rel="prev" title="Creating a destination rate" href="../../getting_started/external_outgoing_calls/destination_rate.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> IvozProvider
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.6
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Basic Concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../basics/intro/index.html">Introduction to IvozProvider</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../basics/architecture/index.html">Platform general architecture</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../basics/installation/index.html">Initial Installation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../basics/operation_roles/index.html">Platform roles</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/internal_calls/index.html">Making internal calls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/external_incoming_calls/index.html">Receive external calls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/external_outgoing_calls/index.html">Making external calls</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Administation portal</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../platform/index.html">Platform Configuration</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Brand Configuration</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../virtual_pbx.html">Virtual PBX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../retail.html">Retail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wholesale.html">Wholesale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../residential.html">Residential</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../balances.html">Balances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../portal_urls.html">Portals URLS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notifications.html">Notification Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../peering/index.html">Peering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transformations/index.html">Numeric transformations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../music_on_hold.html">Generic Music on Hold</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../services.html">Brand Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../match_lists.html">Generic Match Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../routing/index.html">Outgoing Call Routing</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Billing</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="billable_calls.html">Billable calls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="destination_rates.html">Destination Rates</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Rating plans</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#creating-a-rating-plan">Creating a rating plan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#assigning-a-rating-plan-to-a-company">Assigning a rating plan to a company</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bill_a_call.html">Call billing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../invoices/index.html">Invoicing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../company/index.html">Company Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../residential/index.html">Residential Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../retail/index.html">Retail Configuration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User portal</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../userportal/index.html">User Portal</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Security and Maintenance</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../security/index.html">Security elements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maintenance/index.html">Maintenance and troubleshooting</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">IvozProvider</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../getting_started/external_outgoing_calls/index.html">Making external calls</a> &raquo;</li>
+      
+    <li>Rating plans</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/brand/billing/rating_plans.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="rating-plans">
+<h1>Rating plans<a class="headerlink" href="#rating-plans" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="creating-a-rating-plan">
+<h2>Creating a rating plan<a class="headerlink" href="#creating-a-rating-plan" title="Permalink to this headline">¶</a></h2>
+<p>Destination rates are grouped using Rating plans. This offers the possibility to have base pricing data and customize
+some destination with different prices.</p>
+<p>Create a <strong>rating plan</strong>:</p>
+<img alt="../../_images/rating_plan_new.png" src="../../_images/rating_plan_new.png" />
+<p>And then we can add our destination rate:</p>
+<img alt="../../_images/rating_plan_add.png" src="../../_images/rating_plan_add.png" />
+<p>The <strong>metric</strong> of the link lets you assign more than one <em>destination rate</em> for a
+plan, even though some destinations are included in more than one of those
+destination rates.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p class="last">If a given call can be billed with more than one destination rate,
+it will be billed using the one with lowest metric.</p>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">This allows having a general <em>Destination rate</em> and concrete the price of
+a specific destination in another <em>destination rate</em> with lower metric (free cell
+phone calls, for example).</p>
+</div>
+<p class="rubric">Checking Rating plans</p>
+<p>To check the configuration so far we can <strong>Simulate a call</strong> from the rating plans list.</p>
+<p>We introduce the destination number in <a class="reference internal" href="../transformations/index.html#e164"><span class="std std-ref">E.164 format</span></a>, and we can check that it matches
+the <strong>rating plan</strong> we have just created:</p>
+<img alt="../../_images/rating_plan_simulate.png" src="../../_images/rating_plan_simulate.png" />
+</div>
+<div class="section" id="assigning-a-rating-plan-to-a-company">
+<h2>Assigning a rating plan to a company<a class="headerlink" href="#assigning-a-rating-plan-to-a-company" title="Permalink to this headline">¶</a></h2>
+<p>A specific <strong>rating plan</strong> can be linked to multiple companies.</p>
+<p>In the section <strong>Brand configuration</strong> &gt; <strong>Virtual PBXs</strong> we select the <em>demo</em>
+company:</p>
+<img alt="../../_images/rating_plan_company.png" src="../../_images/rating_plan_company.png" />
+<p>The <strong>Rating plan</strong> have an activation time, and only one can be active for each
+company.</p>
+<img alt="../../_images/rating_plan_company2.png" src="../../_images/rating_plan_company2.png" />
+<p class="rubric">Simulating a call of a specific company</p>
+<p>In this list we can also simulate a call for a given company like we did previously
+in the rating plan list and check the price it will imply. This way, we can be sure
+that the configuration is ok.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../getting_started/external_outgoing_calls/finish.html" class="btn btn-neutral float-right" title="Outgoing configuration complete!" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../../getting_started/external_outgoing_calls/destination_rate.html" class="btn btn-neutral" title="Creating a destination rate" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2017, Irontec.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        <span class="fa fa-book"> Other Versions</span>
+        v: artemis
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        <dl>
+            <dt>Branches</dt>
+            <dd><a href="rating_plans.html">artemis</a></dd>
+            <dd><a href="../../../bleeding/brand/billing/rating_plans.html">bleeding</a></dd>
+            <dd><a href="../../../oasis/index.html">oasis</a></dd>
+        </dl>
+    </div>
+</div>
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'Artemis',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

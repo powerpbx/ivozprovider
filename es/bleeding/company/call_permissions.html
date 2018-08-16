@@ -1,0 +1,344 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Control ACL para llamadas &mdash; documentación de IvozProvider - Artemis</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/banner.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Índice"
+              href="../genindex.html"/>
+        <link rel="search" title="Búsqueda" href="../search.html"/>
+    <link rel="top" title="documentación de IvozProvider - Artemis" href="../index.html"/>
+        <link rel="up" title="Configuración de Compañía" href="index.html"/>
+        <link rel="next" title="Grupos de salto" href="huntgroups.html"/>
+        <link rel="prev" title="Candados" href="route_locks.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> IvozProvider
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Basic Concepts</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basics/intro/index.html">Introducción a Ivozprovider</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basics/architecture/index.html">Arquitectura general de la plataforma</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basics/installation/index.html">Instalación inicial</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basics/operation_roles/index.html">Roles de la plataforma</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/internal_calls/index.html">Realizar llamadas internas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/external_incoming_calls/index.html">Recibir llamadas externas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/external_outgoing_calls/index.html">Realizar llamadas externas</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Administation portal</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../platform/index.html">Configuración de Plataforma</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../brand/index.html">Configuración de Marca</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Configuración de Compañía</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="users.html">Usuarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="terminals.html">Terminales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="extensions.html">Extensiones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="friends.html">Friends</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ddis.html">DDIs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outgoingddi_rules.html">Reglas DDI de salida</a></li>
+<li class="toctree-l2"><a class="reference internal" href="external_filters.html">Filtros de entrada externo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conditional_routes.html">Rutas condicionales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="match_lists.html">Listas de coincidencia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="calendars.html">Calendarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schedules.html">Horarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="route_locks.html">Candados</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Control ACL para llamadas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#call-acl-matchlits">Listas de coincidencia para ACLs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#call-acl">Permisos de llamada</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="huntgroups.html">Grupos de salto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="call_captures.html">Capturas de llamada</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ivrs.html">Interactive Voice Response (IVR)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="queues.html">Colas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conference_rooms.html">Salas de audioconferencias</a></li>
+<li class="toctree-l2"><a class="reference internal" href="locutions.html">Locuciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="music_on_hold.html">Música en espera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="call_recording.html">Grabación de llamadas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services.html">Servicios de Compañía</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faxing.html">Sistema de Fax Virtual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="call_registry.html">Registro de llamadas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../residential/index.html">Residential Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../retail/index.html">Configuración Retail</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User portal</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../userportal/index.html">Portal de usuario</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Security and Maintenance</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../security/index.html">Elementos de seguridad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maintenance/index.html">Mantenimiento de la solución</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">IvozProvider</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Configuración de Compañía</a> &raquo;</li>
+      
+    <li>Control ACL para llamadas</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/company/call_permissions.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="call-acl-control">
+<span id="call-permissions"></span><h1>Control ACL para llamadas<a class="headerlink" href="#call-acl-control" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Los <strong>Permisos de llamada</strong> determinan qué usuarios pueden llamar a qué destinos internos.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Atención</p>
+<p class="last">Las extensiones internas son accesibles por todos los usuarios, <strong>los permisos de llamada solo aplican a llamadas externas</strong>.</p>
+</div>
+<p>La configuración de <strong>permisos de llamada</strong> tiene 2 partes:</p>
+<ul>
+<li><p class="first">Clasificar las llamadas en determinados tipos utilizando <strong>listas de coincidencia</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p class="first">A nivel de marca en <strong>Configuración de Marca</strong> &gt; <strong>Listas de coincidencia</strong>.</p>
+</li>
+<li><p class="first">A nivel de empresa en <strong>Configuración de Empresa</strong> &gt; <strong>Listas de coincidencia</strong>.</p>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Definir políticas para los patrones deseados: <strong>Configuración de Empresa</strong> &gt; <strong>Permisos llamada</strong></p>
+</li>
+</ul>
+<div class="section" id="call-acl-matchlits">
+<h2>Listas de coincidencia para ACLs<a class="headerlink" href="#call-acl-matchlits" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El destino de la llamadas es comprobado contra la <strong>Lista de coincidencia</strong> para determinar los permisos de la llamada.</p>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Las listas de coincidencia de marca pueden ser empleadas por sus compañías, de tal manera que los patrones más genéricos (por ej. prefijos de paises) puede ser facilmente reutilizables.</p>
+</div>
+<p>Para más información sobre como se crean patrones de listas de coincidencia, ver sección <a class="reference internal" href="match_lists.html#match-lists"><span class="std std-ref">Listas de coincidencia</span></a>.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Atención</p>
+<p class="last"><strong>Las expresiones regulares de las listas de coincidencia tienen que estar en formato E.164</strong></p>
+</div>
+</div>
+<div class="section" id="call-acl">
+<h2>Permisos de llamada<a class="headerlink" href="#call-acl" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>La definición de un <strong>Permiso de llamada</strong> utiliza una lógica más fácil de describir con un ejemplo.</p>
+<p>Imaginemos que tenemos los siguientes patrones en una <strong>lista de coincidencia</strong>:</p>
+<img alt="../_images/permissions_patterns_list1.png" src="../_images/permissions_patterns_list1.png" />
+<p>Podríamos definir un <strong>Permiso de llamada</strong> como el que sigue:</p>
+<img alt="../_images/permissions_add1.png" src="../_images/permissions_add1.png" />
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">La acción por defecto describe lo que hay que hacer con la llamada una vez que se han evaluado todas las reglas (permitir/rechazar).</p>
+</div>
+<p>Editamos el <strong>permiso de llamada</strong> que acabamos de crear para añadir las reglas necesarias:</p>
+<img alt="../_images/permissions_add21.png" src="../_images/permissions_add21.png" />
+<p>La <strong>métrica</strong> determina el orden de evaluación de las reglas y la acción lo que</p>
+<img alt="../_images/permissions_add31.png" src="../_images/permissions_add31.png" />
+<p>Una vez añadida nuestra <strong>lista de coincidencia</strong> española, nuestro <strong>permiso de llamadas</strong> quedará como sigue:</p>
+<img alt="../_images/permissions_add41.png" src="../_images/permissions_add41.png" />
+<p>Ya solo faltaría añadírselo a un usuario concreto en la sección <strong>Configuración de empresa</strong> &gt; <strong>Usuarios</strong>:</p>
+<img alt="../_images/permissions_add51.png" src="../_images/permissions_add51.png" />
+<p>Desde este momento, Alice solo podría llamar a extensiones internas (siempre están permitidas) y a móviles y fijos nacionales.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="huntgroups.html" class="btn btn-neutral float-right" title="Grupos de salto" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="route_locks.html" class="btn btn-neutral" title="Candados" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016-2017, Irontec.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        <span class="fa fa-book"> Other Versions</span>
+        v: bleeding
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        <dl>
+            <dt>Branches</dt>
+            <dd><a href="../../artemis/company/call_permissions.html">artemis</a></dd>
+            <dd><a href="call_permissions.html">bleeding</a></dd>
+            <dd><a href="../../oasis/index.html">oasis</a></dd>
+        </dl>
+    </div>
+</div>
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'Artemis',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

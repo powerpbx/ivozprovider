@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Wholesale</title>
+    
+    <link rel="stylesheet" href="../_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/banner.css" type="text/css" /> 
+  </head>
+  <body role="document">
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.xhtml" title="Índice General"
+             accesskey="I">índice</a></li>
+        <li class="right" >
+          <a href="residential.xhtml" title="Residencial"
+             accesskey="N">siguiente</a> |</li>
+        <li class="right" >
+          <a href="retail.xhtml" title="Retail"
+             accesskey="P">anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.xhtml">documentación de IvozProvider - Artemis</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.xhtml" accesskey="U">Configuración de Marca</a> &#187;</li> 
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="wholesale">
+<span id="wholesale-clients"></span><h1>Wholesale</h1>
+<p>Wholesale permite ofrecer un servicio de conexión con Proveedores para clientes sin requisitos de funcionalidades de Servidores de aplicación, centrándose en concurrencia y calidad e ignorando el resto de funcionalidades.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p class="first">Solo realiza llamadas salientes.</p>
+</li>
+<li><p class="first">Solo autenticación IP (sin registro, sin autenticación SIP).</p>
+</li>
+<li><p class="first">Las llamadas van directamente del proxy de usuarios al de salida sin la participación de ningun servidor de aplicación.</p>
+</li>
+<li><p class="first">Soportan Routing tags (el cliente puede elegir la ruta de salida a emplear)</p>
+</li>
+</ul>
+</div></blockquote>
+<div class="admonition hint">
+<p class="first admonition-title">Consejo</p>
+<p class="last">Algunos de los campos descritos a continuación podrían ser invisibles en función de las funcionalidades habilitadas en el cliente.</p>
+</div>
+<dl class="glossary docutils">
+<dt id="term-name">Nombre</dt>
+<dd><p class="first last">Configura el nombre del cliente.</p>
+</dd>
+<dt id="term-features">Features</dt>
+<dd><p class="first last">Permite elegir las features del cliente. Esto habilitará o deshabilitará las diferentes secciones del menú del cliente.</p>
+</dd>
+<dt id="term-billing-method">Método de tarificación</dt>
+<dd><p class="first last">Cuando la tarificación esté habilitada, determina como serán tarificadas las llamadas. Ver sección <a class="reference internal" href="billing/index.xhtml#billing"><span class="std std-ref">Tarificación</span></a>.</p>
+</dd>
+<dt id="term-geographic-configuration">Configuración geográfica</dt>
+<dd><p class="first last">Configuración geral del lenguaje y zona horaria. La mayoría de las opciones en esta sección se pueden configurar por usuario si es necesario.</p>
+</dd>
+<dt id="term-security">Seguridad</dt>
+<dd><p class="first last">Limitar el número de llamadas externas concurrentes.</p>
+</dd>
+<dt id="term-routing-tags">Routing tags</dt>
+<dd><p class="first last">Seleccionar los <a class="reference internal" href="routing/tags.xhtml#routing-tags"><span class="std std-ref">Routing tags</span></a> que el cliente wholesale podrá emplear.</p>
+</dd>
+<dt id="term-invoice-data">Datos de facturación</dt>
+<dd><p class="first last">Información incluida en las facturas creadas por esta marca.</p>
+</dd>
+<dt id="term-notifications">Notificationes</dt>
+<dd><p class="first last">Configurar las <a class="reference internal" href="notifications.xhtml#notification-templates"><span class="std std-ref">Plantillas de Notificaciones</span></a> a emplear en esta compañía.</p>
+</dd>
+<dt id="term-media-relay-set">Servidores de Media</dt>
+<dd><p class="first last">Como se ha mencionado, los servidores de media pueden ser agrupados para reservar capacidades o para una distribución geográfica. Esta sección le permite asignarlos a las compañías.</p>
+</dd>
+<dt id="term-audio-transcoding">Transcodificación de audio</dt>
+<dd><p class="first last">Permite seleccionar los codecs que se añadirán a las llamadas.</p>
+</dd>
+</dl>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016-2017, Irontec.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9.
+    </div>
+  </body>
+</html>

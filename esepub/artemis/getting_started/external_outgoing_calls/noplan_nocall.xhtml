@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Sin plan de precio, no hay llamada</title>
+    
+    <link rel="stylesheet" href="../../_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/banner.css" type="text/css" /> 
+  </head>
+  <body role="document">
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.xhtml" title="Índice General"
+             accesskey="I">índice</a></li>
+        <li class="right" >
+          <a href="destination_rate.xhtml" title="Crear un precio destino"
+             accesskey="N">siguiente</a> |</li>
+        <li class="right" >
+          <a href="outgoing_ddi.xhtml" title="Configurar DDI saliente"
+             accesskey="P">anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.xhtml">documentación de IvozProvider - Artemis</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.xhtml" accesskey="U">Realizar llamadas externas</a> &#187;</li> 
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <p>Llegados a este punto y estando deseosos como estamos de hacer nuestra primera llamada, habremos intentando llamar con la configuración actual pero...</p>
+<div class="section" id="no-pricing-plan-no-call">
+<span id="noplan-nocall"></span><h1>Sin plan de precio, no hay llamada</h1>
+<p>Tal y como advertimos <a class="reference internal" href="../../basics/operation_roles/index.xhtml#brand-responsibilities"><span class="std std-ref">cuando describimos las funciones del operador de marca</span></a>, el operador de marca era el <strong>responsable de realizar la configuración necesaria para que todas las llamadas externas se puedan tarificar</strong>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last"><strong>Billing a call</strong> is the action of <strong>assigning price</strong> to a call that implies
+cost.</p>
+</div>
+<p>Para evitar que por un descuido el operador de marca no defina el precio para un tipo de llamada y llamadas que implican coste salgan a precio 0, <strong>en el momento del establecimiento de una llamada se comprueba que la llamada se va a poder tarificar</strong>.</p>
+<div class="admonition error">
+<p class="first admonition-title">Error</p>
+<p class="last">Si una llamada no se va a poder tarificar, IvozProvider no permitirá su establecimiento.</p>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016-2017, Irontec.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9.
+    </div>
+  </body>
+</html>

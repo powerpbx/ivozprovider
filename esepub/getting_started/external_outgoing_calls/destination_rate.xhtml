@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Crear un precio destino</title>
+    
+    <link rel="stylesheet" href="../../_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/banner.css" type="text/css" /> 
+  </head>
+  <body role="document">
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.xhtml" title="Índice General"
+             accesskey="I">índice</a></li>
+        <li class="right" >
+          <a href="../../brand/billing/rating_plans.xhtml" title="Planes de precio"
+             accesskey="N">siguiente</a> |</li>
+        <li class="right" >
+          <a href="noplan_nocall.xhtml" title="Sin plan de precio, no hay llamada"
+             accesskey="P">anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.xhtml">documentación de IvozProvider - Artemis</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.xhtml" accesskey="U">Realizar llamadas externas</a> &#187;</li> 
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="creating-a-destination-rate">
+<h1>Crear un precio destino</h1>
+<p>A diferencia de los patrones de destino, que vienen precreados con los países del mundo, los patrones de precio no se crean ya que lo habitual es que un país se divida en muchos patrones de precio (redes GSM de un operador, numeraciones especiales, números fijos, números móviles, etc.).</p>
+<p>En la mayoríad e los casos, los datos de esta sección serán importado desde un CSV facilitado por los Contratos de Peering, pero para nuesto ejemplo lo crearemos manualmente. Vea la sección <a class="reference internal" href="../../brand/billing/destination_rates.xhtml#destination-rates"><span class="std std-ref">Precios destino</span></a> para más información.</p>
+<p>Creamos un <strong>precio destino</strong>:</p>
+<img alt="../../_images/destination_rate_new1.png" src="../../_images/destination_rate_new1.png" />
+<p>Y añadimos un precio con el prefijo en E.164 (con signo +)</p>
+<img alt="../../_images/destination_rate_add1.png" src="../../_images/destination_rate_add1.png" />
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Los números decimales se tienen que introducir utilizando el &#8221;.&#8221; como separador decimal (e.g. 0.02)</p>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016-2017, Irontec.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9.
+    </div>
+  </body>
+</html>

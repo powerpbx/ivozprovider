@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Retail</title>
+    
+    <link rel="stylesheet" href="../_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/banner.css" type="text/css" /> 
+  </head>
+  <body role="document">
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.xhtml" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="wholesale.xhtml" title="Wholesale"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="virtual_pbx.xhtml" title="Virtual PBX"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.xhtml">IvozProvider Artemis documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.xhtml" accesskey="U">Brand Configuration</a> &#187;</li> 
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="retail">
+<span id="retail-clients"></span><h1>Retail</h1>
+<p>Retail are designed to provider DDI routing service to clients with self hosted PBXs..</p>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last">Some fields described below may not be visible depending on enabled features.</p>
+</div>
+<dl class="glossary docutils">
+<dt id="term-name">Name</dt>
+<dd>Sets the name for this client.</dd>
+<dt id="term-features">Features</dt>
+<dd>Allow configuration of avaialble features for this client.
+Related sections are hidden consequently and the client cannot use them.</dd>
+<dt id="term-billing-method">Billing method</dt>
+<dd>When billing feature is enabled determines when calls will be priced. See <a class="reference internal" href="billing/index.xhtml#billing"><span class="std std-ref">Billing</span></a> section.</dd>
+<dt id="term-geographic-configuration">Geographic Configuration</dt>
+<dd>General client configuration for language and timezones. Most of the settings in the section can be
+configured per user if required.</dd>
+<dt id="term-security">Security</dt>
+<dd>Limits the external concurrent calls and source of calls for this client.</dd>
+<dt id="term-invoice-data">Invoice data</dt>
+<dd>Data included in invoices created by this brand.</dd>
+<dt id="term-externally-rated-options">Externally rated options</dt>
+<dd>For <a class="reference internal" href="peering/carriers.xhtml#carriers"><span class="std std-ref">Carriers</span></a> with externally rated enabled, this field can be used to store specific
+information for this client.</dd>
+<dt id="term-notifications">Notifications</dt>
+<dd>Configure the email <a class="reference internal" href="notifications.xhtml#notification-templates"><span class="std std-ref">Notification Templates</span></a> to use for this company.</dd>
+<dt id="term-outgoing-ddi">Outgoing DDI</dt>
+<dd>Selects a DDI for outgoing calls of this client, if it is no overridden in
+a lower level.</dd>
+<dt id="term-media-relay-set">Media relay set</dt>
+<dd>As mentioned above, media-relay can be grouped in sets to reserve capacities
+or on a geographical purpose. This section lets you assign them to companies.</dd>
+<dt id="term-distribute-method">Distribute Method</dt>
+<dd>&#8216;Hash based&#8217; distributes calls hashing a parameter that is unique per
+client, &#8216;Round robin&#8217; distributes calls equally between AS-es and
+&#8216;static&#8217; is used for debugging purposes.</dd>
+<dt id="term-application-server">Application Server</dt>
+<dd>If &#8216;static&#8217; <em>distribute method</em> is used, select an application server here.</dd>
+<dt id="term-recordings">Recordings</dt>
+<dd>Configures a limit for the size of recordings of this client. A
+notification is sent to configured address when 80% is reached and
+older recordings are rotated when configured size is reached.</dd>
+</dl>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last">Retail clients and their accounts use Brand&#8217;s domain for authentication.</p>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016-2017, Irontec.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9.
+    </div>
+  </body>
+</html>
