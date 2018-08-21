@@ -23,6 +23,7 @@ class AppKernel extends Kernel
 
         if (in_array($this->getEnvironment(), ['dev', 'test', 'test_e2e'], true)) {
             $bundles[] = new Symfony\Bundle\DebugBundle\DebugBundle();
+            $bundles[] = new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle();
 
             if ('test_e2e' === $this->getEnvironment()) {
                 $bundles[] = new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle();
