@@ -2,8 +2,6 @@
 
 #DEBHELPER#
 
-set -x
-
 # Source debconf library.
 . /usr/share/debconf/confmodule
 
