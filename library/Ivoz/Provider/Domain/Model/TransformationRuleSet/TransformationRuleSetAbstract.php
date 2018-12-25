@@ -14,32 +14,32 @@ use Ivoz\Core\Domain\Model\EntityInterface;
 abstract class TransformationRuleSetAbstract
 {
     /**
-     * @var string
+     * @var string | null
      */
     protected $description;
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $internationalCode = '00';
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $trunkPrefix = '';
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $areaCode = '';
 
     /**
-     * @var integer
+     * @var integer | null
      */
     protected $nationalLen = 9;
 
     /**
-     * @var boolean
+     * @var boolean | null
      */
     protected $generateRules = 0;
 
@@ -98,6 +98,7 @@ abstract class TransformationRuleSetAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return TransformationRuleSetDto|null
@@ -123,6 +124,7 @@ abstract class TransformationRuleSetAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -160,6 +162,7 @@ abstract class TransformationRuleSetAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -193,6 +196,7 @@ abstract class TransformationRuleSetAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return TransformationRuleSetDto
      */
@@ -232,14 +236,13 @@ abstract class TransformationRuleSetAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set description
      *
      * @param string $description
      *
      * @return self
      */
-    public function setDescription($description = null)
+    protected function setDescription($description = null)
     {
         if (!is_null($description)) {
             Assertion::maxLength($description, 250, 'description value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -253,7 +256,7 @@ abstract class TransformationRuleSetAbstract
     /**
      * Get description
      *
-     * @return string
+     * @return string | null
      */
     public function getDescription()
     {
@@ -261,14 +264,13 @@ abstract class TransformationRuleSetAbstract
     }
 
     /**
-     * @deprecated
      * Set internationalCode
      *
      * @param string $internationalCode
      *
      * @return self
      */
-    public function setInternationalCode($internationalCode = null)
+    protected function setInternationalCode($internationalCode = null)
     {
         if (!is_null($internationalCode)) {
             Assertion::maxLength($internationalCode, 10, 'internationalCode value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -282,7 +284,7 @@ abstract class TransformationRuleSetAbstract
     /**
      * Get internationalCode
      *
-     * @return string
+     * @return string | null
      */
     public function getInternationalCode()
     {
@@ -290,14 +292,13 @@ abstract class TransformationRuleSetAbstract
     }
 
     /**
-     * @deprecated
      * Set trunkPrefix
      *
      * @param string $trunkPrefix
      *
      * @return self
      */
-    public function setTrunkPrefix($trunkPrefix = null)
+    protected function setTrunkPrefix($trunkPrefix = null)
     {
         if (!is_null($trunkPrefix)) {
             Assertion::maxLength($trunkPrefix, 5, 'trunkPrefix value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -311,7 +312,7 @@ abstract class TransformationRuleSetAbstract
     /**
      * Get trunkPrefix
      *
-     * @return string
+     * @return string | null
      */
     public function getTrunkPrefix()
     {
@@ -319,14 +320,13 @@ abstract class TransformationRuleSetAbstract
     }
 
     /**
-     * @deprecated
      * Set areaCode
      *
      * @param string $areaCode
      *
      * @return self
      */
-    public function setAreaCode($areaCode = null)
+    protected function setAreaCode($areaCode = null)
     {
         if (!is_null($areaCode)) {
             Assertion::maxLength($areaCode, 5, 'areaCode value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -340,7 +340,7 @@ abstract class TransformationRuleSetAbstract
     /**
      * Get areaCode
      *
-     * @return string
+     * @return string | null
      */
     public function getAreaCode()
     {
@@ -348,14 +348,13 @@ abstract class TransformationRuleSetAbstract
     }
 
     /**
-     * @deprecated
      * Set nationalLen
      *
      * @param integer $nationalLen
      *
      * @return self
      */
-    public function setNationalLen($nationalLen = null)
+    protected function setNationalLen($nationalLen = null)
     {
         if (!is_null($nationalLen)) {
             if (!is_null($nationalLen)) {
@@ -372,7 +371,7 @@ abstract class TransformationRuleSetAbstract
     /**
      * Get nationalLen
      *
-     * @return integer
+     * @return integer | null
      */
     public function getNationalLen()
     {
@@ -380,14 +379,13 @@ abstract class TransformationRuleSetAbstract
     }
 
     /**
-     * @deprecated
      * Set generateRules
      *
      * @param boolean $generateRules
      *
      * @return self
      */
-    public function setGenerateRules($generateRules = null)
+    protected function setGenerateRules($generateRules = null)
     {
         if (!is_null($generateRules)) {
             Assertion::between(intval($generateRules), 0, 1, 'generateRules provided "%s" is not a valid boolean value.');
@@ -401,7 +399,7 @@ abstract class TransformationRuleSetAbstract
     /**
      * Get generateRules
      *
-     * @return boolean
+     * @return boolean | null
      */
     public function getGenerateRules()
     {
@@ -425,7 +423,7 @@ abstract class TransformationRuleSetAbstract
     /**
      * Get brand
      *
-     * @return \Ivoz\Provider\Domain\Model\Brand\BrandInterface
+     * @return \Ivoz\Provider\Domain\Model\Brand\BrandInterface | null
      */
     public function getBrand()
     {
@@ -449,7 +447,7 @@ abstract class TransformationRuleSetAbstract
     /**
      * Get country
      *
-     * @return \Ivoz\Provider\Domain\Model\Country\CountryInterface
+     * @return \Ivoz\Provider\Domain\Model\Country\CountryInterface | null
      */
     public function getCountry()
     {

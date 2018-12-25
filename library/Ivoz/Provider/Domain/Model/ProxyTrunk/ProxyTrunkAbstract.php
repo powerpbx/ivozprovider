@@ -14,7 +14,7 @@ use Ivoz\Core\Domain\Model\EntityInterface;
 abstract class ProxyTrunkAbstract
 {
     /**
-     * @var string
+     * @var string | null
      */
     protected $name;
 
@@ -63,6 +63,7 @@ abstract class ProxyTrunkAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return ProxyTrunkDto|null
@@ -88,6 +89,7 @@ abstract class ProxyTrunkAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -113,6 +115,7 @@ abstract class ProxyTrunkAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -134,6 +137,7 @@ abstract class ProxyTrunkAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return ProxyTrunkDto
      */
@@ -157,14 +161,13 @@ abstract class ProxyTrunkAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set name
      *
      * @param string $name
      *
      * @return self
      */
-    public function setName($name = null)
+    protected function setName($name = null)
     {
         if (!is_null($name)) {
             Assertion::maxLength($name, 100, 'name value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -178,7 +181,7 @@ abstract class ProxyTrunkAbstract
     /**
      * Get name
      *
-     * @return string
+     * @return string | null
      */
     public function getName()
     {
@@ -186,14 +189,13 @@ abstract class ProxyTrunkAbstract
     }
 
     /**
-     * @deprecated
      * Set ip
      *
      * @param string $ip
      *
      * @return self
      */
-    public function setIp($ip)
+    protected function setIp($ip)
     {
         Assertion::notNull($ip, 'ip value "%s" is null, but non null value was expected.');
         Assertion::maxLength($ip, 50, 'ip value "%s" is too long, it should have no more than %d characters, but has %d characters.');

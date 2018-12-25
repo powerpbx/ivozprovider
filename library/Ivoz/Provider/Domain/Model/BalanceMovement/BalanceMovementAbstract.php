@@ -14,17 +14,17 @@ use Ivoz\Core\Domain\Model\EntityInterface;
 abstract class BalanceMovementAbstract
 {
     /**
-     * @var string
+     * @var string | null
      */
     protected $amount = 0;
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $balance = 0;
 
     /**
-     * @var \DateTime
+     * @var \DateTime | null
      */
     protected $createdOn;
 
@@ -77,6 +77,7 @@ abstract class BalanceMovementAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return BalanceMovementDto|null
@@ -102,6 +103,7 @@ abstract class BalanceMovementAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -129,6 +131,7 @@ abstract class BalanceMovementAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -153,6 +156,7 @@ abstract class BalanceMovementAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return BalanceMovementDto
      */
@@ -182,14 +186,13 @@ abstract class BalanceMovementAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set amount
      *
      * @param string $amount
      *
      * @return self
      */
-    public function setAmount($amount = null)
+    protected function setAmount($amount = null)
     {
         if (!is_null($amount)) {
             if (!is_null($amount)) {
@@ -206,7 +209,7 @@ abstract class BalanceMovementAbstract
     /**
      * Get amount
      *
-     * @return string
+     * @return string | null
      */
     public function getAmount()
     {
@@ -214,14 +217,13 @@ abstract class BalanceMovementAbstract
     }
 
     /**
-     * @deprecated
      * Set balance
      *
      * @param string $balance
      *
      * @return self
      */
-    public function setBalance($balance = null)
+    protected function setBalance($balance = null)
     {
         if (!is_null($balance)) {
             if (!is_null($balance)) {
@@ -238,7 +240,7 @@ abstract class BalanceMovementAbstract
     /**
      * Get balance
      *
-     * @return string
+     * @return string | null
      */
     public function getBalance()
     {
@@ -246,14 +248,13 @@ abstract class BalanceMovementAbstract
     }
 
     /**
-     * @deprecated
      * Set createdOn
      *
      * @param \DateTime $createdOn
      *
      * @return self
      */
-    public function setCreatedOn($createdOn = null)
+    protected function setCreatedOn($createdOn = null)
     {
         if (!is_null($createdOn)) {
             $createdOn = \Ivoz\Core\Domain\Model\Helper\DateTimeHelper::createOrFix(
@@ -270,7 +271,7 @@ abstract class BalanceMovementAbstract
     /**
      * Get createdOn
      *
-     * @return \DateTime
+     * @return \DateTime | null
      */
     public function getCreatedOn()
     {
@@ -294,7 +295,7 @@ abstract class BalanceMovementAbstract
     /**
      * Get company
      *
-     * @return \Ivoz\Provider\Domain\Model\Company\CompanyInterface
+     * @return \Ivoz\Provider\Domain\Model\Company\CompanyInterface | null
      */
     public function getCompany()
     {
@@ -318,7 +319,7 @@ abstract class BalanceMovementAbstract
     /**
      * Get carrier
      *
-     * @return \Ivoz\Provider\Domain\Model\Carrier\CarrierInterface
+     * @return \Ivoz\Provider\Domain\Model\Carrier\CarrierInterface | null
      */
     public function getCarrier()
     {

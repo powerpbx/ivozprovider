@@ -25,7 +25,7 @@ abstract class IvrEntryAbstract
     protected $routeType;
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $numberValue;
 
@@ -100,6 +100,7 @@ abstract class IvrEntryAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return IvrEntryDto|null
@@ -125,6 +126,7 @@ abstract class IvrEntryAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -157,6 +159,7 @@ abstract class IvrEntryAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -185,6 +188,7 @@ abstract class IvrEntryAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return IvrEntryDto
      */
@@ -222,14 +226,13 @@ abstract class IvrEntryAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set entry
      *
      * @param string $entry
      *
      * @return self
      */
-    public function setEntry($entry)
+    protected function setEntry($entry)
     {
         Assertion::notNull($entry, 'entry value "%s" is null, but non null value was expected.');
         Assertion::maxLength($entry, 40, 'entry value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -250,14 +253,13 @@ abstract class IvrEntryAbstract
     }
 
     /**
-     * @deprecated
      * Set routeType
      *
      * @param string $routeType
      *
      * @return self
      */
-    public function setRouteType($routeType)
+    protected function setRouteType($routeType)
     {
         Assertion::notNull($routeType, 'routeType value "%s" is null, but non null value was expected.');
         Assertion::maxLength($routeType, 25, 'routeType value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -284,14 +286,13 @@ abstract class IvrEntryAbstract
     }
 
     /**
-     * @deprecated
      * Set numberValue
      *
      * @param string $numberValue
      *
      * @return self
      */
-    public function setNumberValue($numberValue = null)
+    protected function setNumberValue($numberValue = null)
     {
         if (!is_null($numberValue)) {
             Assertion::maxLength($numberValue, 25, 'numberValue value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -305,7 +306,7 @@ abstract class IvrEntryAbstract
     /**
      * Get numberValue
      *
-     * @return string
+     * @return string | null
      */
     public function getNumberValue()
     {

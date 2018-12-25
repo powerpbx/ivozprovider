@@ -14,12 +14,12 @@ use Ivoz\Core\Domain\Model\EntityInterface;
 abstract class HuntGroupsRelUserAbstract
 {
     /**
-     * @var integer
+     * @var integer | null
      */
     protected $timeoutTime;
 
     /**
-     * @var integer
+     * @var integer | null
      */
     protected $priority;
 
@@ -72,6 +72,7 @@ abstract class HuntGroupsRelUserAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return HuntGroupsRelUserDto|null
@@ -97,6 +98,7 @@ abstract class HuntGroupsRelUserAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -123,6 +125,7 @@ abstract class HuntGroupsRelUserAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -146,6 +149,7 @@ abstract class HuntGroupsRelUserAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return HuntGroupsRelUserDto
      */
@@ -173,14 +177,13 @@ abstract class HuntGroupsRelUserAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set timeoutTime
      *
      * @param integer $timeoutTime
      *
      * @return self
      */
-    public function setTimeoutTime($timeoutTime = null)
+    protected function setTimeoutTime($timeoutTime = null)
     {
         if (!is_null($timeoutTime)) {
             if (!is_null($timeoutTime)) {
@@ -196,7 +199,7 @@ abstract class HuntGroupsRelUserAbstract
     /**
      * Get timeoutTime
      *
-     * @return integer
+     * @return integer | null
      */
     public function getTimeoutTime()
     {
@@ -204,14 +207,13 @@ abstract class HuntGroupsRelUserAbstract
     }
 
     /**
-     * @deprecated
      * Set priority
      *
      * @param integer $priority
      *
      * @return self
      */
-    public function setPriority($priority = null)
+    protected function setPriority($priority = null)
     {
         if (!is_null($priority)) {
             if (!is_null($priority)) {
@@ -227,7 +229,7 @@ abstract class HuntGroupsRelUserAbstract
     /**
      * Get priority
      *
-     * @return integer
+     * @return integer | null
      */
     public function getPriority()
     {

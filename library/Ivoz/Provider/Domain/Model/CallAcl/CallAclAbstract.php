@@ -70,6 +70,7 @@ abstract class CallAclAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return CallAclDto|null
@@ -95,6 +96,7 @@ abstract class CallAclAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -121,6 +123,7 @@ abstract class CallAclAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -143,6 +146,7 @@ abstract class CallAclAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return CallAclDto
      */
@@ -168,14 +172,13 @@ abstract class CallAclAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set name
      *
      * @param string $name
      *
      * @return self
      */
-    public function setName($name)
+    protected function setName($name)
     {
         Assertion::notNull($name, 'name value "%s" is null, but non null value was expected.');
         Assertion::maxLength($name, 50, 'name value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -196,14 +199,13 @@ abstract class CallAclAbstract
     }
 
     /**
-     * @deprecated
      * Set defaultPolicy
      *
      * @param string $defaultPolicy
      *
      * @return self
      */
-    public function setDefaultPolicy($defaultPolicy)
+    protected function setDefaultPolicy($defaultPolicy)
     {
         Assertion::notNull($defaultPolicy, 'defaultPolicy value "%s" is null, but non null value was expected.');
         Assertion::maxLength($defaultPolicy, 10, 'defaultPolicy value "%s" is too long, it should have no more than %d characters, but has %d characters.');

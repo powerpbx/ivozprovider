@@ -20,23 +20,23 @@ abstract class ExternalCallFilterAbstract
 
     /**
      * comment: enum:number|extension|voicemail
-     * @var string
+     * @var string | null
      */
     protected $holidayTargetType;
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $holidayNumberValue;
 
     /**
      * comment: enum:number|extension|voicemail
-     * @var string
+     * @var string | null
      */
     protected $outOfScheduleTargetType;
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $outOfScheduleNumberValue;
 
@@ -130,6 +130,7 @@ abstract class ExternalCallFilterAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return ExternalCallFilterDto|null
@@ -155,6 +156,7 @@ abstract class ExternalCallFilterAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -193,6 +195,7 @@ abstract class ExternalCallFilterAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -227,6 +230,7 @@ abstract class ExternalCallFilterAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return ExternalCallFilterDto
      */
@@ -276,14 +280,13 @@ abstract class ExternalCallFilterAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set name
      *
      * @param string $name
      *
      * @return self
      */
-    public function setName($name)
+    protected function setName($name)
     {
         Assertion::notNull($name, 'name value "%s" is null, but non null value was expected.');
         Assertion::maxLength($name, 50, 'name value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -304,14 +307,13 @@ abstract class ExternalCallFilterAbstract
     }
 
     /**
-     * @deprecated
      * Set holidayTargetType
      *
      * @param string $holidayTargetType
      *
      * @return self
      */
-    public function setHolidayTargetType($holidayTargetType = null)
+    protected function setHolidayTargetType($holidayTargetType = null)
     {
         if (!is_null($holidayTargetType)) {
             Assertion::maxLength($holidayTargetType, 25, 'holidayTargetType value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -330,7 +332,7 @@ abstract class ExternalCallFilterAbstract
     /**
      * Get holidayTargetType
      *
-     * @return string
+     * @return string | null
      */
     public function getHolidayTargetType()
     {
@@ -338,14 +340,13 @@ abstract class ExternalCallFilterAbstract
     }
 
     /**
-     * @deprecated
      * Set holidayNumberValue
      *
      * @param string $holidayNumberValue
      *
      * @return self
      */
-    public function setHolidayNumberValue($holidayNumberValue = null)
+    protected function setHolidayNumberValue($holidayNumberValue = null)
     {
         if (!is_null($holidayNumberValue)) {
             Assertion::maxLength($holidayNumberValue, 25, 'holidayNumberValue value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -359,7 +360,7 @@ abstract class ExternalCallFilterAbstract
     /**
      * Get holidayNumberValue
      *
-     * @return string
+     * @return string | null
      */
     public function getHolidayNumberValue()
     {
@@ -367,14 +368,13 @@ abstract class ExternalCallFilterAbstract
     }
 
     /**
-     * @deprecated
      * Set outOfScheduleTargetType
      *
      * @param string $outOfScheduleTargetType
      *
      * @return self
      */
-    public function setOutOfScheduleTargetType($outOfScheduleTargetType = null)
+    protected function setOutOfScheduleTargetType($outOfScheduleTargetType = null)
     {
         if (!is_null($outOfScheduleTargetType)) {
             Assertion::maxLength($outOfScheduleTargetType, 25, 'outOfScheduleTargetType value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -393,7 +393,7 @@ abstract class ExternalCallFilterAbstract
     /**
      * Get outOfScheduleTargetType
      *
-     * @return string
+     * @return string | null
      */
     public function getOutOfScheduleTargetType()
     {
@@ -401,14 +401,13 @@ abstract class ExternalCallFilterAbstract
     }
 
     /**
-     * @deprecated
      * Set outOfScheduleNumberValue
      *
      * @param string $outOfScheduleNumberValue
      *
      * @return self
      */
-    public function setOutOfScheduleNumberValue($outOfScheduleNumberValue = null)
+    protected function setOutOfScheduleNumberValue($outOfScheduleNumberValue = null)
     {
         if (!is_null($outOfScheduleNumberValue)) {
             Assertion::maxLength($outOfScheduleNumberValue, 25, 'outOfScheduleNumberValue value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -422,7 +421,7 @@ abstract class ExternalCallFilterAbstract
     /**
      * Get outOfScheduleNumberValue
      *
-     * @return string
+     * @return string | null
      */
     public function getOutOfScheduleNumberValue()
     {
@@ -494,7 +493,7 @@ abstract class ExternalCallFilterAbstract
     /**
      * Get holidayLocution
      *
-     * @return \Ivoz\Provider\Domain\Model\Locution\LocutionInterface
+     * @return \Ivoz\Provider\Domain\Model\Locution\LocutionInterface | null
      */
     public function getHolidayLocution()
     {

@@ -69,6 +69,7 @@ abstract class FriendsPatternAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return FriendsPatternDto|null
@@ -94,6 +95,7 @@ abstract class FriendsPatternAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -120,6 +122,7 @@ abstract class FriendsPatternAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -142,6 +145,7 @@ abstract class FriendsPatternAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return FriendsPatternDto
      */
@@ -167,14 +171,13 @@ abstract class FriendsPatternAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set name
      *
      * @param string $name
      *
      * @return self
      */
-    public function setName($name)
+    protected function setName($name)
     {
         Assertion::notNull($name, 'name value "%s" is null, but non null value was expected.');
         Assertion::maxLength($name, 50, 'name value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -195,14 +198,13 @@ abstract class FriendsPatternAbstract
     }
 
     /**
-     * @deprecated
      * Set regExp
      *
      * @param string $regExp
      *
      * @return self
      */
-    public function setRegExp($regExp)
+    protected function setRegExp($regExp)
     {
         Assertion::notNull($regExp, 'regExp value "%s" is null, but non null value was expected.');
         Assertion::maxLength($regExp, 255, 'regExp value "%s" is too long, it should have no more than %d characters, but has %d characters.');

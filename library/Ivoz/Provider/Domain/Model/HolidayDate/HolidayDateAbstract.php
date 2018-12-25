@@ -74,6 +74,7 @@ abstract class HolidayDateAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return HolidayDateDto|null
@@ -99,6 +100,7 @@ abstract class HolidayDateAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -126,6 +128,7 @@ abstract class HolidayDateAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -149,6 +152,7 @@ abstract class HolidayDateAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return HolidayDateDto
      */
@@ -176,14 +180,13 @@ abstract class HolidayDateAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set name
      *
      * @param string $name
      *
      * @return self
      */
-    public function setName($name)
+    protected function setName($name)
     {
         Assertion::notNull($name, 'name value "%s" is null, but non null value was expected.');
         Assertion::maxLength($name, 50, 'name value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -204,14 +207,13 @@ abstract class HolidayDateAbstract
     }
 
     /**
-     * @deprecated
      * Set eventDate
      *
      * @param \DateTime $eventDate
      *
      * @return self
      */
-    public function setEventDate($eventDate)
+    protected function setEventDate($eventDate)
     {
         Assertion::notNull($eventDate, 'eventDate value "%s" is null, but non null value was expected.');
 

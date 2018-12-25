@@ -74,6 +74,7 @@ abstract class DestinationAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return DestinationDto|null
@@ -99,6 +100,7 @@ abstract class DestinationAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -130,6 +132,7 @@ abstract class DestinationAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -157,6 +160,7 @@ abstract class DestinationAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return DestinationDto
      */
@@ -184,14 +188,13 @@ abstract class DestinationAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set prefix
      *
      * @param string $prefix
      *
      * @return self
      */
-    public function setPrefix($prefix)
+    protected function setPrefix($prefix)
     {
         Assertion::notNull($prefix, 'prefix value "%s" is null, but non null value was expected.');
         Assertion::maxLength($prefix, 24, 'prefix value "%s" is too long, it should have no more than %d characters, but has %d characters.');

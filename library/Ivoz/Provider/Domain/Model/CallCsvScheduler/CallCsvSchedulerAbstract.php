@@ -19,7 +19,7 @@ abstract class CallCsvSchedulerAbstract
     protected $name;
 
     /**
-     * comment: enum:week|month|year
+     * comment: enum:day|week|month
      * @var string
      */
     protected $unit = 'month';
@@ -35,12 +35,17 @@ abstract class CallCsvSchedulerAbstract
     protected $email;
 
     /**
-     * @var \DateTime
+     * @var \DateTime | null
      */
     protected $lastExecution;
 
     /**
-     * @var \DateTime
+     * @var string | null
+     */
+    protected $lastExecutionError;
+
+    /**
+     * @var \DateTime | null
      */
     protected $nextExecution;
 
@@ -97,6 +102,7 @@ abstract class CallCsvSchedulerAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return CallCsvSchedulerDto|null
@@ -122,6 +128,7 @@ abstract class CallCsvSchedulerAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -141,6 +148,7 @@ abstract class CallCsvSchedulerAbstract
 
         $self
             ->setLastExecution($dto->getLastExecution())
+            ->setLastExecutionError($dto->getLastExecutionError())
             ->setNextExecution($dto->getNextExecution())
             ->setBrand($dto->getBrand())
             ->setCompany($dto->getCompany())
@@ -153,6 +161,7 @@ abstract class CallCsvSchedulerAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -169,6 +178,7 @@ abstract class CallCsvSchedulerAbstract
             ->setFrequency($dto->getFrequency())
             ->setEmail($dto->getEmail())
             ->setLastExecution($dto->getLastExecution())
+            ->setLastExecutionError($dto->getLastExecutionError())
             ->setNextExecution($dto->getNextExecution())
             ->setBrand($dto->getBrand())
             ->setCompany($dto->getCompany());
@@ -180,6 +190,7 @@ abstract class CallCsvSchedulerAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return CallCsvSchedulerDto
      */
@@ -191,6 +202,7 @@ abstract class CallCsvSchedulerAbstract
             ->setFrequency(self::getFrequency())
             ->setEmail(self::getEmail())
             ->setLastExecution(self::getLastExecution())
+            ->setLastExecutionError(self::getLastExecutionError())
             ->setNextExecution(self::getNextExecution())
             ->setBrand(\Ivoz\Provider\Domain\Model\Brand\Brand::entityToDto(self::getBrand(), $depth))
             ->setCompany(\Ivoz\Provider\Domain\Model\Company\Company::entityToDto(self::getCompany(), $depth));
@@ -207,6 +219,7 @@ abstract class CallCsvSchedulerAbstract
             'frequency' => self::getFrequency(),
             'email' => self::getEmail(),
             'lastExecution' => self::getLastExecution(),
+            'lastExecutionError' => self::getLastExecutionError(),
             'nextExecution' => self::getNextExecution(),
             'brandId' => self::getBrand() ? self::getBrand()->getId() : null,
             'companyId' => self::getCompany() ? self::getCompany()->getId() : null
@@ -215,14 +228,13 @@ abstract class CallCsvSchedulerAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set name
      *
      * @param string $name
      *
      * @return self
      */
-    public function setName($name)
+    protected function setName($name)
     {
         Assertion::notNull($name, 'name value "%s" is null, but non null value was expected.');
         Assertion::maxLength($name, 40, 'name value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -243,21 +255,20 @@ abstract class CallCsvSchedulerAbstract
     }
 
     /**
-     * @deprecated
      * Set unit
      *
      * @param string $unit
      *
      * @return self
      */
-    public function setUnit($unit)
+    protected function setUnit($unit)
     {
         Assertion::notNull($unit, 'unit value "%s" is null, but non null value was expected.');
         Assertion::maxLength($unit, 30, 'unit value "%s" is too long, it should have no more than %d characters, but has %d characters.');
         Assertion::choice($unit, array (
-          0 => 'week',
-          1 => 'month',
-          2 => 'year',
+          0 => 'day',
+          1 => 'week',
+          2 => 'month',
         ), 'unitvalue "%s" is not an element of the valid values: %s');
 
         $this->unit = $unit;
@@ -276,14 +287,13 @@ abstract class CallCsvSchedulerAbstract
     }
 
     /**
-     * @deprecated
      * Set frequency
      *
      * @param integer $frequency
      *
      * @return self
      */
-    public function setFrequency($frequency)
+    protected function setFrequency($frequency)
     {
         Assertion::notNull($frequency, 'frequency value "%s" is null, but non null value was expected.');
         Assertion::integerish($frequency, 'frequency value "%s" is not an integer or a number castable to integer.');
@@ -305,14 +315,13 @@ abstract class CallCsvSchedulerAbstract
     }
 
     /**
-     * @deprecated
      * Set email
      *
      * @param string $email
      *
      * @return self
      */
-    public function setEmail($email)
+    protected function setEmail($email)
     {
         Assertion::notNull($email, 'email value "%s" is null, but non null value was expected.');
         Assertion::maxLength($email, 140, 'email value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -333,14 +342,13 @@ abstract class CallCsvSchedulerAbstract
     }
 
     /**
-     * @deprecated
      * Set lastExecution
      *
      * @param \DateTime $lastExecution
      *
      * @return self
      */
-    public function setLastExecution($lastExecution = null)
+    protected function setLastExecution($lastExecution = null)
     {
         if (!is_null($lastExecution)) {
             $lastExecution = \Ivoz\Core\Domain\Model\Helper\DateTimeHelper::createOrFix(
@@ -357,7 +365,7 @@ abstract class CallCsvSchedulerAbstract
     /**
      * Get lastExecution
      *
-     * @return \DateTime
+     * @return \DateTime | null
      */
     public function getLastExecution()
     {
@@ -365,14 +373,41 @@ abstract class CallCsvSchedulerAbstract
     }
 
     /**
-     * @deprecated
+     * Set lastExecutionError
+     *
+     * @param string $lastExecutionError
+     *
+     * @return self
+     */
+    protected function setLastExecutionError($lastExecutionError = null)
+    {
+        if (!is_null($lastExecutionError)) {
+            Assertion::maxLength($lastExecutionError, 300, 'lastExecutionError value "%s" is too long, it should have no more than %d characters, but has %d characters.');
+        }
+
+        $this->lastExecutionError = $lastExecutionError;
+
+        return $this;
+    }
+
+    /**
+     * Get lastExecutionError
+     *
+     * @return string | null
+     */
+    public function getLastExecutionError()
+    {
+        return $this->lastExecutionError;
+    }
+
+    /**
      * Set nextExecution
      *
      * @param \DateTime $nextExecution
      *
      * @return self
      */
-    public function setNextExecution($nextExecution = null)
+    protected function setNextExecution($nextExecution = null)
     {
         if (!is_null($nextExecution)) {
             $nextExecution = \Ivoz\Core\Domain\Model\Helper\DateTimeHelper::createOrFix(
@@ -389,7 +424,7 @@ abstract class CallCsvSchedulerAbstract
     /**
      * Get nextExecution
      *
-     * @return \DateTime
+     * @return \DateTime | null
      */
     public function getNextExecution()
     {
@@ -413,7 +448,7 @@ abstract class CallCsvSchedulerAbstract
     /**
      * Get brand
      *
-     * @return \Ivoz\Provider\Domain\Model\Brand\BrandInterface
+     * @return \Ivoz\Provider\Domain\Model\Brand\BrandInterface | null
      */
     public function getBrand()
     {
@@ -427,7 +462,7 @@ abstract class CallCsvSchedulerAbstract
      *
      * @return self
      */
-    public function setCompany(\Ivoz\Provider\Domain\Model\Company\CompanyInterface $company)
+    public function setCompany(\Ivoz\Provider\Domain\Model\Company\CompanyInterface $company = null)
     {
         $this->company = $company;
 
@@ -437,7 +472,7 @@ abstract class CallCsvSchedulerAbstract
     /**
      * Get company
      *
-     * @return \Ivoz\Provider\Domain\Model\Company\CompanyInterface
+     * @return \Ivoz\Provider\Domain\Model\Company\CompanyInterface | null
      */
     public function getCompany()
     {

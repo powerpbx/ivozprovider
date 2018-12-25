@@ -38,31 +38,11 @@ interface RetailAccountInterface extends LoggableEntityInterface
     public function getName();
 
     /**
-     * @deprecated
-     * Set description
-     *
-     * @param string $description
-     *
-     * @return self
-     */
-    public function setDescription($description);
-
-    /**
      * Get description
      *
      * @return string
      */
     public function getDescription();
-
-    /**
-     * @deprecated
-     * Set transport
-     *
-     * @param string $transport
-     *
-     * @return self
-     */
-    public function setTransport($transport);
 
     /**
      * Get transport
@@ -74,50 +54,30 @@ interface RetailAccountInterface extends LoggableEntityInterface
     /**
      * Get ip
      *
-     * @return string
+     * @return string | null
      */
     public function getIp();
 
     /**
      * Get port
      *
-     * @return integer
+     * @return integer | null
      */
     public function getPort();
 
     /**
      * Get password
      *
-     * @return string
+     * @return string | null
      */
     public function getPassword();
 
     /**
-     * @deprecated
-     * Set fromDomain
-     *
-     * @param string $fromDomain
-     *
-     * @return self
-     */
-    public function setFromDomain($fromDomain = null);
-
-    /**
      * Get fromDomain
      *
-     * @return string
+     * @return string | null
      */
     public function getFromDomain();
-
-    /**
-     * @deprecated
-     * Set directConnectivity
-     *
-     * @param string $directConnectivity
-     *
-     * @return self
-     */
-    public function setDirectConnectivity($directConnectivity);
 
     /**
      * Get directConnectivity
@@ -125,6 +85,13 @@ interface RetailAccountInterface extends LoggableEntityInterface
      * @return string
      */
     public function getDirectConnectivity();
+
+    /**
+     * Get ddiIn
+     *
+     * @return string
+     */
+    public function getDdiIn();
 
     /**
      * Set brand
@@ -154,7 +121,7 @@ interface RetailAccountInterface extends LoggableEntityInterface
     /**
      * Get domain
      *
-     * @return \Ivoz\Provider\Domain\Model\Domain\DomainInterface
+     * @return \Ivoz\Provider\Domain\Model\Domain\DomainInterface | null
      */
     public function getDomain();
 

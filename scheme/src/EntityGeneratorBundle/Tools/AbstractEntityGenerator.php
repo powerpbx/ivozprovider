@@ -76,6 +76,7 @@ public static function createDto($id = null)
 }
 
 /**
+ * @internal use EntityTools instead
  * @param EntityInterface|null $entity
  * @param int $depth
  * @return <dtoClass>|null
@@ -101,6 +102,7 @@ public static function entityToDto(EntityInterface $entity = null, $depth = 0)
 
 /**
  * Factory method
+ * @internal use EntityTools instead
  * @param DataTransferObjectInterface $dto
  * @return self
  */
@@ -120,6 +122,7 @@ public static function fromDto(DataTransferObjectInterface $dto)
 }
 
 /**
+ * @internal use EntityTools instead
  * @param DataTransferObjectInterface $dto
  * @return self
  */
@@ -137,6 +140,7 @@ public function updateFromDto(DataTransferObjectInterface $dto)
 }
 
 /**
+ * @internal use EntityTools instead
  * @param int $depth
  * @return <dtoClass>
  */
@@ -157,7 +161,7 @@ protected function __toArray()
      */
     protected static $setMethodTemplate =
 '/**
- * <deprecated><description>
+ * <description>
  *
  * @param <variableType> $<variableName>
  *
@@ -179,7 +183,7 @@ protected function __toArray()
 '/**
  * <description>
  *
- * @return <variableType>
+ * @return <variableType><nullable>
  */
 public function <methodName>(<criteriaArgument>)
 {<criteriaGetter>
@@ -414,12 +418,17 @@ public function <methodName>(<criteriaArgument>)
             $lines[] = $this->spaces . ' * comment: ' . $comment;
         }
 
-        $lines[] = $this->spaces . ' * @var ' . $this->getType($fieldMapping['type']);
+        $isNullable = isset($fieldMapping['nullable']) && $fieldMapping['nullable'];
+        $lines[] =
+            $this->spaces
+            . ' * @var '
+            . $this->getType($fieldMapping['type'])
+            . ($isNullable ? ' | null' : '');
+
         $lines[] = $this->spaces . ' */';
 
         return implode("\n", $lines);
     }
-
 
     /**
      * @param ClassMetadataInfo $metadata
@@ -1173,11 +1182,7 @@ public function <methodName>(<criteriaArgument>)
     {
         $currentField = null;
         $isNullable = false;
-        $visibility = $metadata->isEmbeddedClass
-            ? 'protected'
-            : 'public';
-
-        $deprecated = "@deprecated\n     * ";
+        $visibility = 'protected';
 
         if (array_key_exists($fieldName, $metadata->fieldMappings)) {
             $currentField = (object) $metadata->fieldMappings[$fieldName];
@@ -1195,7 +1200,7 @@ public function <methodName>(<criteriaArgument>)
 
         $isFk = strpos($typeHint, '\\');
         if ($isFk) {
-            $deprecated = '';
+            $visibility = 'public';
         }
 
         $isCollection = strpos($typeHint, 'Doctrine\\Common\\Collections\\Collection') !== false;
@@ -1205,6 +1210,16 @@ public function <methodName>(<criteriaArgument>)
 
         $parentResponse = parent::generateEntityStubMethod($metadata, $type, $fieldName, $typeHint,  $defaultValue);
         $parentResponse = str_replace('(\\' . $metadata->namespace . '\\', '(', $parentResponse);
+
+        $isNullableFk = false;
+        if (array_key_exists($fieldName, $metadata->associationMappings)) {
+            $currentAsoc = (object) $metadata->associationMappings[$fieldName];
+            $isNullableFk =
+                isset($currentAsoc->joinColumns)
+                && isset($currentAsoc->joinColumns[0])
+                && isset($currentAsoc->joinColumns[0]['nullable'])
+                && $currentAsoc->joinColumns[0]['nullable'];
+        }
 
         $assertions = [];
 
@@ -1224,6 +1239,7 @@ public function <methodName>(<criteriaArgument>)
             } else {
                 $assertions[] = 'if (!is_null($' . $fieldName . ')) {';
             }
+
 
             if (in_array($currentField->type, ['boolean'])) {
                 $assertions = array_merge(
@@ -1325,8 +1341,8 @@ public function <methodName>(<criteriaArgument>)
 
         $replacements = array(
             $this->spaces . '<assertions>' => $assertions,
-            '<deprecated>' => $deprecated,
-            '<visibility>' => $visibility
+            '<visibility>' => $visibility,
+            '<nullable>' => ($isNullable || $isNullableFk) ? ' | null' : ''
         );
 
         if ($type == 'replace') {

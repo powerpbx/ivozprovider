@@ -70,6 +70,7 @@ abstract class TerminalManufacturerAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return TerminalManufacturerDto|null
@@ -95,6 +96,7 @@ abstract class TerminalManufacturerAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -118,6 +120,7 @@ abstract class TerminalManufacturerAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -140,6 +143,7 @@ abstract class TerminalManufacturerAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return TerminalManufacturerDto
      */
@@ -165,14 +169,13 @@ abstract class TerminalManufacturerAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set iden
      *
      * @param string $iden
      *
      * @return self
      */
-    public function setIden($iden)
+    protected function setIden($iden)
     {
         Assertion::notNull($iden, 'iden value "%s" is null, but non null value was expected.');
         Assertion::maxLength($iden, 100, 'iden value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -193,14 +196,13 @@ abstract class TerminalManufacturerAbstract
     }
 
     /**
-     * @deprecated
      * Set name
      *
      * @param string $name
      *
      * @return self
      */
-    public function setName($name)
+    protected function setName($name)
     {
         Assertion::notNull($name, 'name value "%s" is null, but non null value was expected.');
         Assertion::maxLength($name, 100, 'name value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -221,14 +223,13 @@ abstract class TerminalManufacturerAbstract
     }
 
     /**
-     * @deprecated
      * Set description
      *
      * @param string $description
      *
      * @return self
      */
-    public function setDescription($description)
+    protected function setDescription($description)
     {
         Assertion::notNull($description, 'description value "%s" is null, but non null value was expected.');
         Assertion::maxLength($description, 500, 'description value "%s" is too long, it should have no more than %d characters, but has %d characters.');

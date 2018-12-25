@@ -45,6 +45,11 @@ interface ResidentialDeviceInterface extends LoggableEntityInterface
     public function getLanguageCode();
 
     /**
+     * @return string
+     */
+    public function getOutgoingDdiNumber();
+
+    /**
      * Get Residential Device outgoingDdi
      * If no Ddi is assigned, retrieve company's default Ddi
      * @return \Ivoz\Provider\Domain\Model\Ddi\DdiInterface or NULL
@@ -59,6 +64,21 @@ interface ResidentialDeviceInterface extends LoggableEntityInterface
     public function getDdi($ddieE164);
 
     /**
+     * @return string with the voicemail
+     */
+    public function getVoiceMail();
+
+    /**
+     * @return string with the voicemail user
+     */
+    public function getVoiceMailUser();
+
+    /**
+     * @return string with the voicemail context
+     */
+    public function getVoiceMailContext();
+
+    /**
      * Get name
      *
      * @return string
@@ -66,31 +86,11 @@ interface ResidentialDeviceInterface extends LoggableEntityInterface
     public function getName();
 
     /**
-     * @deprecated
-     * Set description
-     *
-     * @param string $description
-     *
-     * @return self
-     */
-    public function setDescription($description);
-
-    /**
      * Get description
      *
      * @return string
      */
     public function getDescription();
-
-    /**
-     * @deprecated
-     * Set transport
-     *
-     * @param string $transport
-     *
-     * @return self
-     */
-    public function setTransport($transport);
 
     /**
      * Get transport
@@ -102,26 +102,16 @@ interface ResidentialDeviceInterface extends LoggableEntityInterface
     /**
      * Get ip
      *
-     * @return string
+     * @return string | null
      */
     public function getIp();
 
     /**
      * Get port
      *
-     * @return integer
+     * @return integer | null
      */
     public function getPort();
-
-    /**
-     * @deprecated
-     * Set authNeeded
-     *
-     * @param string $authNeeded
-     *
-     * @return self
-     */
-    public function setAuthNeeded($authNeeded);
 
     /**
      * Get authNeeded
@@ -133,19 +123,9 @@ interface ResidentialDeviceInterface extends LoggableEntityInterface
     /**
      * Get password
      *
-     * @return string
+     * @return string | null
      */
     public function getPassword();
-
-    /**
-     * @deprecated
-     * Set disallow
-     *
-     * @param string $disallow
-     *
-     * @return self
-     */
-    public function setDisallow($disallow);
 
     /**
      * Get disallow
@@ -155,31 +135,11 @@ interface ResidentialDeviceInterface extends LoggableEntityInterface
     public function getDisallow();
 
     /**
-     * @deprecated
-     * Set allow
-     *
-     * @param string $allow
-     *
-     * @return self
-     */
-    public function setAllow($allow);
-
-    /**
      * Get allow
      *
      * @return string
      */
     public function getAllow();
-
-    /**
-     * @deprecated
-     * Set directMediaMethod
-     *
-     * @param string $directMediaMethod
-     *
-     * @return self
-     */
-    public function setDirectMediaMethod($directMediaMethod);
 
     /**
      * Get directMediaMethod
@@ -189,31 +149,11 @@ interface ResidentialDeviceInterface extends LoggableEntityInterface
     public function getDirectMediaMethod();
 
     /**
-     * @deprecated
-     * Set calleridUpdateHeader
-     *
-     * @param string $calleridUpdateHeader
-     *
-     * @return self
-     */
-    public function setCalleridUpdateHeader($calleridUpdateHeader);
-
-    /**
      * Get calleridUpdateHeader
      *
      * @return string
      */
     public function getCalleridUpdateHeader();
-
-    /**
-     * @deprecated
-     * Set updateCallerid
-     *
-     * @param string $updateCallerid
-     *
-     * @return self
-     */
-    public function setUpdateCallerid($updateCallerid);
 
     /**
      * Get updateCallerid
@@ -223,31 +163,11 @@ interface ResidentialDeviceInterface extends LoggableEntityInterface
     public function getUpdateCallerid();
 
     /**
-     * @deprecated
-     * Set fromDomain
-     *
-     * @param string $fromDomain
-     *
-     * @return self
-     */
-    public function setFromDomain($fromDomain = null);
-
-    /**
      * Get fromDomain
      *
-     * @return string
+     * @return string | null
      */
     public function getFromDomain();
-
-    /**
-     * @deprecated
-     * Set directConnectivity
-     *
-     * @param string $directConnectivity
-     *
-     * @return self
-     */
-    public function setDirectConnectivity($directConnectivity);
 
     /**
      * Get directConnectivity
@@ -255,6 +175,13 @@ interface ResidentialDeviceInterface extends LoggableEntityInterface
      * @return string
      */
     public function getDirectConnectivity();
+
+    /**
+     * Get ddiIn
+     *
+     * @return string
+     */
+    public function getDdiIn();
 
     /**
      * Set brand
@@ -284,7 +211,7 @@ interface ResidentialDeviceInterface extends LoggableEntityInterface
     /**
      * Get domain
      *
-     * @return \Ivoz\Provider\Domain\Model\Domain\DomainInterface
+     * @return \Ivoz\Provider\Domain\Model\Domain\DomainInterface | null
      */
     public function getDomain();
 
@@ -406,4 +333,35 @@ interface ResidentialDeviceInterface extends LoggableEntityInterface
      * @return \Ivoz\Provider\Domain\Model\Ddi\DdiInterface[]
      */
     public function getDdis(\Doctrine\Common\Collections\Criteria $criteria = null);
+
+    /**
+     * Add callForwardSetting
+     *
+     * @param \Ivoz\Provider\Domain\Model\CallForwardSetting\CallForwardSettingInterface $callForwardSetting
+     *
+     * @return ResidentialDeviceTrait
+     */
+    public function addCallForwardSetting(\Ivoz\Provider\Domain\Model\CallForwardSetting\CallForwardSettingInterface $callForwardSetting);
+
+    /**
+     * Remove callForwardSetting
+     *
+     * @param \Ivoz\Provider\Domain\Model\CallForwardSetting\CallForwardSettingInterface $callForwardSetting
+     */
+    public function removeCallForwardSetting(\Ivoz\Provider\Domain\Model\CallForwardSetting\CallForwardSettingInterface $callForwardSetting);
+
+    /**
+     * Replace callForwardSettings
+     *
+     * @param \Ivoz\Provider\Domain\Model\CallForwardSetting\CallForwardSettingInterface[] $callForwardSettings
+     * @return self
+     */
+    public function replaceCallForwardSettings(Collection $callForwardSettings);
+
+    /**
+     * Get callForwardSettings
+     *
+     * @return \Ivoz\Provider\Domain\Model\CallForwardSetting\CallForwardSettingInterface[]
+     */
+    public function getCallForwardSettings(\Doctrine\Common\Collections\Criteria $criteria = null);
 }

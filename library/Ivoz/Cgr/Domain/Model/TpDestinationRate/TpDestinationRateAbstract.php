@@ -19,19 +19,19 @@ abstract class TpDestinationRateAbstract
     protected $tpid = 'ivozprovider';
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $tag;
 
     /**
      * column: destinations_tag
-     * @var string
+     * @var string | null
      */
     protected $destinationsTag;
 
     /**
      * column: rates_tag
-     * @var string
+     * @var string | null
      */
     protected $ratesTag;
 
@@ -121,6 +121,7 @@ abstract class TpDestinationRateAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return TpDestinationRateDto|null
@@ -146,6 +147,7 @@ abstract class TpDestinationRateAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -179,6 +181,7 @@ abstract class TpDestinationRateAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -208,6 +211,7 @@ abstract class TpDestinationRateAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return TpDestinationRateDto
      */
@@ -247,14 +251,13 @@ abstract class TpDestinationRateAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set tpid
      *
      * @param string $tpid
      *
      * @return self
      */
-    public function setTpid($tpid)
+    protected function setTpid($tpid)
     {
         Assertion::notNull($tpid, 'tpid value "%s" is null, but non null value was expected.');
         Assertion::maxLength($tpid, 64, 'tpid value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -275,14 +278,13 @@ abstract class TpDestinationRateAbstract
     }
 
     /**
-     * @deprecated
      * Set tag
      *
      * @param string $tag
      *
      * @return self
      */
-    public function setTag($tag = null)
+    protected function setTag($tag = null)
     {
         if (!is_null($tag)) {
             Assertion::maxLength($tag, 64, 'tag value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -296,7 +298,7 @@ abstract class TpDestinationRateAbstract
     /**
      * Get tag
      *
-     * @return string
+     * @return string | null
      */
     public function getTag()
     {
@@ -304,14 +306,13 @@ abstract class TpDestinationRateAbstract
     }
 
     /**
-     * @deprecated
      * Set destinationsTag
      *
      * @param string $destinationsTag
      *
      * @return self
      */
-    public function setDestinationsTag($destinationsTag = null)
+    protected function setDestinationsTag($destinationsTag = null)
     {
         if (!is_null($destinationsTag)) {
             Assertion::maxLength($destinationsTag, 64, 'destinationsTag value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -325,7 +326,7 @@ abstract class TpDestinationRateAbstract
     /**
      * Get destinationsTag
      *
-     * @return string
+     * @return string | null
      */
     public function getDestinationsTag()
     {
@@ -333,14 +334,13 @@ abstract class TpDestinationRateAbstract
     }
 
     /**
-     * @deprecated
      * Set ratesTag
      *
      * @param string $ratesTag
      *
      * @return self
      */
-    public function setRatesTag($ratesTag = null)
+    protected function setRatesTag($ratesTag = null)
     {
         if (!is_null($ratesTag)) {
             Assertion::maxLength($ratesTag, 64, 'ratesTag value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -354,7 +354,7 @@ abstract class TpDestinationRateAbstract
     /**
      * Get ratesTag
      *
-     * @return string
+     * @return string | null
      */
     public function getRatesTag()
     {
@@ -362,14 +362,13 @@ abstract class TpDestinationRateAbstract
     }
 
     /**
-     * @deprecated
      * Set roundingMethod
      *
      * @param string $roundingMethod
      *
      * @return self
      */
-    public function setRoundingMethod($roundingMethod)
+    protected function setRoundingMethod($roundingMethod)
     {
         Assertion::notNull($roundingMethod, 'roundingMethod value "%s" is null, but non null value was expected.');
         Assertion::maxLength($roundingMethod, 255, 'roundingMethod value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -390,14 +389,13 @@ abstract class TpDestinationRateAbstract
     }
 
     /**
-     * @deprecated
      * Set roundingDecimals
      *
      * @param integer $roundingDecimals
      *
      * @return self
      */
-    public function setRoundingDecimals($roundingDecimals)
+    protected function setRoundingDecimals($roundingDecimals)
     {
         Assertion::notNull($roundingDecimals, 'roundingDecimals value "%s" is null, but non null value was expected.');
         Assertion::integerish($roundingDecimals, 'roundingDecimals value "%s" is not an integer or a number castable to integer.');
@@ -418,14 +416,13 @@ abstract class TpDestinationRateAbstract
     }
 
     /**
-     * @deprecated
      * Set maxCost
      *
      * @param string $maxCost
      *
      * @return self
      */
-    public function setMaxCost($maxCost)
+    protected function setMaxCost($maxCost)
     {
         Assertion::notNull($maxCost, 'maxCost value "%s" is null, but non null value was expected.');
         Assertion::numeric($maxCost);
@@ -447,14 +444,13 @@ abstract class TpDestinationRateAbstract
     }
 
     /**
-     * @deprecated
      * Set maxCostStrategy
      *
      * @param string $maxCostStrategy
      *
      * @return self
      */
-    public function setMaxCostStrategy($maxCostStrategy)
+    protected function setMaxCostStrategy($maxCostStrategy)
     {
         Assertion::notNull($maxCostStrategy, 'maxCostStrategy value "%s" is null, but non null value was expected.');
         Assertion::maxLength($maxCostStrategy, 16, 'maxCostStrategy value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -475,14 +471,13 @@ abstract class TpDestinationRateAbstract
     }
 
     /**
-     * @deprecated
      * Set createdAt
      *
      * @param \DateTime $createdAt
      *
      * @return self
      */
-    public function setCreatedAt($createdAt)
+    protected function setCreatedAt($createdAt)
     {
         Assertion::notNull($createdAt, 'createdAt value "%s" is null, but non null value was expected.');
         $createdAt = \Ivoz\Core\Domain\Model\Helper\DateTimeHelper::createOrFix(

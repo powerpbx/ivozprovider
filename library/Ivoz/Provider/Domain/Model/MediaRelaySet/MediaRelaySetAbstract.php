@@ -19,7 +19,7 @@ abstract class MediaRelaySetAbstract
     protected $name = '0';
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $description;
 
@@ -63,6 +63,7 @@ abstract class MediaRelaySetAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return MediaRelaySetDto|null
@@ -88,6 +89,7 @@ abstract class MediaRelaySetAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -113,6 +115,7 @@ abstract class MediaRelaySetAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -134,6 +137,7 @@ abstract class MediaRelaySetAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return MediaRelaySetDto
      */
@@ -157,14 +161,13 @@ abstract class MediaRelaySetAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set name
      *
      * @param string $name
      *
      * @return self
      */
-    public function setName($name)
+    protected function setName($name)
     {
         Assertion::notNull($name, 'name value "%s" is null, but non null value was expected.');
         Assertion::maxLength($name, 32, 'name value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -185,14 +188,13 @@ abstract class MediaRelaySetAbstract
     }
 
     /**
-     * @deprecated
      * Set description
      *
      * @param string $description
      *
      * @return self
      */
-    public function setDescription($description = null)
+    protected function setDescription($description = null)
     {
         if (!is_null($description)) {
             Assertion::maxLength($description, 200, 'description value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -206,7 +208,7 @@ abstract class MediaRelaySetAbstract
     /**
      * Get description
      *
-     * @return string
+     * @return string | null
      */
     public function getDescription()
     {

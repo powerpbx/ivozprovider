@@ -19,7 +19,7 @@ abstract class InvoiceTemplateAbstract
     protected $name;
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $description;
 
@@ -29,12 +29,12 @@ abstract class InvoiceTemplateAbstract
     protected $template;
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $templateHeader;
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $templateFooter;
 
@@ -84,6 +84,7 @@ abstract class InvoiceTemplateAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return InvoiceTemplateDto|null
@@ -109,6 +110,7 @@ abstract class InvoiceTemplateAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -138,6 +140,7 @@ abstract class InvoiceTemplateAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -163,6 +166,7 @@ abstract class InvoiceTemplateAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return InvoiceTemplateDto
      */
@@ -194,14 +198,13 @@ abstract class InvoiceTemplateAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set name
      *
      * @param string $name
      *
      * @return self
      */
-    public function setName($name)
+    protected function setName($name)
     {
         Assertion::notNull($name, 'name value "%s" is null, but non null value was expected.');
         Assertion::maxLength($name, 55, 'name value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -222,14 +225,13 @@ abstract class InvoiceTemplateAbstract
     }
 
     /**
-     * @deprecated
      * Set description
      *
      * @param string $description
      *
      * @return self
      */
-    public function setDescription($description = null)
+    protected function setDescription($description = null)
     {
         if (!is_null($description)) {
             Assertion::maxLength($description, 300, 'description value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -243,7 +245,7 @@ abstract class InvoiceTemplateAbstract
     /**
      * Get description
      *
-     * @return string
+     * @return string | null
      */
     public function getDescription()
     {
@@ -251,14 +253,13 @@ abstract class InvoiceTemplateAbstract
     }
 
     /**
-     * @deprecated
      * Set template
      *
      * @param string $template
      *
      * @return self
      */
-    public function setTemplate($template)
+    protected function setTemplate($template)
     {
         Assertion::notNull($template, 'template value "%s" is null, but non null value was expected.');
         Assertion::maxLength($template, 65535, 'template value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -279,14 +280,13 @@ abstract class InvoiceTemplateAbstract
     }
 
     /**
-     * @deprecated
      * Set templateHeader
      *
      * @param string $templateHeader
      *
      * @return self
      */
-    public function setTemplateHeader($templateHeader = null)
+    protected function setTemplateHeader($templateHeader = null)
     {
         if (!is_null($templateHeader)) {
             Assertion::maxLength($templateHeader, 65535, 'templateHeader value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -300,7 +300,7 @@ abstract class InvoiceTemplateAbstract
     /**
      * Get templateHeader
      *
-     * @return string
+     * @return string | null
      */
     public function getTemplateHeader()
     {
@@ -308,14 +308,13 @@ abstract class InvoiceTemplateAbstract
     }
 
     /**
-     * @deprecated
      * Set templateFooter
      *
      * @param string $templateFooter
      *
      * @return self
      */
-    public function setTemplateFooter($templateFooter = null)
+    protected function setTemplateFooter($templateFooter = null)
     {
         if (!is_null($templateFooter)) {
             Assertion::maxLength($templateFooter, 65535, 'templateFooter value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -329,7 +328,7 @@ abstract class InvoiceTemplateAbstract
     /**
      * Get templateFooter
      *
-     * @return string
+     * @return string | null
      */
     public function getTemplateFooter()
     {

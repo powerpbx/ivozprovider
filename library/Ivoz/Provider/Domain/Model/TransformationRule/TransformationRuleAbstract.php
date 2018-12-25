@@ -25,17 +25,17 @@ abstract class TransformationRuleAbstract
     protected $description = '';
 
     /**
-     * @var integer
+     * @var integer | null
      */
     protected $priority;
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $matchExpr;
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $replaceExpr;
 
@@ -85,6 +85,7 @@ abstract class TransformationRuleAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return TransformationRuleDto|null
@@ -110,6 +111,7 @@ abstract class TransformationRuleAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -139,6 +141,7 @@ abstract class TransformationRuleAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -164,6 +167,7 @@ abstract class TransformationRuleAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return TransformationRuleDto
      */
@@ -195,14 +199,13 @@ abstract class TransformationRuleAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set type
      *
      * @param string $type
      *
      * @return self
      */
-    public function setType($type)
+    protected function setType($type)
     {
         Assertion::notNull($type, 'type value "%s" is null, but non null value was expected.');
         Assertion::maxLength($type, 10, 'type value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -229,14 +232,13 @@ abstract class TransformationRuleAbstract
     }
 
     /**
-     * @deprecated
      * Set description
      *
      * @param string $description
      *
      * @return self
      */
-    public function setDescription($description)
+    protected function setDescription($description)
     {
         Assertion::notNull($description, 'description value "%s" is null, but non null value was expected.');
         Assertion::maxLength($description, 64, 'description value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -257,14 +259,13 @@ abstract class TransformationRuleAbstract
     }
 
     /**
-     * @deprecated
      * Set priority
      *
      * @param integer $priority
      *
      * @return self
      */
-    public function setPriority($priority = null)
+    protected function setPriority($priority = null)
     {
         if (!is_null($priority)) {
             if (!is_null($priority)) {
@@ -281,7 +282,7 @@ abstract class TransformationRuleAbstract
     /**
      * Get priority
      *
-     * @return integer
+     * @return integer | null
      */
     public function getPriority()
     {
@@ -289,14 +290,13 @@ abstract class TransformationRuleAbstract
     }
 
     /**
-     * @deprecated
      * Set matchExpr
      *
      * @param string $matchExpr
      *
      * @return self
      */
-    public function setMatchExpr($matchExpr = null)
+    protected function setMatchExpr($matchExpr = null)
     {
         if (!is_null($matchExpr)) {
             Assertion::maxLength($matchExpr, 128, 'matchExpr value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -310,7 +310,7 @@ abstract class TransformationRuleAbstract
     /**
      * Get matchExpr
      *
-     * @return string
+     * @return string | null
      */
     public function getMatchExpr()
     {
@@ -318,14 +318,13 @@ abstract class TransformationRuleAbstract
     }
 
     /**
-     * @deprecated
      * Set replaceExpr
      *
      * @param string $replaceExpr
      *
      * @return self
      */
-    public function setReplaceExpr($replaceExpr = null)
+    protected function setReplaceExpr($replaceExpr = null)
     {
         if (!is_null($replaceExpr)) {
             Assertion::maxLength($replaceExpr, 128, 'replaceExpr value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -339,7 +338,7 @@ abstract class TransformationRuleAbstract
     /**
      * Get replaceExpr
      *
-     * @return string
+     * @return string | null
      */
     public function getReplaceExpr()
     {
@@ -363,7 +362,7 @@ abstract class TransformationRuleAbstract
     /**
      * Get transformationRuleSet
      *
-     * @return \Ivoz\Provider\Domain\Model\TransformationRuleSet\TransformationRuleSetInterface
+     * @return \Ivoz\Provider\Domain\Model\TransformationRuleSet\TransformationRuleSetInterface | null
      */
     public function getTransformationRuleSet()
     {

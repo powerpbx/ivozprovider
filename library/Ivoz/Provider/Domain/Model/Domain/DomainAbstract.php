@@ -24,7 +24,7 @@ abstract class DomainAbstract
     protected $pointsTo = 'proxyusers';
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $description;
 
@@ -69,6 +69,7 @@ abstract class DomainAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return DomainDto|null
@@ -94,6 +95,7 @@ abstract class DomainAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -120,6 +122,7 @@ abstract class DomainAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -142,6 +145,7 @@ abstract class DomainAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return DomainDto
      */
@@ -167,14 +171,13 @@ abstract class DomainAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set domain
      *
      * @param string $domain
      *
      * @return self
      */
-    public function setDomain($domain)
+    protected function setDomain($domain)
     {
         Assertion::notNull($domain, 'domain value "%s" is null, but non null value was expected.');
         Assertion::maxLength($domain, 190, 'domain value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -195,14 +198,13 @@ abstract class DomainAbstract
     }
 
     /**
-     * @deprecated
      * Set pointsTo
      *
      * @param string $pointsTo
      *
      * @return self
      */
-    public function setPointsTo($pointsTo)
+    protected function setPointsTo($pointsTo)
     {
         Assertion::notNull($pointsTo, 'pointsTo value "%s" is null, but non null value was expected.');
 
@@ -222,14 +224,13 @@ abstract class DomainAbstract
     }
 
     /**
-     * @deprecated
      * Set description
      *
      * @param string $description
      *
      * @return self
      */
-    public function setDescription($description = null)
+    protected function setDescription($description = null)
     {
         if (!is_null($description)) {
             Assertion::maxLength($description, 500, 'description value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -243,7 +244,7 @@ abstract class DomainAbstract
     /**
      * Get description
      *
-     * @return string
+     * @return string | null
      */
     public function getDescription()
     {

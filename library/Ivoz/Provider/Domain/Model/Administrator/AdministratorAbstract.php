@@ -35,12 +35,12 @@ abstract class AdministratorAbstract
     protected $active = '1';
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $name;
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $lastname;
 
@@ -102,6 +102,7 @@ abstract class AdministratorAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return AdministratorDto|null
@@ -127,6 +128,7 @@ abstract class AdministratorAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -159,6 +161,7 @@ abstract class AdministratorAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -187,6 +190,7 @@ abstract class AdministratorAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return AdministratorDto
      */
@@ -224,14 +228,13 @@ abstract class AdministratorAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set username
      *
      * @param string $username
      *
      * @return self
      */
-    public function setUsername($username)
+    protected function setUsername($username)
     {
         Assertion::notNull($username, 'username value "%s" is null, but non null value was expected.');
         Assertion::maxLength($username, 65, 'username value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -252,14 +255,13 @@ abstract class AdministratorAbstract
     }
 
     /**
-     * @deprecated
      * Set pass
      *
      * @param string $pass
      *
      * @return self
      */
-    public function setPass($pass)
+    protected function setPass($pass)
     {
         Assertion::notNull($pass, 'pass value "%s" is null, but non null value was expected.');
         Assertion::maxLength($pass, 80, 'pass value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -280,14 +282,13 @@ abstract class AdministratorAbstract
     }
 
     /**
-     * @deprecated
      * Set email
      *
      * @param string $email
      *
      * @return self
      */
-    public function setEmail($email)
+    protected function setEmail($email)
     {
         Assertion::notNull($email, 'email value "%s" is null, but non null value was expected.');
         Assertion::maxLength($email, 100, 'email value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -308,14 +309,13 @@ abstract class AdministratorAbstract
     }
 
     /**
-     * @deprecated
      * Set active
      *
      * @param boolean $active
      *
      * @return self
      */
-    public function setActive($active)
+    protected function setActive($active)
     {
         Assertion::notNull($active, 'active value "%s" is null, but non null value was expected.');
         Assertion::between(intval($active), 0, 1, 'active provided "%s" is not a valid boolean value.');
@@ -336,14 +336,13 @@ abstract class AdministratorAbstract
     }
 
     /**
-     * @deprecated
      * Set name
      *
      * @param string $name
      *
      * @return self
      */
-    public function setName($name = null)
+    protected function setName($name = null)
     {
         if (!is_null($name)) {
             Assertion::maxLength($name, 100, 'name value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -357,7 +356,7 @@ abstract class AdministratorAbstract
     /**
      * Get name
      *
-     * @return string
+     * @return string | null
      */
     public function getName()
     {
@@ -365,14 +364,13 @@ abstract class AdministratorAbstract
     }
 
     /**
-     * @deprecated
      * Set lastname
      *
      * @param string $lastname
      *
      * @return self
      */
-    public function setLastname($lastname = null)
+    protected function setLastname($lastname = null)
     {
         if (!is_null($lastname)) {
             Assertion::maxLength($lastname, 100, 'lastname value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -386,7 +384,7 @@ abstract class AdministratorAbstract
     /**
      * Get lastname
      *
-     * @return string
+     * @return string | null
      */
     public function getLastname()
     {
@@ -410,7 +408,7 @@ abstract class AdministratorAbstract
     /**
      * Get brand
      *
-     * @return \Ivoz\Provider\Domain\Model\Brand\BrandInterface
+     * @return \Ivoz\Provider\Domain\Model\Brand\BrandInterface | null
      */
     public function getBrand()
     {
@@ -434,7 +432,7 @@ abstract class AdministratorAbstract
     /**
      * Get company
      *
-     * @return \Ivoz\Provider\Domain\Model\Company\CompanyInterface
+     * @return \Ivoz\Provider\Domain\Model\Company\CompanyInterface | null
      */
     public function getCompany()
     {

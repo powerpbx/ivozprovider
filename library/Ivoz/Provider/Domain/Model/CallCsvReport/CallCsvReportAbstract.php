@@ -44,6 +44,11 @@ abstract class CallCsvReportAbstract
     protected $company;
 
     /**
+     * @var \Ivoz\Provider\Domain\Model\Brand\BrandInterface
+     */
+    protected $brand;
+
+    /**
      * @var \Ivoz\Provider\Domain\Model\CallCsvScheduler\CallCsvSchedulerInterface
      */
     protected $callCsvScheduler;
@@ -97,6 +102,7 @@ abstract class CallCsvReportAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return CallCsvReportDto|null
@@ -122,6 +128,7 @@ abstract class CallCsvReportAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -148,6 +155,7 @@ abstract class CallCsvReportAbstract
 
         $self
             ->setCompany($dto->getCompany())
+            ->setBrand($dto->getBrand())
             ->setCallCsvScheduler($dto->getCallCsvScheduler())
         ;
 
@@ -158,6 +166,7 @@ abstract class CallCsvReportAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -181,6 +190,7 @@ abstract class CallCsvReportAbstract
             ->setCreatedOn($dto->getCreatedOn())
             ->setCsv($csv)
             ->setCompany($dto->getCompany())
+            ->setBrand($dto->getBrand())
             ->setCallCsvScheduler($dto->getCallCsvScheduler());
 
 
@@ -190,6 +200,7 @@ abstract class CallCsvReportAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return CallCsvReportDto
      */
@@ -204,6 +215,7 @@ abstract class CallCsvReportAbstract
             ->setCsvMimeType(self::getCsv()->getMimeType())
             ->setCsvBaseName(self::getCsv()->getBaseName())
             ->setCompany(\Ivoz\Provider\Domain\Model\Company\Company::entityToDto(self::getCompany(), $depth))
+            ->setBrand(\Ivoz\Provider\Domain\Model\Brand\Brand::entityToDto(self::getBrand(), $depth))
             ->setCallCsvScheduler(\Ivoz\Provider\Domain\Model\CallCsvScheduler\CallCsvScheduler::entityToDto(self::getCallCsvScheduler(), $depth));
     }
 
@@ -221,20 +233,20 @@ abstract class CallCsvReportAbstract
             'csvMimeType' => self::getCsv()->getMimeType(),
             'csvBaseName' => self::getCsv()->getBaseName(),
             'companyId' => self::getCompany() ? self::getCompany()->getId() : null,
+            'brandId' => self::getBrand() ? self::getBrand()->getId() : null,
             'callCsvSchedulerId' => self::getCallCsvScheduler() ? self::getCallCsvScheduler()->getId() : null
         ];
     }
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set sentTo
      *
      * @param string $sentTo
      *
      * @return self
      */
-    public function setSentTo($sentTo)
+    protected function setSentTo($sentTo)
     {
         Assertion::notNull($sentTo, 'sentTo value "%s" is null, but non null value was expected.');
         Assertion::maxLength($sentTo, 250, 'sentTo value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -255,14 +267,13 @@ abstract class CallCsvReportAbstract
     }
 
     /**
-     * @deprecated
      * Set inDate
      *
      * @param \DateTime $inDate
      *
      * @return self
      */
-    public function setInDate($inDate)
+    protected function setInDate($inDate)
     {
         Assertion::notNull($inDate, 'inDate value "%s" is null, but non null value was expected.');
         $inDate = \Ivoz\Core\Domain\Model\Helper\DateTimeHelper::createOrFix(
@@ -286,14 +297,13 @@ abstract class CallCsvReportAbstract
     }
 
     /**
-     * @deprecated
      * Set outDate
      *
      * @param \DateTime $outDate
      *
      * @return self
      */
-    public function setOutDate($outDate)
+    protected function setOutDate($outDate)
     {
         Assertion::notNull($outDate, 'outDate value "%s" is null, but non null value was expected.');
         $outDate = \Ivoz\Core\Domain\Model\Helper\DateTimeHelper::createOrFix(
@@ -317,14 +327,13 @@ abstract class CallCsvReportAbstract
     }
 
     /**
-     * @deprecated
      * Set createdOn
      *
      * @param \DateTime $createdOn
      *
      * @return self
      */
-    public function setCreatedOn($createdOn)
+    protected function setCreatedOn($createdOn)
     {
         Assertion::notNull($createdOn, 'createdOn value "%s" is null, but non null value was expected.');
         $createdOn = \Ivoz\Core\Domain\Model\Helper\DateTimeHelper::createOrFix(
@@ -364,11 +373,35 @@ abstract class CallCsvReportAbstract
     /**
      * Get company
      *
-     * @return \Ivoz\Provider\Domain\Model\Company\CompanyInterface
+     * @return \Ivoz\Provider\Domain\Model\Company\CompanyInterface | null
      */
     public function getCompany()
     {
         return $this->company;
+    }
+
+    /**
+     * Set brand
+     *
+     * @param \Ivoz\Provider\Domain\Model\Brand\BrandInterface $brand
+     *
+     * @return self
+     */
+    public function setBrand(\Ivoz\Provider\Domain\Model\Brand\BrandInterface $brand = null)
+    {
+        $this->brand = $brand;
+
+        return $this;
+    }
+
+    /**
+     * Get brand
+     *
+     * @return \Ivoz\Provider\Domain\Model\Brand\BrandInterface | null
+     */
+    public function getBrand()
+    {
+        return $this->brand;
     }
 
     /**
@@ -388,7 +421,7 @@ abstract class CallCsvReportAbstract
     /**
      * Get callCsvScheduler
      *
-     * @return \Ivoz\Provider\Domain\Model\CallCsvScheduler\CallCsvSchedulerInterface
+     * @return \Ivoz\Provider\Domain\Model\CallCsvScheduler\CallCsvSchedulerInterface | null
      */
     public function getCallCsvScheduler()
     {

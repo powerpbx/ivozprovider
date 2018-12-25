@@ -7,6 +7,7 @@ class BillableCallDto extends BillableCallDtoAbstract
 
     /**
      * @inheritdoc
+     * @codeCoverageIgnore
      */
     public static function getPropertyMap(string $context = '')
     {
@@ -18,11 +19,13 @@ class BillableCallDto extends BillableCallDtoAbstract
                 'callee' => 'callee',
                 'cost' => 'cost',
                 'price' => 'price',
-                'id' => 'id',
+                'callid' => 'callid',
                 'brandId' => 'brand',
                 'companyId' => 'company',
                 'carrierId' => 'carrier',
-                'invoiceId' => 'invoice'
+                'invoiceId' => 'invoice',
+                'endpointType' => 'endpointType',
+                'endpointId' => 'endpointId',
             ];
         }
 

@@ -14,12 +14,12 @@ use Ivoz\Core\Domain\Model\EntityInterface;
 abstract class DdiProviderAddressAbstract
 {
     /**
-     * @var string
+     * @var string | null
      */
     protected $ip;
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $description;
 
@@ -72,6 +72,7 @@ abstract class DdiProviderAddressAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return DdiProviderAddressDto|null
@@ -97,6 +98,7 @@ abstract class DdiProviderAddressAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -122,6 +124,7 @@ abstract class DdiProviderAddressAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -144,6 +147,7 @@ abstract class DdiProviderAddressAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return DdiProviderAddressDto
      */
@@ -169,14 +173,13 @@ abstract class DdiProviderAddressAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set ip
      *
      * @param string $ip
      *
      * @return self
      */
-    public function setIp($ip = null)
+    protected function setIp($ip = null)
     {
         if (!is_null($ip)) {
             Assertion::maxLength($ip, 50, 'ip value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -190,7 +193,7 @@ abstract class DdiProviderAddressAbstract
     /**
      * Get ip
      *
-     * @return string
+     * @return string | null
      */
     public function getIp()
     {
@@ -198,14 +201,13 @@ abstract class DdiProviderAddressAbstract
     }
 
     /**
-     * @deprecated
      * Set description
      *
      * @param string $description
      *
      * @return self
      */
-    public function setDescription($description = null)
+    protected function setDescription($description = null)
     {
         if (!is_null($description)) {
             Assertion::maxLength($description, 200, 'description value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -219,7 +221,7 @@ abstract class DdiProviderAddressAbstract
     /**
      * Get description
      *
-     * @return string
+     * @return string | null
      */
     public function getDescription()
     {

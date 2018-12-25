@@ -20,7 +20,7 @@ abstract class MusicOnHoldAbstract
 
     /**
      * comment: enum:pending|encoding|ready|error
-     * @var string
+     * @var string | null
      */
     protected $status;
 
@@ -89,6 +89,7 @@ abstract class MusicOnHoldAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return MusicOnHoldDto|null
@@ -114,6 +115,7 @@ abstract class MusicOnHoldAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -155,6 +157,7 @@ abstract class MusicOnHoldAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -192,6 +195,7 @@ abstract class MusicOnHoldAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return MusicOnHoldDto
      */
@@ -231,14 +235,13 @@ abstract class MusicOnHoldAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set name
      *
      * @param string $name
      *
      * @return self
      */
-    public function setName($name)
+    protected function setName($name)
     {
         Assertion::notNull($name, 'name value "%s" is null, but non null value was expected.');
         Assertion::maxLength($name, 50, 'name value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -259,14 +262,13 @@ abstract class MusicOnHoldAbstract
     }
 
     /**
-     * @deprecated
      * Set status
      *
      * @param string $status
      *
      * @return self
      */
-    public function setStatus($status = null)
+    protected function setStatus($status = null)
     {
         if (!is_null($status)) {
             Assertion::maxLength($status, 20, 'status value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -286,7 +288,7 @@ abstract class MusicOnHoldAbstract
     /**
      * Get status
      *
-     * @return string
+     * @return string | null
      */
     public function getStatus()
     {
@@ -310,7 +312,7 @@ abstract class MusicOnHoldAbstract
     /**
      * Get brand
      *
-     * @return \Ivoz\Provider\Domain\Model\Brand\BrandInterface
+     * @return \Ivoz\Provider\Domain\Model\Brand\BrandInterface | null
      */
     public function getBrand()
     {
@@ -334,7 +336,7 @@ abstract class MusicOnHoldAbstract
     /**
      * Get company
      *
-     * @return \Ivoz\Provider\Domain\Model\Company\CompanyInterface
+     * @return \Ivoz\Provider\Domain\Model\Company\CompanyInterface | null
      */
     public function getCompany()
     {

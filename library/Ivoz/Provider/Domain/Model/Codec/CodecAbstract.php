@@ -71,6 +71,7 @@ abstract class CodecAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return CodecDto|null
@@ -96,6 +97,7 @@ abstract class CodecAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -119,6 +121,7 @@ abstract class CodecAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -141,6 +144,7 @@ abstract class CodecAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return CodecDto
      */
@@ -166,14 +170,13 @@ abstract class CodecAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set type
      *
      * @param string $type
      *
      * @return self
      */
-    public function setType($type)
+    protected function setType($type)
     {
         Assertion::notNull($type, 'type value "%s" is null, but non null value was expected.');
         Assertion::maxLength($type, 10, 'type value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -198,14 +201,13 @@ abstract class CodecAbstract
     }
 
     /**
-     * @deprecated
      * Set iden
      *
      * @param string $iden
      *
      * @return self
      */
-    public function setIden($iden)
+    protected function setIden($iden)
     {
         Assertion::notNull($iden, 'iden value "%s" is null, but non null value was expected.');
         Assertion::maxLength($iden, 25, 'iden value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -226,14 +228,13 @@ abstract class CodecAbstract
     }
 
     /**
-     * @deprecated
      * Set name
      *
      * @param string $name
      *
      * @return self
      */
-    public function setName($name)
+    protected function setName($name)
     {
         Assertion::notNull($name, 'name value "%s" is null, but non null value was expected.');
         Assertion::maxLength($name, 100, 'name value "%s" is too long, it should have no more than %d characters, but has %d characters.');

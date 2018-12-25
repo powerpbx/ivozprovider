@@ -70,6 +70,7 @@ abstract class NotificationTemplateAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return NotificationTemplateDto|null
@@ -95,6 +96,7 @@ abstract class NotificationTemplateAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -121,6 +123,7 @@ abstract class NotificationTemplateAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -143,6 +146,7 @@ abstract class NotificationTemplateAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return NotificationTemplateDto
      */
@@ -168,14 +172,13 @@ abstract class NotificationTemplateAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set name
      *
      * @param string $name
      *
      * @return self
      */
-    public function setName($name)
+    protected function setName($name)
     {
         Assertion::notNull($name, 'name value "%s" is null, but non null value was expected.');
         Assertion::maxLength($name, 55, 'name value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -196,14 +199,13 @@ abstract class NotificationTemplateAbstract
     }
 
     /**
-     * @deprecated
      * Set type
      *
      * @param string $type
      *
      * @return self
      */
-    public function setType($type)
+    protected function setType($type)
     {
         Assertion::notNull($type, 'type value "%s" is null, but non null value was expected.');
         Assertion::maxLength($type, 25, 'type value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -248,7 +250,7 @@ abstract class NotificationTemplateAbstract
     /**
      * Get brand
      *
-     * @return \Ivoz\Provider\Domain\Model\Brand\BrandInterface
+     * @return \Ivoz\Provider\Domain\Model\Brand\BrandInterface | null
      */
     public function getBrand()
     {

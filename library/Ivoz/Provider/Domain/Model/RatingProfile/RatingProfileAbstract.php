@@ -78,6 +78,7 @@ abstract class RatingProfileAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return RatingProfileDto|null
@@ -103,6 +104,7 @@ abstract class RatingProfileAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -131,6 +133,7 @@ abstract class RatingProfileAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -155,6 +158,7 @@ abstract class RatingProfileAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return RatingProfileDto
      */
@@ -184,14 +188,13 @@ abstract class RatingProfileAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set activationTime
      *
      * @param \DateTime $activationTime
      *
      * @return self
      */
-    public function setActivationTime($activationTime)
+    protected function setActivationTime($activationTime)
     {
         Assertion::notNull($activationTime, 'activationTime value "%s" is null, but non null value was expected.');
         $activationTime = \Ivoz\Core\Domain\Model\Helper\DateTimeHelper::createOrFix(
@@ -231,7 +234,7 @@ abstract class RatingProfileAbstract
     /**
      * Get company
      *
-     * @return \Ivoz\Provider\Domain\Model\Company\CompanyInterface
+     * @return \Ivoz\Provider\Domain\Model\Company\CompanyInterface | null
      */
     public function getCompany()
     {
@@ -255,7 +258,7 @@ abstract class RatingProfileAbstract
     /**
      * Get carrier
      *
-     * @return \Ivoz\Provider\Domain\Model\Carrier\CarrierInterface
+     * @return \Ivoz\Provider\Domain\Model\Carrier\CarrierInterface | null
      */
     public function getCarrier()
     {
@@ -303,7 +306,7 @@ abstract class RatingProfileAbstract
     /**
      * Get routingTag
      *
-     * @return \Ivoz\Provider\Domain\Model\RoutingTag\RoutingTagInterface
+     * @return \Ivoz\Provider\Domain\Model\RoutingTag\RoutingTagInterface | null
      */
     public function getRoutingTag()
     {

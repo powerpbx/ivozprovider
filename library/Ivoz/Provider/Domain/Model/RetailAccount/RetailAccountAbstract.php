@@ -30,22 +30,22 @@ abstract class RetailAccountAbstract
     protected $transport;
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $ip;
 
     /**
-     * @var integer
+     * @var integer | null
      */
     protected $port;
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $password;
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $fromDomain;
 
@@ -54,6 +54,12 @@ abstract class RetailAccountAbstract
      * @var string
      */
     protected $directConnectivity = 'yes';
+
+    /**
+     * comment: enum:yes|no
+     * @var string
+     */
+    protected $ddiIn = 'yes';
 
     /**
      * @var \Ivoz\Provider\Domain\Model\Brand\BrandInterface
@@ -90,12 +96,14 @@ abstract class RetailAccountAbstract
         $name,
         $description,
         $transport,
-        $directConnectivity
+        $directConnectivity,
+        $ddiIn
     ) {
         $this->setName($name);
         $this->setDescription($description);
         $this->setTransport($transport);
         $this->setDirectConnectivity($directConnectivity);
+        $this->setDdiIn($ddiIn);
     }
 
     abstract public function getId();
@@ -127,6 +135,7 @@ abstract class RetailAccountAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return RetailAccountDto|null
@@ -152,6 +161,7 @@ abstract class RetailAccountAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -166,7 +176,8 @@ abstract class RetailAccountAbstract
             $dto->getName(),
             $dto->getDescription(),
             $dto->getTransport(),
-            $dto->getDirectConnectivity()
+            $dto->getDirectConnectivity(),
+            $dto->getDdiIn()
         );
 
         $self
@@ -188,6 +199,7 @@ abstract class RetailAccountAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -207,6 +219,7 @@ abstract class RetailAccountAbstract
             ->setPassword($dto->getPassword())
             ->setFromDomain($dto->getFromDomain())
             ->setDirectConnectivity($dto->getDirectConnectivity())
+            ->setDdiIn($dto->getDdiIn())
             ->setBrand($dto->getBrand())
             ->setDomain($dto->getDomain())
             ->setCompany($dto->getCompany())
@@ -220,6 +233,7 @@ abstract class RetailAccountAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return RetailAccountDto
      */
@@ -234,6 +248,7 @@ abstract class RetailAccountAbstract
             ->setPassword(self::getPassword())
             ->setFromDomain(self::getFromDomain())
             ->setDirectConnectivity(self::getDirectConnectivity())
+            ->setDdiIn(self::getDdiIn())
             ->setBrand(\Ivoz\Provider\Domain\Model\Brand\Brand::entityToDto(self::getBrand(), $depth))
             ->setDomain(\Ivoz\Provider\Domain\Model\Domain\Domain::entityToDto(self::getDomain(), $depth))
             ->setCompany(\Ivoz\Provider\Domain\Model\Company\Company::entityToDto(self::getCompany(), $depth))
@@ -255,6 +270,7 @@ abstract class RetailAccountAbstract
             'password' => self::getPassword(),
             'fromDomain' => self::getFromDomain(),
             'directConnectivity' => self::getDirectConnectivity(),
+            'ddiIn' => self::getDdiIn(),
             'brandId' => self::getBrand() ? self::getBrand()->getId() : null,
             'domainId' => self::getDomain() ? self::getDomain()->getId() : null,
             'companyId' => self::getCompany() ? self::getCompany()->getId() : null,
@@ -265,14 +281,13 @@ abstract class RetailAccountAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set name
      *
      * @param string $name
      *
      * @return self
      */
-    public function setName($name)
+    protected function setName($name)
     {
         Assertion::notNull($name, 'name value "%s" is null, but non null value was expected.');
         Assertion::maxLength($name, 65, 'name value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -293,14 +308,13 @@ abstract class RetailAccountAbstract
     }
 
     /**
-     * @deprecated
      * Set description
      *
      * @param string $description
      *
      * @return self
      */
-    public function setDescription($description)
+    protected function setDescription($description)
     {
         Assertion::notNull($description, 'description value "%s" is null, but non null value was expected.');
         Assertion::maxLength($description, 500, 'description value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -321,14 +335,13 @@ abstract class RetailAccountAbstract
     }
 
     /**
-     * @deprecated
      * Set transport
      *
      * @param string $transport
      *
      * @return self
      */
-    public function setTransport($transport)
+    protected function setTransport($transport)
     {
         Assertion::notNull($transport, 'transport value "%s" is null, but non null value was expected.');
         Assertion::maxLength($transport, 25, 'transport value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -354,14 +367,13 @@ abstract class RetailAccountAbstract
     }
 
     /**
-     * @deprecated
      * Set ip
      *
      * @param string $ip
      *
      * @return self
      */
-    public function setIp($ip = null)
+    protected function setIp($ip = null)
     {
         if (!is_null($ip)) {
             Assertion::maxLength($ip, 50, 'ip value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -375,7 +387,7 @@ abstract class RetailAccountAbstract
     /**
      * Get ip
      *
-     * @return string
+     * @return string | null
      */
     public function getIp()
     {
@@ -383,14 +395,13 @@ abstract class RetailAccountAbstract
     }
 
     /**
-     * @deprecated
      * Set port
      *
      * @param integer $port
      *
      * @return self
      */
-    public function setPort($port = null)
+    protected function setPort($port = null)
     {
         if (!is_null($port)) {
             if (!is_null($port)) {
@@ -407,7 +418,7 @@ abstract class RetailAccountAbstract
     /**
      * Get port
      *
-     * @return integer
+     * @return integer | null
      */
     public function getPort()
     {
@@ -415,14 +426,13 @@ abstract class RetailAccountAbstract
     }
 
     /**
-     * @deprecated
      * Set password
      *
      * @param string $password
      *
      * @return self
      */
-    public function setPassword($password = null)
+    protected function setPassword($password = null)
     {
         if (!is_null($password)) {
             Assertion::maxLength($password, 64, 'password value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -436,7 +446,7 @@ abstract class RetailAccountAbstract
     /**
      * Get password
      *
-     * @return string
+     * @return string | null
      */
     public function getPassword()
     {
@@ -444,14 +454,13 @@ abstract class RetailAccountAbstract
     }
 
     /**
-     * @deprecated
      * Set fromDomain
      *
      * @param string $fromDomain
      *
      * @return self
      */
-    public function setFromDomain($fromDomain = null)
+    protected function setFromDomain($fromDomain = null)
     {
         if (!is_null($fromDomain)) {
             Assertion::maxLength($fromDomain, 190, 'fromDomain value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -465,7 +474,7 @@ abstract class RetailAccountAbstract
     /**
      * Get fromDomain
      *
-     * @return string
+     * @return string | null
      */
     public function getFromDomain()
     {
@@ -473,14 +482,13 @@ abstract class RetailAccountAbstract
     }
 
     /**
-     * @deprecated
      * Set directConnectivity
      *
      * @param string $directConnectivity
      *
      * @return self
      */
-    public function setDirectConnectivity($directConnectivity)
+    protected function setDirectConnectivity($directConnectivity)
     {
         Assertion::notNull($directConnectivity, 'directConnectivity value "%s" is null, but non null value was expected.');
         Assertion::choice($directConnectivity, array (
@@ -501,6 +509,36 @@ abstract class RetailAccountAbstract
     public function getDirectConnectivity()
     {
         return $this->directConnectivity;
+    }
+
+    /**
+     * Set ddiIn
+     *
+     * @param string $ddiIn
+     *
+     * @return self
+     */
+    protected function setDdiIn($ddiIn)
+    {
+        Assertion::notNull($ddiIn, 'ddiIn value "%s" is null, but non null value was expected.');
+        Assertion::choice($ddiIn, array (
+          0 => 'yes',
+          1 => 'no',
+        ), 'ddiInvalue "%s" is not an element of the valid values: %s');
+
+        $this->ddiIn = $ddiIn;
+
+        return $this;
+    }
+
+    /**
+     * Get ddiIn
+     *
+     * @return string
+     */
+    public function getDdiIn()
+    {
+        return $this->ddiIn;
     }
 
     /**
@@ -544,7 +582,7 @@ abstract class RetailAccountAbstract
     /**
      * Get domain
      *
-     * @return \Ivoz\Provider\Domain\Model\Domain\DomainInterface
+     * @return \Ivoz\Provider\Domain\Model\Domain\DomainInterface | null
      */
     public function getDomain()
     {

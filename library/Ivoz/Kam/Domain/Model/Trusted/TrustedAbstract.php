@@ -15,34 +15,34 @@ abstract class TrustedAbstract
 {
     /**
      * column: src_ip
-     * @var string
+     * @var string | null
      */
     protected $srcIp;
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $proto;
 
     /**
      * column: from_pattern
-     * @var string
+     * @var string | null
      */
     protected $fromPattern;
 
     /**
      * column: ruri_pattern
-     * @var string
+     * @var string | null
      */
     protected $ruriPattern;
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $tag;
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $description;
 
@@ -96,6 +96,7 @@ abstract class TrustedAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return TrustedDto|null
@@ -121,6 +122,7 @@ abstract class TrustedAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -152,6 +154,7 @@ abstract class TrustedAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -179,6 +182,7 @@ abstract class TrustedAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return TrustedDto
      */
@@ -214,14 +218,13 @@ abstract class TrustedAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set srcIp
      *
      * @param string $srcIp
      *
      * @return self
      */
-    public function setSrcIp($srcIp = null)
+    protected function setSrcIp($srcIp = null)
     {
         if (!is_null($srcIp)) {
             Assertion::maxLength($srcIp, 50, 'srcIp value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -235,7 +238,7 @@ abstract class TrustedAbstract
     /**
      * Get srcIp
      *
-     * @return string
+     * @return string | null
      */
     public function getSrcIp()
     {
@@ -243,14 +246,13 @@ abstract class TrustedAbstract
     }
 
     /**
-     * @deprecated
      * Set proto
      *
      * @param string $proto
      *
      * @return self
      */
-    public function setProto($proto = null)
+    protected function setProto($proto = null)
     {
         if (!is_null($proto)) {
             Assertion::maxLength($proto, 4, 'proto value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -264,7 +266,7 @@ abstract class TrustedAbstract
     /**
      * Get proto
      *
-     * @return string
+     * @return string | null
      */
     public function getProto()
     {
@@ -272,14 +274,13 @@ abstract class TrustedAbstract
     }
 
     /**
-     * @deprecated
      * Set fromPattern
      *
      * @param string $fromPattern
      *
      * @return self
      */
-    public function setFromPattern($fromPattern = null)
+    protected function setFromPattern($fromPattern = null)
     {
         if (!is_null($fromPattern)) {
             Assertion::maxLength($fromPattern, 64, 'fromPattern value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -293,7 +294,7 @@ abstract class TrustedAbstract
     /**
      * Get fromPattern
      *
-     * @return string
+     * @return string | null
      */
     public function getFromPattern()
     {
@@ -301,14 +302,13 @@ abstract class TrustedAbstract
     }
 
     /**
-     * @deprecated
      * Set ruriPattern
      *
      * @param string $ruriPattern
      *
      * @return self
      */
-    public function setRuriPattern($ruriPattern = null)
+    protected function setRuriPattern($ruriPattern = null)
     {
         if (!is_null($ruriPattern)) {
             Assertion::maxLength($ruriPattern, 64, 'ruriPattern value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -322,7 +322,7 @@ abstract class TrustedAbstract
     /**
      * Get ruriPattern
      *
-     * @return string
+     * @return string | null
      */
     public function getRuriPattern()
     {
@@ -330,14 +330,13 @@ abstract class TrustedAbstract
     }
 
     /**
-     * @deprecated
      * Set tag
      *
      * @param string $tag
      *
      * @return self
      */
-    public function setTag($tag = null)
+    protected function setTag($tag = null)
     {
         if (!is_null($tag)) {
             Assertion::maxLength($tag, 64, 'tag value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -351,7 +350,7 @@ abstract class TrustedAbstract
     /**
      * Get tag
      *
-     * @return string
+     * @return string | null
      */
     public function getTag()
     {
@@ -359,14 +358,13 @@ abstract class TrustedAbstract
     }
 
     /**
-     * @deprecated
      * Set description
      *
      * @param string $description
      *
      * @return self
      */
-    public function setDescription($description = null)
+    protected function setDescription($description = null)
     {
         if (!is_null($description)) {
             Assertion::maxLength($description, 200, 'description value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -380,7 +378,7 @@ abstract class TrustedAbstract
     /**
      * Get description
      *
-     * @return string
+     * @return string | null
      */
     public function getDescription()
     {
@@ -388,14 +386,13 @@ abstract class TrustedAbstract
     }
 
     /**
-     * @deprecated
      * Set priority
      *
      * @param integer $priority
      *
      * @return self
      */
-    public function setPriority($priority)
+    protected function setPriority($priority)
     {
         Assertion::notNull($priority, 'priority value "%s" is null, but non null value was expected.');
         Assertion::integerish($priority, 'priority value "%s" is not an integer or a number castable to integer.');
@@ -432,7 +429,7 @@ abstract class TrustedAbstract
     /**
      * Get company
      *
-     * @return \Ivoz\Provider\Domain\Model\Company\CompanyInterface
+     * @return \Ivoz\Provider\Domain\Model\Company\CompanyInterface | null
      */
     public function getCompany()
     {

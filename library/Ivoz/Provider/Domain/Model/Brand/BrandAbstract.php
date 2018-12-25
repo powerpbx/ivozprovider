@@ -20,17 +20,17 @@ abstract class BrandAbstract
 
     /**
      * column: domain_users
-     * @var string
+     * @var string | null
      */
     protected $domainUsers;
 
     /**
-     * @var integer
+     * @var integer | null
      */
     protected $recordingsLimitMB;
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $recordingsLimitEmail;
 
@@ -111,6 +111,7 @@ abstract class BrandAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return BrandDto|null
@@ -136,6 +137,7 @@ abstract class BrandAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -185,6 +187,7 @@ abstract class BrandAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -230,6 +233,7 @@ abstract class BrandAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return BrandDto
      */
@@ -285,14 +289,13 @@ abstract class BrandAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set name
      *
      * @param string $name
      *
      * @return self
      */
-    public function setName($name)
+    protected function setName($name)
     {
         Assertion::notNull($name, 'name value "%s" is null, but non null value was expected.');
         Assertion::maxLength($name, 75, 'name value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -313,14 +316,13 @@ abstract class BrandAbstract
     }
 
     /**
-     * @deprecated
      * Set domainUsers
      *
      * @param string $domainUsers
      *
      * @return self
      */
-    public function setDomainUsers($domainUsers = null)
+    protected function setDomainUsers($domainUsers = null)
     {
         if (!is_null($domainUsers)) {
             Assertion::maxLength($domainUsers, 190, 'domainUsers value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -334,7 +336,7 @@ abstract class BrandAbstract
     /**
      * Get domainUsers
      *
-     * @return string
+     * @return string | null
      */
     public function getDomainUsers()
     {
@@ -342,14 +344,13 @@ abstract class BrandAbstract
     }
 
     /**
-     * @deprecated
      * Set recordingsLimitMB
      *
      * @param integer $recordingsLimitMB
      *
      * @return self
      */
-    public function setRecordingsLimitMB($recordingsLimitMB = null)
+    protected function setRecordingsLimitMB($recordingsLimitMB = null)
     {
         if (!is_null($recordingsLimitMB)) {
             if (!is_null($recordingsLimitMB)) {
@@ -365,7 +366,7 @@ abstract class BrandAbstract
     /**
      * Get recordingsLimitMB
      *
-     * @return integer
+     * @return integer | null
      */
     public function getRecordingsLimitMB()
     {
@@ -373,14 +374,13 @@ abstract class BrandAbstract
     }
 
     /**
-     * @deprecated
      * Set recordingsLimitEmail
      *
      * @param string $recordingsLimitEmail
      *
      * @return self
      */
-    public function setRecordingsLimitEmail($recordingsLimitEmail = null)
+    protected function setRecordingsLimitEmail($recordingsLimitEmail = null)
     {
         if (!is_null($recordingsLimitEmail)) {
             Assertion::maxLength($recordingsLimitEmail, 250, 'recordingsLimitEmail value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -394,7 +394,7 @@ abstract class BrandAbstract
     /**
      * Get recordingsLimitEmail
      *
-     * @return string
+     * @return string | null
      */
     public function getRecordingsLimitEmail()
     {
@@ -402,14 +402,13 @@ abstract class BrandAbstract
     }
 
     /**
-     * @deprecated
      * Set maxCalls
      *
      * @param integer $maxCalls
      *
      * @return self
      */
-    public function setMaxCalls($maxCalls)
+    protected function setMaxCalls($maxCalls)
     {
         Assertion::notNull($maxCalls, 'maxCalls value "%s" is null, but non null value was expected.');
         Assertion::integerish($maxCalls, 'maxCalls value "%s" is not an integer or a number castable to integer.');
@@ -447,7 +446,7 @@ abstract class BrandAbstract
     /**
      * Get domain
      *
-     * @return \Ivoz\Provider\Domain\Model\Domain\DomainInterface
+     * @return \Ivoz\Provider\Domain\Model\Domain\DomainInterface | null
      */
     public function getDomain()
     {

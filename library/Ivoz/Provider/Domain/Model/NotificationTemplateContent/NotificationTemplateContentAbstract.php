@@ -14,12 +14,12 @@ use Ivoz\Core\Domain\Model\EntityInterface;
 abstract class NotificationTemplateContentAbstract
 {
     /**
-     * @var string
+     * @var string | null
      */
     protected $fromName;
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $fromAddress;
 
@@ -32,6 +32,12 @@ abstract class NotificationTemplateContentAbstract
      * @var string
      */
     protected $body;
+
+    /**
+     * comment: enum:text/plain|text/html
+     * @var string
+     */
+    protected $bodyType = 'text/plain';
 
     /**
      * @var \Ivoz\Provider\Domain\Model\NotificationTemplate\NotificationTemplateInterface
@@ -49,10 +55,11 @@ abstract class NotificationTemplateContentAbstract
     /**
      * Constructor
      */
-    protected function __construct($subject, $body)
+    protected function __construct($subject, $body, $bodyType)
     {
         $this->setSubject($subject);
         $this->setBody($body);
+        $this->setBodyType($bodyType);
     }
 
     abstract public function getId();
@@ -84,6 +91,7 @@ abstract class NotificationTemplateContentAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return NotificationTemplateContentDto|null
@@ -109,6 +117,7 @@ abstract class NotificationTemplateContentAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -121,7 +130,8 @@ abstract class NotificationTemplateContentAbstract
 
         $self = new static(
             $dto->getSubject(),
-            $dto->getBody()
+            $dto->getBody(),
+            $dto->getBodyType()
         );
 
         $self
@@ -138,6 +148,7 @@ abstract class NotificationTemplateContentAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -153,6 +164,7 @@ abstract class NotificationTemplateContentAbstract
             ->setFromAddress($dto->getFromAddress())
             ->setSubject($dto->getSubject())
             ->setBody($dto->getBody())
+            ->setBodyType($dto->getBodyType())
             ->setNotificationTemplate($dto->getNotificationTemplate())
             ->setLanguage($dto->getLanguage());
 
@@ -163,6 +175,7 @@ abstract class NotificationTemplateContentAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return NotificationTemplateContentDto
      */
@@ -173,6 +186,7 @@ abstract class NotificationTemplateContentAbstract
             ->setFromAddress(self::getFromAddress())
             ->setSubject(self::getSubject())
             ->setBody(self::getBody())
+            ->setBodyType(self::getBodyType())
             ->setNotificationTemplate(\Ivoz\Provider\Domain\Model\NotificationTemplate\NotificationTemplate::entityToDto(self::getNotificationTemplate(), $depth))
             ->setLanguage(\Ivoz\Provider\Domain\Model\Language\Language::entityToDto(self::getLanguage(), $depth));
     }
@@ -187,6 +201,7 @@ abstract class NotificationTemplateContentAbstract
             'fromAddress' => self::getFromAddress(),
             'subject' => self::getSubject(),
             'body' => self::getBody(),
+            'bodyType' => self::getBodyType(),
             'notificationTemplateId' => self::getNotificationTemplate() ? self::getNotificationTemplate()->getId() : null,
             'languageId' => self::getLanguage() ? self::getLanguage()->getId() : null
         ];
@@ -194,14 +209,13 @@ abstract class NotificationTemplateContentAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set fromName
      *
      * @param string $fromName
      *
      * @return self
      */
-    public function setFromName($fromName = null)
+    protected function setFromName($fromName = null)
     {
         if (!is_null($fromName)) {
             Assertion::maxLength($fromName, 255, 'fromName value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -215,7 +229,7 @@ abstract class NotificationTemplateContentAbstract
     /**
      * Get fromName
      *
-     * @return string
+     * @return string | null
      */
     public function getFromName()
     {
@@ -223,14 +237,13 @@ abstract class NotificationTemplateContentAbstract
     }
 
     /**
-     * @deprecated
      * Set fromAddress
      *
      * @param string $fromAddress
      *
      * @return self
      */
-    public function setFromAddress($fromAddress = null)
+    protected function setFromAddress($fromAddress = null)
     {
         if (!is_null($fromAddress)) {
             Assertion::maxLength($fromAddress, 255, 'fromAddress value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -244,7 +257,7 @@ abstract class NotificationTemplateContentAbstract
     /**
      * Get fromAddress
      *
-     * @return string
+     * @return string | null
      */
     public function getFromAddress()
     {
@@ -252,14 +265,13 @@ abstract class NotificationTemplateContentAbstract
     }
 
     /**
-     * @deprecated
      * Set subject
      *
      * @param string $subject
      *
      * @return self
      */
-    public function setSubject($subject)
+    protected function setSubject($subject)
     {
         Assertion::notNull($subject, 'subject value "%s" is null, but non null value was expected.');
         Assertion::maxLength($subject, 255, 'subject value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -280,14 +292,13 @@ abstract class NotificationTemplateContentAbstract
     }
 
     /**
-     * @deprecated
      * Set body
      *
      * @param string $body
      *
      * @return self
      */
-    public function setBody($body)
+    protected function setBody($body)
     {
         Assertion::notNull($body, 'body value "%s" is null, but non null value was expected.');
         Assertion::maxLength($body, 65535, 'body value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -305,6 +316,37 @@ abstract class NotificationTemplateContentAbstract
     public function getBody()
     {
         return $this->body;
+    }
+
+    /**
+     * Set bodyType
+     *
+     * @param string $bodyType
+     *
+     * @return self
+     */
+    protected function setBodyType($bodyType)
+    {
+        Assertion::notNull($bodyType, 'bodyType value "%s" is null, but non null value was expected.');
+        Assertion::maxLength($bodyType, 25, 'bodyType value "%s" is too long, it should have no more than %d characters, but has %d characters.');
+        Assertion::choice($bodyType, array (
+          0 => 'text/plain',
+          1 => 'text/html',
+        ), 'bodyTypevalue "%s" is not an element of the valid values: %s');
+
+        $this->bodyType = $bodyType;
+
+        return $this;
+    }
+
+    /**
+     * Get bodyType
+     *
+     * @return string
+     */
+    public function getBodyType()
+    {
+        return $this->bodyType;
     }
 
     /**

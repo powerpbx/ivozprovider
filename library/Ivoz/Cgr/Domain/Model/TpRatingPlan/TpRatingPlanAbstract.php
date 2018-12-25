@@ -19,13 +19,13 @@ abstract class TpRatingPlanAbstract
     protected $tpid = 'ivozprovider';
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $tag;
 
     /**
      * column: destrates_tag
-     * @var string
+     * @var string | null
      */
     protected $destratesTag;
 
@@ -94,6 +94,7 @@ abstract class TpRatingPlanAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return TpRatingPlanDto|null
@@ -119,6 +120,7 @@ abstract class TpRatingPlanAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -149,6 +151,7 @@ abstract class TpRatingPlanAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -175,6 +178,7 @@ abstract class TpRatingPlanAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return TpRatingPlanDto
      */
@@ -208,14 +212,13 @@ abstract class TpRatingPlanAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set tpid
      *
      * @param string $tpid
      *
      * @return self
      */
-    public function setTpid($tpid)
+    protected function setTpid($tpid)
     {
         Assertion::notNull($tpid, 'tpid value "%s" is null, but non null value was expected.');
         Assertion::maxLength($tpid, 64, 'tpid value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -236,14 +239,13 @@ abstract class TpRatingPlanAbstract
     }
 
     /**
-     * @deprecated
      * Set tag
      *
      * @param string $tag
      *
      * @return self
      */
-    public function setTag($tag = null)
+    protected function setTag($tag = null)
     {
         if (!is_null($tag)) {
             Assertion::maxLength($tag, 64, 'tag value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -257,7 +259,7 @@ abstract class TpRatingPlanAbstract
     /**
      * Get tag
      *
-     * @return string
+     * @return string | null
      */
     public function getTag()
     {
@@ -265,14 +267,13 @@ abstract class TpRatingPlanAbstract
     }
 
     /**
-     * @deprecated
      * Set destratesTag
      *
      * @param string $destratesTag
      *
      * @return self
      */
-    public function setDestratesTag($destratesTag = null)
+    protected function setDestratesTag($destratesTag = null)
     {
         if (!is_null($destratesTag)) {
             Assertion::maxLength($destratesTag, 64, 'destratesTag value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -286,7 +287,7 @@ abstract class TpRatingPlanAbstract
     /**
      * Get destratesTag
      *
-     * @return string
+     * @return string | null
      */
     public function getDestratesTag()
     {
@@ -294,14 +295,13 @@ abstract class TpRatingPlanAbstract
     }
 
     /**
-     * @deprecated
      * Set timingTag
      *
      * @param string $timingTag
      *
      * @return self
      */
-    public function setTimingTag($timingTag)
+    protected function setTimingTag($timingTag)
     {
         Assertion::notNull($timingTag, 'timingTag value "%s" is null, but non null value was expected.');
         Assertion::maxLength($timingTag, 64, 'timingTag value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -322,14 +322,13 @@ abstract class TpRatingPlanAbstract
     }
 
     /**
-     * @deprecated
      * Set weight
      *
      * @param string $weight
      *
      * @return self
      */
-    public function setWeight($weight)
+    protected function setWeight($weight)
     {
         Assertion::notNull($weight, 'weight value "%s" is null, but non null value was expected.');
         Assertion::numeric($weight);
@@ -351,14 +350,13 @@ abstract class TpRatingPlanAbstract
     }
 
     /**
-     * @deprecated
      * Set createdAt
      *
      * @param \DateTime $createdAt
      *
      * @return self
      */
-    public function setCreatedAt($createdAt)
+    protected function setCreatedAt($createdAt)
     {
         Assertion::notNull($createdAt, 'createdAt value "%s" is null, but non null value was expected.');
         $createdAt = \Ivoz\Core\Domain\Model\Helper\DateTimeHelper::createOrFix(

@@ -13,48 +13,18 @@ interface NotificationTemplateContentInterface extends LoggableEntityInterface
     public function getChangeSet();
 
     /**
-     * @deprecated
-     * Set fromName
-     *
-     * @param string $fromName
-     *
-     * @return self
-     */
-    public function setFromName($fromName = null);
-
-    /**
      * Get fromName
      *
-     * @return string
+     * @return string | null
      */
     public function getFromName();
 
     /**
-     * @deprecated
-     * Set fromAddress
-     *
-     * @param string $fromAddress
-     *
-     * @return self
-     */
-    public function setFromAddress($fromAddress = null);
-
-    /**
      * Get fromAddress
      *
-     * @return string
+     * @return string | null
      */
     public function getFromAddress();
-
-    /**
-     * @deprecated
-     * Set subject
-     *
-     * @param string $subject
-     *
-     * @return self
-     */
-    public function setSubject($subject);
 
     /**
      * Get subject
@@ -64,21 +34,18 @@ interface NotificationTemplateContentInterface extends LoggableEntityInterface
     public function getSubject();
 
     /**
-     * @deprecated
-     * Set body
-     *
-     * @param string $body
-     *
-     * @return self
-     */
-    public function setBody($body);
-
-    /**
      * Get body
      *
      * @return string
      */
     public function getBody();
+
+    /**
+     * Get bodyType
+     *
+     * @return string
+     */
+    public function getBodyType();
 
     /**
      * Set notificationTemplate

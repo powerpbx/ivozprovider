@@ -14,7 +14,7 @@ use Ivoz\Core\Domain\Model\EntityInterface;
 abstract class QueueMemberAbstract
 {
     /**
-     * @var integer
+     * @var integer | null
      */
     protected $penalty;
 
@@ -67,6 +67,7 @@ abstract class QueueMemberAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return QueueMemberDto|null
@@ -92,6 +93,7 @@ abstract class QueueMemberAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -117,6 +119,7 @@ abstract class QueueMemberAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -139,6 +142,7 @@ abstract class QueueMemberAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return QueueMemberDto
      */
@@ -164,14 +168,13 @@ abstract class QueueMemberAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set penalty
      *
      * @param integer $penalty
      *
      * @return self
      */
-    public function setPenalty($penalty = null)
+    protected function setPenalty($penalty = null)
     {
         if (!is_null($penalty)) {
             if (!is_null($penalty)) {
@@ -187,7 +190,7 @@ abstract class QueueMemberAbstract
     /**
      * Get penalty
      *
-     * @return integer
+     * @return integer | null
      */
     public function getPenalty()
     {

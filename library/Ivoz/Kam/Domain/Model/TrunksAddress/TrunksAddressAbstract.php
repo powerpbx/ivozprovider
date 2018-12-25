@@ -20,7 +20,7 @@ abstract class TrunksAddressAbstract
 
     /**
      * column: ip_addr
-     * @var string
+     * @var string | null
      */
     protected $ipAddr;
 
@@ -35,7 +35,7 @@ abstract class TrunksAddressAbstract
     protected $port = '0';
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $tag;
 
@@ -86,6 +86,7 @@ abstract class TrunksAddressAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return TrunksAddressDto|null
@@ -111,6 +112,7 @@ abstract class TrunksAddressAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -140,6 +142,7 @@ abstract class TrunksAddressAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -165,6 +168,7 @@ abstract class TrunksAddressAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return TrunksAddressDto
      */
@@ -196,14 +200,13 @@ abstract class TrunksAddressAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set grp
      *
      * @param integer $grp
      *
      * @return self
      */
-    public function setGrp($grp)
+    protected function setGrp($grp)
     {
         Assertion::notNull($grp, 'grp value "%s" is null, but non null value was expected.');
         Assertion::integerish($grp, 'grp value "%s" is not an integer or a number castable to integer.');
@@ -225,14 +228,13 @@ abstract class TrunksAddressAbstract
     }
 
     /**
-     * @deprecated
      * Set ipAddr
      *
      * @param string $ipAddr
      *
      * @return self
      */
-    public function setIpAddr($ipAddr = null)
+    protected function setIpAddr($ipAddr = null)
     {
         if (!is_null($ipAddr)) {
             Assertion::maxLength($ipAddr, 50, 'ipAddr value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -246,7 +248,7 @@ abstract class TrunksAddressAbstract
     /**
      * Get ipAddr
      *
-     * @return string
+     * @return string | null
      */
     public function getIpAddr()
     {
@@ -254,14 +256,13 @@ abstract class TrunksAddressAbstract
     }
 
     /**
-     * @deprecated
      * Set mask
      *
      * @param integer $mask
      *
      * @return self
      */
-    public function setMask($mask)
+    protected function setMask($mask)
     {
         Assertion::notNull($mask, 'mask value "%s" is null, but non null value was expected.');
         Assertion::integerish($mask, 'mask value "%s" is not an integer or a number castable to integer.');
@@ -282,14 +283,13 @@ abstract class TrunksAddressAbstract
     }
 
     /**
-     * @deprecated
      * Set port
      *
      * @param integer $port
      *
      * @return self
      */
-    public function setPort($port)
+    protected function setPort($port)
     {
         Assertion::notNull($port, 'port value "%s" is null, but non null value was expected.');
         Assertion::integerish($port, 'port value "%s" is not an integer or a number castable to integer.');
@@ -310,14 +310,13 @@ abstract class TrunksAddressAbstract
     }
 
     /**
-     * @deprecated
      * Set tag
      *
      * @param string $tag
      *
      * @return self
      */
-    public function setTag($tag = null)
+    protected function setTag($tag = null)
     {
         if (!is_null($tag)) {
             Assertion::maxLength($tag, 64, 'tag value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -331,7 +330,7 @@ abstract class TrunksAddressAbstract
     /**
      * Get tag
      *
-     * @return string
+     * @return string | null
      */
     public function getTag()
     {

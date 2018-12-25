@@ -24,7 +24,7 @@ abstract class ConferenceRoomAbstract
     protected $pinProtected = 0;
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $pinCode;
 
@@ -80,6 +80,7 @@ abstract class ConferenceRoomAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return ConferenceRoomDto|null
@@ -105,6 +106,7 @@ abstract class ConferenceRoomAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -133,6 +135,7 @@ abstract class ConferenceRoomAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -157,6 +160,7 @@ abstract class ConferenceRoomAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return ConferenceRoomDto
      */
@@ -186,14 +190,13 @@ abstract class ConferenceRoomAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set name
      *
      * @param string $name
      *
      * @return self
      */
-    public function setName($name)
+    protected function setName($name)
     {
         Assertion::notNull($name, 'name value "%s" is null, but non null value was expected.');
         Assertion::maxLength($name, 50, 'name value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -214,14 +217,13 @@ abstract class ConferenceRoomAbstract
     }
 
     /**
-     * @deprecated
      * Set pinProtected
      *
      * @param boolean $pinProtected
      *
      * @return self
      */
-    public function setPinProtected($pinProtected)
+    protected function setPinProtected($pinProtected)
     {
         Assertion::notNull($pinProtected, 'pinProtected value "%s" is null, but non null value was expected.');
         Assertion::between(intval($pinProtected), 0, 1, 'pinProtected provided "%s" is not a valid boolean value.');
@@ -242,14 +244,13 @@ abstract class ConferenceRoomAbstract
     }
 
     /**
-     * @deprecated
      * Set pinCode
      *
      * @param string $pinCode
      *
      * @return self
      */
-    public function setPinCode($pinCode = null)
+    protected function setPinCode($pinCode = null)
     {
         if (!is_null($pinCode)) {
             Assertion::maxLength($pinCode, 6, 'pinCode value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -263,7 +264,7 @@ abstract class ConferenceRoomAbstract
     /**
      * Get pinCode
      *
-     * @return string
+     * @return string | null
      */
     public function getPinCode()
     {
@@ -271,14 +272,13 @@ abstract class ConferenceRoomAbstract
     }
 
     /**
-     * @deprecated
      * Set maxMembers
      *
      * @param integer $maxMembers
      *
      * @return self
      */
-    public function setMaxMembers($maxMembers)
+    protected function setMaxMembers($maxMembers)
     {
         Assertion::notNull($maxMembers, 'maxMembers value "%s" is null, but non null value was expected.');
         Assertion::integerish($maxMembers, 'maxMembers value "%s" is not an integer or a number castable to integer.');

@@ -69,6 +69,7 @@ abstract class RoutingTagAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return RoutingTagDto|null
@@ -94,6 +95,7 @@ abstract class RoutingTagAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -120,6 +122,7 @@ abstract class RoutingTagAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -142,6 +145,7 @@ abstract class RoutingTagAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return RoutingTagDto
      */
@@ -167,14 +171,13 @@ abstract class RoutingTagAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set name
      *
      * @param string $name
      *
      * @return self
      */
-    public function setName($name)
+    protected function setName($name)
     {
         Assertion::notNull($name, 'name value "%s" is null, but non null value was expected.');
         Assertion::maxLength($name, 80, 'name value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -195,14 +198,13 @@ abstract class RoutingTagAbstract
     }
 
     /**
-     * @deprecated
      * Set tag
      *
      * @param string $tag
      *
      * @return self
      */
-    public function setTag($tag)
+    protected function setTag($tag)
     {
         Assertion::notNull($tag, 'tag value "%s" is null, but non null value was expected.');
         Assertion::maxLength($tag, 15, 'tag value "%s" is too long, it should have no more than %d characters, but has %d characters.');

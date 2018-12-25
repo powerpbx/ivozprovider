@@ -14,7 +14,7 @@ use Ivoz\Core\Domain\Model\EntityInterface;
 abstract class FixedCostsRelInvoiceSchedulerAbstract
 {
     /**
-     * @var integer
+     * @var integer | null
      */
     protected $quantity;
 
@@ -67,6 +67,7 @@ abstract class FixedCostsRelInvoiceSchedulerAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return FixedCostsRelInvoiceSchedulerDto|null
@@ -92,6 +93,7 @@ abstract class FixedCostsRelInvoiceSchedulerAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -117,6 +119,7 @@ abstract class FixedCostsRelInvoiceSchedulerAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -139,6 +142,7 @@ abstract class FixedCostsRelInvoiceSchedulerAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return FixedCostsRelInvoiceSchedulerDto
      */
@@ -164,14 +168,13 @@ abstract class FixedCostsRelInvoiceSchedulerAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set quantity
      *
      * @param integer $quantity
      *
      * @return self
      */
-    public function setQuantity($quantity = null)
+    protected function setQuantity($quantity = null)
     {
         if (!is_null($quantity)) {
             if (!is_null($quantity)) {
@@ -188,7 +191,7 @@ abstract class FixedCostsRelInvoiceSchedulerAbstract
     /**
      * Get quantity
      *
-     * @return integer
+     * @return integer | null
      */
     public function getQuantity()
     {

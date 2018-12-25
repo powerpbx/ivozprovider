@@ -80,6 +80,7 @@ abstract class OutgoingDdiRulesPatternAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return OutgoingDdiRulesPatternDto|null
@@ -105,6 +106,7 @@ abstract class OutgoingDdiRulesPatternAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -133,6 +135,7 @@ abstract class OutgoingDdiRulesPatternAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -157,6 +160,7 @@ abstract class OutgoingDdiRulesPatternAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return OutgoingDdiRulesPatternDto
      */
@@ -186,14 +190,13 @@ abstract class OutgoingDdiRulesPatternAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set action
      *
      * @param string $action
      *
      * @return self
      */
-    public function setAction($action)
+    protected function setAction($action)
     {
         Assertion::notNull($action, 'action value "%s" is null, but non null value was expected.');
         Assertion::maxLength($action, 10, 'action value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -218,14 +221,13 @@ abstract class OutgoingDdiRulesPatternAbstract
     }
 
     /**
-     * @deprecated
      * Set priority
      *
      * @param integer $priority
      *
      * @return self
      */
-    public function setPriority($priority)
+    protected function setPriority($priority)
     {
         Assertion::notNull($priority, 'priority value "%s" is null, but non null value was expected.');
         Assertion::integerish($priority, 'priority value "%s" is not an integer or a number castable to integer.');

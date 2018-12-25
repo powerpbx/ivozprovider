@@ -44,13 +44,13 @@ abstract class TpDerivedChargerAbstract
     protected $account = '*any';
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $subject = '*any';
 
     /**
      * column: destination_ids
-     * @var string
+     * @var string | null
      */
     protected $destinationIds = '*any';
 
@@ -253,6 +253,7 @@ abstract class TpDerivedChargerAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return TpDerivedChargerDto|null
@@ -278,6 +279,7 @@ abstract class TpDerivedChargerAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -328,6 +330,7 @@ abstract class TpDerivedChargerAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -374,6 +377,7 @@ abstract class TpDerivedChargerAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return TpDerivedChargerDto
      */
@@ -447,14 +451,13 @@ abstract class TpDerivedChargerAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set tpid
      *
      * @param string $tpid
      *
      * @return self
      */
-    public function setTpid($tpid)
+    protected function setTpid($tpid)
     {
         Assertion::notNull($tpid, 'tpid value "%s" is null, but non null value was expected.');
         Assertion::maxLength($tpid, 64, 'tpid value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -475,14 +478,13 @@ abstract class TpDerivedChargerAbstract
     }
 
     /**
-     * @deprecated
      * Set loadid
      *
      * @param string $loadid
      *
      * @return self
      */
-    public function setLoadid($loadid)
+    protected function setLoadid($loadid)
     {
         Assertion::notNull($loadid, 'loadid value "%s" is null, but non null value was expected.');
         Assertion::maxLength($loadid, 64, 'loadid value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -503,14 +505,13 @@ abstract class TpDerivedChargerAbstract
     }
 
     /**
-     * @deprecated
      * Set direction
      *
      * @param string $direction
      *
      * @return self
      */
-    public function setDirection($direction)
+    protected function setDirection($direction)
     {
         Assertion::notNull($direction, 'direction value "%s" is null, but non null value was expected.');
         Assertion::maxLength($direction, 8, 'direction value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -531,14 +532,13 @@ abstract class TpDerivedChargerAbstract
     }
 
     /**
-     * @deprecated
      * Set tenant
      *
      * @param string $tenant
      *
      * @return self
      */
-    public function setTenant($tenant)
+    protected function setTenant($tenant)
     {
         Assertion::notNull($tenant, 'tenant value "%s" is null, but non null value was expected.');
         Assertion::maxLength($tenant, 64, 'tenant value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -559,14 +559,13 @@ abstract class TpDerivedChargerAbstract
     }
 
     /**
-     * @deprecated
      * Set category
      *
      * @param string $category
      *
      * @return self
      */
-    public function setCategory($category)
+    protected function setCategory($category)
     {
         Assertion::notNull($category, 'category value "%s" is null, but non null value was expected.');
         Assertion::maxLength($category, 32, 'category value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -587,14 +586,13 @@ abstract class TpDerivedChargerAbstract
     }
 
     /**
-     * @deprecated
      * Set account
      *
      * @param string $account
      *
      * @return self
      */
-    public function setAccount($account)
+    protected function setAccount($account)
     {
         Assertion::notNull($account, 'account value "%s" is null, but non null value was expected.');
         Assertion::maxLength($account, 64, 'account value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -615,14 +613,13 @@ abstract class TpDerivedChargerAbstract
     }
 
     /**
-     * @deprecated
      * Set subject
      *
      * @param string $subject
      *
      * @return self
      */
-    public function setSubject($subject = null)
+    protected function setSubject($subject = null)
     {
         if (!is_null($subject)) {
             Assertion::maxLength($subject, 64, 'subject value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -636,7 +633,7 @@ abstract class TpDerivedChargerAbstract
     /**
      * Get subject
      *
-     * @return string
+     * @return string | null
      */
     public function getSubject()
     {
@@ -644,14 +641,13 @@ abstract class TpDerivedChargerAbstract
     }
 
     /**
-     * @deprecated
      * Set destinationIds
      *
      * @param string $destinationIds
      *
      * @return self
      */
-    public function setDestinationIds($destinationIds = null)
+    protected function setDestinationIds($destinationIds = null)
     {
         if (!is_null($destinationIds)) {
             Assertion::maxLength($destinationIds, 64, 'destinationIds value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -665,7 +661,7 @@ abstract class TpDerivedChargerAbstract
     /**
      * Get destinationIds
      *
-     * @return string
+     * @return string | null
      */
     public function getDestinationIds()
     {
@@ -673,14 +669,13 @@ abstract class TpDerivedChargerAbstract
     }
 
     /**
-     * @deprecated
      * Set runid
      *
      * @param string $runid
      *
      * @return self
      */
-    public function setRunid($runid)
+    protected function setRunid($runid)
     {
         Assertion::notNull($runid, 'runid value "%s" is null, but non null value was expected.');
         Assertion::maxLength($runid, 64, 'runid value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -701,14 +696,13 @@ abstract class TpDerivedChargerAbstract
     }
 
     /**
-     * @deprecated
      * Set runFilters
      *
      * @param string $runFilters
      *
      * @return self
      */
-    public function setRunFilters($runFilters)
+    protected function setRunFilters($runFilters)
     {
         Assertion::notNull($runFilters, 'runFilters value "%s" is null, but non null value was expected.');
         Assertion::maxLength($runFilters, 32, 'runFilters value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -729,14 +723,13 @@ abstract class TpDerivedChargerAbstract
     }
 
     /**
-     * @deprecated
      * Set reqTypeField
      *
      * @param string $reqTypeField
      *
      * @return self
      */
-    public function setReqTypeField($reqTypeField)
+    protected function setReqTypeField($reqTypeField)
     {
         Assertion::notNull($reqTypeField, 'reqTypeField value "%s" is null, but non null value was expected.');
         Assertion::maxLength($reqTypeField, 64, 'reqTypeField value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -757,14 +750,13 @@ abstract class TpDerivedChargerAbstract
     }
 
     /**
-     * @deprecated
      * Set directionField
      *
      * @param string $directionField
      *
      * @return self
      */
-    public function setDirectionField($directionField)
+    protected function setDirectionField($directionField)
     {
         Assertion::notNull($directionField, 'directionField value "%s" is null, but non null value was expected.');
         Assertion::maxLength($directionField, 64, 'directionField value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -785,14 +777,13 @@ abstract class TpDerivedChargerAbstract
     }
 
     /**
-     * @deprecated
      * Set tenantField
      *
      * @param string $tenantField
      *
      * @return self
      */
-    public function setTenantField($tenantField)
+    protected function setTenantField($tenantField)
     {
         Assertion::notNull($tenantField, 'tenantField value "%s" is null, but non null value was expected.');
         Assertion::maxLength($tenantField, 64, 'tenantField value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -813,14 +804,13 @@ abstract class TpDerivedChargerAbstract
     }
 
     /**
-     * @deprecated
      * Set categoryField
      *
      * @param string $categoryField
      *
      * @return self
      */
-    public function setCategoryField($categoryField)
+    protected function setCategoryField($categoryField)
     {
         Assertion::notNull($categoryField, 'categoryField value "%s" is null, but non null value was expected.');
         Assertion::maxLength($categoryField, 64, 'categoryField value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -841,14 +831,13 @@ abstract class TpDerivedChargerAbstract
     }
 
     /**
-     * @deprecated
      * Set accountField
      *
      * @param string $accountField
      *
      * @return self
      */
-    public function setAccountField($accountField)
+    protected function setAccountField($accountField)
     {
         Assertion::notNull($accountField, 'accountField value "%s" is null, but non null value was expected.');
         Assertion::maxLength($accountField, 64, 'accountField value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -869,14 +858,13 @@ abstract class TpDerivedChargerAbstract
     }
 
     /**
-     * @deprecated
      * Set subjectField
      *
      * @param string $subjectField
      *
      * @return self
      */
-    public function setSubjectField($subjectField)
+    protected function setSubjectField($subjectField)
     {
         Assertion::notNull($subjectField, 'subjectField value "%s" is null, but non null value was expected.');
         Assertion::maxLength($subjectField, 64, 'subjectField value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -897,14 +885,13 @@ abstract class TpDerivedChargerAbstract
     }
 
     /**
-     * @deprecated
      * Set destinationField
      *
      * @param string $destinationField
      *
      * @return self
      */
-    public function setDestinationField($destinationField)
+    protected function setDestinationField($destinationField)
     {
         Assertion::notNull($destinationField, 'destinationField value "%s" is null, but non null value was expected.');
         Assertion::maxLength($destinationField, 64, 'destinationField value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -925,14 +912,13 @@ abstract class TpDerivedChargerAbstract
     }
 
     /**
-     * @deprecated
      * Set setupTimeField
      *
      * @param string $setupTimeField
      *
      * @return self
      */
-    public function setSetupTimeField($setupTimeField)
+    protected function setSetupTimeField($setupTimeField)
     {
         Assertion::notNull($setupTimeField, 'setupTimeField value "%s" is null, but non null value was expected.');
         Assertion::maxLength($setupTimeField, 64, 'setupTimeField value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -953,14 +939,13 @@ abstract class TpDerivedChargerAbstract
     }
 
     /**
-     * @deprecated
      * Set pddField
      *
      * @param string $pddField
      *
      * @return self
      */
-    public function setPddField($pddField)
+    protected function setPddField($pddField)
     {
         Assertion::notNull($pddField, 'pddField value "%s" is null, but non null value was expected.');
         Assertion::maxLength($pddField, 64, 'pddField value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -981,14 +966,13 @@ abstract class TpDerivedChargerAbstract
     }
 
     /**
-     * @deprecated
      * Set answerTimeField
      *
      * @param string $answerTimeField
      *
      * @return self
      */
-    public function setAnswerTimeField($answerTimeField)
+    protected function setAnswerTimeField($answerTimeField)
     {
         Assertion::notNull($answerTimeField, 'answerTimeField value "%s" is null, but non null value was expected.');
         Assertion::maxLength($answerTimeField, 64, 'answerTimeField value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -1009,14 +993,13 @@ abstract class TpDerivedChargerAbstract
     }
 
     /**
-     * @deprecated
      * Set usageField
      *
      * @param string $usageField
      *
      * @return self
      */
-    public function setUsageField($usageField)
+    protected function setUsageField($usageField)
     {
         Assertion::notNull($usageField, 'usageField value "%s" is null, but non null value was expected.');
         Assertion::maxLength($usageField, 64, 'usageField value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -1037,14 +1020,13 @@ abstract class TpDerivedChargerAbstract
     }
 
     /**
-     * @deprecated
      * Set supplierField
      *
      * @param string $supplierField
      *
      * @return self
      */
-    public function setSupplierField($supplierField)
+    protected function setSupplierField($supplierField)
     {
         Assertion::notNull($supplierField, 'supplierField value "%s" is null, but non null value was expected.');
         Assertion::maxLength($supplierField, 64, 'supplierField value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -1065,14 +1047,13 @@ abstract class TpDerivedChargerAbstract
     }
 
     /**
-     * @deprecated
      * Set disconnectCauseField
      *
      * @param string $disconnectCauseField
      *
      * @return self
      */
-    public function setDisconnectCauseField($disconnectCauseField)
+    protected function setDisconnectCauseField($disconnectCauseField)
     {
         Assertion::notNull($disconnectCauseField, 'disconnectCauseField value "%s" is null, but non null value was expected.');
         Assertion::maxLength($disconnectCauseField, 64, 'disconnectCauseField value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -1093,14 +1074,13 @@ abstract class TpDerivedChargerAbstract
     }
 
     /**
-     * @deprecated
      * Set ratedTimeField
      *
      * @param string $ratedTimeField
      *
      * @return self
      */
-    public function setRatedTimeField($ratedTimeField)
+    protected function setRatedTimeField($ratedTimeField)
     {
         Assertion::notNull($ratedTimeField, 'ratedTimeField value "%s" is null, but non null value was expected.');
         Assertion::maxLength($ratedTimeField, 64, 'ratedTimeField value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -1121,14 +1101,13 @@ abstract class TpDerivedChargerAbstract
     }
 
     /**
-     * @deprecated
      * Set costField
      *
      * @param string $costField
      *
      * @return self
      */
-    public function setCostField($costField)
+    protected function setCostField($costField)
     {
         Assertion::notNull($costField, 'costField value "%s" is null, but non null value was expected.');
         Assertion::maxLength($costField, 64, 'costField value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -1149,14 +1128,13 @@ abstract class TpDerivedChargerAbstract
     }
 
     /**
-     * @deprecated
      * Set createdAt
      *
      * @param \DateTime $createdAt
      *
      * @return self
      */
-    public function setCreatedAt($createdAt)
+    protected function setCreatedAt($createdAt)
     {
         Assertion::notNull($createdAt, 'createdAt value "%s" is null, but non null value was expected.');
         $createdAt = \Ivoz\Core\Domain\Model\Helper\DateTimeHelper::createOrFix(

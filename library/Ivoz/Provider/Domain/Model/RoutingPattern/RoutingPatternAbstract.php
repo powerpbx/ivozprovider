@@ -78,6 +78,7 @@ abstract class RoutingPatternAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return RoutingPatternDto|null
@@ -103,6 +104,7 @@ abstract class RoutingPatternAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -140,6 +142,7 @@ abstract class RoutingPatternAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -173,6 +176,7 @@ abstract class RoutingPatternAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return RoutingPatternDto
      */
@@ -204,14 +208,13 @@ abstract class RoutingPatternAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set prefix
      *
      * @param string $prefix
      *
      * @return self
      */
-    public function setPrefix($prefix)
+    protected function setPrefix($prefix)
     {
         Assertion::notNull($prefix, 'prefix value "%s" is null, but non null value was expected.');
         Assertion::maxLength($prefix, 80, 'prefix value "%s" is too long, it should have no more than %d characters, but has %d characters.');

@@ -64,6 +64,7 @@ abstract class FeatureAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return FeatureDto|null
@@ -89,6 +90,7 @@ abstract class FeatureAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -116,6 +118,7 @@ abstract class FeatureAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -142,6 +145,7 @@ abstract class FeatureAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return FeatureDto
      */
@@ -167,14 +171,13 @@ abstract class FeatureAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set iden
      *
      * @param string $iden
      *
      * @return self
      */
-    public function setIden($iden)
+    protected function setIden($iden)
     {
         Assertion::notNull($iden, 'iden value "%s" is null, but non null value was expected.');
         Assertion::maxLength($iden, 100, 'iden value "%s" is too long, it should have no more than %d characters, but has %d characters.');

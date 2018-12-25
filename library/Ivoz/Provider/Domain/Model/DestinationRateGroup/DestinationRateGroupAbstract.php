@@ -15,7 +15,7 @@ abstract class DestinationRateGroupAbstract
 {
     /**
      * comment: enum:waiting|inProgress|imported|error
-     * @var string
+     * @var string | null
      */
     protected $status;
 
@@ -84,6 +84,7 @@ abstract class DestinationRateGroupAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return DestinationRateGroupDto|null
@@ -109,6 +110,7 @@ abstract class DestinationRateGroupAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -154,6 +156,7 @@ abstract class DestinationRateGroupAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -195,6 +198,7 @@ abstract class DestinationRateGroupAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return DestinationRateGroupDto
      */
@@ -234,14 +238,13 @@ abstract class DestinationRateGroupAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set status
      *
      * @param string $status
      *
      * @return self
      */
-    public function setStatus($status = null)
+    protected function setStatus($status = null)
     {
         if (!is_null($status)) {
             Assertion::maxLength($status, 20, 'status value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -261,7 +264,7 @@ abstract class DestinationRateGroupAbstract
     /**
      * Get status
      *
-     * @return string
+     * @return string | null
      */
     public function getStatus()
     {

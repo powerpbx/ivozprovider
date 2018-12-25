@@ -35,17 +35,22 @@ abstract class InvoiceSchedulerAbstract
     protected $email;
 
     /**
-     * @var \DateTime
+     * @var \DateTime | null
      */
     protected $lastExecution;
 
     /**
-     * @var \DateTime
+     * @var string | null
+     */
+    protected $lastExecutionError;
+
+    /**
+     * @var \DateTime | null
      */
     protected $nextExecution;
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $taxRate;
 
@@ -112,6 +117,7 @@ abstract class InvoiceSchedulerAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return InvoiceSchedulerDto|null
@@ -137,6 +143,7 @@ abstract class InvoiceSchedulerAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -156,6 +163,7 @@ abstract class InvoiceSchedulerAbstract
 
         $self
             ->setLastExecution($dto->getLastExecution())
+            ->setLastExecutionError($dto->getLastExecutionError())
             ->setNextExecution($dto->getNextExecution())
             ->setTaxRate($dto->getTaxRate())
             ->setInvoiceTemplate($dto->getInvoiceTemplate())
@@ -171,6 +179,7 @@ abstract class InvoiceSchedulerAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -187,6 +196,7 @@ abstract class InvoiceSchedulerAbstract
             ->setFrequency($dto->getFrequency())
             ->setEmail($dto->getEmail())
             ->setLastExecution($dto->getLastExecution())
+            ->setLastExecutionError($dto->getLastExecutionError())
             ->setNextExecution($dto->getNextExecution())
             ->setTaxRate($dto->getTaxRate())
             ->setInvoiceTemplate($dto->getInvoiceTemplate())
@@ -201,6 +211,7 @@ abstract class InvoiceSchedulerAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return InvoiceSchedulerDto
      */
@@ -212,6 +223,7 @@ abstract class InvoiceSchedulerAbstract
             ->setFrequency(self::getFrequency())
             ->setEmail(self::getEmail())
             ->setLastExecution(self::getLastExecution())
+            ->setLastExecutionError(self::getLastExecutionError())
             ->setNextExecution(self::getNextExecution())
             ->setTaxRate(self::getTaxRate())
             ->setInvoiceTemplate(\Ivoz\Provider\Domain\Model\InvoiceTemplate\InvoiceTemplate::entityToDto(self::getInvoiceTemplate(), $depth))
@@ -231,6 +243,7 @@ abstract class InvoiceSchedulerAbstract
             'frequency' => self::getFrequency(),
             'email' => self::getEmail(),
             'lastExecution' => self::getLastExecution(),
+            'lastExecutionError' => self::getLastExecutionError(),
             'nextExecution' => self::getNextExecution(),
             'taxRate' => self::getTaxRate(),
             'invoiceTemplateId' => self::getInvoiceTemplate() ? self::getInvoiceTemplate()->getId() : null,
@@ -242,14 +255,13 @@ abstract class InvoiceSchedulerAbstract
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set name
      *
      * @param string $name
      *
      * @return self
      */
-    public function setName($name)
+    protected function setName($name)
     {
         Assertion::notNull($name, 'name value "%s" is null, but non null value was expected.');
         Assertion::maxLength($name, 40, 'name value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -270,14 +282,13 @@ abstract class InvoiceSchedulerAbstract
     }
 
     /**
-     * @deprecated
      * Set unit
      *
      * @param string $unit
      *
      * @return self
      */
-    public function setUnit($unit)
+    protected function setUnit($unit)
     {
         Assertion::notNull($unit, 'unit value "%s" is null, but non null value was expected.');
         Assertion::maxLength($unit, 30, 'unit value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -303,14 +314,13 @@ abstract class InvoiceSchedulerAbstract
     }
 
     /**
-     * @deprecated
      * Set frequency
      *
      * @param integer $frequency
      *
      * @return self
      */
-    public function setFrequency($frequency)
+    protected function setFrequency($frequency)
     {
         Assertion::notNull($frequency, 'frequency value "%s" is null, but non null value was expected.');
         Assertion::integerish($frequency, 'frequency value "%s" is not an integer or a number castable to integer.');
@@ -332,14 +342,13 @@ abstract class InvoiceSchedulerAbstract
     }
 
     /**
-     * @deprecated
      * Set email
      *
      * @param string $email
      *
      * @return self
      */
-    public function setEmail($email)
+    protected function setEmail($email)
     {
         Assertion::notNull($email, 'email value "%s" is null, but non null value was expected.');
         Assertion::maxLength($email, 140, 'email value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -360,14 +369,13 @@ abstract class InvoiceSchedulerAbstract
     }
 
     /**
-     * @deprecated
      * Set lastExecution
      *
      * @param \DateTime $lastExecution
      *
      * @return self
      */
-    public function setLastExecution($lastExecution = null)
+    protected function setLastExecution($lastExecution = null)
     {
         if (!is_null($lastExecution)) {
             $lastExecution = \Ivoz\Core\Domain\Model\Helper\DateTimeHelper::createOrFix(
@@ -384,7 +392,7 @@ abstract class InvoiceSchedulerAbstract
     /**
      * Get lastExecution
      *
-     * @return \DateTime
+     * @return \DateTime | null
      */
     public function getLastExecution()
     {
@@ -392,14 +400,41 @@ abstract class InvoiceSchedulerAbstract
     }
 
     /**
-     * @deprecated
+     * Set lastExecutionError
+     *
+     * @param string $lastExecutionError
+     *
+     * @return self
+     */
+    protected function setLastExecutionError($lastExecutionError = null)
+    {
+        if (!is_null($lastExecutionError)) {
+            Assertion::maxLength($lastExecutionError, 300, 'lastExecutionError value "%s" is too long, it should have no more than %d characters, but has %d characters.');
+        }
+
+        $this->lastExecutionError = $lastExecutionError;
+
+        return $this;
+    }
+
+    /**
+     * Get lastExecutionError
+     *
+     * @return string | null
+     */
+    public function getLastExecutionError()
+    {
+        return $this->lastExecutionError;
+    }
+
+    /**
      * Set nextExecution
      *
      * @param \DateTime $nextExecution
      *
      * @return self
      */
-    public function setNextExecution($nextExecution = null)
+    protected function setNextExecution($nextExecution = null)
     {
         if (!is_null($nextExecution)) {
             $nextExecution = \Ivoz\Core\Domain\Model\Helper\DateTimeHelper::createOrFix(
@@ -416,7 +451,7 @@ abstract class InvoiceSchedulerAbstract
     /**
      * Get nextExecution
      *
-     * @return \DateTime
+     * @return \DateTime | null
      */
     public function getNextExecution()
     {
@@ -424,14 +459,13 @@ abstract class InvoiceSchedulerAbstract
     }
 
     /**
-     * @deprecated
      * Set taxRate
      *
      * @param string $taxRate
      *
      * @return self
      */
-    public function setTaxRate($taxRate = null)
+    protected function setTaxRate($taxRate = null)
     {
         if (!is_null($taxRate)) {
             if (!is_null($taxRate)) {
@@ -448,7 +482,7 @@ abstract class InvoiceSchedulerAbstract
     /**
      * Get taxRate
      *
-     * @return string
+     * @return string | null
      */
     public function getTaxRate()
     {
@@ -544,7 +578,7 @@ abstract class InvoiceSchedulerAbstract
     /**
      * Get numberSequence
      *
-     * @return \Ivoz\Provider\Domain\Model\InvoiceNumberSequence\InvoiceNumberSequenceInterface
+     * @return \Ivoz\Provider\Domain\Model\InvoiceNumberSequence\InvoiceNumberSequenceInterface | null
      */
     public function getNumberSequence()
     {

@@ -31,52 +31,52 @@ abstract class TrunksCdrAbstract
     protected $duration = '0.000';
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $caller;
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $callee;
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $callid;
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $callidHash;
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $xcallid;
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $diversion;
 
     /**
-     * @var boolean
+     * @var boolean | null
      */
     protected $bounced;
 
     /**
-     * @var boolean
+     * @var boolean | null
      */
     protected $metered = '0';
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $direction;
 
     /**
-     * @var string
+     * @var string | null
      */
     protected $cgrid;
 
@@ -94,6 +94,11 @@ abstract class TrunksCdrAbstract
      * @var \Ivoz\Provider\Domain\Model\Carrier\CarrierInterface
      */
     protected $carrier;
+
+    /**
+     * @var \Ivoz\Provider\Domain\Model\RetailAccount\RetailAccountInterface
+     */
+    protected $retailAccount;
 
 
     use ChangelogTrait;
@@ -137,6 +142,7 @@ abstract class TrunksCdrAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param EntityInterface|null $entity
      * @param int $depth
      * @return TrunksCdrDto|null
@@ -162,6 +168,7 @@ abstract class TrunksCdrAbstract
 
     /**
      * Factory method
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -192,6 +199,7 @@ abstract class TrunksCdrAbstract
             ->setBrand($dto->getBrand())
             ->setCompany($dto->getCompany())
             ->setCarrier($dto->getCarrier())
+            ->setRetailAccount($dto->getRetailAccount())
         ;
 
         $self->sanitizeValues();
@@ -201,6 +209,7 @@ abstract class TrunksCdrAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param DataTransferObjectInterface $dto
      * @return self
      */
@@ -227,7 +236,8 @@ abstract class TrunksCdrAbstract
             ->setCgrid($dto->getCgrid())
             ->setBrand($dto->getBrand())
             ->setCompany($dto->getCompany())
-            ->setCarrier($dto->getCarrier());
+            ->setCarrier($dto->getCarrier())
+            ->setRetailAccount($dto->getRetailAccount());
 
 
 
@@ -236,6 +246,7 @@ abstract class TrunksCdrAbstract
     }
 
     /**
+     * @internal use EntityTools instead
      * @param int $depth
      * @return TrunksCdrDto
      */
@@ -257,7 +268,8 @@ abstract class TrunksCdrAbstract
             ->setCgrid(self::getCgrid())
             ->setBrand(\Ivoz\Provider\Domain\Model\Brand\Brand::entityToDto(self::getBrand(), $depth))
             ->setCompany(\Ivoz\Provider\Domain\Model\Company\Company::entityToDto(self::getCompany(), $depth))
-            ->setCarrier(\Ivoz\Provider\Domain\Model\Carrier\Carrier::entityToDto(self::getCarrier(), $depth));
+            ->setCarrier(\Ivoz\Provider\Domain\Model\Carrier\Carrier::entityToDto(self::getCarrier(), $depth))
+            ->setRetailAccount(\Ivoz\Provider\Domain\Model\RetailAccount\RetailAccount::entityToDto(self::getRetailAccount(), $depth));
     }
 
     /**
@@ -281,20 +293,20 @@ abstract class TrunksCdrAbstract
             'cgrid' => self::getCgrid(),
             'brandId' => self::getBrand() ? self::getBrand()->getId() : null,
             'companyId' => self::getCompany() ? self::getCompany()->getId() : null,
-            'carrierId' => self::getCarrier() ? self::getCarrier()->getId() : null
+            'carrierId' => self::getCarrier() ? self::getCarrier()->getId() : null,
+            'retailAccountId' => self::getRetailAccount() ? self::getRetailAccount()->getId() : null
         ];
     }
     // @codeCoverageIgnoreStart
 
     /**
-     * @deprecated
      * Set startTime
      *
      * @param \DateTime $startTime
      *
      * @return self
      */
-    public function setStartTime($startTime)
+    protected function setStartTime($startTime)
     {
         Assertion::notNull($startTime, 'startTime value "%s" is null, but non null value was expected.');
         $startTime = \Ivoz\Core\Domain\Model\Helper\DateTimeHelper::createOrFix(
@@ -318,14 +330,13 @@ abstract class TrunksCdrAbstract
     }
 
     /**
-     * @deprecated
      * Set endTime
      *
      * @param \DateTime $endTime
      *
      * @return self
      */
-    public function setEndTime($endTime)
+    protected function setEndTime($endTime)
     {
         Assertion::notNull($endTime, 'endTime value "%s" is null, but non null value was expected.');
         $endTime = \Ivoz\Core\Domain\Model\Helper\DateTimeHelper::createOrFix(
@@ -349,14 +360,13 @@ abstract class TrunksCdrAbstract
     }
 
     /**
-     * @deprecated
      * Set duration
      *
      * @param float $duration
      *
      * @return self
      */
-    public function setDuration($duration)
+    protected function setDuration($duration)
     {
         Assertion::notNull($duration, 'duration value "%s" is null, but non null value was expected.');
         Assertion::numeric($duration);
@@ -378,14 +388,13 @@ abstract class TrunksCdrAbstract
     }
 
     /**
-     * @deprecated
      * Set caller
      *
      * @param string $caller
      *
      * @return self
      */
-    public function setCaller($caller = null)
+    protected function setCaller($caller = null)
     {
         if (!is_null($caller)) {
             Assertion::maxLength($caller, 128, 'caller value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -399,7 +408,7 @@ abstract class TrunksCdrAbstract
     /**
      * Get caller
      *
-     * @return string
+     * @return string | null
      */
     public function getCaller()
     {
@@ -407,14 +416,13 @@ abstract class TrunksCdrAbstract
     }
 
     /**
-     * @deprecated
      * Set callee
      *
      * @param string $callee
      *
      * @return self
      */
-    public function setCallee($callee = null)
+    protected function setCallee($callee = null)
     {
         if (!is_null($callee)) {
             Assertion::maxLength($callee, 128, 'callee value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -428,7 +436,7 @@ abstract class TrunksCdrAbstract
     /**
      * Get callee
      *
-     * @return string
+     * @return string | null
      */
     public function getCallee()
     {
@@ -436,14 +444,13 @@ abstract class TrunksCdrAbstract
     }
 
     /**
-     * @deprecated
      * Set callid
      *
      * @param string $callid
      *
      * @return self
      */
-    public function setCallid($callid = null)
+    protected function setCallid($callid = null)
     {
         if (!is_null($callid)) {
             Assertion::maxLength($callid, 255, 'callid value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -457,7 +464,7 @@ abstract class TrunksCdrAbstract
     /**
      * Get callid
      *
-     * @return string
+     * @return string | null
      */
     public function getCallid()
     {
@@ -465,14 +472,13 @@ abstract class TrunksCdrAbstract
     }
 
     /**
-     * @deprecated
      * Set callidHash
      *
      * @param string $callidHash
      *
      * @return self
      */
-    public function setCallidHash($callidHash = null)
+    protected function setCallidHash($callidHash = null)
     {
         if (!is_null($callidHash)) {
             Assertion::maxLength($callidHash, 128, 'callidHash value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -486,7 +492,7 @@ abstract class TrunksCdrAbstract
     /**
      * Get callidHash
      *
-     * @return string
+     * @return string | null
      */
     public function getCallidHash()
     {
@@ -494,14 +500,13 @@ abstract class TrunksCdrAbstract
     }
 
     /**
-     * @deprecated
      * Set xcallid
      *
      * @param string $xcallid
      *
      * @return self
      */
-    public function setXcallid($xcallid = null)
+    protected function setXcallid($xcallid = null)
     {
         if (!is_null($xcallid)) {
             Assertion::maxLength($xcallid, 255, 'xcallid value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -515,7 +520,7 @@ abstract class TrunksCdrAbstract
     /**
      * Get xcallid
      *
-     * @return string
+     * @return string | null
      */
     public function getXcallid()
     {
@@ -523,14 +528,13 @@ abstract class TrunksCdrAbstract
     }
 
     /**
-     * @deprecated
      * Set diversion
      *
      * @param string $diversion
      *
      * @return self
      */
-    public function setDiversion($diversion = null)
+    protected function setDiversion($diversion = null)
     {
         if (!is_null($diversion)) {
             Assertion::maxLength($diversion, 64, 'diversion value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -544,7 +548,7 @@ abstract class TrunksCdrAbstract
     /**
      * Get diversion
      *
-     * @return string
+     * @return string | null
      */
     public function getDiversion()
     {
@@ -552,14 +556,13 @@ abstract class TrunksCdrAbstract
     }
 
     /**
-     * @deprecated
      * Set bounced
      *
      * @param boolean $bounced
      *
      * @return self
      */
-    public function setBounced($bounced = null)
+    protected function setBounced($bounced = null)
     {
         if (!is_null($bounced)) {
             Assertion::between(intval($bounced), 0, 1, 'bounced provided "%s" is not a valid boolean value.');
@@ -573,7 +576,7 @@ abstract class TrunksCdrAbstract
     /**
      * Get bounced
      *
-     * @return boolean
+     * @return boolean | null
      */
     public function getBounced()
     {
@@ -581,14 +584,13 @@ abstract class TrunksCdrAbstract
     }
 
     /**
-     * @deprecated
      * Set metered
      *
      * @param boolean $metered
      *
      * @return self
      */
-    public function setMetered($metered = null)
+    protected function setMetered($metered = null)
     {
         if (!is_null($metered)) {
             Assertion::between(intval($metered), 0, 1, 'metered provided "%s" is not a valid boolean value.');
@@ -602,7 +604,7 @@ abstract class TrunksCdrAbstract
     /**
      * Get metered
      *
-     * @return boolean
+     * @return boolean | null
      */
     public function getMetered()
     {
@@ -610,14 +612,13 @@ abstract class TrunksCdrAbstract
     }
 
     /**
-     * @deprecated
      * Set direction
      *
      * @param string $direction
      *
      * @return self
      */
-    public function setDirection($direction = null)
+    protected function setDirection($direction = null)
     {
         if (!is_null($direction)) {
         }
@@ -630,7 +631,7 @@ abstract class TrunksCdrAbstract
     /**
      * Get direction
      *
-     * @return string
+     * @return string | null
      */
     public function getDirection()
     {
@@ -638,14 +639,13 @@ abstract class TrunksCdrAbstract
     }
 
     /**
-     * @deprecated
      * Set cgrid
      *
      * @param string $cgrid
      *
      * @return self
      */
-    public function setCgrid($cgrid = null)
+    protected function setCgrid($cgrid = null)
     {
         if (!is_null($cgrid)) {
             Assertion::maxLength($cgrid, 40, 'cgrid value "%s" is too long, it should have no more than %d characters, but has %d characters.');
@@ -659,7 +659,7 @@ abstract class TrunksCdrAbstract
     /**
      * Get cgrid
      *
-     * @return string
+     * @return string | null
      */
     public function getCgrid()
     {
@@ -736,6 +736,30 @@ abstract class TrunksCdrAbstract
     public function getCarrier()
     {
         return $this->carrier;
+    }
+
+    /**
+     * Set retailAccount
+     *
+     * @param \Ivoz\Provider\Domain\Model\RetailAccount\RetailAccountInterface $retailAccount
+     *
+     * @return self
+     */
+    public function setRetailAccount(\Ivoz\Provider\Domain\Model\RetailAccount\RetailAccountInterface $retailAccount = null)
+    {
+        $this->retailAccount = $retailAccount;
+
+        return $this;
+    }
+
+    /**
+     * Get retailAccount
+     *
+     * @return \Ivoz\Provider\Domain\Model\RetailAccount\RetailAccountInterface
+     */
+    public function getRetailAccount()
+    {
+        return $this->retailAccount;
     }
 
     // @codeCoverageIgnoreEnd
