@@ -4,6 +4,12 @@ ivozprovider (2.9~2.9.0) UNRELEASED; urgency=medium
 
  -- Irontec IvozProvider Team <ivozprovider@irontec.com>  Wed, 26 Dec 2018 11:03:14 +0100
 
+ivozprovider (20.8~20.8.1) stable; urgency=medium
+
+  * Version bump to 20.8.1
+
+ -- PowerPBX Team <devops@powerpbx.org>  Wed, 25 Dec 2018 19:56:15 -0700
+
 ivozprovider (2.8~2.8.1) stable; urgency=medium
 
   * Version bump to 2.8.1
