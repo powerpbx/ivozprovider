@@ -182,7 +182,7 @@ Package: ivozprovider-scheme
 Architecture: all
 Section: database
 Priority: optional
-Pre-Depends: ivozprovider-common-library (=${binary:Version}), bind9, php7.0-mysql, php7.0-xml, mysql-server
+Pre-Depends: ivozprovider-common-library (=${binary:Version}), bind9, php7.0-mysql, php7.0-xml, mariadb-server
 Homepage: http://www.irontec.com
 Description: IVOZ Provider - Database Scheme
  .
