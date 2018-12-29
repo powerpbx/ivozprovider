@@ -45,7 +45,7 @@ Package: ivozprovider-profile-as
 Architecture: all
 Section: admin
 Priority: optional
-Pre-Depends: libmyodbc, unixodbc
+Pre-Depends: libmaodbc, unixodbc
 Depends: ivozprovider-profile-common (=${binary:Version}),
     ivozprovider-asterisk-agi (=${binary:Version}),
     ivozprovider-asterisk-config (=${binary:Version}),
