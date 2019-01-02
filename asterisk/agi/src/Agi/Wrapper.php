@@ -386,5 +386,10 @@ class Wrapper
         return "";
     }
 
+    public function echo()
+    {
+        return $this->fastagi->exec("Echo", "");
+    }
+
 }
 
