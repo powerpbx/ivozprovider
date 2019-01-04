@@ -70,8 +70,7 @@ Depends: ivozprovider-profile-common (=${binary:Version}),
     ivozprovider-balances (=${binary:Version}),
     libstring-crc32-perl,
     libgearman-client-perl,
-    redis-server,
-    redis-sentinel
+    redis-server
 Homepage: http://www.irontec.com
 Description: IVOZ Provider - Data System Profile
  .
