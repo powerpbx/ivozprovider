@@ -1,0 +1,11 @@
+# Custom aliases for proxies
+
+scku ()
+{
+	systemctl $1 kamailio@users	
+}
+
+sckt ()
+{
+	systemctl $1 kamailio@trunks
+}
