@@ -15,6 +15,6 @@ sc ()
 	elif [[ $2 == 'kt' ]]; then
 		systemctl --no-pager $1 kamailio@trunks.service -l
 	else
-		systemctl $1 $2
+		systemctl --no-pager $1 $2 -l
 	fi
 }
