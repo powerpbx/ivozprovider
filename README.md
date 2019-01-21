@@ -9,7 +9,7 @@ IvozProvider supports multiple management levels, from Global platform administr
  * Global Administrator manages multiple Brands
  * Brand Administrators manage multiple Companies
  * Company Administrators manage multiple Users
- * Users manage their preferencess
+ * Users manage their preferences
 
 #### Scaling
 From its beginning, IvozProvider was designed to be installed distributed between multiple machines, each one fullfilling one of the existing profiles:
