@@ -27,6 +27,11 @@ abstract class ApplicationServerDtoAbstract implements DataTransferObjectInterfa
      */
     private $id;
 
+    /**
+     * @var integer
+     */
+    private $groupId;
+
 
     use DtoNormalizer;
 
@@ -47,7 +52,8 @@ abstract class ApplicationServerDtoAbstract implements DataTransferObjectInterfa
         return [
             'ip' => 'ip',
             'name' => 'name',
-            'id' => 'id'
+            'id' => 'id',
+            'groupId' => 'groupId'
         ];
     }
 
@@ -59,7 +65,8 @@ abstract class ApplicationServerDtoAbstract implements DataTransferObjectInterfa
         return [
             'ip' => $this->getIp(),
             'name' => $this->getName(),
-            'id' => $this->getId()
+            'id' => $this->getId(),
+            'groupId' => $this->getGroupId()
         ];
     }
 
@@ -135,5 +142,25 @@ abstract class ApplicationServerDtoAbstract implements DataTransferObjectInterfa
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * @param integer $id
+     *
+     * @return static
+     */
+    public function setGroupId($id = null)
+    {
+        $this->groupId = $groupId;
+
+        return $this;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getGroupId()
+    {
+        return $this->groupId;
     }
 }

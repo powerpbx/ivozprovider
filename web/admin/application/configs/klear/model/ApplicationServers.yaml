@@ -11,6 +11,11 @@ production:
       type: text
       trim: both
       required: true
+    groupId:
+      title: 'Group Id'
+      type: text
+      trim: both
+      required: true
     transport:
       title: _('Transport')
       type: text
