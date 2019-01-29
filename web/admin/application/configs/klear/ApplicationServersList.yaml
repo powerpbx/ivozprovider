@@ -35,6 +35,7 @@ production:
         order: &applicationServersOrder
             name: true
             ip: true
+            grpid: true
       options:
         title: _("Options")
         screens:
