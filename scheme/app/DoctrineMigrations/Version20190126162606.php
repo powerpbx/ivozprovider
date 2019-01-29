@@ -16,7 +16,7 @@ class Version20190126162606 extends AbstractMigration
     public function up(Schema $schema)
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE ApplicationServers ADD groupId INT UNSIGNED DEFAULT NULL');
+        $this->addSql('ALTER TABLE ApplicationServers ADD grpid INT UNSIGNED DEFAULT 1');
 
     }
 
@@ -26,7 +26,7 @@ class Version20190126162606 extends AbstractMigration
     public function down(Schema $schema)
     {
         // this down() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE ApplicationServers DROP groupId');
+        $this->addSql('ALTER TABLE ApplicationServers DROP grpid');
 
     }
 }
