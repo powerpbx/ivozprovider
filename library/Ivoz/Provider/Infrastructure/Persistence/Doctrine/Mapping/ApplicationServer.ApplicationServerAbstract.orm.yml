@@ -7,6 +7,9 @@ Ivoz\Provider\Domain\Model\ApplicationServer\ApplicationServerAbstract:
     name:
       columns:
         - name
+    grpid:
+      columns:
+        - grpid
   fields:
     ip:
       type: string
@@ -18,3 +21,9 @@ Ivoz\Provider\Domain\Model\ApplicationServer\ApplicationServerAbstract:
       length: 64
       options:
         fixed: false
+    grpid:
+      type: integer
+      nullable: false
+      options:
+        unsigned: true
+        default: 1
