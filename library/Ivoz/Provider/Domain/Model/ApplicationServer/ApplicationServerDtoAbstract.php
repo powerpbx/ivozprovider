@@ -30,7 +30,6 @@ abstract class ApplicationServerDtoAbstract implements DataTransferObjectInterfa
      */
     private $grpid = 1;
 
-
     use DtoNormalizer;
 
     public function __construct($id = null)
