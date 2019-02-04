@@ -43,8 +43,10 @@ production:
           town: true
           province: true
           countryName: true
+          country: true
           registryData: true
           defaultTimezone: true
+          currency: true
           mediaRelaySets: true
           language: true
           balance: true
@@ -127,8 +129,10 @@ production:
           label: _("Geographic Configuration")
           fields:
             language: 4
+            country: 4
             defaultTimezone: 4
             transformationRuleSet: 8
+            currency: 4
         group3:
           colsPerRow: 12
           label: _("Wholesale specific")
@@ -185,8 +189,10 @@ production:
           label: _("Geographic Configuration")
           fields:
             language: 4
+            country: 4
             defaultTimezone: 4
-            transformationRuleSet: 4
+            transformationRuleSet: 8
+            currency: 4
         group3:
           colsPerRow: 12
           label: _("Wholesale specific")
