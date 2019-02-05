@@ -1,14 +1,27 @@
-ivozprovider (20.8~20.8.1) UNRELEASED; urgency=medium
+ivozprovider (1:2.9~2.9.1-ppx1) stable; urgency=medium
 
-  * Version bump to 20.8.1
+  * Version bump to 2.9.1
+  * Add group id for clustering
+
+ -- PowerPBX Team <devops@powerpbx.com>  Mon, 04 Feb 2019 12:25:16 -0800
+
+ivozprovider (2.9~2.9.0) stable; urgency=medium
+
+  * Version bump to 2.9.0
+
+ -- Irontec IvozProvider Team <ivozprovider@irontec.com>  Wed, 26 Dec 2018 11:03:14 +0100
+
+ivozprovider (2.8~2.8.2) ; urgency=medium
+
+  * Version bump to 20.8.2
 
  -- PowerPBX Team <devops@powerpbx.org>  Wed, 25 Dec 2018 19:56:15 -0800
 
-ivozprovider (2.8~2.8.1) UNRELEASED; urgency=medium
+ivozprovider (2.8~2.8.1) stable; urgency=medium
 
   * Version bump to 2.8.1
 
- -- Irontec IvozProvider Team <ivozprovider@irontec.com>  Wed, 28 Nov 2018 17:46:33 +0100
+ -- Irontec IvozProvider Team <ivozprovider@irontec.com>  Wed, 26 Dec 2018 11:03:02 +0100
 
 ivozprovider (2.8~2.8.0) stable; urgency=medium
 

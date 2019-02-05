@@ -3,8 +3,6 @@
 namespace Ivoz\Provider\Domain\Model\ApplicationServer;
 
 use Ivoz\Core\Application\DataTransferObjectInterface;
-use Ivoz\Core\Application\ForeignKeyTransformerInterface;
-use Ivoz\Core\Application\CollectionTransformerInterface;
 use Ivoz\Core\Application\Model\DtoNormalizer;
 
 /**
@@ -67,20 +65,6 @@ abstract class ApplicationServerDtoAbstract implements DataTransferObjectInterfa
             'grpid' => $this->getGrpid(),
             'id' => $this->getId()
         ];
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function transformForeignKeys(ForeignKeyTransformerInterface $transformer)
-    {
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function transformCollections(CollectionTransformerInterface $transformer)
-    {
     }
 
     /**

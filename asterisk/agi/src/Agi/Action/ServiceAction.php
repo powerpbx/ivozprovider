@@ -46,7 +46,7 @@ class ServiceAction
     /**
      * @var CompanyServiceInterface
      */
-    protected  $service;
+    protected $service;
 
     /**
      * ServiceAction constructor.
@@ -88,8 +88,11 @@ class ServiceAction
         }
 
         // Some feedback for asterisk cli
-        $this->agi->notice("Processing Service %s [service%d]",
-                        $service->getService()->getName()->getEs(), $service->getId());
+        $this->agi->notice(
+            "Processing Service %s [service%d]",
+            $service->getService()->getName()->getEs(),
+            $service->getId()
+        );
 
         // Process this service
         switch ($service->getService()->getIden()) {
@@ -201,7 +204,6 @@ class ServiceAction
             // Target not found here
             $this->agi->hangup(3);
         }
-
     }
 
     protected function processGroupPickUp()
@@ -224,7 +226,6 @@ class ServiceAction
             // Target not found here
             $this->agi->hangup(3);
         }
-
     }
 
     protected function processRecordLocution()
