@@ -1,6 +1,6 @@
-ivozprovider (1:2.9~2.9.2-ppx1) stable; urgency=medium
+ivozprovider (1:2.9~2.9.3-ppx1) stable; urgency=medium
 
-  * Version bump to 2.9.2
+  * Version bump to 2.9.3
   * Add group id for clustering
 
  -- PowerPBX Team <devops@powerpbx.org>  Mon, 04 Feb 2019 12:25:16 -0800
