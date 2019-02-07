@@ -2,7 +2,7 @@
   "name": "userweb",
   "version": "2.0.0",
   "dependencies": {
-    "bower": "^1.8.4",
+    "bower": "^1.8.8",
     "grunt-cli": "^1.3.2"
   },
   "repository": {},
