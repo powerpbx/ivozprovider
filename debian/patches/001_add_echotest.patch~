@@ -1,0 +1,43 @@
+Index: ivozprovider/asterisk/agi/src/Agi/Action/ServiceAction.php
+===================================================================
+--- ivozprovider.orig/asterisk/agi/src/Agi/Action/ServiceAction.php
++++ ivozprovider/asterisk/agi/src/Agi/Action/ServiceAction.php
+@@ -117,6 +117,9 @@ class ServiceAction
+             case 'ToggleLock':
+                 $this->processToggleLock();
+                 break;
++            case 'EchoTest':
++                $this->processEchoTest();
++                break;
+         }
+     }
+ 
+@@ -391,4 +394,14 @@ class ServiceAction
+ 
+         $this->agi->playback("hello/hello");
+     }
++
++    public function processEchoTest()
++    {
++        $sound = 'echo-test';
++
++        $this->agi->playback($sound);
++        $this->agi->playback('beep');
++        $this->agi->echo();
++        //$this->agi->hangup();
++    }
+ }
+Index: ivozprovider/asterisk/agi/src/Agi/Wrapper.php
+===================================================================
+--- ivozprovider.orig/asterisk/agi/src/Agi/Wrapper.php
++++ ivozprovider/asterisk/agi/src/Agi/Wrapper.php
+@@ -396,4 +396,9 @@ class Wrapper
+ 
+         return array_shift($dialedNumberParts);
+     }
++
++	public function echo()
++    {
++        return $this->fastagi->exec("Echo", "");
++    }
+ }
