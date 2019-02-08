@@ -1,0 +1,43 @@
+Index: ivozprovider/asterisk/config/pjsip.conf
+===================================================================
+--- ivozprovider.orig/asterisk/config/pjsip.conf
++++ ivozprovider/asterisk/config/pjsip.conf
+@@ -3,7 +3,7 @@
+ ;;
+ [global]
+ type=global
+-user_agent=Irontec IvozProvider v2.9
++user_agent=PowerPBX v2.9
+ endpoint_identifier_order=contact,ip,username,anonymous
+ 
+ ;;
+Index: ivozprovider/kamailio/trunks/config/kamailio.cfg
+===================================================================
+--- ivozprovider.orig/kamailio/trunks/config/kamailio.cfg
++++ ivozprovider/kamailio/trunks/config/kamailio.cfg
+@@ -102,8 +103,8 @@ log_facility=LOG_LOCAL0
+ onsend_route_reply=yes
+ 
+ # Add custom Server header
+-server_header="Server: Irontec IvozProvider v2.9"
+-user_agent_header="User-Agent: Irontec IvozProvider v2.9"
++server_header="Server: PowerPBX v2.9"
++user_agent_header="User-Agent: PowerPBX v2.9"
+ 
+ ####### Modules Section ########
+
+Index: ivozprovider/kamailio/users/config/kamailio.cfg
+===================================================================
+--- ivozprovider.orig/kamailio/users/config/kamailio.cfg
++++ ivozprovider/kamailio/users/config/kamailio.cfg
+@@ -126,8 +126,8 @@ log_facility=LOG_LOCAL0
+ onsend_route_reply=yes
+ 
+ # Add custom Server header
+-server_header="Server: Irontec IvozProvider v2.9"
+-user_agent_header="User-Agent: Irontec IvozProvider v2.9"
++server_header="Server: PowerPBX v2.9"
++user_agent_header="User-Agent: PowerPBX v2.9"
+ 
+ ####### Modules Section ########
+ 
