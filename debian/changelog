@@ -1,3 +1,9 @@
+ivozprovider (1:2.9~2.9.3.2-ppx1) UNRELEASED; urgency=medium
+
+  * Version bump to 2.9.3.2
+
+ -- Irontec IvozProvider Team <ivozprovider@irontec.com>  Sat, 09 Feb 2019 13:10:32 -0800
+
 ivozprovider (1:2.9~2.9.3.1-ppx1) stable; urgency=medium
 
   * Version bump
