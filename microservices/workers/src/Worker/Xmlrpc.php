@@ -139,35 +139,40 @@ class Xmlrpc
         }
 
         /** @var ProxyTrunk|ProxyUser $server */
-        $server = $repository->getProxyMainAddress();
+        //$server = $repository->getProxyMainAddress();
+        $servers = $repository->findAll();
 
-        try {
-            // Create a new XmlRpc client for each server
-            $client = new Client(sprintf("http://%s:%d/RPC2", $server->getIp(), $port));
-            $client->setUserAgent("xmlrpclib");
-            $response = $client->send(new Request($method));
+        foreach ($servers as $server) {
 
-            if ($response->errno) {
-                throw new \Exception($response->errstr);
+            try {
+                // Create a new XmlRpc client for each server
+                $client = new Client(sprintf("http://%s:%d/RPC2", $server->getIp(), $port));
+                $client->setUserAgent("xmlrpclib");
+                $response = $client->send(new Request($method));
+
+                if ($response->errno) {
+                    throw new \Exception($response->errstr);
+                }
+
+                $this->logger->info(sprintf(
+                    "[XMLRPC] Request %s sent to %s [%s:%d]",
+                    $method,
+                    $server->getName(),
+                    $server->getIp(),
+                    $port
+                ));
+            } catch (\Exception $e) {
+                $this->logger->error(sprintf(
+                    "[XMLRPC] Unable to send request %s to server %s [%s:%d]: %s",
+                    $method,
+                    $server->getName(),
+                    $server->getIp(),
+                    $port,
+                    $e->getMessage()
+                ));
+                //Comment out return so does not exit loop if a server is unreachable
+                //return false;
             }
-
-            $this->logger->info(sprintf(
-                "[XMLRPC] Request %s sent to %s [%s:%d]",
-                $method,
-                $server->getName(),
-                $server->getIp(),
-                $port
-            ));
-        } catch (\Exception $e) {
-            $this->logger->error(sprintf(
-                "[XMLRPC] Unable to send request %s to server %s [%s:%d]: %s",
-                $method,
-                $server->getName(),
-                $server->getIp(),
-                $port,
-                $e->getMessage()
-            ));
-            return false;
         }
         return true;
     }
