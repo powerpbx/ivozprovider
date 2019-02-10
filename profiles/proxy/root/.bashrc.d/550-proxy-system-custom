@@ -1,0 +1,20 @@
+# Custom aliases
+
+ # override previous alias set in common package
+unalias sc
+
+ ## EXAMPLES
+# "sc status ku" is alias for "systemctl --no-pager status kamailio@users.service -l"
+# "sc status kt" is alias for "systemctl --no-pager status kamailio@trunks.service -l"
+# "sc status firewalld" is alias for "systemctl status firewalld"
+
+ sc ()
+{
+	if [[ $2 == 'ku' ]]; then
+		systemctl --no-pager $1 kamailio@users.service -l
+	elif [[ $2 == 'kt' ]]; then
+		systemctl --no-pager $1 kamailio@trunks.service -l
+	else
+		systemctl --no-pager $1 $2 -l
+	fi
+}
