@@ -117,6 +117,9 @@ class ServiceAction
             case 'ToggleLock':
                 $this->processToggleLock();
                 break;
+            case 'EchoTest':
+                $this->processEchoTest();
+                break;
         }
     }
 
@@ -390,5 +393,15 @@ class ServiceAction
         } while (substr($entered, -3) != 777);
 
         $this->agi->playback("hello/hello");
+    }
+
+    public function processEchoTest()
+    {
+        $sound = 'echo-test';
+        
+        $this->agi->playback($sound);
+        $this->agi->playback('beep');
+        $this->agi->echo();
+        $this->agi->hangup();
     }
 }
