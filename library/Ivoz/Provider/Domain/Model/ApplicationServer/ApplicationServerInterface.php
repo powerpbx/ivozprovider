@@ -25,4 +25,11 @@ interface ApplicationServerInterface extends LoggableEntityInterface
      * @return string | null
      */
     public function getName();
+
+    /**
+     * Get grpid
+     *
+     * @return integer
+     */
+    public function getGrpid();
 }
