@@ -1,0 +1,2 @@
+# Add custom aliases for frequently used commands
+alias sc='systemctl'
