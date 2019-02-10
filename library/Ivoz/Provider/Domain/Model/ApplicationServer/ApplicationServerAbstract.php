@@ -23,6 +23,10 @@ abstract class ApplicationServerAbstract
      */
     protected $name;
 
+    /**
+     * @var integer
+     */
+    protected $grpid = 1;
 
     use ChangelogTrait;
 
@@ -103,7 +107,8 @@ abstract class ApplicationServerAbstract
         Assertion::isInstanceOf($dto, ApplicationServerDto::class);
 
         $self = new static(
-            $dto->getIp()
+            $dto->getIp(),
+            $dto->getGrpid()
         );
 
         $self
@@ -132,7 +137,8 @@ abstract class ApplicationServerAbstract
 
         $this
             ->setIp($dto->getIp())
-            ->setName($dto->getName());
+            ->setName($dto->getName())
+             ->setGrpid($dto->getGrpid());
 
 
 
@@ -149,7 +155,8 @@ abstract class ApplicationServerAbstract
     {
         return self::createDto()
             ->setIp(self::getIp())
-            ->setName(self::getName());
+            ->setName(self::getName())
+            ->setGrpid(self::getGrpid());
     }
 
     /**
@@ -159,7 +166,8 @@ abstract class ApplicationServerAbstract
     {
         return [
             'ip' => self::getIp(),
-            'name' => self::getName()
+            'name' => self::getName(),
+            'grpid' => self::getGrpid()
         ];
     }
     // @codeCoverageIgnoreStart
@@ -217,6 +225,31 @@ abstract class ApplicationServerAbstract
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * Set grpid
+     *
+     * @param integer $grpid
+     *
+     * @return self
+     */
+    protected function setGrpid($grpid)
+    {
+        Assertion::notNull($grpid, 'grpid value "%s" is null, but non null value was expected.');
+        Assertion::integerish($grpid, 'grpid value "%s" is not an integer or a number castable to integer.');
+        Assertion::greaterOrEqualThan($grpid, 0, 'grpid provided "%s" is not greater or equal than "%s".');
+         $this->grpid = $grpid;
+         return $this;
+    }
+     /**
+     * Get grpid
+     *
+     * @return integer
+     */
+    public function getGrpid()
+    {
+        return $this->grpid;
     }
 
     // @codeCoverageIgnoreEnd

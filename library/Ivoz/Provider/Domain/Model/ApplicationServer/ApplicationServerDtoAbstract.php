@@ -25,6 +25,10 @@ abstract class ApplicationServerDtoAbstract implements DataTransferObjectInterfa
      */
     private $id;
 
+    /**
+     * @var integer
+     */
+    private $grpid = 1;
 
     use DtoNormalizer;
 
@@ -45,6 +49,7 @@ abstract class ApplicationServerDtoAbstract implements DataTransferObjectInterfa
         return [
             'ip' => 'ip',
             'name' => 'name',
+            'grpid' => 'grpid',
             'id' => 'id'
         ];
     }
@@ -57,6 +62,7 @@ abstract class ApplicationServerDtoAbstract implements DataTransferObjectInterfa
         return [
             'ip' => $this->getIp(),
             'name' => $this->getName(),
+            'grpid' => $this->getGrpid(),
             'id' => $this->getId()
         ];
     }
@@ -99,6 +105,24 @@ abstract class ApplicationServerDtoAbstract implements DataTransferObjectInterfa
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * @param integer $grpid
+     *
+     * @return static
+     */
+    public function setGrpid($grpid = null)
+    {
+        $this->grpid = $grpid;
+         return $this;
+    }
+     /**
+     * @return integer
+     */
+    public function getGrpid()
+    {
+        return $this->grpid;
     }
 
     /**
