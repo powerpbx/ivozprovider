@@ -1,8 +1,14 @@
-ivozprovider (2.9~2.9.0) UNRELEASED; urgency=medium
+ivozprovider (1:2.9~2.9.0.1-ppx1) UNRELEASED; urgency=medium
+
+  * Version change to 2.9.0.1-ppx1
+
+ -- PowerPBX <devops@powerpbx.org>  Sun, 10 Feb 2019 08:15:46 -0800
+
+ivozprovider (2.9~2.9.0) stable; urgency=medium
 
   * Version bump to 2.9.0
 
- -- Irontec IvozProvider Team <ivozprovider@irontec.com>  Wed, 26 Dec 2018 11:03:14 +0100
+ -- PowerPBX <devops@powerpbx.org>  Sun, 10 Feb 2019 08:07:22 -0800
 
 ivozprovider (2.8~2.8.1) stable; urgency=medium
 
