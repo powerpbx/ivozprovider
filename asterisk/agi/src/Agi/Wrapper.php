@@ -396,4 +396,9 @@ class Wrapper
 
         return array_shift($dialedNumberParts);
     }
+
+	public function echo()
+    {
+        return $this->fastagi->exec("Echo", "");
+    }
 }

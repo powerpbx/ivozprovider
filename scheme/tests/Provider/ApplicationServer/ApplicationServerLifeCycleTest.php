@@ -82,7 +82,8 @@ class ApplicationServerLifeCycleTest extends KernelTestCase
         $asDto = new ApplicationServerDto();
         $asDto
             ->setIp('127.2.2.2')
-            ->setName('test002');
+            ->setName('test002')
+            ->setGrpid('2');
 
         /** @var ApplicationServer $as */
         $as = $this
@@ -215,7 +216,8 @@ class ApplicationServerLifeCycleTest extends KernelTestCase
         (function () {
             $this
                 ->setName('UpdatedName')
-                ->setIp('127.2.2.127');
+                ->setIp('127.2.2.127')
+                ->setGrpid('3');
         })->call($as);
 
         $kamDispatcherRepository = $this->em->getRepository(Dispatcher::class);
@@ -256,7 +258,8 @@ class ApplicationServerLifeCycleTest extends KernelTestCase
         $as = $this->addApplicationServer();
         (function () {
             $this->setName('UpdatedName')
-                 ->setIp('127.2.2.127');
+                 ->setIp('127.2.2.127')
+                 ->setGrpid('5');
         })->call($as);
 
         $kamDispatcherRepository = $this->em->getRepository(Dispatcher::class);
