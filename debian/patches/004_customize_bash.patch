@@ -16,7 +16,7 @@ Index: ivozprovider/profiles/common/root/.bashrc.d/150-common-custom
 @@ -0,0 +1,2 @@
 +# Add custom aliases for frequently used commands
 +alias sc='systemctl'
-\ No newline at end of file
++
 Index: ivozprovider/profiles/data/root/.bashrc.d/300-data-system
 ===================================================================
 --- ivozprovider.orig/profiles/data/root/.bashrc.d/300-data-system
@@ -70,3 +70,4 @@ Index: ivozprovider/profiles/proxy/root/.bashrc.d/550-proxy-system-custom
 +		systemctl --no-pager $1 $2 -l
 +	fi
 +}
++
