@@ -2,3 +2,4 @@
 002_custom_user_agent.patch
 003_add_groupid_for_proxy_clustering.patch
 004_customize_bash.patch
+005_customize_bind.patch
