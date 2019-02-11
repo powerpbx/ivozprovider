@@ -189,7 +189,15 @@ Index: ivozprovider/library/Ivoz/Provider/Domain/Model/ApplicationServer/Applica
              'id' => 'id'
          ];
      }
-@@ -102,6 +107,24 @@ abstract class ApplicationServerDtoAbstr
+@@ -57,6 +62,7 @@ abstract class ApplicationServerDtoAbstr
+         return [
+             'ip' => $this->getIp(),
+             'name' => $this->getName(),
++            'grpid' => $this->getGrpid(),
+             'id' => $this->getId()
+         ];
+     }
+@@ -102,6 +108,24 @@ abstract class ApplicationServerDtoAbstr
      }
  
      /**
@@ -254,3 +262,110 @@ Index: ivozprovider/library/Ivoz/Provider/Infrastructure/Persistence/Doctrine/Ma
 +      options:
 +        unsigned: true
 +        default: 1
+Index: ivozprovider/library/Ivoz/Kam/Domain/Service/Dispatcher/UpdateByApplicationServer.php
+===================================================================
+--- ivozprovider.orig/library/Ivoz/Kam/Domain/Service/Dispatcher/UpdateByApplicationServer.php
++++ ivozprovider/library/Ivoz/Kam/Domain/Service/Dispatcher/UpdateByApplicationServer.php
+@@ -56,7 +56,7 @@ class UpdateByApplicationServer implemen
+ 
+         $kamDispatcherDto
+             ->setApplicationServerId($entity->getId())
+-            ->setSetid(1)
++            ->setSetid($entity->getGrpid())
+             ->setDestination('sip:' . $entity->getIp() . ":6060")
+             ->setDescription($entity->getName());
+ 
+Index: ivozprovider/web/admin/application/configs/klear/model/ApplicationServers.yaml
+===================================================================
+--- ivozprovider.orig/web/admin/application/configs/klear/model/ApplicationServers.yaml
++++ ivozprovider/web/admin/application/configs/klear/model/ApplicationServers.yaml
+@@ -11,6 +11,12 @@ production:
+       type: text
+       trim: both
+       required: true
++    grpid:
++      title: 'Group Id'
++      type: text
++      trim: both
++      defaultValue: 1
++      required: true
+     transport:
+       title: _('Transport')
+       type: text
+Index: ivozprovider/scheme/tests/Provider/ApplicationServer/ApplicationServerLifeCycleTest.php
+===================================================================
+--- ivozprovider.orig/scheme/tests/Provider/ApplicationServer/ApplicationServerLifeCycleTest.php
++++ ivozprovider/scheme/tests/Provider/ApplicationServer/ApplicationServerLifeCycleTest.php
+@@ -82,7 +82,8 @@ class ApplicationServerLifeCycleTest ext
+         $asDto = new ApplicationServerDto();
+         $asDto
+             ->setIp('127.2.2.2')
+-            ->setName('test002');
++            ->setName('test002')
++            ->setGrpid('2');
+ 
+         /** @var ApplicationServer $as */
+         $as = $this
+@@ -215,7 +216,8 @@ class ApplicationServerLifeCycleTest ext
+         (function () {
+             $this
+                 ->setName('UpdatedName')
+-                ->setIp('127.2.2.127');
++                ->setIp('127.2.2.127')
++                ->setGrpid('3');
+         })->call($as);
+ 
+         $kamDispatcherRepository = $this->em->getRepository(Dispatcher::class);
+@@ -256,7 +258,8 @@ class ApplicationServerLifeCycleTest ext
+         $as = $this->addApplicationServer();
+         (function () {
+             $this->setName('UpdatedName')
+-                 ->setIp('127.2.2.127');
++                 ->setIp('127.2.2.127')
++                 ->setGrpid('5');
+         })->call($as);
+ 
+         $kamDispatcherRepository = $this->em->getRepository(Dispatcher::class);
+Index: ivozprovider/web/admin/application/configs/klear/ApplicationServersList.yaml
+===================================================================
+--- ivozprovider.orig/web/admin/application/configs/klear/ApplicationServersList.yaml
++++ ivozprovider/web/admin/application/configs/klear/ApplicationServersList.yaml
+@@ -35,6 +35,7 @@ production:
+         order: &applicationServersOrder
+             name: true
+             ip: true
++            grpid: true
+       options:
+         title: _("Options")
+         screens:
+Index: ivozprovider/scheme/app/DoctrineMigrations/Version20190126162606.php
+===================================================================
+--- /dev/null
++++ ivozprovider/scheme/app/DoctrineMigrations/Version20190126162606.php
+@@ -0,0 +1,26 @@
++<?php
++ namespace Application\Migrations;
++ use Doctrine\DBAL\Migrations\AbstractMigration;
++use Doctrine\DBAL\Schema\Schema;
++ /**
++ * Auto-generated Migration: Please modify to your needs!
++ */
++class Version20190126162606 extends AbstractMigration
++{
++    /**
++     * @param Schema $schema
++     */
++    public function up(Schema $schema)
++    {
++        // this up() migration is auto-generated, please modify it to your needs
++        $this->addSql('ALTER TABLE ApplicationServers ADD grpid INT UNSIGNED DEFAULT 1');
++     }
++     /**
++     * @param Schema $schema
++     */
++    public function down(Schema $schema)
++    {
++        // this down() migration is auto-generated, please modify it to your needs
++        $this->addSql('ALTER TABLE ApplicationServers DROP grpid');
++     }
++}

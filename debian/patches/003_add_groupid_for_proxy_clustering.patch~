@@ -166,3 +166,175 @@ Index: ivozprovider/library/Ivoz/Provider/Domain/Model/ApplicationServer/Applica
 +
      // @codeCoverageIgnoreEnd
  }
+Index: ivozprovider/library/Ivoz/Provider/Domain/Model/ApplicationServer/ApplicationServerDtoAbstract.php
+===================================================================
+--- ivozprovider.orig/library/Ivoz/Provider/Domain/Model/ApplicationServer/ApplicationServerDtoAbstract.php
++++ ivozprovider/library/Ivoz/Provider/Domain/Model/ApplicationServer/ApplicationServerDtoAbstract.php
+@@ -25,6 +25,10 @@ abstract class ApplicationServerDtoAbstr
+      */
+     private $id;
+ 
++    /**
++     * @var integer
++     */
++    private $grpid = 1;
+ 
+     use DtoNormalizer;
+ 
+@@ -45,6 +49,7 @@ abstract class ApplicationServerDtoAbstr
+         return [
+             'ip' => 'ip',
+             'name' => 'name',
++            'grpid' => 'grpid',
+             'id' => 'id'
+         ];
+     }
+@@ -57,6 +62,7 @@ abstract class ApplicationServerDtoAbstr
+         return [
+             'ip' => $this->getIp(),
+             'name' => $this->getName(),
++            'grpid' => $this->getGrpid(),
+             'id' => $this->getId()
+         ];
+     }
+@@ -102,6 +108,24 @@ abstract class ApplicationServerDtoAbstr
+     }
+ 
+     /**
++     * @param integer $grpid
++     *
++     * @return static
++     */
++    public function setGrpid($grpid = null)
++    {
++        $this->grpid = $grpid;
++         return $this;
++    }
++     /**
++     * @return integer
++     */
++    public function getGrpid()
++    {
++        return $this->grpid;
++    }
++
++    /**
+      * @param integer $id
+      *
+      * @return static
+Index: ivozprovider/library/Ivoz/Provider/Domain/Model/ApplicationServer/ApplicationServerInterface.php
+===================================================================
+--- ivozprovider.orig/library/Ivoz/Provider/Domain/Model/ApplicationServer/ApplicationServerInterface.php
++++ ivozprovider/library/Ivoz/Provider/Domain/Model/ApplicationServer/ApplicationServerInterface.php
+@@ -25,4 +25,11 @@ interface ApplicationServerInterface ext
+      * @return string | null
+      */
+     public function getName();
++
++    /**
++     * Get grpid
++     *
++     * @return integer
++     */
++    public function getGrpid();
+ }
+Index: ivozprovider/library/Ivoz/Provider/Infrastructure/Persistence/Doctrine/Mapping/ApplicationServer.ApplicationServerAbstract.orm.yml
+===================================================================
+--- ivozprovider.orig/library/Ivoz/Provider/Infrastructure/Persistence/Doctrine/Mapping/ApplicationServer.ApplicationServerAbstract.orm.yml
++++ ivozprovider/library/Ivoz/Provider/Infrastructure/Persistence/Doctrine/Mapping/ApplicationServer.ApplicationServerAbstract.orm.yml
+@@ -7,6 +7,9 @@ Ivoz\Provider\Domain\Model\ApplicationSe
+     name:
+       columns:
+         - name
++    grpid:
++      columns:
++        - grpid
+   fields:
+     ip:
+       type: string
+@@ -18,3 +21,9 @@ Ivoz\Provider\Domain\Model\ApplicationSe
+       length: 64
+       options:
+         fixed: false
++    grpid:
++      type: integer
++      nullable: false
++      options:
++        unsigned: true
++        default: 1
+Index: ivozprovider/library/Ivoz/Kam/Domain/Service/Dispatcher/UpdateByApplicationServer.php
+===================================================================
+--- ivozprovider.orig/library/Ivoz/Kam/Domain/Service/Dispatcher/UpdateByApplicationServer.php
++++ ivozprovider/library/Ivoz/Kam/Domain/Service/Dispatcher/UpdateByApplicationServer.php
+@@ -56,7 +56,7 @@ class UpdateByApplicationServer implemen
+ 
+         $kamDispatcherDto
+             ->setApplicationServerId($entity->getId())
+-            ->setSetid(1)
++            ->setSetid($entity->getGrpid())
+             ->setDestination('sip:' . $entity->getIp() . ":6060")
+             ->setDescription($entity->getName());
+ 
+Index: ivozprovider/web/admin/application/configs/klear/model/ApplicationServers.yaml
+===================================================================
+--- ivozprovider.orig/web/admin/application/configs/klear/model/ApplicationServers.yaml
++++ ivozprovider/web/admin/application/configs/klear/model/ApplicationServers.yaml
+@@ -11,6 +11,12 @@ production:
+       type: text
+       trim: both
+       required: true
++    grpid:
++      title: 'Group Id'
++      type: text
++      trim: both
++      defaultValue: 1
++      required: true
+     transport:
+       title: _('Transport')
+       type: text
+Index: ivozprovider/scheme/tests/Provider/ApplicationServer/ApplicationServerLifeCycleTest.php
+===================================================================
+--- ivozprovider.orig/scheme/tests/Provider/ApplicationServer/ApplicationServerLifeCycleTest.php
++++ ivozprovider/scheme/tests/Provider/ApplicationServer/ApplicationServerLifeCycleTest.php
+@@ -82,7 +82,8 @@ class ApplicationServerLifeCycleTest ext
+         $asDto = new ApplicationServerDto();
+         $asDto
+             ->setIp('127.2.2.2')
+-            ->setName('test002');
++            ->setName('test002')
++            ->setGrpid('2');
+ 
+         /** @var ApplicationServer $as */
+         $as = $this
+@@ -215,7 +216,8 @@ class ApplicationServerLifeCycleTest ext
+         (function () {
+             $this
+                 ->setName('UpdatedName')
+-                ->setIp('127.2.2.127');
++                ->setIp('127.2.2.127')
++                ->setGrpid('3');
+         })->call($as);
+ 
+         $kamDispatcherRepository = $this->em->getRepository(Dispatcher::class);
+@@ -256,7 +258,8 @@ class ApplicationServerLifeCycleTest ext
+         $as = $this->addApplicationServer();
+         (function () {
+             $this->setName('UpdatedName')
+-                 ->setIp('127.2.2.127');
++                 ->setIp('127.2.2.127')
++                 ->setGrpid('5');
+         })->call($as);
+ 
+         $kamDispatcherRepository = $this->em->getRepository(Dispatcher::class);
+Index: ivozprovider/web/admin/application/configs/klear/ApplicationServersList.yaml
+===================================================================
+--- ivozprovider.orig/web/admin/application/configs/klear/ApplicationServersList.yaml
++++ ivozprovider/web/admin/application/configs/klear/ApplicationServersList.yaml
+@@ -35,6 +35,7 @@ production:
+         order: &applicationServersOrder
+             name: true
+             ip: true
++            grpid: true
+       options:
+         title: _("Options")
+         screens:
