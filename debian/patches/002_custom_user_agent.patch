@@ -40,4 +40,3 @@ Index: ivozprovider/kamailio/users/config/kamailio.cfg
 +user_agent_header="User-Agent: PowerPBX v2.9"
  
  ####### Modules Section ########
- 
