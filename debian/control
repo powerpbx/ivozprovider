@@ -8,7 +8,7 @@ Build-Depends: debhelper, dh-systemd,
     libjs-jquery (>=1.11.3), python-alabaster (>=0.7.8), composer,
     php7.0-mbstring, php7.0-xml, php7.0-zip, php-mailparse, php-gearman
 Standards-Version: 3.9.6
-Maintainer: Irontec IvozProvider Team <ivozprovider@irontec.com>
+Maintainer: PowerPBX <devops@powerpbx.org>
 
 Package: ivozprovider
 Architecture: all
@@ -45,7 +45,7 @@ Package: ivozprovider-profile-as
 Architecture: all
 Section: admin
 Priority: optional
-Pre-Depends: libmyodbc, unixodbc
+Pre-Depends: libmaodbc, unixodbc
 Depends: ivozprovider-profile-common (=${binary:Version}),
     ivozprovider-asterisk-agi (=${binary:Version}),
     ivozprovider-asterisk-config (=${binary:Version}),
@@ -64,7 +64,7 @@ Package: ivozprovider-profile-data
 Architecture: all
 Section: admin
 Priority: optional
-Pre-Depends: bind9, mysql-server
+Pre-Depends: bind9, mariadb-server
 Depends: ivozprovider-profile-common (=${binary:Version}),
     ivozprovider-scheme (=${binary:Version}),
     ivozprovider-balances (=${binary:Version}),
@@ -112,7 +112,7 @@ Section: admin
 Priority: optional
 Depends: ivozprovider-profile-common (=${binary:Version}),
         sngrep,
-        mysql-client,
+        mariadb-client,
         netcat-openbsd,
         ssl-cert,
         ivozprovider-kamailio,
@@ -181,7 +181,7 @@ Package: ivozprovider-scheme
 Architecture: all
 Section: database
 Priority: optional
-Pre-Depends: ivozprovider-common-library (=${binary:Version}), bind9, php7.0-mysql, php7.0-xml, mysql-server
+Pre-Depends: ivozprovider-common-library (=${binary:Version}), bind9, php7.0-mysql, php7.0-xml, mariadb-server
 Homepage: http://www.irontec.com
 Description: IVOZ Provider - Database Scheme
  .
