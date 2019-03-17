@@ -21,7 +21,6 @@ ivozprovider (2.9~2.9.1) stable; urgency=medium
   * Version bump to 2.9.1
 
  -- Irontec IvozProvider Team <ivozprovider@irontec.com>  Tue, 12 Feb 2019 17:39:25 +0100
->>>>>>> ef5df01fadc272cb1796b058292dcd45d38d81ed
 
 ivozprovider (2.9~2.9.0) stable; urgency=medium
 
