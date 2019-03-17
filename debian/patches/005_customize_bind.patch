@@ -1,0 +1,13 @@
+Index: ivozprovider/profiles/data/etc/bind/named.conf.options.ivozprovider
+===================================================================
+--- ivozprovider.orig/profiles/data/etc/bind/named.conf.options.ivozprovider
++++ ivozprovider/profiles/data/etc/bind/named.conf.options.ivozprovider
+@@ -10,7 +10,7 @@ options {
+     // Uncomment the following block, and insert the addresses replacing
+     // the all-0's placeholder.
+ 
+-    allow-query { nicepeople; };
++    allow-query { any; };
+ 
+     forwarders {
+         8.8.8.8;

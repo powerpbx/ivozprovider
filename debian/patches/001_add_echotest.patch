@@ -1,0 +1,68 @@
+Index: ivozprovider/asterisk/agi/src/Agi/Action/ServiceAction.php
+===================================================================
+--- ivozprovider.orig/asterisk/agi/src/Agi/Action/ServiceAction.php
++++ ivozprovider/asterisk/agi/src/Agi/Action/ServiceAction.php
+@@ -117,6 +117,9 @@ class ServiceAction
+             case 'ToggleLock':
+                 $this->processToggleLock();
+                 break;
++            case 'EchoTest':
++                $this->processEchoTest();
++                break;
+         }
+     }
+ 
+@@ -391,4 +394,14 @@ class ServiceAction
+ 
+         $this->agi->playback("hello/hello");
+     }
++
++    public function processEchoTest()
++    {
++        $sound = 'echo-test';
++
++        $this->agi->playback($sound);
++        $this->agi->playback('beep');
++        $this->agi->echo();
++        $this->agi->hangup();
++    }
+ }
+Index: ivozprovider/asterisk/agi/src/Agi/Wrapper.php
+===================================================================
+--- ivozprovider.orig/asterisk/agi/src/Agi/Wrapper.php
++++ ivozprovider/asterisk/agi/src/Agi/Wrapper.php
+@@ -396,4 +396,9 @@ class Wrapper
+ 
+         return array_shift($dialedNumberParts);
+     }
++
++	public function echo()
++    {
++        return $this->fastagi->exec("Echo", "");
++    }
+ }
+Index: ivozprovider/asterisk/config/modules.conf
+===================================================================
+--- ivozprovider.orig/asterisk/config/modules.conf
++++ ivozprovider/asterisk/config/modules.conf
+@@ -109,6 +109,7 @@ load => app_dial.so
+ load => app_queue.so
+ load => app_stack.so
+ load => app_macro.so
++load => app_echo.so
+ load => app_exec.so
+ load => app_dumpchan.so
+ load => app_read.so
+Index: ivozprovider/scheme/initial.sql
+===================================================================
+--- ivozprovider.orig/scheme/initial.sql
++++ ivozprovider/scheme/initial.sql
+@@ -3429,7 +3429,7 @@ CREATE TABLE `Services` (
+ 
+ LOCK TABLES `Services` WRITE;
+ /*!40000 ALTER TABLE `Services` DISABLE KEYS */;
+-INSERT INTO `Services` VALUES (1,'DirectPickUp','Direct Pickup','Captura Directa','Add the capture extension after the service code','Añada la extensión a capturar tras el código de servicio','94',1),(2,'GroupPickUp','Group Pickup','Captura de Grupo','Captura la llamada de un miembro de los grupos de captura del usuario','Captura la llamada de un miembro de los grupos de captura del usuario','95',0),(3,'Voicemail','Check Voicemail','Consultar buzón de voz','Check and configure the voicemail of the user','Consulta y configura el buzón de voz del usuario','93',1),(4,'RecordLocution','Record Locution','Grabar Locucion','Add the locution code after the service code','Añada el código de locución tras el código de servicio','00',1),(5,'CloseLock','Close Lock','Cerrar candado','Disables a routes with the lock','Deshabilita rutas configuradas con el candado','70',1),(6,'OpenLock','Open Lock','Abrir candado','Enables a routes with the lock','Habilita rutas configuradas con el candado','71',1),(7,'ToggleLock','Toggle Lock','Alternar candado','Switch current lock status','Alterna el estado de un candado','72',1);
++INSERT INTO `Services` VALUES (1,'DirectPickUp','Direct Pickup','Captura Directa','Add the capture extension after the service code','Añada la extensión a capturar tras el código de servicio','94',1),(2,'GroupPickUp','Group Pickup','Captura de Grupo','Captura la llamada de un miembro de los grupos de captura del usuario','Captura la llamada de un miembro de los grupos de captura del usuario','95',0),(3,'Voicemail','Check Voicemail','Consultar buzón de voz','Check and configure the voicemail of the user','Consulta y configura el buzón de voz del usuario','93',1),(4,'RecordLocution','Record Locution','Grabar Locucion','Add the locution code after the service code','Añada el código de locución tras el código de servicio','00',1),(5,'CloseLock','Close Lock','Cerrar candado','Disables a routes with the lock','Deshabilita rutas configuradas con el candado','70',1),(6,'OpenLock','Open Lock','Abrir candado','Enables a routes with the lock','Habilita rutas configuradas con el candado','71',1),(7,'ToggleLock','Toggle Lock','Alternar candado','Switch current lock status','Alterna el estado de un candado','72',1),(8,'EchoTest','Echo Test','Prueba de eco','Echo audio back to caller','Echo de audio de nuevo a la persona que llama','43',0);
+ /*!40000 ALTER TABLE `Services` ENABLE KEYS */;
+ UNLOCK TABLES;
+ 

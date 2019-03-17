@@ -1,4 +1,11 @@
-ivozprovider (2.9~2.9.3) UNRELEASED; urgency=medium
+ivozprovider (2.9~2.9.3.1-ppx1) stable; urgency=medium
+
+  * Version bump and change to 2.9.3.1-ppx1
+  * Created fresh from artemis branch adding powerpbx customizations
+
+ -- PowerPBX <devops@powerpbx.org>  Sun, 17 Mar 2019 15:48:22 -0800
+
+ivozprovider (2.9~2.9.3) stable; urgency=medium
 
   * Version bump to 2.9.3
 
