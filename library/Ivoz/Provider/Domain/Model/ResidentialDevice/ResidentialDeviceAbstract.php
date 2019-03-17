@@ -13,6 +13,30 @@ use Ivoz\Core\Domain\Model\EntityInterface;
  */
 abstract class ResidentialDeviceAbstract
 {
+    const TRANSPORT_UDP = 'udp';
+    const TRANSPORT_TCP = 'tcp';
+    const TRANSPORT_TLS = 'tls';
+
+
+    const DIRECTMEDIAMETHOD_INVITE = 'invite';
+    const DIRECTMEDIAMETHOD_UPDATE = 'update';
+
+
+    const CALLERIDUPDATEHEADER_PAI = 'pai';
+    const CALLERIDUPDATEHEADER_RPID = 'rpid';
+
+
+    const UPDATECALLERID_YES = 'yes';
+    const UPDATECALLERID_NO = 'no';
+
+
+    const DIRECTCONNECTIVITY_YES = 'yes';
+    const DIRECTCONNECTIVITY_NO = 'no';
+
+
+    const DDIIN_YES = 'yes';
+    const DDIIN_NO = 'no';
+
     /**
      * @var string
      */
@@ -100,6 +124,11 @@ abstract class ResidentialDeviceAbstract
     protected $ddiIn = 'yes';
 
     /**
+     * @var integer
+     */
+    protected $maxCalls = 1;
+
+    /**
      * @var \Ivoz\Provider\Domain\Model\Brand\BrandInterface
      */
     protected $brand;
@@ -146,7 +175,8 @@ abstract class ResidentialDeviceAbstract
         $calleridUpdateHeader,
         $updateCallerid,
         $directConnectivity,
-        $ddiIn
+        $ddiIn,
+        $maxCalls
     ) {
         $this->setName($name);
         $this->setDescription($description);
@@ -159,6 +189,7 @@ abstract class ResidentialDeviceAbstract
         $this->setUpdateCallerid($updateCallerid);
         $this->setDirectConnectivity($directConnectivity);
         $this->setDdiIn($ddiIn);
+        $this->setMaxCalls($maxCalls);
     }
 
     abstract public function getId();
@@ -240,7 +271,8 @@ abstract class ResidentialDeviceAbstract
             $dto->getCalleridUpdateHeader(),
             $dto->getUpdateCallerid(),
             $dto->getDirectConnectivity(),
-            $dto->getDdiIn()
+            $dto->getDdiIn(),
+            $dto->getMaxCalls()
         );
 
         $self
@@ -292,6 +324,7 @@ abstract class ResidentialDeviceAbstract
             ->setFromDomain($dto->getFromDomain())
             ->setDirectConnectivity($dto->getDirectConnectivity())
             ->setDdiIn($dto->getDdiIn())
+            ->setMaxCalls($dto->getMaxCalls())
             ->setBrand($fkTransformer->transform($dto->getBrand()))
             ->setDomain($fkTransformer->transform($dto->getDomain()))
             ->setCompany($fkTransformer->transform($dto->getCompany()))
@@ -328,6 +361,7 @@ abstract class ResidentialDeviceAbstract
             ->setFromDomain(self::getFromDomain())
             ->setDirectConnectivity(self::getDirectConnectivity())
             ->setDdiIn(self::getDdiIn())
+            ->setMaxCalls(self::getMaxCalls())
             ->setBrand(\Ivoz\Provider\Domain\Model\Brand\Brand::entityToDto(self::getBrand(), $depth))
             ->setDomain(\Ivoz\Provider\Domain\Model\Domain\Domain::entityToDto(self::getDomain(), $depth))
             ->setCompany(\Ivoz\Provider\Domain\Model\Company\Company::entityToDto(self::getCompany(), $depth))
@@ -357,6 +391,7 @@ abstract class ResidentialDeviceAbstract
             'from_domain' => self::getFromDomain(),
             'directConnectivity' => self::getDirectConnectivity(),
             'ddiIn' => self::getDdiIn(),
+            'maxCalls' => self::getMaxCalls(),
             'brandId' => self::getBrand() ? self::getBrand()->getId() : null,
             'domainId' => self::getDomain() ? self::getDomain()->getId() : null,
             'companyId' => self::getCompany() ? self::getCompany()->getId() : null,
@@ -432,11 +467,11 @@ abstract class ResidentialDeviceAbstract
     {
         Assertion::notNull($transport, 'transport value "%s" is null, but non null value was expected.');
         Assertion::maxLength($transport, 25, 'transport value "%s" is too long, it should have no more than %d characters, but has %d characters.');
-        Assertion::choice($transport, array (
-          0 => 'udp',
-          1 => 'tcp',
-          2 => 'tls',
-        ), 'transportvalue "%s" is not an element of the valid values: %s');
+        Assertion::choice($transport, [
+            self::TRANSPORT_UDP,
+            self::TRANSPORT_TCP,
+            self::TRANSPORT_TLS
+        ], 'transportvalue "%s" is not an element of the valid values: %s');
 
         $this->transport = $transport;
 
@@ -494,6 +529,7 @@ abstract class ResidentialDeviceAbstract
             if (!is_null($port)) {
                 Assertion::integerish($port, 'port value "%s" is not an integer or a number castable to integer.');
                 Assertion::greaterOrEqualThan($port, 0, 'port provided "%s" is not greater or equal than "%s".');
+                $port = (int) $port;
             }
         }
 
@@ -630,10 +666,10 @@ abstract class ResidentialDeviceAbstract
     protected function setDirectMediaMethod($directMediaMethod)
     {
         Assertion::notNull($directMediaMethod, 'directMediaMethod value "%s" is null, but non null value was expected.');
-        Assertion::choice($directMediaMethod, array (
-          0 => 'invite',
-          1 => 'update',
-        ), 'directMediaMethodvalue "%s" is not an element of the valid values: %s');
+        Assertion::choice($directMediaMethod, [
+            self::DIRECTMEDIAMETHOD_INVITE,
+            self::DIRECTMEDIAMETHOD_UPDATE
+        ], 'directMediaMethodvalue "%s" is not an element of the valid values: %s');
 
         $this->directMediaMethod = $directMediaMethod;
 
@@ -660,10 +696,10 @@ abstract class ResidentialDeviceAbstract
     protected function setCalleridUpdateHeader($calleridUpdateHeader)
     {
         Assertion::notNull($calleridUpdateHeader, 'calleridUpdateHeader value "%s" is null, but non null value was expected.');
-        Assertion::choice($calleridUpdateHeader, array (
-          0 => 'pai',
-          1 => 'rpid',
-        ), 'calleridUpdateHeadervalue "%s" is not an element of the valid values: %s');
+        Assertion::choice($calleridUpdateHeader, [
+            self::CALLERIDUPDATEHEADER_PAI,
+            self::CALLERIDUPDATEHEADER_RPID
+        ], 'calleridUpdateHeadervalue "%s" is not an element of the valid values: %s');
 
         $this->calleridUpdateHeader = $calleridUpdateHeader;
 
@@ -690,10 +726,10 @@ abstract class ResidentialDeviceAbstract
     protected function setUpdateCallerid($updateCallerid)
     {
         Assertion::notNull($updateCallerid, 'updateCallerid value "%s" is null, but non null value was expected.');
-        Assertion::choice($updateCallerid, array (
-          0 => 'yes',
-          1 => 'no',
-        ), 'updateCalleridvalue "%s" is not an element of the valid values: %s');
+        Assertion::choice($updateCallerid, [
+            self::UPDATECALLERID_YES,
+            self::UPDATECALLERID_NO
+        ], 'updateCalleridvalue "%s" is not an element of the valid values: %s');
 
         $this->updateCallerid = $updateCallerid;
 
@@ -748,10 +784,10 @@ abstract class ResidentialDeviceAbstract
     protected function setDirectConnectivity($directConnectivity)
     {
         Assertion::notNull($directConnectivity, 'directConnectivity value "%s" is null, but non null value was expected.');
-        Assertion::choice($directConnectivity, array (
-          0 => 'yes',
-          1 => 'no',
-        ), 'directConnectivityvalue "%s" is not an element of the valid values: %s');
+        Assertion::choice($directConnectivity, [
+            self::DIRECTCONNECTIVITY_YES,
+            self::DIRECTCONNECTIVITY_NO
+        ], 'directConnectivityvalue "%s" is not an element of the valid values: %s');
 
         $this->directConnectivity = $directConnectivity;
 
@@ -778,10 +814,10 @@ abstract class ResidentialDeviceAbstract
     protected function setDdiIn($ddiIn)
     {
         Assertion::notNull($ddiIn, 'ddiIn value "%s" is null, but non null value was expected.');
-        Assertion::choice($ddiIn, array (
-          0 => 'yes',
-          1 => 'no',
-        ), 'ddiInvalue "%s" is not an element of the valid values: %s');
+        Assertion::choice($ddiIn, [
+            self::DDIIN_YES,
+            self::DDIIN_NO
+        ], 'ddiInvalue "%s" is not an element of the valid values: %s');
 
         $this->ddiIn = $ddiIn;
 
@@ -796,6 +832,34 @@ abstract class ResidentialDeviceAbstract
     public function getDdiIn()
     {
         return $this->ddiIn;
+    }
+
+    /**
+     * Set maxCalls
+     *
+     * @param integer $maxCalls
+     *
+     * @return self
+     */
+    protected function setMaxCalls($maxCalls)
+    {
+        Assertion::notNull($maxCalls, 'maxCalls value "%s" is null, but non null value was expected.');
+        Assertion::integerish($maxCalls, 'maxCalls value "%s" is not an integer or a number castable to integer.');
+        Assertion::greaterOrEqualThan($maxCalls, 0, 'maxCalls provided "%s" is not greater or equal than "%s".');
+
+        $this->maxCalls = (int) $maxCalls;
+
+        return $this;
+    }
+
+    /**
+     * Get maxCalls
+     *
+     * @return integer
+     */
+    public function getMaxCalls()
+    {
+        return $this->maxCalls;
     }
 
     /**

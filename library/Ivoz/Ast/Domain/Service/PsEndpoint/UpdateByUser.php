@@ -7,11 +7,6 @@ use Ivoz\Core\Application\Service\EntityTools;
 use Ivoz\Provider\Domain\Model\User\UserInterface;
 use Ivoz\Provider\Domain\Service\User\UserLifecycleEventHandlerInterface;
 
-/**
- * Class UpdateByUser
- * @package Ivoz\Ast\Domain\Service\PsEndpoint
- * @lifecycle pre_persist
- */
 class UpdateByUser implements UserLifecycleEventHandlerInterface
 {
     /**
@@ -51,7 +46,8 @@ class UpdateByUser implements UserLifecycleEventHandlerInterface
 
         $endpointDto
             ->setCallerid($callerId)
-            ->setMailboxes($user->getVoiceMail());
+            ->setMailboxes($user->getVoiceMail())
+            ->setNamedPickupGroup($user->getPickUpGroupsIds());
 
         $this
             ->entityTools

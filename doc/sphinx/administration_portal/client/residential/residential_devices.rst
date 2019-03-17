@@ -78,6 +78,9 @@ These are the configurable settings of *Residential devices*:
         If set to 'Yes', use endpoint username in R-URI when calling this residential device. If set to 'No', use called
         number instead.
 
+    Max Calls
+        Limits the number of concurrent received calls. Set 0 for unlimited calls.
+
 Voicemail settings
 ==================
 
@@ -132,9 +135,11 @@ Device peer
     secret=device-password
     fromdomain=ivozprovider-brand.sip-domain.com
     insecure=port,invite
+    sendrpid=pai
 
 .. warning:: *Residential devices* MUST NOT challenge IvozProvider. That's
              why the *insecure* setting is used here.
 
+.. note:: As from username is used to identify the retail account, P-Asserted-Identity must be used to specify caller number.
 
 

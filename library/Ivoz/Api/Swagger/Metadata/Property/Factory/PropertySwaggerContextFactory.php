@@ -140,17 +140,27 @@ class PropertySwaggerContextFactory implements PropertyMetadataFactoryInterface
                             ]
                         ]
                     );
-                }
-                break;
-
-            case 'int':
-                $isUnsigned = isset($fldMetadata['options']) && isset($fldMetadata['options']['unsigned']) && $fldMetadata['options']['unsigned'];
-                if ($isUnsigned) {
+                } elseif ($ormType == 'time') {
                     $propertyMetadata = $this->appendAttributes(
                         $propertyMetadata,
                         [
                             'swagger_context' => [
-                                'minimun' => 0
+                                'format' => 'time'
+                            ]
+                        ]
+                    );
+                }
+                break;
+
+            case 'int':
+                $isId = isset($fldMetadata['id']) && $fldMetadata['id'];
+                $isUnsigned = isset($fldMetadata['options']) && isset($fldMetadata['options']['unsigned']) && $fldMetadata['options']['unsigned'];
+                if ($isUnsigned && !$isId) {
+                    $propertyMetadata = $this->appendAttributes(
+                        $propertyMetadata,
+                        [
+                            'swagger_context' => [
+                                'minimum' => 0
                             ]
                         ]
                     );

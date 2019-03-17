@@ -1,3 +1,69 @@
+Thu, 14 Mar 2019 12:32:55 +0100 IvozProvider Team <vozip+ivozprovider@irontec.com>
+
+    * IvozProvider 2.9.3 released
+
+    * Proxies
+        - Fixed a bug with unsolicited MWI NOTIFYs not being properly handled
+
+    * Web
+        - Demo Brand has now all features enabled by default
+        - Fixed a crash while sorting tables by outgoingDDI field
+        - Brand creation screen has now all Locale fields visible
+        - Removed Hunt Group relation table from User edit screen
+
+    * API
+        - Added Routing, Destination and Rating endpoints to brand API
+
+    * vPBx
+        - Fixed a bug with PickupGroups not being properly updated
+
+    * Packaging
+        - Added missed dependency on ghostscript for PDF thumbnails
+        - Avoid initial scheme import if database already exists
+
+    * Other
+        - Improved changes detection for entity changelog tables
+
+
+Wed, 27 Feb 2019 10:10:30 +0100 IvozProvider Team <vozip+ivozprovider@irontec.com>
+
+    * IvozProvider 2.9.2 released
+
+    * Billing
+        - Added Redis Sentinel support to CGrateS
+
+    * Proxies
+        - Fixed incoming DDI recognition logic
+        - Added an option to configure how bounced calls are handled
+
+    * Web
+        - Improved API search and order strategies
+        - Added new response headers with pagination information
+        - Added date conversions from/to client user timezone
+        - Added global Numeric transformation for E.164 without + sign
+        - Added max concurrent calls field in residential devices
+        - Fixed a bug while exporting calls CSVs from Brand and Client portals
+
+    * Packaging
+        - Removed all mysql replication information from debian packages
+
+Tue, 12 Feb 2019 16:52:41 +0100 IvozProvider Team <vozip+ivozprovider@irontec.com>
+
+    * IvozProvider 2.9.1 released
+
+    * vPBX
+        - Fix call-forward in 302 Moved Temporarily from UACs handling
+
+    * Web
+        - Improve performance on big CSV files generation
+        - Reduce memory usage on unpaginated API requests
+        - API specs on /docs.json instead of swagger.json
+        - Make APIs fully OpenAPI 2.0 spec compliant
+
+    * CI
+        - Tests are now configured using Jenkinsfile
+        - Add new API validator tests
+
 Mon, 04 Feb 2019 15:13:33 +0100 IvozProvider Team <vozip+ivozprovider@irontec.com>
 
     * IvozProvider 2.9.0 released
