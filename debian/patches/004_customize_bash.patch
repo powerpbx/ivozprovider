@@ -57,7 +57,7 @@ Index: ivozprovider/profiles/proxy/root/.bashrc.d/550-proxy-system-custom
 + ## EXAMPLES
 +# "sc status ku" is alias for "systemctl --no-pager status kamailio@users.service -l"
 +# "sc status kt" is alias for "systemctl --no-pager status kamailio@trunks.service -l"
-+# "sc status firewalld" is alias for "systemctl status firewalld"
++# "sc status firewalld" is alias for "systemctl --no-pager status firewalld -l"
 +
 + sc ()
 +{
